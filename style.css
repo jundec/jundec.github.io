@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body { 
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+}
+
+/* STRUCTURE */
+
+#pagewrap {
+	padding: 5px;
+	width: 1280px;
+	margin: 20px auto;
+}
+header {
+	height: 80px;
+	padding: 0 5px;
+}
+#content {
+	width: 250px;
+	float: left;
+	padding: 5px 5px;
+}
+
+#middle {
+	width: 600px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 5px;
+	margin: 0px 0px 0px 0px;
+}
+
+#sidebar {
+	width: 400px;
+	padding: 5px 5px;
+	float: left;
+}
+footer {
+	clear: both;
+	padding: 0 5px;
+}
