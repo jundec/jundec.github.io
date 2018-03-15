@@ -8,12 +8,16 @@ body {
 /* STRUCTURE */
 
 #pagewrap {
-	padding: 5px;
+	padding: 0px;
 	width: 1280px;
-	margin: 20px auto;
+	margin: 0px auto;
+}
+#titlebar {
+	height: 20px;
+	padding: 0 5px;
 }
 header {
-	height: 80px;
+	height: 60px;
 	padding: 0 5px;
 }
 #content {
