@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body { 
+body {
 	background: url(srcs/bgi.png) no-repeat;
   background-size:100% 100%;
   font-family: 'Open Sans', sans-serif;
@@ -68,3 +68,26 @@ footer a:link {text-decoration:underline;background-color:none;color:#000000}
 footer a:visited {text-decoration:none;background-color:#FFFFFF;color:#000000}
 footer a:hover {text-decoration:none;background-color:#000000;color:#FFFFFF}
 footer a:active {text-decoration:none;background-color:#000000;color:#FFFFFF}
+
+
+#rsdtheory {
+	width: 600px;
+	float: left;
+	padding: 5px 5px;
+}
+#rsdtheory a:link {text-decoration:underline;background-color:none;color:#000000}
+#rsdtheory a:visited {text-decoration:none;background-color:#FFFFFF;color:#000000}
+#rsdtheory a:hover {text-decoration:none;background-color:#000000;color:#FFFFFF}
+#rsdtheory a:active {text-decoration:none;background-color:#000000;color:#FFFFFF}
+
+
+#rsdobs {
+	width: 500px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 5px;
+	margin: 0px 0px 0px 0px;
+}
+#rsdobs a:link {text-decoration:underline;background-color:none;color:#000000}
+#rsdobs a:visited {text-decoration:none;background-color:#FFFFFF;color:#000000}
+#rsdobs a:hover {text-decoration:none;background-color:#000000;color:#FFFFFF}
+#rsdobs a:active {text-decoration:none;background-color:#000000;color:#FFFFFF}
