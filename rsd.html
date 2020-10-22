@@ -1,100 +1,453 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>All About RSD</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="shortcut icon" type="image/x-icon" href="srcs/galaxy.png">
-</head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<body>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<div id="pagewrap">
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-	<section id="titlebar">
-		<h1 align="center">All About RSD</h1>
-	</section>
-	<header>
-		<h1 align="center">
-		<a target="" href="index.html"><img title="home" src="srcs/header_wave.png"></a>
-		</h1>
-	</header>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-	<section id="rsdtheory">
-    <h2 align="">THEORIES</h2>
-		<p><div><strong><a target="_blank" href="https://doi.org/10.1093/mnras/227.1.1"> Kaiser 1987</a></strong></div>
-			<div>Clustering in real space and in redshift space</div>
-		</p>
-		<p><div><strong><a target="_blank" href="https://doi.org/10.1103/PhysRevD.77.063530">Matsubara 2008</a></strong></div>
-			<div>Resumming cosmological perturbations via the Lagrangian picture: One-loop results in real space and in redshift space</div>
-		</p>
-		<p><div><strong><a target="_blank" href="https://doi.org/10.1103/PhysRevD.82.063522">Taruya et al. 2010</a></strong></div>
-			<div>Baryon acoustic oscillations in 2D: Modeling redshift-space power spectrum from perturbation theory</div>
-		</p>
-		<p><div><strong><a target="_blank" href="https://doi.org/10.1088/1475-7516/2011/11/039">Seljak&McDonald 2011</a></strong></div>
-			<div>Distribution function approach to redshift space distortions</div>
-		</p>
-		<p><div><strong><a target="_blank" href="https://doi.org/10.1103/PhysRevD.87.063526">Zhang et al. 2013</a></strong></div>
-			<div>Peculiar velocity decomposition, redshift space distortion, and velocity reconstruction in redshift surveys: The methodology</div>
-		</p>
-		<p><div><strong><a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2011.19379.x">Reid&White 2011</a></strong></div>
-			<div>Towards an accurate model of the redshift-space clustering of haloes in the quasi-linear regime</div>
-		</p>
-		<p><div><strong><a target="_blank" href="https://doi.org/10.1093/mnras/stt1916">Wang et al. 2014</a></strong></div>
-			<div>An analytic model for redshift-space distortions</div>
-		</p>
-		<p><div><strong><a target="_blank" href="https://doi.org/10.1088/1475-7516/2016/08/050">Zheng&Song 2016</a></strong></div>
-			<div>Study on the mapping of dark matter clustering from real space to redshift space</div>
-		</p>
-		<p><div><strong><a target="_blank" href="https://doi.org/10.1088/1475-7516/2019/06/013">Zheng et al 2019</a></strong></div>
-			<div>Study on the mapping of halo clustering from real space to redshift space</div>
-		</p>
-		<p><div><strong><a target="_blank" href="https://doi.org/10.1088/1475-7516/2019/03/007">Zvonimir Vlaha and Martin White 2019</a></strong></div>
-			<div>Exploring redshift-space distortions in large-scale structure</div>
-		</p>
-	</section>
+<style sype="text/css">
+.jumbotron{
+    background-image: url('srcs/bgi.png');
+    background-size: cover;
+    height: 20%;}
 
-	<section id="rsdobs">
-    <h2 align="">OBSERVATIONS</h2>
-		<p><div><strong><a target="_blank" href="http://www.2dfgrs.net">2dF Galaxy Redshift Survey</a></strong></div>
-			<div><a target="_blank" href="https://doi.org/10.1046/j.1365-2966.2003.07063.x">Hawkins et al. 2003</a></div>
-		</p>
-		<p><div><strong><a target="_blank" href="https://cesam.lam.fr/vvds/">VVDS</a></strong></div>
-			<div><a target="_blank" href="https://doi.org/10.1038/nature06555">Guzzo et al. 2008</a></div>
-		</p>
-		<p><div><strong><a target="_blank" href="https://wigglez.swin.edu.au/site/forward.html">WiggleZ Dark Energy Survey</a></strong></div>
-			<div><a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2011.18903.x">Blake et al. 2011</a></div>
-		</p>
-		<p><div><strong><a target="_blank" href="http://www.6dfgs.net">6dF Galaxy Redshift Survey</a></strong></div>
-			<div><a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2012.21136.x">Beutler et al. 2012</a> .
-			<a target="_blank" href="https://doi.org/10.1093/mnras/stu1615">Johnson et al. 2014</a></div>
-		</p>
-		<p><div><strong><a target="_blank" href="http://www.kusastro.kyoto-u.ac.jp/Fastsound/documents.html">FastSound</a></strong></div>
-			<div><a target="_blank" href="https://doi.org/10.1093/pasj/psw029">Okumura et al. 2016</a></div>
-		</p>
-		<p><div><strong><a target="_blank" href="http://www.gama-survey.org/pubs/">GAMA</a></strong></div>
-			<div><a target="_blank" href="https://doi.org/10.1103/PhysRevD.93.023525">Simpson et al. 2016</a></div>
-		</p>
-		<p><div><strong><a target="_blank" href="http://vipers.inaf.it/papers.html">VIPERS</a></strong></div>
-			<div><a target="_blank" href="https://doi.org/10.1051/0004-6361/201321463">Torre et al. 2013</a> .
-			<a target="_blank" href="https://doi.org/10.1051/0004-6361/201630295">Pezzotta et al. 2017</a> .
-			<a target="_blank" href="https://doi.org/10.1051/0004-6361/201731685">Mohammad et al. 2018</a></div>
-		</p>
-		<p><div><strong><a target="_blank" href="https://www.sdss.org/science/final-bao-and-rsd-measurements">SDSS BOSS eBOSS</a></strong></div>
-			<div><a target="_blank" href="https://doi.org/10.1103/PhysRevD.74.123507">Tegmark et al. 2006</a> .
-			<a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2012.21779.x">Reid et al. 2012</a> .
-			<a target="_blank" href="https://doi.org/10.1093/mnras/stu197">Samushia et al. 2012</a></div>
-		</p>
-	</section>
+.fimg img {
+    width:200px;
+}
+</style>
 
-	<footer>
-		<div align="center">Ongoing/Upcoming: <a target="_blank" href="http://pfs.ipmu.jp/index.html">PFS</a> . <a target="_blank" href="http://desi.lbl.gov/">DESI</a> .</div>
-	</footer>
+<div class="jumbotron text-center">
+  <h1>Redshift Space Distortion</h1>
+  <div><a target="" href="index.html"><img title="home" src="srcs/header_wave.png"></a></div><br>
 
-    <div align="center">
-    <form method="get" action="http://www.google.com/search"> <input type="text" name="q" size="31" maxlength="255" value="" /> <input type="submit" value="Google Search" /> <input type="radio" name="sitesearch" value="" /> The Web <input type="radio" name="sitesearch" value="baidu.com" checked /> Baidu <br /> </form>
+  <!-- <a href="#" class="btn btn-info" role="button">Link Button</a>
+  <button type="button" class="btn btn-info">Button</button>
+  <input type="button" class="btn btn-info" value="Input Button">
+  <input type="submit" class="btn btn-info" value="Submit Button"> -->
+
+  <!-- <div class="btn-group">
+  <button type="button" class="btn btn-primary">Apple</button>
+  <button type="button" class="btn btn-primary">Samsung</button>
+  <div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sony</button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Tablet</a>
+      <a class="dropdown-item" href="#">Smartphone</a>
     </div>
-  <p>.. </p>
+  </div>
+  </div> -->
+  <!-- <p>Resize this responsive page to see the effect!</p> -->
 </div>
 
-</body>
-</html>
+<div class="container">
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#theories">THEORIES</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#observations">FINISHED OBSERVATIONS</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#ou">ONGOING/UPCOMING OBSERVATIONS</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane container active" id="theories"><br>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Authors - Year</th>
+          <th>Title</th>
+          <th>Remarks</th>
+          <th>Suppliment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a target="_blank" href="https://doi.org/10.1093/mnras/227.1.1"> Kaiser 1987</a></td>
+          <td>Clustering in real space and in redshift space</td>
+          <td>Kaiser</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="https://doi.org/10.1103/PhysRevD.70.083007">Scoccimarro 2004</a></td>
+          <td>Redshift-space distortions, pairwise velocities, and nonlinearities</td>
+          <td>Scoccimarro</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="https://doi.org/10.1103/PhysRevD.77.063530">Matsubara 2008</a></td>
+          <td>Resumming cosmological perturbations via the Lagrangian picture: One-loop results in real space and in redshift space</td>
+          <td>Matsubara</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="https://doi.org/10.1103/PhysRevD.82.063522">Taruya et al. 2010</a></td>
+          <td>Baryon acoustic oscillations in 2D: Modeling redshift-space power spectrum from perturbation theory</td>
+          <td>TNS Model</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="https://doi.org/10.1088/1475-7516/2011/11/039">Seljak&McDonald 2011</a></td>
+          <td>Distribution function approach to redshift space distortions</td>
+          <td>Distribution Function Approach</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="https://doi.org/10.1103/PhysRevD.87.063526">Zhang et al. 2013</a></td>
+          <td>Peculiar velocity decomposition, redshift space distortion, and velocity reconstruction in redshift surveys: The methodology</td>
+          <td>Velocity Decomposition Approach</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2011.19379.x">Reid&White 2011</a></td>
+          <td>Towards an accurate model of the redshift-space clustering of haloes in the quasi-linear regime</td>
+          <td>Streaming Model</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="https://doi.org/10.1093/mnras/stt1916">Wang et al. 2014</a></td>
+          <td>An analytic model for redshift-space distortions</td>
+          <td>CLPT-GSM</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="https://doi.org/10.1088/1475-7516/2019/03/007">Vlaha&White 2019</a></td>
+          <td>Exploring redshift-space distortions in large-scale structure</td>
+          <td>Fourier Streaming Model</td>
+          <td><a target="_blank" href="https://doi.org/10.1088/1475-7516/2020/07/062">Chen et al. 2019</a></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="https://doi.org/10.1088/1475-7516/2016/08/050">Zheng&Song 2016</a></td>
+          <td>Study on the mapping of dark matter clustering from real space to redshift space</td>
+          <td>Advanced TNS</td>
+          <td><a target="_blank" href="https://doi.org/10.1088/1475-7516/2019/06/013">Zheng et al 2019</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tab-pane container fade" id="observations"><br>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>2p CF</th>
+          <th>Growth Rate</th>
+          <th>Redshift Range</th>
+          <th>z<sub>eff</sub></th>
+          <th>N<sub>Sample</sub></th>
+          <th>references</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modal2dFS">2dFGRS</button> -->
+            <a target="_blank" href="http://www.2dfgrs.net">2dFGRS</a>
+            <div>(:30-06-2003) </div>
+          </td>
+          <td>
+            <div class="fimg"><img src="rsd_srcs/2dFS0.jpg" class="img-thumbnail" alt="..."></div>
+          </td>
+          <td>β = 0.49±0.09</td>
+          <td>0.01 < z < 0.20</td>
+          <td>0.15</td>
+          <td>165659</td>
+          <td><a target="_blank" href="https://doi.org/10.1046/j.1365-2966.2003.07063.x">Hawkins et al. 2003</a></td>
+        </tr>
+        <tr>
+          <td>
+            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalVVDS">VVDS</button> -->
+            <a target="_blank" href="https://cesam.lam.fr/vvds/">VVDS</a>
+          </td>
+          <td>
+            <div class="fimg"><img src="rsd_srcs/VVDS0.jpg" class="img-thumbnail" alt="..."></div>
+          </td>
+          <td>β = 0.70±0.26</td>
+          <td>0.60 < z < 1.20</td>
+          <td>0.77</td>
+          <td>5,895 ?</td>
+          <td><a target="_blank" href="https://doi.org/10.1038/nature06555">Guzzo et al. 2008</a></td>
+        </tr>
+        <tr>
+          <td>
+            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalWigglez">WiggleZ</button> -->
+            <a target="_blank" href="https://wigglez.swin.edu.au/site/forward.html">WiggleZ</a>
+          </td>
+          <td>
+            <div class="fimg"><img src="rsd_srcs/wiggz2.jpg" class="img-thumbnail" alt="..."></div>
+          </td>
+          <td>fσ<sub>8</sub> =
+            <div>0.42±0.07, 0.45±0.04, 0.43±0.04, 0.38±0.04</div></td>
+            <!-- <div>b^2 = (0.69±0.04, 0.83±0.04, 1.21±0.04, 1.48±0.08)</div> -->
+          <td></td>
+          <td>0.22, 0.41, 0.60, 0.78</td>
+          <td></td>
+          <td><a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2011.18903.x">Blake et al. 2011</a></td>
+        </tr>
+        <tr>
+          <td>
+            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modal6dFS">6dFGRS</button> -->
+            <a target="_blank" href="http://www.6dfgs.net">6dFGRS</a>
+          </td>
+          <td>
+            <div class="fimg"><img src="rsd_srcs/6dFS0.jpg" class="img-thumbnail" alt="..."></div>
+          </td>
+          <td>β = 0.373 ± 0.054 </td>
+          <td>z<0.07</td>
+          <td>0.067</td>
+          <td>8896G + 303SNe</td>
+          <td><a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2012.21136.x">Beutler et al. 2012</a> .
+    			    <a target="_blank" href="https://doi.org/10.1093/mnras/stu1615">Johnson et al. 2014</a></td>
+        </tr>
+        <tr>
+          <td>
+            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalFastSound">FastSound</button> -->
+            <a target="_blank" href="http://www.kusastro.kyoto-u.ac.jp/Fastsound/documents.html">FastSound</a>
+          </td>
+          <td>
+            <div class="fimg"><img src="rsd_srcs/fastsound0.png" class="img-thumbnail" alt="..."></div>
+          </td>
+          <td>fσ<sub>8</sub> = 0.482±0.116</td>
+            <!-- <div>b = 1.9</div> -->
+          <td></td>
+          <td>1.4</td>
+          <td></td>
+          <td><a target="_blank" href="https://doi.org/10.1093/pasj/psw029">Okumura et al. 2016</a></td>
+        </tr>
+        <tr>
+          <td>
+            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalGAMA">GAMA</button> -->
+            <a target="_blank" href="http://www.gama-survey.org/pubs/">GAMA</a>
+          </td>
+          <td></td>
+          <td>fσ<sub>8</sub> = 0.29±0.10</td>
+          <td></td>
+          <td>0.18</td>
+          <td></td>
+          <td><a target="_blank" href="https://doi.org/10.1103/PhysRevD.93.023525">Simpson et al. 2016</a></td>
+        </tr>
+        <tr>
+          <td>
+            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalVIPERS">VIPERS</button> -->
+            <a target="_blank" href="http://vipers.inaf.it/papers.html">VIPERS</a>
+          </td>
+          <td>
+            <div class="fimg"><img src="rsd_srcs/VIPERS03.jpg" class="img-thumbnail" alt="..."></div>
+          </td>
+          <td>fσ<sub>8</sub> = 0.45 ± 0.11</td>
+          <td></td>
+          <td>0.85</td>
+          <td></td>
+          <td><a target="_blank" href="https://doi.org/10.1051/0004-6361/201321463">Torre et al. 2013</a> .
+    			    <a target="_blank" href="https://doi.org/10.1051/0004-6361/201630295">Pezzotta et al. 2017</a> .
+    			    <a target="_blank" href="https://doi.org/10.1051/0004-6361/201731685">Mohammad et al. 2018</a></td>
+        </tr>
+        <tr>
+          <td>
+            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalsdss">SDSS BOSS & eBOSS</button> -->
+            <a target="_blank" href="https://www.sdss.org/science/final-bao-and-rsd-measurements">SDSS BOSS eBOSS</a>
+          </td>
+          <td>
+            <div class="fimg"><img src="rsd_srcs/BOSSDR11_0.png" class="img-thumbnail" alt="..."></div>
+          </td>
+          <td>fσ<sub>8</sub> = 0.441±0.044</td>
+          <td></td>
+          <td>0.57</td>
+          <td></td>
+          <td><a target="_blank" href="https://doi.org/10.1103/PhysRevD.74.123507">Tegmark et al. 2006</a> .
+    			    <a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2012.21779.x">Reid et al. 2012</a> .
+    			    <a target="_blank" href="https://doi.org/10.1093/mnras/stu197">Samushia et al. 2012</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tab-pane container fade" id="ou"><br>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Results</th>
+          <th>Remarks</th>
+          <th>Suppliment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a target="_blank" href="http://pfs.ipmu.jp/index.html">PFS</a></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a target="_blank" href="http://desi.lbl.gov/">DESI</a></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div>
+
+<!--Modal: GAMA-->
+<div class="modal fade" id="modalGAMA" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body mb-0 p-0">
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
+          <iframe class="embed-responsive-item" src="http://www.gama-survey.org/"></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Name-->
+
+<!--Modal: FastSound-->
+<div class="modal fade" id="modalFastSound" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body mb-0 p-0">
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
+          <iframe class="embed-responsive-item" src="http://www.kusastro.kyoto-u.ac.jp/Fastsound/documents.html"></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Name-->
+
+<!--Modal: 6dFS-->
+<div class="modal fade" id="modal6dFS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body mb-0 p-0">
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
+          <iframe class="embed-responsive-item" src="http://www.6dfgs.net"></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Name-->
+
+<!--Modal: Wigglez-->
+<div class="modal fade" id="modalWigglez" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body mb-0 p-0">
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
+          <iframe class="embed-responsive-item" src="https://wigglez.swin.edu.au/site/forward.html"></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Name-->
+
+<!--Modal: VVDS-->
+<div class="modal fade" id="modalVVDS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body mb-0 p-0">
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
+          <iframe class="embed-responsive-item" src="https://cesam.lam.fr/vvds/"></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Name-->
+
+<!--Modal: 2dFS-->
+<div class="modal fade" id="modal2dFS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Body-->
+      <div class="modal-body mb-0 p-0">
+
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
+          <iframe class="embed-responsive-item" src="http://www.2dfgrs.net" allowfullscreen></iframe>
+        </div>
+
+      </div>
+
+      <!--Footer-->
+      <!-- <div class="modal-footer justify-content-center">
+        <span class="mr-4">2dFS</span>
+        <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+      </div> -->
+
+    </div>
+    <!--/.Content-->
+
+  </div>
+</div>
+<!--Modal: Name-->
+
+<!--Modal: SDSS-->
+<div class="modal fade" id="modalsdss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body mb-0 p-0">
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
+          <iframe class="embed-responsive-item" src="https://www.sdss.org/science/final-bao-and-rsd-measurements"></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Name-->
+
+<!--Modal: VIPERS-->
+<div class="modal fade" id="modalVIPERS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body mb-0 p-0">
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
+          <iframe class="embed-responsive-item" src="http://vipers.inaf.it"></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Name-->
+
+  <!-- <h2>RSD Theories</h2> -->
+  <!-- <p>The .table-bordered class adds borders on all sides of the table and the cells:</p> -->
