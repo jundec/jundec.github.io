@@ -1,0 +1,111 @@
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+
+  .navbar {
+      min-height: 50px;
+    }
+    .navbar-dark .homeicon {
+      color: #cccccc;
+      border: 2px solid #cccccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+    .navbar-dark .homeicon:hover {
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .navbar-dark .navbar-nav .nav-item .home {
+      color: #ff5c33;
+    }
+
+    .navbar-dark .navbar-nav .dropdown-menu {
+      background-color: #808080;
+    }
+
+    .navbar-dark .navbar-nav .cosmology a {
+      color: #ccff33;
+    }
+    .navbar-dark .navbar-nav .cosmology .dropdown-menu a {
+      color: #ccff33;
+    }
+    .navbar-dark .navbar-nav .cosmology .dropdown-menu a:hover {
+      color: black;
+      background-color: #ccff33;
+    }
+
+    .navbar-dark .navbar-nav .music a{
+      color: #ffcc00;
+    }
+    .navbar-dark .navbar-nav .music .dropdown-menu a {
+      color: #ffcc00;
+    }
+    .navbar-dark .navbar-nav .music .dropdown-menu a:hover {
+      color: black;
+      background-color: #ffcc00;
+    }
+
+    .navbar-dark .navbar-nav .nav-item .movie {
+      color: #33ccff;
+    }
+
+    @media all and (min-width: 992px) {
+  	.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+  	.navbar .nav-item:hover .nav-link{ color: #fff;  }
+  	.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+  	.navbar .dropdown-menu.fade-up{ top:180%;  }
+  	.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+    }
+  </style>
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark ">
+    <a class="navbar-brand homeicon" href="index.html">&nbsp𐒨𐒧𐒠&nbsp</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link home" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown cosmology">
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cosmology
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="rsd.html">Redshift-Space Distortion</a>
+            <a class="dropdown-item" href="#">Fundamental Metallicity Relation</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Reviews</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown music">
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Music
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Baroque</a>
+            <a class="dropdown-item" href="#">Classical</a>
+            <a class="dropdown-item" href="#">Romantic</a>
+            <a class="dropdown-item" href="#">Popular</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">AOTY</a>
+          </div>
+        </li>
+        <li class="nav-item active ">
+          <a class="nav-link movie" href="#">Moive <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+
+      <!-- searh -->
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
