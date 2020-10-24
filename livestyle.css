@@ -22,25 +22,25 @@
 	color: #fff;
 }
 
-.vid-info { 
-	position: relative; 
-	top: 0; 
-	right: 0; 
+.vid-info {
+	position: relative;
+	top: 0;
+	right: 0;
 	width: 10%; 
-	color: #fff; 
-	padding: 1rem; 
-	font-family: Avenir, Helvetica, sans-serif; 
+	color: #fff;
+	padding: 1rem;
+	font-family: Avenir, Helvetica, sans-serif;
 }
 
-.vid-info a { 
-	display: block; 
-	color: #fff; 
-	text-decoration: none; 
-	background: rgba(0,0,0,0.3); 
-	transition: .6s background; 
-	border-bottom: none; 
-	margin: 0rem auto; 
-	text-align: center; 
+.vid-info a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	background: rgba(0,0,0,0.3);
+	transition: .6s background;
+	border-bottom: none;
+	margin: 0rem auto;
+	text-align: center;
 }
 
 @media (min-aspect-ratio: 16/9) {
