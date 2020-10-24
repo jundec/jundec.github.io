@@ -11,55 +11,6 @@ body {
 
 /* STRUCTURE */
 
-
-#pagewrap {
-	padding: 0px;
-	width: 1280px;
-	margin: 0px auto;
-}
-#pagewrap {background-color:rgba(255,255,255,0.8);}
-
-#titlebar {
-	height: 20px;
-	padding: 0 5px;
-}
-header {
-	height: 60px;
-	padding: 0 5px;
-}
-#content {
-	width: 250px;
-	float: left;
-	padding: 5px 5px;
-}
-#content a:link {text-decoration:underline;background-color:none;color:#000000}
-#content a:visited {text-decoration:none;background-color:#FFFFFF;color:#000000}
-#content a:hover {text-decoration:none;background-color:#000000;color:#FFFFFF}
-#content a:active {text-decoration:none;background-color:#000000;color:#FFFFFF}
-
-#middle {
-	width: 600px; /* Account for margins + border values */
-	float: left;
-	padding: 5px 5px;
-	margin: 0px 0px 0px 0px;
-}
-#middle a:link {text-decoration:underline;background-color:none;color:#000000}
-#middle a:visited {text-decoration:none;background-color:#FFFFFF;color:#000000}
-#middle a:hover {text-decoration:none;background-color:#000000;color:#FFFFFF}
-#middle a:active {text-decoration:none;background-color:#000000;color:#FFFFFF}
-
-#sidebar {
-	width: 400px;
-	padding: 5px 5px;
-	float: left;
-	font-family: Sans-Serif;
-	font-weight: bold;
-}
-#sidebar a:link {text-decoration:underline;background-color:none;color:#000000}
-#sidebar a:visited {text-decoration:none;background-color:#FFFFFF;color:#000000}
-#sidebar a:hover {text-decoration:none;background-color:#000000;color:#FFFFFF}
-#sidebar a:active {text-decoration:none;background-color:#000000;color:#FFFFFF}
-
 footer {
 	clear: both;
 	padding: 0 5px;
@@ -68,26 +19,3 @@ footer a:link {text-decoration:underline;background-color:none;color:#000000}
 footer a:visited {text-decoration:none;background-color:#FFFFFF;color:#000000}
 footer a:hover {text-decoration:none;background-color:#000000;color:#FFFFFF}
 footer a:active {text-decoration:none;background-color:#000000;color:#FFFFFF}
-
-
-#rsdtheory {
-	width: 600px;
-	float: left;
-	padding: 5px 5px;
-}
-#rsdtheory a:link {text-decoration:underline;background-color:none;color:#000000}
-#rsdtheory a:visited {text-decoration:none;background-color:#FFFFFF;color:#000000}
-#rsdtheory a:hover {text-decoration:none;background-color:#000000;color:#FFFFFF}
-#rsdtheory a:active {text-decoration:none;background-color:#000000;color:#FFFFFF}
-
-
-#rsdobs {
-	width: 500px; /* Account for margins + border values */
-	float: left;
-	padding: 5px 5px;
-	margin: 0px 0px 0px 0px;
-}
-#rsdobs a:link {text-decoration:underline;background-color:none;color:#000000}
-#rsdobs a:visited {text-decoration:none;background-color:#FFFFFF;color:#000000}
-#rsdobs a:hover {text-decoration:none;background-color:#000000;color:#FFFFFF}
-#rsdobs a:active {text-decoration:none;background-color:#000000;color:#FFFFFF}
