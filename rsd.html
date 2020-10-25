@@ -14,12 +14,14 @@
   </script>
 
   <style type="text/css">
-  .jumbotron{
-      background-image: url("srcs/bgi.jpg");
-      background-size: cover;
-      height: 20%;}
+  .pb-2{
+    background: url(srcs/bgi.jpg);
+    background-size: cover;
+    height: 100px;
+  }
   .fimg img{
-      width:200px;}
+    width:200px;
+  }
   </style>
 </head>
 
@@ -29,13 +31,14 @@
 
     </div>
 
-<div class="jumbotron text-center">
-  <h1>Redshift Space Distortion</h1>
-  <div><a target="_blank" href="index.html"><img title="home" src="srcs/header_wave.png"></a></div><br>
+<!-- header -->
+<div class="pb-2 border-bottom">
+  <h1 align="center">Redshift Space Distortion</h1>
+  <div align="center"><a target="_blank" href="index.html"><img title="home" src="srcs/header_wave.png"></a></div><br>
 </div>
+<br>
 
 <div class="container">
-
 <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" data-toggle="tab" href="#theories">THEORIES</a>
@@ -48,7 +51,7 @@
   </li>
 </ul>
 
-<div class="tab-content">
+<div class="tab-content" style="background: rgba(255,255,255,0.9);">
   <div class="tab-pane container active" id="theories"><br>
     <table class="table table-bordered">
       <thead>
@@ -123,7 +126,6 @@
       </tbody>
     </table>
   </div>
-
   <div class="tab-pane container fade" id="observations"><br>
     <table class="table table-bordered">
       <thead>
@@ -260,7 +262,6 @@
       </tbody>
     </table>
   </div>
-
   <div class="tab-pane container fade" id="ou"><br>
     <table class="table table-bordered">
       <thead>
@@ -287,8 +288,8 @@
       </tbody>
     </table>
   </div>
+  <br>
 </div>
-
 </div>
 
 <!--Modal: GAMA-->
@@ -437,8 +438,10 @@
     <!--/.Content-->
   </div>
 </div>
+
 <!--Modal: Name-->
 
+<br>
 <!-- Copyright -->
 <div class="footer-copyright text-center py-3 bg-dark">
 	<p class="text-center text-md-center" style="color:white">© 2020 Copyright:
