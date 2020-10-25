@@ -13,14 +13,22 @@
 	});
 	</script>
   <style>
-  body {
-  	background-image: url(srcs/bgbrq.jpg);
-    background-size:100%;
-    font-family: 'Open Sans', sans-serif;
-    color: #000;
-    background-attachment:fixed;
-    background-repeat:repeat;
-  }
+	body {
+		background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+		background-size: 400% 400%;
+		animation: gradient 15s ease infinite;
+	}
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
 	.card-title{
 		color: white;
 		background: rgba(0,0,0,0.3);
