@@ -14,13 +14,34 @@
   </script>
 
   <style type="text/css">
-  .pb-2{
+  .header{
     background: url(srcs/bgi.jpg);
     background-size: cover;
-    height: 100px;
   }
   .fimg img{
     width:200px;
+  }
+  .content {
+    background: rgba(0,0,0,0.05);
+  }
+  .content .nav-tabs .nav-item a.active{
+    color: #ff3333;
+    font-weight: bold;
+  }
+  .content .nav-tabs a{
+    color: gray;
+    font-weight: bold;
+  }
+  .content .nav-tabs .nav-item a:hover{
+    color: #ff3333;
+    background: white;
+    font-weight: bold;
+  }
+  .tab-content {
+    font-size: 14px;
+  }
+  .tab-content a{
+    font-weight: bold;
   }
   </style>
 </head>
@@ -32,13 +53,14 @@
     </div>
 
 <!-- header -->
-<div class="pb-2 border-bottom">
-  <h1 align="center">Redshift Space Distortion</h1>
-  <div align="center"><a target="_blank" href="index.html"><img title="home" src="srcs/header_wave.png"></a></div><br>
-</div>
 <br>
+<div class="container header border bg-light">
+  <br>
+  <h1 align="center">Redshift Space Distortion</h1>
+  <div align="center"><a target="_blank" href="index.html"><img width=100% title="home" src="srcs/header_wave.png"></a></div><br>
+</div><br>
 
-<div class="container">
+<div class="container content"><br>
 <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" data-toggle="tab" href="#theories">THEORIES</a>
@@ -52,7 +74,7 @@
 </ul>
 
 <div class="tab-content" style="background: rgba(255,255,255,0.9);">
-  <div class="tab-pane container active" id="theories"><br>
+  <div class="tab-pane container active border-left border-right border-bottom" id="theories"><br>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -126,7 +148,7 @@
       </tbody>
     </table>
   </div>
-  <div class="tab-pane container fade" id="observations"><br>
+  <div class="tab-pane container fade border-left border-right border-bottom" id="observations"><br>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -262,7 +284,7 @@
       </tbody>
     </table>
   </div>
-  <div class="tab-pane container fade" id="ou"><br>
+  <div class="tab-pane container fade border-left border-right border-bottom" id="ou"><br>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -288,8 +310,7 @@
       </tbody>
     </table>
   </div>
-  <br>
-</div>
+</div> <br>
 </div>
 
 <!--Modal: GAMA-->
