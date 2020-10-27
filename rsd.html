@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Redshift Space Distortion</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-  $(function(){
-    $("#nav-placeholder").load("nav.html");
-  });
-  </script>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Redshift-Sapce Distortion!</title>
+	<link rel="shortcut icon" type="image/x-icon" href="srcs/galaxy.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
   <style type="text/css">
   body{
     background: #F5F5F5;
@@ -50,9 +46,49 @@
 
 <body>
 
-    <div id="nav-placeholder">
+  <nav class="navbar navbar-custom sticky-top navbar-expand-sm navbar-dark bg-dark">
+  	<a class="navbar-brand homeicon" href="index.html">&nbsp𐒨𐒧𐒠&nbsp</a>
+  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  		<ul class="navbar-nav mr-auto">
+  			<li class="nav-item active">
+  				<a class="nav-link home" href="index.html">Home<span class="sr-only">(current)</span></a>
+  			</li>
+  			<li class="nav-item dropdown astronomy">
+  				<a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  					Astronomy
+  				</a>
+  				<div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+  					<a class="dropdown-item" href="rsd.html">RSD</a>
+  					<a class="dropdown-item" href="#">FMR</a>
+  					<div class="dropdown-divider"></div>
+  					<a class="dropdown-item" href="#">Reviews</a>
+  				</div>
+  			</li>
+  			<li class="nav-item dropdown music">
+  				<a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  					Music
+  				</a>
+  				<div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+  					<a class="dropdown-item" href="baroque.html">Baroque</a>
+  					<a class="dropdown-item" href="#">Classical</a>
+  					<a class="dropdown-item" href="#">Romantic</a>
+  					<a class="dropdown-item" href="#">Popular</a>
+  					<div class="dropdown-divider"></div>
+  					<a class="dropdown-item" href="aoty.html">AOTY</a>
+  				</div>
+  			</li>
+  			<li class="nav-item active ">
+  				<a class="nav-link movie" href="#">Moive<span class="sr-only">(current)</span></a>
+  			</li>
+  		</ul>
 
-    </div>
+  		<!-- searh -->
+  		<form method="get" action="http://www.google.com/search" target="_blank">
+  			<input type="text" name="q" size="21" maxlength="255" value="" />
+  			<input type="submit" value="Search" />
+  		</form>
+  	</div>
+  </nav>
 
 <!-- header -->
 <br>
@@ -77,7 +113,7 @@
 
 <div class="tab-content" style="background: white;">
   <div class="tab-pane container active border-left border-right border-bottom" id="theories"><br>
-    <table class="table table-bordered">
+    <table class="table table-bordered  table-hover">
       <thead>
         <tr>
           <th>Authors - Year</th>
@@ -151,126 +187,130 @@
     </table>
   </div>
   <div class="tab-pane container fade border-left border-right border-bottom" id="observations"><br>
-    <table class="table table-bordered">
+    <table class="table table-bordered  table-hover">
       <thead>
         <tr>
           <th>Project</th>
-          <th>2p CF</th>
+          <th>Correlation Function</th>
           <th>Growth Rate</th>
           <th>Redshift Range</th>
           <th>z<sub>eff</sub></th>
           <th>N<sub>Sample</sub></th>
           <th>references</th>
+          <th>Suppliment</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>
-            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modal2dFS">2dFGRS</button> -->
             <a target="_blank" href="http://www.2dfgrs.net">2dFGRS</a>
-            <div>(:30-06-2003) </div>
+            <div>1997-2003</div>
           </td>
           <td>
             <div class="fimg"><img src="rsd_srcs/2dFS0.jpg" class="img-thumbnail" alt="..."></div>
           </td>
           <td>β = 0.49±0.09</td>
-          <td>0.01 &lt z &lt 0.20</td>
+          <td>0.01-0.20</td>
           <td>0.15</td>
-          <td>165659</td>
+          <td>165,659</td>
           <td><a target="_blank" href="https://doi.org/10.1046/j.1365-2966.2003.07063.x">Hawkins et al. 2003</a></td>
+          <td></td>
         </tr>
         <tr>
           <td>
-            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalVVDS">VVDS</button> -->
             <a target="_blank" href="https://cesam.lam.fr/vvds/">VVDS</a>
           </td>
           <td>
             <div class="fimg"><img src="rsd_srcs/VVDS0.jpg" class="img-thumbnail" alt="..."></div>
           </td>
           <td>β = 0.70±0.26</td>
-          <td>0.60 &lt z &lt 1.20</td>
+          <td>0.6-1.2</td>
           <td>0.77</td>
           <td>5,895 ?</td>
           <td><a target="_blank" href="https://doi.org/10.1038/nature06555">Guzzo et al. 2008</a></td>
+          <td></td>
         </tr>
         <tr>
           <td>
-            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalWigglez">WiggleZ</button> -->
             <a target="_blank" href="https://wigglez.swin.edu.au/site/forward.html">WiggleZ</a>
+            <div>2006-2011</div>
           </td>
-          <td>
-            <div class="fimg"><img src="rsd_srcs/wiggz2.jpg" class="img-thumbnail" alt="..."></div>
-          </td>
+          <td></td>
           <td>fσ<sub>8</sub> =
             <div>0.42±0.07, 0.45±0.04, 0.43±0.04, 0.38±0.04</div></td>
-            <!-- <div>b^2 = (0.69±0.04, 0.83±0.04, 1.21±0.04, 1.48±0.08)</div> -->
-          <td></td>
+          <td>0.1-0.9</td>
           <td>0.22, 0.41, 0.60, 0.78</td>
-          <td></td>
+          <td>19608, 39495, 60227, 32787</td>
           <td><a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2011.18903.x">Blake et al. 2011</a></td>
+          <td></td>
         </tr>
         <tr>
           <td>
-            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modal6dFS">6dFGRS</button> -->
             <a target="_blank" href="http://www.6dfgs.net">6dFGRS</a>
+            <div>2001-2009</div>
           </td>
           <td>
             <div class="fimg"><img src="rsd_srcs/6dFS0.jpg" class="img-thumbnail" alt="..."></div>
           </td>
-          <td>β = 0.373 ± 0.054 </td>
-          <td>z &lt 0.07</td>
+          <td>β = 0.373±0.054 </td>
+          <td>z &lt0.07</td>
           <td>0.067</td>
           <td>8896G + 303SNe</td>
           <td><a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2012.21136.x">Beutler et al. 2012</a> .
-    			    <a target="_blank" href="https://doi.org/10.1093/mnras/stu1615">Johnson et al. 2014</a></td>
+    			    <a target="_blank" href="https://doi.org/10.1093/mnras/stu1615">Johnson et al. 2014</a>
+          </td>
+          <td></td>
         </tr>
         <tr>
           <td>
-            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalFastSound">FastSound</button> -->
             <a target="_blank" href="http://www.kusastro.kyoto-u.ac.jp/Fastsound/documents.html">FastSound</a>
+            <div>2012-2014</div>
           </td>
           <td>
             <div class="fimg"><img src="rsd_srcs/fastsound0.png" class="img-thumbnail" alt="..."></div>
           </td>
           <td>fσ<sub>8</sub> = 0.482±0.116</td>
             <!-- <div>b = 1.9</div> -->
-          <td></td>
+          <td>1.19–1.55</td>
           <td>1.4</td>
-          <td></td>
+          <td>3,017</td>
           <td><a target="_blank" href="https://doi.org/10.1093/pasj/psw029">Okumura et al. 2016</a></td>
+          <td></td>
         </tr>
         <tr>
           <td>
-            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalGAMA">GAMA</button> -->
             <a target="_blank" href="http://www.gama-survey.org/pubs/">GAMA</a>
+            <div>2008-2014</div>
           </td>
           <td></td>
           <td>fσ<sub>8</sub> = 0.29±0.10</td>
-          <td></td>
+          <td>0.002-0.25</td>
           <td>0.18</td>
-          <td></td>
+          <td>105,996</td>
           <td><a target="_blank" href="https://doi.org/10.1103/PhysRevD.93.023525">Simpson et al. 2016</a></td>
+          <td></td>
         </tr>
         <tr>
           <td>
-            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalVIPERS">VIPERS</button> -->
             <a target="_blank" href="http://vipers.inaf.it/papers.html">VIPERS</a>
           </td>
           <td>
             <div class="fimg"><img src="rsd_srcs/VIPERS03.jpg" class="img-thumbnail" alt="..."></div>
           </td>
           <td>fσ<sub>8</sub> = 0.45 ± 0.11</td>
-          <td></td>
+          <td>0.6-1.0</td>
           <td>0.85</td>
-          <td></td>
-          <td><a target="_blank" href="https://doi.org/10.1051/0004-6361/201321463">Torre et al. 2013</a> .
-    			    <a target="_blank" href="https://doi.org/10.1051/0004-6361/201630295">Pezzotta et al. 2017</a> .
-    			    <a target="_blank" href="https://doi.org/10.1051/0004-6361/201731685">Mohammad et al. 2018</a></td>
+          <td>89,022</td>
+          <td><a target="_blank" href="https://doi.org/10.1051/0004-6361/201731685">Mohammad et al. 2018</a></td>
+          <td>
+            <a target="_blank" href="https://doi.org/10.1051/0004-6361/201321463">Torre et al. 2013</a>
+            <a target="_blank" href="https://doi.org/10.1051/0004-6361/201630295">Pezzotta et al. 2017</a>
+          </td>
         </tr>
         <tr>
           <td>
-            <!-- <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalsdss">SDSS BOSS & eBOSS</button> -->
             <a target="_blank" href="https://www.sdss.org/science/final-bao-and-rsd-measurements">SDSS BOSS eBOSS</a>
+            <div>2000–2020</div>
           </td>
           <td>
             <div class="fimg"><img src="rsd_srcs/BOSSDR11_0.png" class="img-thumbnail" alt="..."></div>
@@ -281,13 +321,15 @@
           <td></td>
           <td><a target="_blank" href="https://doi.org/10.1103/PhysRevD.74.123507">Tegmark et al. 2006</a> .
     			    <a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2012.21779.x">Reid et al. 2012</a> .
-    			    <a target="_blank" href="https://doi.org/10.1093/mnras/stu197">Samushia et al. 2012</a></td>
+    			    <a target="_blank" href="https://doi.org/10.1093/mnras/stu197">Samushia et al. 2012</a>
+          </td>
+          <td></td>
         </tr>
       </tbody>
     </table>
   </div>
   <div class="tab-pane container fade border-left border-right border-bottom" id="ou"><br>
-    <table class="table table-bordered">
+    <table class="table table-bordered  table-hover">
       <thead>
         <tr>
           <th>Project</th>
@@ -315,159 +357,11 @@
 </div> <br>
 </div>
 
-<!--Modal: GAMA-->
-<div class="modal fade" id="modalGAMA" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <!--Content-->
-    <div class="modal-content">
-      <!--Body-->
-      <div class="modal-body mb-0 p-0">
-        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
-          <iframe class="embed-responsive-item" src="http://www.gama-survey.org/"></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
-</div>
-<!--Modal: Name-->
-
-<!--Modal: FastSound-->
-<div class="modal fade" id="modalFastSound" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <!--Content-->
-    <div class="modal-content">
-      <!--Body-->
-      <div class="modal-body mb-0 p-0">
-        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
-          <iframe class="embed-responsive-item" src="http://www.kusastro.kyoto-u.ac.jp/Fastsound/documents.html"></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
-</div>
-<!--Modal: Name-->
-
-<!--Modal: 6dFS-->
-<div class="modal fade" id="modal6dFS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <!--Content-->
-    <div class="modal-content">
-      <!--Body-->
-      <div class="modal-body mb-0 p-0">
-        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
-          <iframe class="embed-responsive-item" src="http://www.6dfgs.net"></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
-</div>
-<!--Modal: Name-->
-
-<!--Modal: Wigglez-->
-<div class="modal fade" id="modalWigglez" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <!--Content-->
-    <div class="modal-content">
-      <!--Body-->
-      <div class="modal-body mb-0 p-0">
-        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
-          <iframe class="embed-responsive-item" src="https://wigglez.swin.edu.au/site/forward.html"></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
-</div>
-<!--Modal: Name-->
-
-<!--Modal: VVDS-->
-<div class="modal fade" id="modalVVDS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <!--Content-->
-    <div class="modal-content">
-      <!--Body-->
-      <div class="modal-body mb-0 p-0">
-        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
-          <iframe class="embed-responsive-item" src="https://cesam.lam.fr/vvds/"></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
-</div>
-<!--Modal: Name-->
-
-<!--Modal: 2dFS-->
-<div class="modal fade" id="modal2dFS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-
-    <!--Content-->
-    <div class="modal-content">
-
-      <!--Body-->
-      <div class="modal-body mb-0 p-0">
-
-        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
-          <iframe class="embed-responsive-item" src="http://www.2dfgrs.net" allowfullscreen></iframe>
-        </div>
-
-      </div>
-
-      <!--Footer-->
-      <!-- <div class="modal-footer justify-content-center">
-        <span class="mr-4">2dFS</span>
-        <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
-      </div> -->
-
-    </div>
-    <!--/.Content-->
-
-  </div>
-</div>
-<!--Modal: Name-->
-
-<!--Modal: SDSS-->
-<div class="modal fade" id="modalsdss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <!--Content-->
-    <div class="modal-content">
-      <!--Body-->
-      <div class="modal-body mb-0 p-0">
-        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
-          <iframe class="embed-responsive-item" src="https://www.sdss.org/science/final-bao-and-rsd-measurements"></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
-</div>
-<!--Modal: Name-->
-
-<!--Modal: VIPERS-->
-<div class="modal fade" id="modalVIPERS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <!--Content-->
-    <div class="modal-content">
-      <!--Body-->
-      <div class="modal-body mb-0 p-0">
-        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half" style="height:100%">
-          <iframe class="embed-responsive-item" src="http://vipers.inaf.it"></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
-</div>
-
-<!--Modal: Name-->
 
 <br>
 <!-- Copyright -->
-<div class="footer-copyright text-center py-3 bg-dark">
-	<p class="text-center text-md-center" style="color:white">© 2020 Copyright:
+<div class="footer-copyright text-center py-3 bg-dark  text-light">
+	<p class="text-center text-md-center" >© 2020 Copyright:
 	<a href="https://jundec.github.io/" style="color:white"> <strong>Junde Chen</strong></a>
 	</p>
 </div>
