@@ -1,0 +1,60 @@
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(srcs/bgbrq.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+  background-size: 100% !important;
+  background-position: center top !important;
+  color: #fff;
+}
+
+.card-title{
+  color: white;
+  background: rgba(0,0,0,0.3);
+  margin: 8rem auto;
+  font-size: 14px;
+}
+.card-title a {
+  color: white;
+  text-decoration: underline;
+}
+.card-title a:hover {
+  color: black;
+  background-color: white;
+  text-decoration: underline;
+}
+.centered-and-cropped { object-fit: cover }
+
+.performers {
+  color: #e62e00;
+  border: none;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.performers:hover{
+  background: #e62e00;
+  color: #fff;
+  text-decoration: none;
+}
+
+.title{
+  padding-top: 300px;
+  padding-bottom: 400px;
+  font-family: serif;
+  font-size: 8em;
+  letter-spacing: -.06em;
+  font-weight: 1000;
+  text-align: center;
+  color: #FFA31A;
+}
+
+.footer{
+  padding-top: 0px;
+  padding-bottom: 300px;
+  font-family: serif;
+  font-size: 8em;
+  letter-spacing: -.06em;
+  font-weight: 1000;
+  text-align: center;
+  color: #fff;
+}
