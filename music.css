@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(srcs/bgbrq.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-attachment: fixed !important;
   background-size: 100% !important;
   background-position: center top !important;
@@ -15,25 +15,25 @@ body {
 }
 .card-title a {
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .card-title a:hover {
   color: black;
-  background-color: white;
-  text-decoration: underline;
+  background-color: #ccff33;
+  text-decoration: none;
 }
 .centered-and-cropped { object-fit: cover }
 
 .performers {
-  color: #e62e00;
+  color: #000;
   border: none;
   font-size: 14px;
   text-transform: capitalize;
 }
 
 .performers:hover{
-  background: #e62e00;
-  color: #fff;
+  background: #ccff33;
+  color: #000;
   text-decoration: none;
 }
 
