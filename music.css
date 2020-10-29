@@ -50,11 +50,11 @@ body {
 
 .footer{
   padding-top: 0px;
-  padding-bottom: 300px;
+  padding-bottom: 100px;
   font-family: serif;
   font-size: 8em;
   letter-spacing: -.06em;
   font-weight: 1000;
   text-align: center;
-  color: #fff;
+  color: #FFA31A;
 }
