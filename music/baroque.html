@@ -1,68 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Baroque</title>
-	<link rel="shortcut icon" type="image/x-icon" href="srcs/galaxy.png">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="music.css">
-</head>
+---
+layout: music
+title: Baroque
+---
 
-<body>
-
-	<nav class="navbar navbar-custom sticky-top navbar-expand-sm navbar-dark bg-dark">
-		<a class="navbar-brand homeicon" href="index.html">&nbsp𐒨𐒧𐒠&nbsp</a>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link home" href="index.html">Home<span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item dropdown astronomy">
-					<a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Astronomy
-					</a>
-					<div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="rsd.html">RSD</a>
-						<a class="dropdown-item" href="#">FMR</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Reviews</a>
-					</div>
-				</li>
-				<li class="nav-item dropdown music">
-					<a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Music
-					</a>
-					<div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="baroque.html">Baroque</a>
-						<a class="dropdown-item" href="#">Classical</a>
-						<a class="dropdown-item" href="#">Romantic</a>
-						<a class="dropdown-item" href="#">Popular</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="aoty.html">AOTY</a>
-					</div>
-				</li>
-				<li class="nav-item active ">
-					<a class="nav-link movie" href="#">Moive<span class="sr-only">(current)</span></a>
-				</li>
-			</ul>
-
-			<!-- searh -->
-			<form method="get" action="http://www.google.com/search" target="_blank">
-				<input type="text" name="q" size="21" maxlength="255" value="" />
-				<input type="submit" value="Search" />
-			</form>
-		</div>
-	</nav>
-
-<div class="title">
+<div class="container pt-5 title">
+  <div class="gallary">
 	<h1>BAROQUE 1600-1750</h1>
+  </div>
 </div>
 
-<div class="container" style="margin-top:30px;background: rgba(242, 242, 242,0.3);">
+<div class="container mt-3" style="margin-top:30px;">
 	<br/>
 	<div class="card-group">
 		<div class="card bg-dark border-0">
@@ -172,25 +119,3 @@
 	BAROQUE 1600-1750
 </h1>
 
-<!-- Copyright -->
-<div class="footer-copyright text-center py-3 bg-dark">
-	<p class="text-center text-md-center" style="color:white">© 2020 Copyright:
-	<a href="https://jundec.github.io/" style="color:white"> <strong>Junde Chen</strong></a>
-	</p>
-</div>
-<!-- Copyright -->
-
-</body>
-</html>
-
-<script>
-// var nystories = document.querySelector("p").offsetTop;
-nystories = 300;
-window.onscroll = function() {
-  if (window.pageYOffset > 0) {
- var opac = (window.pageYOffset / nystories);
-    console.log(opac);
-  document.body.style.background = "linear-gradient(rgba(242, 242, 242, " + opac + "), rgba(242, 242, 242, " + opac + ")), url(srcs/bgbrq.jpg) repeat fixed";
-  }
-}
-</script>

@@ -1,0 +1,84 @@
+body {
+  background: rgba(242, 242, 242, 0.3);
+  background-repeat: repeat;
+  background-attachment: fixed !important;
+  background-size: 100% !important;
+  background-position: center top !important;
+  color: #fff;
+}
+
+.card-title{
+  color: white;
+  background: rgba(0,0,0,0.3);
+  margin: 8rem auto;
+  font-size: 14px;
+}
+.card-title a {
+  color: white;
+  text-decoration: none;
+}
+.card-title a:hover {
+  color: black;
+  background-color: #ccff33;
+  text-decoration: none;
+}
+.centered-and-cropped { object-fit: cover }
+
+.aoty img{
+  transition: .3s all;
+  -webkit-filter: blur(1px) brightness(.5) grayscale(100%);
+  }
+.aoty img:hover{
+  -webkit-filter: blur(0px) brightness(1) grayscale(0%);
+}
+.aoty .overlay {
+  color:#fff;
+  font-size:1.5em;
+  font-weight:bolder;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.performers {
+  color: #000;
+  border: none;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.performers:hover{
+  background: #ccff33;
+  color: #000;
+  text-decoration: none;
+}
+
+.title{
+  background-image: url(/srcs/bgbrq.jpg);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.title h1{
+  padding-top: 100px;
+  padding-bottom: 20px;
+  letter-spacing: -.06em;
+  font-family: serif;
+  font-size: 8em;
+  letter-spacing: -.06em;
+  font-weight: 1000;
+  text-align: center;
+  color: #fff;
+}
+
+.bottom_text{
+  padding-top: 0px;
+  padding-bottom: 20px;
+  font-family: serif;
+  font-size: 8em;
+  letter-spacing: -.06em;
+  font-weight: 1000;
+  text-align: center;
+  color: #FFA31A;
+}
+
