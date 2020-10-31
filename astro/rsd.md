@@ -17,14 +17,26 @@ The accelerating expansion of the Universe.
 
 Q: dark energy or modified gravity?
 
-structure growth rate ($f\sigma_8$)
+different growth history, structure growth rate ($f\sigma_8$)
 
-Redshift Space Distortion (RSD) 
+In observation, can be tested by redshift-space distortion (RSD) 
 
 The observed position of galaxy is distorted by its peculiar velocity.
 
 $$\mathbf{s}=\mathbf{x}+\frac{\mathbf{v}_z}{aH}$$
 
-$\mathbf{v}_z$ is the peculiar velocity along the line of sight direction;
+in which, $\mathbf{v}_z$ is the peculiar velocity along the line of sight direction;
 $H$ is Hubble parameter, $a$ scale factor.
 
+The perturbation theory to solve eom.
+
+
+The statistics, correlation function
+
+$$\xi(\mathbf{r})=\langle\delta(\mathbf{x})\delta(\mathbf{x+r})\rangle$$
+
+and its fourier transformation, power spectrum,
+
+$$P(\mathbf{k})$$
+
+....
