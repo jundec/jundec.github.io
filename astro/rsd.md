@@ -11,6 +11,8 @@ title: RSD
   </div><br/>
 </div><br/>
 
+Far from finished..
+
 This part is a brief introduction about RSD.
 
 The accelerating expansion of the Universe.
@@ -28,6 +30,10 @@ $$\mathbf{s}=\mathbf{x}+\frac{\mathbf{v}_z}{aH}$$
 in which, $\mathbf{v}_z$ is the peculiar velocity along the line of sight direction;
 $H$ is Hubble parameter, $a$ scale factor.
 
+First discovered by Jackson, J. C. 1972's paper,
+[A CRITIQUE OF REES’S THEORY OF PRIMORDIAL GRAVITATIONAL RADIATION](https://ui.adsabs.harvard.edu/abs/arXiv:0810.3908 "Jackson1972")
+now known as Fingers of God effect.
+
 The perturbation theory to solve eom.
 
 
@@ -39,4 +45,8 @@ and its fourier transformation, power spectrum,
 
 $$P(\mathbf{k})$$
 
-....
+estimators,
+
+multiples or wedges
+
+
