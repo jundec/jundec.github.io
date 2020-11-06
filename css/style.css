@@ -8,94 +8,83 @@ body {
   background-repeat:repeat;
 }
 
-a, a:hover, a:focus {
-    text-decoration: none;
-    transition: all 0.1s;
+a,a:hover,a:focus{text-decoration: none;transition: all 0.1s;}
+
+input[type=text]{
+  color:#fff;
+  outline: none;
+  border:none;
+	background-color: transparent;
+}
+input[type=text]::placeholder{
+  font-size:0.88em;
+  color:#708090;
 }
 
-/* header */
+/* header 
 input[type = submit] {
-	color: whitesmoke;
-	background-color: #9939F3;
-	border: 2px solid #9939F3;
+	color: #ff5c33;
+	border: 1px solid #ff5c33;
+	background-color: transparent;
 	cursor: pointer;
 	width: max-content;
 	transition: 0.25s ease;
 }
 input[type = submit]:hover {
-	color: #9939F3;
+	color: #fff;
+	border: 1px solid #fff;
+	}
+*/
+.homeicon {
+  color: #ff5c33;
 	background-color: transparent;
+  border: 2px solid #ff5c33;
+  border-radius: 10px;
+  box-sizing: border-box;
+	}
+.homeicon:hover {
+  color: none;
+	background-color: #ff5c33;
+  border: 2px solid #ff5c33;
 	}
 
 .navbar {
+  height:50px;
   min-height: 20px;
   z-index:1000;
   }
-.navbar .homeicon {
-  color: #ff5c33;
-	font-size: 10px;
-	font-weight: bold;
-  border: 2px solid #ff5c33;
-  border-radius: 8px;
-  box-sizing: border-box;
-	}
-.navbar .homeicon:hover {
-  color: #ffffff;
-  border: 2px solid #ff5c33;
-	background-color: #ff5c33;
-  border-radius: 8px;
-  box-sizing: border-box;
-	}
-.navbar .navbar-nav a {
-  font-weight:normal;
-	}
-.navbar .navbar-nav .nav-item .home {
-  color: #ff5c33;
-	}
-.navbar .navbar-nav .astronomy a {
-  color: #ccff33;
-	}
-.navbar .navbar-nav .astronomy .dropdown-menu a {
-  color: #ccff33;
-	}
-.navbar .navbar-nav .astronomy .dropdown-menu a:hover {
-  color: black;
-  background-color: #ccff33;
-	}
-.navbar .navbar-nav .music a{
-  color: #ffcc00;
-	}
-.navbar .navbar-nav .music .dropdown-menu a {
-  color: #ffcc00;
-	}
-.navbar .navbar-nav .music .dropdown-menu a:hover {
-  color: black;
-  background-color: #ffcc00;
-	}
-.navbar .navbar-nav .nav-item .movie {
-  color: #33ccff;
-	}
+.navbar .navbar-nav .nav-link{color:#fff;font-size:0.8em;}
+.navbar .navbar-nav .home a:hover{color: #ff5c33;}
+.navbar .navbar-nav .astronomy:hover .nav-link{color: #ccff33;}
+.navbar .navbar-nav .astronomy .dropdown-menu a {color: #ccff33;font-size:0.8em;}
+.navbar .navbar-nav .astronomy .dropdown-menu a:hover {color: black;background-color: #ccff33;}
+.navbar .navbar-nav .music:hover .nav-link{ color: #ffcc00;  }
+.navbar .navbar-nav .music .dropdown-menu a {color: #ffcc00;font-size:0.8em;}
+.navbar .navbar-nav .music .dropdown-menu a:hover {color: black;background-color: #ffcc00;}
+.navbar .navbar-nav .movie a:hover{color: #33ccff;}
+
 @media all and (min-width: 992px) {
 .navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
-.navbar .nav-item:hover .nav-link{ color: #fff;  }
-.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
-.navbar .dropdown-menu.fade-up{ top:180%;  }
-.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+.navbar .dropdown-menu.fade-down{ top:10%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+.navbar .dropdown-menu.fade-up{ top:10%;  }
+.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:80%; transform: rotateX(0deg); }
 }
 
 /* footer */
 footer {
 	clear: both;
 	padding: 0 5px;
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  font-size: 0.88em;
 	background-size: 400% 400%;
 	animation: gradient 50s ease infinite;
   z-index:1000;
 }
 footer .container a:link {text-decoration:none;background-color:none;color:#fff}
-footer .container a:visited {text-decoration:none;background-color:#fff;color:#fff}
-footer .container a:hover {text-decoration:none;background-color:#fff;color:#000}
-footer .container a:active {text-decoration:none;background-color:#fff;color:#000}
+footer .container a:visited {text-decoration:none;background-color:none;color:#fff}
+footer .container a:hover {text-decoration:underline;background-color:none;color:#9aa6b1}
+footer .container a:active {text-decoration:none;background-color:none;color:#000}
+/*
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -115,3 +104,4 @@ footer .container a:active {text-decoration:none;background-color:#fff;color:#00
   background-color:transparent;
   text-decoration:none;
   }
+*/

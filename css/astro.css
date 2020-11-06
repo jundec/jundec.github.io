@@ -13,39 +13,12 @@ body{
   width:200px;
 }
 
-.content {
-  background: #fff;
-}
-.content .nav-tabs .nav-item a.active{
-  color: #ff3333;
-  font-weight: bold;
-}
-.content .nav-tabs a{
-  color: gray;
-  font-weight: bold;
-}
-.content .nav-tabs .nav-item a:hover{
-  color: #ff3333;
-  font-weight: bold;
-}
-.tab-content {
-  font-size: .9em;
-}
-.tab-content a{
-  font-weight: bold;
-}
-
 /* SideBar */
 #sidebar {
   position: -webkit-sticky;
   height: 100%;
   z-index: 0;
 }
-
-#sidebar.active {
-  margin-left: -250px;
-}
-
 #sidebar .sidebar-header {
   padding: 10px;
   font-weight: bolder;
@@ -57,17 +30,16 @@ body{
 #sidebar ul.components {
   padding-bottom: 10px;
 }
-
 #sidebar ul li a {
   padding: 10px;
   padding-left: 10px;
-  font-size: .9em;
+  font-size: .88em;
+  font-weight:bold;
   display: block;
-  color: #000;
+  color:#8c99a6;
 }
 #sidebar ul li a:hover {
-  color:#fff;
-  background-color: #ff5c33;
+  color: #ff5c33;
 }
 
 #sidebar ul li ul li a{
@@ -80,26 +52,6 @@ body{
   background-color: transparent;
   font-size:0.8em;
   padding-left:30px;
-}
-
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #ff5c33;
-}
-
-a[data-toggle="collapse"] {
-    position: relative;
-}
-
-a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
-    content: '\e259';
-    display: block;
-    position: absolute;
-    right: 20px;
-    font-family: 'Glyphicons Halflings';
-    font-size: 0.6em;
-}
-a[aria-expanded="true"]::before {
-    content: '\e260';
 }
 
 #topBtn {

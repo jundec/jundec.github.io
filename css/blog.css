@@ -1,0 +1,25 @@
+body{
+  background:#000;
+  color:#fff;
+  }
+
+a{
+  color:#33ccff;
+  }
+
+figure {
+  background-color:#fff;
+  }
+
+article {
+  padding:20px;
+  color:#fff;
+  }
+
+.blog{
+  padding:20px;
+  height:100%;
+  }
+.page-heading{
+  font-weight:bold;
+  }

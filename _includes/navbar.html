@@ -1,45 +1,58 @@
-<header class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
-<div class="container">
-  <a class="navbar-brand homeicon" href="/index.html">&nbsp𐒨𐒧𐒠&nbsp</a>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<header class="navbar sticky-top navbar-expand-sm navbar-dark font-small bg-dark">
+<div class="container text-uppercase font-weight-bold">
+
+  <a class="homeicon ml-2 mr-2" href="/index.html">&nbsp𐒨𐒧𐒠&nbsp</a>
+  <div class="collapse navbar-collapse pt-2">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link home" href="/index.html">Home<span class="sr-only">(current)</span></a>
+
+      <li class="nav-item active home">
+        <div class="text-uppercase text-light font-weight-bold">
+        <a class="nav-link" href="/index.html">home</a>
+        </div>
       </li>
+
       <li class="nav-item dropdown astronomy">
-        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Astronomy
-        </a>
+        <div class="text-uppercase text-light font-weight-bold">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Astronomy</a>
+        </div>
         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/astro/rsd.html">RSD</a>
-          <a class="dropdown-item" href="#">FMR</a>
+          <a class="dropdown-item font-weight-bold" href="/astro/rsd.html">RSD</a>
+          <a class="dropdown-item font-weight-bold" href="#">FMR</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Reviews</a>
+          <a class="dropdown-item font-weight-bold" href="#">Reviews</a>
         </div>
       </li>
+
       <li class="nav-item dropdown music">
-        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Music
-        </a>
+        <div class="text-uppercase text-light font-weight-bold">
+        <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Music</a>
+        </div>
         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/music/baroque.html">Baroque</a>
-          <a class="dropdown-item" href="/music/classical.html">Classical</a>
-          <a class="dropdown-item" href="/music/romantic.html">Romantic</a>
-          <a class="dropdown-item" href="/music/popular.html">Popular</a>
+          <a class="dropdown-item font-weight-bold" href="/music/baroque.html">Baroque</a>
+          <a class="dropdown-item font-weight-bold" href="/music/classical.html">Classical</a>
+          <a class="dropdown-item font-weight-bold" href="/music/romantic.html">Romantic</a>
+          <a class="dropdown-item font-weight-bold" href="/music/popular.html">Popular</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/music/aoty.html">AOTY</a>
+          <a class="dropdown-item font-weight-bold" href="/music/aoty.html">AOTY</a>
         </div>
       </li>
-      <li class="nav-item active ">
-        <a class="nav-link movie" href="/movie.html">Moive<span class="sr-only">(current)</span></a>
+
+      <li class="nav-item active movie">
+        <div class="text-uppercase text-light font-weight-bold">
+        <a class="nav-link" href="/movie.html">Moive</a>
+        </div>
       </li>
     </ul>
 
     <!-- searh -->
-    <form method="get" action="http://www.google.com/search" target="_blank">
-      <input type="text" name="q" size="21" maxlength="255" value="" />
-      <input type="submit" value="Search" />
+    <form method="get" action="http://www.google.com/search" target="_blank" autocomplete="off">
+      <i class="fa fa-search" style="color:#c5ccd3;"></i>
+      <input type="text" name="q" size="16" maxlength="255" placeholder="Google Search" value=""/>
     </form>
+<!--
+      <input style="height:26px; font-size:0.8em;" type="submit" value="SEARCH" />
+-->
+
   </div>
 </div>
 </header>

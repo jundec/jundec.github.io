@@ -1,0 +1,27 @@
+body{
+  background:#000; 
+  }
+
+#cn-map{
+  display:block;
+  top:0;
+  left:0;
+  padding:30px;
+  width: 100%;
+  height: 100%;
+}
+path:hover, circle:hover {
+  stroke: #ff5c33 !important;
+  stroke-width:2px;
+  stroke-linejoin: round;
+  fill: #ff5c33 !important;
+  cursor: pointer;
+}
+.land
+{
+  fill: #CCCCCC;
+  fill-opacity: 1;
+  stroke:white;
+  stroke-opacity: 1;
+  stroke-width:0.5;
+}
