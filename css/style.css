@@ -10,49 +10,31 @@ body {
 
 a,a:hover,a:focus{text-decoration: none;transition: all 0.1s;}
 
-input[type=text]{
+header input[type=text]{
   color:#fff;
   outline: none;
   border:none;
 	background-color: transparent;
 }
-input[type=text]::placeholder{
+header input[type=text]::placeholder{
   font-size:0.88em;
   color:#708090;
 }
 
-/* header 
-input[type = submit] {
-	color: #ff5c33;
-	border: 1px solid #ff5c33;
-	background-color: transparent;
-	cursor: pointer;
-	width: max-content;
-	transition: 0.25s ease;
-}
-input[type = submit]:hover {
-	color: #fff;
-	border: 1px solid #fff;
-	}
-*/
 .homeicon {
-  color: #ff5c33;
-	background-color: transparent;
+  color: #fff;
+	background-color: #ff5c33;
   border: 2px solid #ff5c33;
   border-radius: 10px;
   box-sizing: border-box;
 	}
 .homeicon:hover {
-  color: none;
-	background-color: #ff5c33;
+  color: #ff5c33;
+	background-color: transparent;
   border: 2px solid #ff5c33;
 	}
 
-.navbar {
-  height:50px;
-  min-height: 20px;
-  z-index:1000;
-  }
+.navbar {height:50px;min-height: 20px;z-index:1000;}
 .navbar .navbar-nav .nav-link{color:#fff;font-size:0.8em;}
 .navbar .navbar-nav .home a:hover{color: #ff5c33;}
 .navbar .navbar-nav .astronomy:hover .nav-link{color: #ccff33;}
@@ -96,12 +78,4 @@ footer .container a:active {text-decoration:none;background-color:none;color:#00
 		background-position: 0% 50%;
 	}
 }
-.footer-copyright a{
-  text-decoration:none;
-}
-.footer-copyright a:hover{
-  color:white;
-  background-color:transparent;
-  text-decoration:none;
-  }
 */
