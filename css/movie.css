@@ -1,7 +1,3 @@
-body {
-  background: #000;
-}
-
 .centered-and-cropped { object-fit: cover }
 
 @keyframes display {
@@ -30,7 +26,7 @@ body {
 .pic-ctn {
   padding-top:100px;
   width: 100%;
-  height: 1000px;
+  height: 600px;
 }
 
 .pic-ctn .card {

@@ -1,49 +1,69 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
-	background: url(/srcs/bgi.jpg) no-repeat;
+	background: #fff url(/srcs/bgi_k.jpg) no-repeat;
   background-size:100% 100%;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   background-attachment:fixed;
   background-repeat:repeat;
+  height:100%;
+  min-height:100vh;
+  position:relative;
 }
 
-a,a:hover,a:focus{text-decoration: none;transition: all 0.1s;}
+.card a{color:#000; text-decoration:underline;}
+.card a:hover,a:focus{color:#ff5c33;text-decoration:none;transition: all 0.1s;}
 
-header input[type=text]{
+.table a{color:#fff; font-size:0.88rem;}
+.table a:hover{color:#9aa6b1;}
+.table ul{list-style-type:circle;}
+
+.list-group{
+ font-size:0.88rem;
+  }
+
+.navbar{
+  border-bottom:1px solid #708090;
+  }
+.navbar .homeicon {
+  font-size:14px;
+  color: #fff;
+	background-color: #ff5c33;
+  border: 2px solid #ff5c33;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-radius: 0px;
+  box-sizing: border-box;
+	}
+.navbar .homeicon:hover {
+  color: #ff5c33;
+	background-color: #fff;
+  border: 2px solid #ff5c33;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+	}
+
+.navbar {height:50px;min-height: 20px;z-index:1000;}
+.navbar .navbar-nav .nav-link{color:#fff;font-size:0.8rem;}
+.navbar .navbar-nav .home a:hover{color: #ff5c33;}
+.navbar .navbar-nav .astronomy:hover .nav-link{color: #ccff33;}
+.navbar .navbar-nav .astronomy .dropdown-menu a {color: #ccff33;font-size:0.8rem;}
+.navbar .navbar-nav .astronomy .dropdown-menu a:hover {color: black;background-color: #ccff33;}
+.navbar .navbar-nav .music:hover .nav-link{ color: #ffcc00;  }
+.navbar .navbar-nav .music .dropdown-menu a {color: #ffcc00;font-size:0.8rem;}
+.navbar .navbar-nav .music .dropdown-menu a:hover {color: black;background-color: #ffcc00;}
+.navbar .navbar-nav .movie a:hover{color: #33ccff;}
+
+.navbar input[type=text]{
   color:#fff;
   outline: none;
   border:none;
 	background-color: transparent;
 }
-header input[type=text]::placeholder{
-  font-size:0.88em;
-  color:#708090;
+.navbar input[type=text]::placeholder{
+  font-size:0.88rem;
+  color:#9aa6b1;
 }
-
-.homeicon {
-  color: #fff;
-	background-color: #ff5c33;
-  border: 2px solid #ff5c33;
-  border-radius: 10px;
-  box-sizing: border-box;
-	}
-.homeicon:hover {
-  color: #ff5c33;
-	background-color: transparent;
-  border: 2px solid #ff5c33;
-	}
-
-.navbar {height:50px;min-height: 20px;z-index:1000;}
-.navbar .navbar-nav .nav-link{color:#fff;font-size:0.8em;}
-.navbar .navbar-nav .home a:hover{color: #ff5c33;}
-.navbar .navbar-nav .astronomy:hover .nav-link{color: #ccff33;}
-.navbar .navbar-nav .astronomy .dropdown-menu a {color: #ccff33;font-size:0.8em;}
-.navbar .navbar-nav .astronomy .dropdown-menu a:hover {color: black;background-color: #ccff33;}
-.navbar .navbar-nav .music:hover .nav-link{ color: #ffcc00;  }
-.navbar .navbar-nav .music .dropdown-menu a {color: #ffcc00;font-size:0.8em;}
-.navbar .navbar-nav .music .dropdown-menu a:hover {color: black;background-color: #ffcc00;}
-.navbar .navbar-nav .movie a:hover{color: #33ccff;}
 
 @media all and (min-width: 992px) {
 .navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
@@ -56,10 +76,11 @@ header input[type=text]::placeholder{
 footer {
 	clear: both;
 	padding: 0 5px;
-  font-size: 0.88em;
+  font-size: 0.88rem;
 	background-size: 400% 400%;
 	animation: gradient 50s ease infinite;
   z-index:1000;
+  border-top:1px solid #708090;
 }
 footer .container a:link {text-decoration:none;background-color:none;color:#fff}
 footer .container a:visited {text-decoration:none;background-color:none;color:#fff}

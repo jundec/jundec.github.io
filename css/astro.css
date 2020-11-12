@@ -1,75 +1,43 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body{
-  background: #fff;
-}
+/* SideBar */
+#sidebar {position:-webkit-sticky;height:100%;width:100%;z-index:0;min-height:100vh;}
+#sidebar .sidebar-header{padding:10px; font-weight:bolder;}
+#sidebar .sidebar-header h3{color:#ff5c33; border-bottom:1px solid;}
+#sidebar ul li a{text-decoration:none;padding-top:10px;padding-bottom:10px; padding-left:10px;font-size:0.88em; display:block; color:#8c99a6;}
+#sidebar ul li a:hover{color:#ff5c33;}
+#sidebar ul li ul li a{font-size:0.8em; padding-left:20px;}
+#sidebar ul li ul li a:hover{color:#ff5c33;}
 
 .top-banner {
   background: url(/srcs/bgi.jpg);
   background-size: cover;
 }
 
+a{color:#3399ff; font-size:0.88rem;}
+a:hover{color:#ff5c33;}
+.table a{color:#3399ff; font-size:0.88rem;}
+.table a:hover{color:#ff5c33;}
+
 .fimg img{
   width:200px;
-}
-
-/* SideBar */
-#sidebar {
-  position: -webkit-sticky;
-  height: 100%;
-  z-index: 0;
-}
-#sidebar .sidebar-header {
-  padding: 10px;
-  font-weight: bolder;
-}
-#sidebar .sidebar-header h3{
-  color:#ff5c33;
-  border-bottom:1px solid;
-}
-#sidebar ul.components {
-  padding-bottom: 10px;
-}
-#sidebar ul li a {
-  padding: 10px;
-  padding-left: 10px;
-  font-size: .88em;
-  font-weight:bold;
-  display: block;
-  color:#8c99a6;
-}
-#sidebar ul li a:hover {
-  color: #ff5c33;
-}
-
-#sidebar ul li ul li a{
-  font-size:0.8em;
-  padding-left:20px;
-}
-
-#sidebar ul li ul li a:hover{
-  color: #ff5c33;
-  background-color: transparent;
-  font-size:0.8em;
-  padding-left:30px;
 }
 
 #topBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 30%; /* Place the button at the bottom of the page */
-  right: 10%; /* Place the button 30px from the right */
+  right: 5%; /* Place the button 30px from the right */
   z-index: 1001; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: gray; /* Set a background color */
+  background-color: #000; /* Set a background color */
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  padding: 10px; /* Some padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 22px; /* Increase font size */
 }
-
 #topBtn:hover {
   background-color: #ff5c33; /* Add a dark-grey background on hover */
 }

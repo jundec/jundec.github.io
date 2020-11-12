@@ -1,6 +1,6 @@
 ---
 layout: rsd 
-title: RSD
+title: Ongoing/Upcoming Redshift Surveys
 ---
 <style>
 #sidebar ul li .collapse{
@@ -13,14 +13,6 @@ color:#000;
 color:#ff5c33;
 }
 </style>
-
-<div class="container top-banner border bg-light">
-  <br/>
-  <h3 align="center">Ongoing/Upcoming Redshift Surveys</h3>
-  <div align="center"><a target="_blank" href="index.html">
-    <img width="100%" height="10px" src="/astro/srcs/header_wave.png"></a>
-  </div>
-</div><br/>
 
 <table class="table table-bordered  table-hover">
   <thead>
