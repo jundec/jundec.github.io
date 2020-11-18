@@ -8,7 +8,7 @@ categories: misc
 *13th century Franciscan hymn*
 
 <div class="mb-3">
-<img src="http://p2.music.126.net/oDTYi5fJ6HVhS6UN35729A==/109951164758219495.jpg" style="width: 400px;height: 400px;"/>
+<img src="http://p2.music.126.net/oDTYi5fJ6HVhS6UN35729A==/109951164758219495.jpg" style="width: 300px;height: 300px;"/>
 </div>
 
 Stabat Mater dolorosa  
@@ -51,12 +51,10 @@ Fac ut portem Christi mortem,
 passionis fac consortem,  
 et plagas recolere.  
 
-<div>
-<audio controls autoplay>
+<audio controls>
 <source src="http://music.163.com/song/media/outer/url?id=1427368509.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
-</div>
 
 Inflammatus et accensus  
 per te, Virgo, sim defensus  
