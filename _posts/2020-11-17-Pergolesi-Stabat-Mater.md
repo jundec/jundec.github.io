@@ -7,10 +7,9 @@ categories: misc
 ***for soprano and alto solo***
 *13th century Franciscan hymn*
 
-<div>
+<div class="mb-3">
 <img src="http://p2.music.126.net/oDTYi5fJ6HVhS6UN35729A==/109951164758219495.jpg" style="width: 400px;height: 400px;"/>
 </div>
-
 
 Stabat Mater dolorosa  
 Iuxta crucem lacrimosa  
@@ -53,7 +52,7 @@ passionis fac consortem,
 et plagas recolere.  
 
 <div>
-<audio controls>
+<audio controls autoplay>
 <source src="http://music.163.com/song/media/outer/url?id=1427368509.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
