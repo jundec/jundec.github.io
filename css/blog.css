@@ -3,23 +3,13 @@ body{
   color:#fff;
   }
 
-a{
-  color:#33ccff;
-  }
+.post-list li{color:#ff3c55;}
+.post-list li .post-meta {color:#fff;}
+.post-list a {color:#fff;}
+.post-list a:hover {color:#ff5c33; text-decoration:none;}
+.post-link {display:block;}
 
-figure {
-  background-color:#fff;
-  }
+article {padding:20px;color:#fff;}
+article .post-title {color:#fff;}
+time {font-weight:bold;color:#fff;}
 
-article {
-  padding:20px;
-  color:#fff;
-  }
-
-.blog{
-  padding:20px;
-  height:100%;
-  }
-.page-heading{
-  font-weight:bold;
-  }

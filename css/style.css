@@ -46,13 +46,16 @@ body {
 .navbar {height:50px;min-height: 20px;z-index:1000;}
 .navbar .navbar-nav .nav-link{color:#fff;font-size:0.8rem;}
 .navbar .navbar-nav .home a:hover{color: #ff5c33;}
-.navbar .navbar-nav .astronomy:hover .nav-link{color: #ccff33;}
-.navbar .navbar-nav .astronomy .dropdown-menu a {color: #ccff33;font-size:0.8rem;}
-.navbar .navbar-nav .astronomy .dropdown-menu a:hover {color: black;background-color: #ccff33;}
+.navbar .navbar-nav .astronomy:hover .nav-link{color: #33ccff;}
+.navbar .navbar-nav .astronomy .dropdown-menu {background-color: #33ccff;}
+.navbar .navbar-nav .astronomy .dropdown-menu a {color: #000;font-size:0.8rem;}
+.navbar .navbar-nav .astronomy .dropdown-menu a:hover {color:#33ccff;background-color:#000;}
 .navbar .navbar-nav .music:hover .nav-link{ color: #ffcc00;  }
-.navbar .navbar-nav .music .dropdown-menu a {color: #ffcc00;font-size:0.8rem;}
-.navbar .navbar-nav .music .dropdown-menu a:hover {color: black;background-color: #ffcc00;}
-.navbar .navbar-nav .movie a:hover{color: #33ccff;}
+.navbar .navbar-nav .music .dropdown-menu {background-color: #ffcc00;font-size:0.8rem;}
+.navbar .navbar-nav .music .dropdown-menu a {color: #000;font-size:0.8rem;}
+.navbar .navbar-nav .music .dropdown-menu a:hover {color: #ffcc00;background-color: #000;}
+.navbar .navbar-nav .movie a:hover{color: #ccff33;}
+.navbar .navbar-nav .golb a:hover{color: #cc99ff;}
 
 .navbar input[type=text]{
   color:#fff;
@@ -65,11 +68,34 @@ body {
   color:#9aa6b1;
 }
 
-@media all and (min-width: 992px) {
+@media all and (min-width: 576px) {
 .navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
 .navbar .dropdown-menu.fade-down{ top:10%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
 .navbar .dropdown-menu.fade-up{ top:10%;  }
 .navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:80%; transform: rotateX(0deg); }
+}
+
+.offcanvas-header{ display:none; }
+
+@media all and  (max-width: 576px) {
+  .offcanvas-header{ display:block; }
+  .navbar-collapse {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #292b2c;
+    transition: visibility .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  }
+  .navbar-collapse.show {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
 }
 
 /* footer */
@@ -79,7 +105,7 @@ footer {
   font-size: 0.88rem;
 	background-size: 400% 400%;
 	animation: gradient 50s ease infinite;
-  z-index:1000;
+  z-index:100;
   border-top:1px solid #708090;
 }
 footer .container a:link {text-decoration:none;background-color:none;color:#fff}
