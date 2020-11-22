@@ -33,20 +33,20 @@ time {font-weight:bold;color:#fff;}
   padding:20px;
   text-align:center;
   font-weight:bold;
-  font-size:10rem;
+  font-size:4rem;
   text-transform:uppercase;
   display:block;
   border-bottom: 3px solid #ff5c33;
   }
 @media (min-width: 544px) {
-  .page-heading {font-size:3rem;}
+  .page-heading {font-size:4rem;}
 }
 @media (min-width: 768px) {
-  .page-heading {font-size:5rem;}
+  .page-heading {font-size:6rem;}
 }
 @media (min-width: 992px) {
-  .page-heading {font-size:7rem;}
+  .page-heading {font-size:8rem;}
 }
 @media (min-width: 1200px) {
-  .page-heading {font-size:9rem;}
+  .page-heading {font-size:10rem;}
 }
