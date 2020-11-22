@@ -46,11 +46,12 @@ body {
 .navbar {height:50px;min-height: 20px;z-index:1000;}
 .navbar .navbar-nav .nav-link{color:#fff;font-size:0.8rem;}
 .navbar .navbar-nav .home a:hover{color: #ff5c33;}
-.navbar .navbar-nav .astronomy a:hover, a:active, a:focus{color: #33ccff;outline:none;}
+.navbar .navbar-nav .astronomy a:hover,a:active, a:focus{color: #33ccff;outline:none;}
+.navbar .navbar-nav .astronomy:hover .nav-link{color: #33ccff;outline:none;}
 .navbar .navbar-nav .astronomy .dropdown-menu {background-color: #33ccff;}
 .navbar .navbar-nav .astronomy .dropdown-menu a {color: #000;font-size:0.8rem;}
 .navbar .navbar-nav .astronomy .dropdown-menu a:hover {color:#33ccff;background-color:#000;}
-.navbar .navbar-nav .music a:hover, a:active, a:focus{color: #ffcc00;outline:none;}
+.navbar .navbar-nav .music:hover .nav-link{ color: #ffcc00;outline:none;}
 .navbar .navbar-nav .music .dropdown-menu {background-color: #ffcc00;font-size:0.8rem;}
 .navbar .navbar-nav .music .dropdown-menu a {color: #000;font-size:0.8rem;}
 .navbar .navbar-nav .music .dropdown-menu a:hover {color: #ffcc00;background-color: #000;}
