@@ -1,5 +1,27 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height:100vh;
+  height: 100%;
+  z-index: -10;
+  background: url(/srcs/bgi_k.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+  height: 100%;
+  min-height:100vh;
+  }
+/*
 body {
 	background: #fff url(/srcs/bgi_k.jpg) no-repeat;
   background-size:100% 100%;
@@ -10,6 +32,7 @@ body {
   min-height:100vh;
   position:relative;
 }
+*/
 
 .card a{color:#000; text-decoration:underline;}
 .card a:hover,a:focus{color:#ff5c33;text-decoration:none;transition: all 0.1s;}
