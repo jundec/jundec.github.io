@@ -39,14 +39,14 @@ time {font-weight:bold;color:#fff;}
   border-bottom: 3px solid #ff5c33;
   }
 @media (min-width: 544px) {
-  .page-heading {font-size:4rem;}
+  .page-heading {font-size:3rem;}
 }
 @media (min-width: 768px) {
-  .page-heading {font-size:6rem;}
+  .page-heading {font-size:5rem;}
 }
 @media (min-width: 992px) {
-  .page-heading {font-size:8rem;}
+  .page-heading {font-size:7rem;}
 }
 @media (min-width: 1200px) {
-  .page-heading {font-size:10rem;}
+  .page-heading {font-size:9rem;}
 }
