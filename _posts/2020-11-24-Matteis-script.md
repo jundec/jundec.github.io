@@ -7,8 +7,8 @@ title:  Diverse bizzarie sopra la vecchia sarabanda o pur ciaccona
 Your browser does not support the audio element.
 </audio>
 Performed by ***Gli Incogniti & Amandine Beyer***<br/>
-In album: ***Nicola Matteis: False Consonances of Melancholy (30th Aug 2019)***<br/>
-(*Only avaliable in China*)<br/>
+In album: ***Nicola Matteis: False Consonances of Melancholy*** (30th Aug 2019)<br/>
+(*Only avaliable in Mainland China*)<br/>
 <br/>
 <img style="width:100%" src="/srcs/scores/PMLP203972-Matteis_Diverse_Bizzarrie_sopra_la_Vecchia_Sarabanda_watermark_pdf_0000.jpg">
 <img style="width:100%" src="/srcs/scores/PMLP203972-Matteis_Diverse_Bizzarrie_sopra_la_Vecchia_Sarabanda_watermark_pdf_0001.jpg">
