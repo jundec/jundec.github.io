@@ -1,5 +1,5 @@
 body:before {
-  background: rgba(242, 242, 242, 0.3);
+  background: url(/srcs/scores/PMLP203972-Matteis_Diverse_Bizzarrie_sopra_la_Vecchia_Sarabanda_watermark_pdf_0000.jpg);
   background-repeat: repeat;
   background-attachment: fixed !important;
   background-size: 100% !important;
@@ -28,6 +28,7 @@ body:before {
   font-weight: 1000;
   text-align: center;
   color: #FFA31A;
+  text-shadow: 4px 4px gray;
 }
 @media (min-width: 544px) {  
   .title h1 {font-size:4rem;}
