@@ -50,3 +50,9 @@ time {font-weight:bold;color:#fff;}
 @media (min-width: 1200px) {
   .page-heading {font-size:10rem;}
 }
+
+.post-content li{color:#fff;}
+.post-content a {color:#fff;}
+.post-content a:hover {color:#ff5c33; text-decoration:none;}
+.post-content {display:block;padding-bottom:20px;}
+
