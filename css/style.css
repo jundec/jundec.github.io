@@ -125,7 +125,7 @@ body {
 footer {
 	clear: both;
 	padding: 0 5px;
-  font-size: 0.88rem;
+  font-size: 0.8rem;
 	background-size: 400% 400%;
 	animation: gradient 50s ease infinite;
   z-index:100;

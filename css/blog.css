@@ -19,7 +19,7 @@ body{
   }
 
 .post-list li{color:#ff3c55;}
-.post-list li .post-meta {color:#000;}
+.post-list li .post-meta {color:#000;font-size:0.9rem;}
 .post-list a {color:#000;}
 .post-list a:hover {color:#ff5c33; text-decoration:none;}
 .post-link {display:block;padding-bottom:20px;}
@@ -51,7 +51,7 @@ time {font-weight:bold;color:#000;}
 }
 
 .post-content li{color:#000;}
-.post-content a {color:silver;font-style: italic;font-size:0.9em;}
+.post-content a {color:silver;font-style: italic;font-size:0.9rem;}
 .post-content a:hover {color:#ff5c33; text-decoration:none;}
 .post-content {display:block;padding-bottom:20px;}
 
