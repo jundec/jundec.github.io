@@ -7,10 +7,6 @@
 .table a:hover{color:#ff5c33;}
 .table ul{list-style-type:circle;}
 
-.list-group{
- font-size:0.88rem;
-  }
-
 .navbar{
   border-top:3px solid #ff5c33;
   border-bottom:1px solid #ddd;

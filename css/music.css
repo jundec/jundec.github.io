@@ -1,11 +1,3 @@
-body:before {
-  background: url(/srcs/scores/PMLP203972-Matteis_Diverse_Bizzarrie_sopra_la_Vecchia_Sarabanda_watermark_pdf_0000.jpg);
-  background-repeat: repeat;
-  background-attachment: fixed !important;
-  background-size: 100% !important;
-  background-position: center top !important;
-}
-
 .title{
   background-image: url(/srcs/bgbrq.jpg);
   background-size: 100%;
@@ -13,7 +5,7 @@ body:before {
 }
 .title h1{
   padding-top: 100px;
-  padding-bottom: 20px;
+  padding-bottom: 120px;
   letter-spacing: -.06em;
   font-family: "Times New Roman", Times, serif;
   letter-spacing: -.06em;
@@ -28,7 +20,7 @@ body:before {
   font-weight: 1000;
   text-align: center;
   color: #FFA31A;
-  text-shadow: 4px 4px gray;
+  text-shadow: 3px 3px #ff5c33;
 }
 @media (min-width: 544px) {  
   .title h1 {font-size:4rem;}
@@ -47,22 +39,20 @@ body:before {
   .bottom_text {font-size:8rem;}
 }
 
-.card-title{
-  color: white;
-  background: rgba(0,0,0,0.3);
-  margin: 8rem auto;
-  font-size: 14px;
-}
-.card-title a {
-  color: white;
-  text-decoration: none;
-}
-.card-title a:hover {
-  color: black;
-  background-color: #ccff33;
-  text-decoration: none;
-}
 .centered-and-cropped { object-fit: cover }
+.card{
+  transition: .3s all;
+  -webkit-filter: blur(0px) brightness(1) grayscale(0%);
+  }
+.card:hover img{
+  -webkit-filter: brightness(.5) grayscale(100%);
+}
+.card {color:transparent;}
+.card a{color:transparent;}
+.card:hover h4{color:#ff5c33;}
+.card:hover{color:white;}
+.card:hover a{color:white;text-decoration:none;font-style:italic;}
+.card:hover a:hover{color:silver;}
 
 .aoty img{
   transition: .3s all;
