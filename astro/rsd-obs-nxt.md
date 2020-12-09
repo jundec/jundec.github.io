@@ -6,9 +6,6 @@ title: Ongoing/Upcoming Redshift Surveys
 #sidebar ul li .collapse{
 display:block;
 }
-#sidebar ul li .observations{
-color:#000;
-}
 #sidebar ul li .collapse .ongoing{
 color:#ff5c33;
 }

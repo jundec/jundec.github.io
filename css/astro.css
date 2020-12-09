@@ -1,30 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body:before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  background:#fff;
-  -webkit-background-size: auto,cover;
-  -moz-background-size: auto,cover;
-  -o-background-size: auto,cover;
-  background-size: auto,cover;
-}
-
-body{
-  color:#000;
-  }
-
 /* SideBar */
 #sidebar {position:-webkit-sticky;height:100%;width:100%;z-index:0;min-height:100vh;}
-#sidebar .sidebar-header{padding:10px; font-weight:bolder;}
-#sidebar .sidebar-header h3{color:#ff5c33; border-bottom:1px solid;}
-#sidebar ul li a{text-decoration:none;padding-top:10px;padding-bottom:10px; padding-left:10px;font-size:0.88em; display:block; color:#8c99a6;}
+#sidebar .sidebar-header{padding:10px;}
+#sidebar .sidebar-header h3{
+  color:#ff5c33;
+  font-weight:bolder; 
+  border-bottom:1px solid;
+  }
+#sidebar ul li a{
+  text-decoration:none;
+  padding-top:10px;
+  padding-bottom:10px; 
+  padding-left:10px;
+  font-size:0.88em; 
+  display:block; 
+  color:#000;
+  }
 #sidebar ul li a:hover{color:#ff5c33;}
 #sidebar ul li ul li a{font-size:0.8em; padding-left:20px;}
 #sidebar ul li ul li a:hover{color:#ff5c33;}
@@ -34,10 +26,10 @@ body{
   background-size: cover;
 }
 
-.content a{color:#000; text-decoration:underline;}
-.content a:hover{color:#ff5c33;}
-.content .table a{color:#000; text-decoration:underline;}
-.content .table a:hover{color:#ff5c33;}
+.content a{color:gray;font-style: italic;font-size:0.9rem;}
+.content a:hover{color:#ff5c33;text-decoration:none}
+.content .table a{color:gray;font-style: italic;font-size:0.9rem;}
+.content .table a:hover{color:#ff5c33;text-decoration:none}
 
 .fimg img{
   width:200px;
