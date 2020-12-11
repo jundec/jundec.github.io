@@ -1,17 +1,3 @@
-.title{
-  background-image: url(/srcs/bgbrq.jpg);
-  background-size: 100%;
-  background-attachment: fixed;
-}
-.title h1{
-  padding-top: 100px;
-  padding-bottom: 120px;
-  letter-spacing: -.06em;
-  font-family: "Times New Roman", Times, serif;
-  letter-spacing: -.06em;
-  font-weight: 1000;
-  color: #fff;
-}
 .bottom_text{
   padding-top: 0px;
   padding-bottom: 20px;
@@ -19,8 +5,8 @@
   letter-spacing: -.06em;
   font-weight: 1000;
   text-align: center;
-  color: #FFA31A;
-  text-shadow: 3px 3px #ff5c33;
+  color: #ffa31a;
+  text-shadow: 2px 2px 0px #ff5c33, 5px 4px 0px rgba(0,0,0,0.15);
 }
 @media (min-width: 544px) {  
   .title h1 {font-size:4rem;}
@@ -40,19 +26,20 @@
 }
 
 .centered-and-cropped { object-fit: cover }
+
 .card{
   transition: .3s all;
   -webkit-filter: blur(0px) brightness(1) grayscale(0%);
   }
 .card:hover img{
-  -webkit-filter: brightness(.5) grayscale(100%);
+  -webkit-filter: blur(1px) brightness(.5) grayscale(100%);
 }
 .card {color:transparent;}
 .card a{color:transparent;}
 .card:hover h4{color:#ff5c33;}
 .card:hover{color:white;}
-.card:hover a{color:white;text-decoration:none;font-style:italic;}
-.card:hover a:hover{color:silver;}
+.card:hover a{color:white;text-decoration:none;font-size:0.8rem;}
+.card:hover a:hover{color:#ff5c33;}
 
 .aoty img{
   transition: .3s all;
@@ -72,14 +59,13 @@
 
 .performers {
   color: #000;
-  border: none;
+  border:none;
   font-size: 14px;
   text-transform: capitalize;
 }
 
 .performers:hover{
-  background: #ccff33;
-  color: #000;
+  color: #ff5c33;
   text-decoration: none;
 }
 
