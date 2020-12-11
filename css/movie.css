@@ -15,11 +15,6 @@ body:before {
   background-size: cover;
 }
 
-body{
-  height: 100%;
-  min-height:100vh;
-  }
-
 .centered-and-cropped { object-fit: cover }
 
 @keyframes display {

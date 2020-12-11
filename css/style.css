@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+body{
+  height: 100%;
+  min-height:100vh;
+  }
+
 .card a{color:#000; text-decoration:underline;}
 .card a:hover,a:focus{color:#ff5c33;text-decoration:none;transition: all 0.1s;}
 
