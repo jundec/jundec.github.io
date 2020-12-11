@@ -1,7 +1,3 @@
-body{
-  background:#000; 
-  }
-
 #cn-map{
   display:block;
   top:0;
@@ -11,17 +7,17 @@ body{
   height: 100%;
 }
 path:hover, circle:hover {
-  stroke: #ff5c33 !important;
-  stroke-width:2px;
+  stroke:#aaa !important;
+  stroke-width:1px;
   stroke-linejoin: round;
-  fill: #ff5c33 !important;
+  fill: #ffde00 !important;
   cursor: pointer;
 }
 .land
 {
-  fill: #CCCCCC;
+  fill: #eee;
   fill-opacity: 1;
-  stroke:white;
+  stroke:#aaa;
   stroke-opacity: 1;
-  stroke-width:0.5;
+  stroke-width:0.5px;
 }

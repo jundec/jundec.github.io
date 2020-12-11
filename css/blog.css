@@ -36,3 +36,4 @@ time {font-weight:bold;color:#000;}
 .post-content a:hover {color:#ff5c33; text-decoration:none;}
 .post-content {display:block;padding-bottom:20px;}
 
+.post-header time{font-weight:bold;color:silver;font-size:0.8rem;}
