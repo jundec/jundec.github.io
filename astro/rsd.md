@@ -15,9 +15,9 @@ In observation, to distinguish them,
 one can test the structure growth rate ($f\sigma_8$) through 
 the redshift-space distortion (RSD) effect.
 
-The observed position of the galaxy is distorted by its peculiar velocity along the line of sight.
+The observed position of the galaxy is distorted by its peculiar velocity along the line of sight.  
 
-$$\mathbf{s}=\mathbf{x}+\frac{\mathbf{v}_z}{aH}$$
+$$\mathbf{s}=\mathbf{x}+\frac{\mathbf{v}_z}{aH}$$  
 
 Here, $\mathbf{x}$ is the real space position, 
 $\mathbf{s}$ is the distorted position in redshift space,
@@ -32,9 +32,9 @@ The very sparse distributed galaxies already exhibit a directional arrangement a
 
 The perturbation theory to solve eom.
 
-The statistics, correlation function
+The statistics, correlation function  
 
-$$\xi(\mathbf{r})=\langle\delta(\mathbf{x})\delta(\mathbf{x+r})\rangle$$
+$$\xi(\mathbf{r})=\langle\delta(\mathbf{x})\delta(\mathbf{x+r})\rangle$$  
 
 and its fourier transformation, power spectrum,
 
