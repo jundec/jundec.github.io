@@ -9,6 +9,17 @@ layout: default
 
   {{ content }}
 
+<!--
+  <div class="text-center font-weight-bold" style="text-transform:uppercase;">Categories</div>
+  <div class="categories_list text-center">
+  {% for category in site.categories %}
+  {% capture category_name %}{{ category | first }}
+  {% endcapture %}
+  {{ category_name }}
+  {% endfor %}
+  </div>
+--!>
+
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
   {% else %}

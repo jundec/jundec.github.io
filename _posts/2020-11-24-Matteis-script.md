@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Diverse bizzarie Sopra la Vecchia Sarabanda o pur Ciaccona
+categories: music
 ---
 <audio controls>
 <source src="http://music.163.com/song/media/outer/url?id=1427949776.mp3" type="audio/mpeg">

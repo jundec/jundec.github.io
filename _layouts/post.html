@@ -26,7 +26,19 @@ layout: default
             <span class="p-author h-card">{{ author }}</span></span>
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
-      {%- endif -%}</p>
+      {%- endif -%}
+
+      <br/>
+      {% if post %}
+        {% assign categories = post.categories %}
+      {% else %}
+        {% assign categories = page.categories %}
+      {% endif %}
+      {% for category in categories %}
+      <time>Theme: {{category}}</time>
+      {% unless forloop.last %}&nbsp;{% endunless %}
+      {% endfor %}</p>
+
   </header>
 
   <div class="post-content e-content">
