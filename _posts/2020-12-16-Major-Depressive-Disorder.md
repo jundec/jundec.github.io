@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Major Depressive Disorder
+categories: psychology
 ---
 
 Excerpted From: ***Diagnostic and Statistical Manual of Mental Disorders (DSM-5)***  
