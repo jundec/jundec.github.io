@@ -29,5 +29,7 @@ categories: Psychology
 > but to select the part, belongs to another.**  
 *English translated by George Long, 1890*
 
+我们登上并非我们所选择的舞台，演出并非我们所选择的剧本。
+
 <http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0235%3Atext%3Denc%3Achapter%3D17>
 
