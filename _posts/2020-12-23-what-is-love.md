@@ -4,14 +4,30 @@ title: What is Love?
 categories: Psychology
 ---
 
-<div>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1437345446&auto=1&height=66"></iframe>
-</div>
+<audio controls>
+<source src="http://music.163.com/song/media/outer/url?id=1323284660.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
 
-爱一个人意味着暴露自己的脆弱,给了另一个人一个摧毁你的可能性  
-人类的理性是有限的  
-爱是不朽的,永恒的  
-爱是为了追求永恒的美  
+**Tchaikovsky - Op.6-5 Why?**  
+
+> Why has the sumptuous rose  
+> Grown pale in spring?  
+> Why is the blue violet so mute  
+> Under the green grass?  
+> Why does the little bird’s song  
+> Sound so sad as it rises up to heaven?  
+> Why does the dew hang over the meadows  
+> Like a mourning veil?  
+>   
+> Why is the morning sun in the sky  
+> Cold and dark, as in winter?  
+> Why is the earth so damp  
+> And gloomier than the grave itself?  
+> Why do I grow sadder  
+> And sicker each day?  
+> Why, oh tell me why, did you leave me  
+> And forget me?  
 
 > **μέμνησο, ὅτι ὑποκριτὴς εἶ δράματος, οἵου ἂν θέλῃ ὁ διδάσκαλος: 
 > ἂν βραχύ, βραχέος: ἂν μακρόν, μακροῦ: 
@@ -19,17 +35,5 @@ categories: Psychology
 > ἂν ἄρχοντα, ἂν ἰδιώτην. σὸν γὰρ τοῦτ᾽ ἔστι, 
 > τὸ δοθὲν ὑποκρίνασθαι πρόσωπον καλῶς: ἐκλέξασθαι δ᾽ αὐτὸ ἄλλου.**  
 *Epicteti Dissertationes ab Arriano digestae. Epictetus. Heinrich Schenkl. editor. Leipzig. B. G. Teubner. 1916.*
-
-> **Remember that thou art an actor in a play, 
-> of such a kind as the teacher (author) may choose; 
-> if short, of a short one; if long, of a long one; 
-> if he wishes you to act the part of a poor man, see that you act the part naturally; 
-> if the part of a lame man, of a magistrate, of a private person, (do the same). 
-> For this is your duty, to act well the part that is given to you; 
-> but to select the part, belongs to another.**  
-*English translated by George Long, 1890*
-
-我们登上并非我们所选择的舞台，演出并非我们所选择的剧本。
-
 <http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0235%3Atext%3Denc%3Achapter%3D17>
 
