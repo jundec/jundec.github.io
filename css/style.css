@@ -18,20 +18,22 @@ body{
   }
 .navbar .homeicon {
   font-size:14px;
-  color: #fff;
-	background-color: #ff5c33;
-  border: 2px solid #ff5c33;
-  border-bottom: 2px solid #000;
-  border-right: 2px solid #000;
-  border-radius: 0px;
-  box-sizing: border-box;
+  color: #ff5c33;
+  #color: #fff;
+	#background-color: #ff5c33;
+  #border: 2px solid #ff5c33;
+  #border-bottom: 2px solid #000;
+  #border-right: 2px solid #000;
+  #border-radius: 0px;
+  #box-sizing: border-box;
 	}
 .navbar .homeicon:hover {
-  color: #ff5c33;
-	background-color: #fff;
-  border: 2px solid #ff5c33;
-  border-bottom: 2px solid #000;
-  border-right: 2px solid #000;
+	color: #000;
+  #color: #ff5c33;
+	#background-color: #fff;
+  #border: 2px solid #ff5c33;
+  #border-bottom: 2px solid #000;
+  #border-right: 2px solid #000;
 	}
 
 .navbar {height:50px;min-height: 20px;z-index:1000;}
