@@ -57,7 +57,10 @@ color:#ff5c33;
     <td>165,659</td>
     <td>$\beta = 0.49\pm0.09$</td>
     <td><a target="_blank" href="https://doi.org/10.1046/j.1365-2966.2003.07063.x">Hawkins et al. 2003</a></td>
-    <td></td>
+    <td>
+      <a target="_blank" href="https://arxiv.org/abs/astro-ph/0103143">Peacock et al. 2003</a>;<br>
+      <a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2004.08146.x">Percival et al. 2003</a>
+    </td>
   </tr>
   <tr>
     <td><a target="_blank" href="https://cesam.lam.fr/vvds/">VVDS</a></td>
@@ -112,7 +115,7 @@ color:#ff5c33;
     <td>$f\sigma_8 = 0.45 \pm 0.11$</td>
     <td><a target="_blank" href="https://doi.org/10.1051/0004-6361/201731685">Mohammad et al. 2018</a></td>
     <td>
-      <a target="_blank" href="https://doi.org/10.1051/0004-6361/201321463">Torre et al. 2013</a>
+      <a target="_blank" href="https://doi.org/10.1051/0004-6361/201321463">Torre et al. 2013</a>;<br>
       <a target="_blank" href="https://doi.org/10.1051/0004-6361/201630295">Pezzotta et al. 2017</a>
     </td>
   </tr>
@@ -132,9 +135,11 @@ color:#ff5c33;
     <td>690,826</td>
     <td>$f\sigma_8 = 0.441 \pm 0.044$</td>
     <td><a target="_blank" href="https://doi.org/10.1093/mnras/stu197">Samushia et al. 2012</a></td>
-    <td><a target="_blank" href="https://doi.org/10.1103/PhysRevD.74.123507">Tegmark et al. 2006</a> .
-        <a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2012.21779.x">Reid et al. 2012</a> .
-        <a target="_blank" href="https://doi.org/10.1093/mnras/stx721">Alam et al. 2016</a> .</td>
+    <td>
+      <a target="_blank" href="https://doi.org/10.1103/PhysRevD.74.123507">Tegmark et al. 2006</a>;<br>
+      <a target="_blank" href="https://doi.org/10.1111/j.1365-2966.2012.21779.x">Reid et al. 2012</a>;<br>
+      <a target="_blank" href="https://doi.org/10.1093/mnras/stx721">Alam et al. 2016</a> 
+    </td>
   </tr>
   <tr>
     <td><a target="_blank" href="https://www.sdss.org/science/final-bao-and-rsd-measurements">SDSS-IV eBOSS</a><div>2014–2020</div></td>
@@ -146,9 +151,9 @@ color:#ff5c33;
         <a target="_blank" href="https://doi.org/10.1093/mnras/staa3234">Hou et al. 2020</a>
     </td>
     <td>
-        <a target="_blank" href="https://doi.org/10.1093/mnras/sty453">Gil-Marin et al. 2018</a>
-        <a target="_blank" href="https://doi.org/10.1093/mnras/staa2800">Bautista et al. 2020</a>
-        <a target="_blank" href="https://doi.org/10.1093/mnras/staa3891">de Mattia et al. 2020</a>
+        <a target="_blank" href="https://doi.org/10.1093/mnras/sty453">Gil-Marin et al. 2018</a>;<br>
+        <a target="_blank" href="https://doi.org/10.1093/mnras/staa2800">Bautista et al. 2020</a>;<br>
+        <a target="_blank" href="https://doi.org/10.1093/mnras/staa3891">de Mattia et al. 2020</a>;<br>
         <a target="_blank" href="https://doi.org/10.1093/mnras/staa2455">Gil-Marin et al. 2020</a>
     </td>
   </tr>
