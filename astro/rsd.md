@@ -10,7 +10,7 @@ color:#ff5c33;
 
 <div align="center">
 <figure>
-  <img width="80%" src="/astro/srcs/fs8s.eps" alt="...">
+  <img width="80%" src="/astro/srcs/fs8s.jpg" alt="...">
   <figcaption>Fig.1 - Constraints on structure growth rate in observation.</figcaption>
 </figure>
 </div>
@@ -38,7 +38,7 @@ turns the isotropically distributed pattern of galaxies in real space into aniso
 
 <div align="center">
 <figure>
-  <img width="50%" src="/astro/srcs/2d_2pcf.eps" alt="...">
+  <img width="50%" src="/astro/srcs/2d_2pcf.jpg" alt="...">
   <figcaption>Fig.2 - 2D redshift space correlation function for BOSS CMASS samples.</figcaption>
 </figure>
 </div>
