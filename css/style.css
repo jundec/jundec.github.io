@@ -2,7 +2,8 @@
 
 body{
   height: 100%;
-  min-height:100vh;
+  min-height: 100vh;
+  background-color: #fff;
   }
 
 .card a{color:#000; text-decoration:underline;}
