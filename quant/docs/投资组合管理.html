@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 投资组合管理 | 算法交易策略研究:基于机器学习、深度学习等方法的探索</title>
+  <meta name="description" content="2 投资组合管理 | 算法交易策略研究:基于机器学习、深度学习等方法的探索" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 投资组合管理 | 算法交易策略研究:基于机器学习、深度学习等方法的探索" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 投资组合管理 | 算法交易策略研究:基于机器学习、深度学习等方法的探索" />
+  
+  
+  
+
+<meta name="author" content="陈隽德 2023 @ 复旦大学" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="算法交易.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">算法交易策略研究</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 量化投资的基本概念</a></li>
+<li class="chapter" data-level="2" data-path="投资组合管理.html"><a href="投资组合管理.html"><i class="fa fa-check"></i><b>2</b> 投资组合管理</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="投资组合管理.html"><a href="投资组合管理.html#理论基础"><i class="fa fa-check"></i><b>2.1</b> 理论基础</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="投资组合管理.html"><a href="投资组合管理.html#markowitz投资组合理论"><i class="fa fa-check"></i><b>2.1.1</b> Markowitz投资组合理论</a></li>
+<li class="chapter" data-level="2.1.2" data-path="投资组合管理.html"><a href="投资组合管理.html#资本资产定价模型"><i class="fa fa-check"></i><b>2.1.2</b> 资本资产定价模型</a></li>
+<li class="chapter" data-level="2.1.3" data-path="投资组合管理.html"><a href="投资组合管理.html#套利定价理论"><i class="fa fa-check"></i><b>2.1.3</b> 套利定价理论</a></li>
+<li class="chapter" data-level="2.1.4" data-path="投资组合管理.html"><a href="投资组合管理.html#fama三因子五因子模型"><i class="fa fa-check"></i><b>2.1.4</b> FAMA三因子、五因子模型</a></li>
+<li class="chapter" data-level="2.1.5" data-path="投资组合管理.html"><a href="投资组合管理.html#多因子模型"><i class="fa fa-check"></i><b>2.1.5</b> 多因子模型</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="投资组合管理.html"><a href="投资组合管理.html#投资组合构建"><i class="fa fa-check"></i><b>2.2</b> 投资组合构建</a></li>
+<li class="chapter" data-level="2.3" data-path="投资组合管理.html"><a href="投资组合管理.html#ssec:eval"><i class="fa fa-check"></i><b>2.3</b> 评价体系</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="算法交易.html"><a href="算法交易.html"><i class="fa fa-check"></i><b>3</b> 算法交易</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="算法交易.html"><a href="算法交易.html#市场微观结构"><i class="fa fa-check"></i><b>3.1</b> 市场微观结构</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="算法交易.html"><a href="算法交易.html#交易数据的组织形式限价订单簿"><i class="fa fa-check"></i><b>3.1.1</b> 交易数据的组织形式——限价订单簿</a></li>
+<li class="chapter" data-level="3.1.2" data-path="算法交易.html"><a href="算法交易.html#市场微观结构理论"><i class="fa fa-check"></i><b>3.1.2</b> 市场微观结构理论</a></li>
+<li class="chapter" data-level="3.1.3" data-path="算法交易.html"><a href="算法交易.html#算法交易的认定与监管"><i class="fa fa-check"></i><b>3.1.3</b> 算法交易的认定与监管</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="算法交易.html"><a href="算法交易.html#交易成本分析"><i class="fa fa-check"></i><b>3.2</b> 交易成本分析</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="算法交易.html"><a href="算法交易.html#交易成本构成"><i class="fa fa-check"></i><b>3.2.1</b> 交易成本构成</a></li>
+<li class="chapter" data-level="3.2.2" data-path="算法交易.html"><a href="算法交易.html#交易执行缺口"><i class="fa fa-check"></i><b>3.2.2</b> 交易执行缺口</a></li>
+<li class="chapter" data-level="3.2.3" data-path="算法交易.html"><a href="算法交易.html#交易执行结果评估"><i class="fa fa-check"></i><b>3.2.3</b> 交易执行结果评估</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="算法交易.html"><a href="算法交易.html#传统算法交易策略"><i class="fa fa-check"></i><b>3.3</b> 传统算法交易策略</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="算法交易.html"><a href="算法交易.html#twap"><i class="fa fa-check"></i><b>3.3.1</b> TWAP</a></li>
+<li class="chapter" data-level="3.3.2" data-path="算法交易.html"><a href="算法交易.html#vwap"><i class="fa fa-check"></i><b>3.3.2</b> VWAP</a></li>
+<li class="chapter" data-level="3.3.3" data-path="算法交易.html"><a href="算法交易.html#pov"><i class="fa fa-check"></i><b>3.3.3</b> POV</a></li>
+<li class="chapter" data-level="3.3.4" data-path="算法交易.html"><a href="算法交易.html#其他算法"><i class="fa fa-check"></i><b>3.3.4</b> 其他算法</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html"><i class="fa fa-check"></i><b>4</b> 机器学习与算法交易</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#机器学习简介"><i class="fa fa-check"></i><b>4.1</b> 机器学习简介</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#传统机器学习"><i class="fa fa-check"></i><b>4.1.1</b> 传统机器学习</a></li>
+<li class="chapter" data-level="4.1.2" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#深度学习"><i class="fa fa-check"></i><b>4.1.2</b> 深度学习</a></li>
+<li class="chapter" data-level="4.1.3" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#强化学习"><i class="fa fa-check"></i><b>4.1.3</b> 强化学习</a></li>
+<li class="chapter" data-level="4.1.4" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#集成学习"><i class="fa fa-check"></i><b>4.1.4</b> 集成学习</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#机器学习在算法交易中的应用"><i class="fa fa-check"></i><b>4.2</b> 机器学习在算法交易中的应用</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#订单簿模拟"><i class="fa fa-check"></i><b>4.2.1</b> 订单簿模拟</a></li>
+<li class="chapter" data-level="4.2.2" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#价格预测"><i class="fa fa-check"></i><b>4.2.2</b> 价格预测</a></li>
+<li class="chapter" data-level="4.2.3" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#情绪分析"><i class="fa fa-check"></i><b>4.2.3</b> 情绪分析</a></li>
+<li class="chapter" data-level="4.2.4" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#合规检测"><i class="fa fa-check"></i><b>4.2.4</b> 合规检测</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">算法交易策略研究:基于机器学习、深度学习等方法的探索</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="投资组合管理" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> 投资组合管理<a href="投资组合管理.html#投资组合管理" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>在现代量化投资领域，
+多因子模型被广泛认为是构建投资组合的核心方法之一。
+本节将简要介绍多因子投资组合模型，
+包含多因子模型的理论基础，投资组合的构建过程及其评价体系。</p>
+<div id="理论基础" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> 理论基础<a href="投资组合管理.html#理论基础" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="markowitz投资组合理论" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Markowitz投资组合理论<a href="投资组合管理.html#markowitz投资组合理论" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="citation">Markowitz (<a href="#ref-Markowitz2023">1952</a>)</span> 提出了现代投资组合理论（Morden Portfolio Theory，MPT），
+认为资产的价格仅由收益的期望与方差决定。
+对某一资产，若其收益率<span class="math inline">\(r_i\)</span>出现的概率为<span class="math inline">\(p_i\)</span>，
+那么该资产的期望收益率<span class="math inline">\(E(r)=\sum_i p_i r_i\)</span>，
+其风险由方差描述，<span class="math inline">\(\sigma_r^2 = \sum_i p_i[r_i-E(r)]^2\)</span>。
+% 若该资产的收益符合高斯分布，则其价格仅由<span class="math inline">\(E(r)\)</span>与<span class="math inline">\(\sigma_r\)</span>决定。
+如果对N个资产进行组合，则有，
+<span class="math display">\[\begin{align}
+  E(r_p)=\sum_{i=1}^N w_i E(r_i)\ ,\quad
+  \sigma^2_p = \sum_{i=1}^N \sum_{j=1}^N w_i w_j \sigma_i \sigma_j \rho_{ij}\ ,
+\end{align}\]</span>
+其中<span class="math inline">\(w_i\)</span>为资产<span class="math inline">\(i\)</span>的投资权重，且<span class="math inline">\(\sum_i w_i=1\)</span>，
+<span class="math inline">\(\rho_{ij}\)</span>为资产<span class="math inline">\(i\)</span>与<span class="math inline">\(j\)</span>的关联系数。
+在<span class="math inline">\(E(r_p)-\sigma_p\)</span>图中，
+取<span class="math inline">\(\sigma_p\)</span>对应的最大<span class="math inline">\(E(r_p)\)</span>所形成的一条曲线，
+称为投资组合的有效边界。
+根据有效边界理论，组合资产比组合中任一资产拥有更高的期望收益，
+当投资者的风险等级确定后， 有效边界上的任意一点即为该风险下的最优投资组合。
+Markowitz模型第一次定量的给出了构建最优投资组合的方法，但也极大的简化了市场逻辑。
+Markowitz假设：
+（1）所有投资者都是风险厌恶者；
+（2）投资者进行的是单期且静态投资；
+（3）交易不存在摩擦成本；
+（4）市场不包含无风险资产等。
+此外，Markowitz模型中的资产收益率<span class="math inline">\(r_i\)</span>及其出现概率<span class="math inline">\(p_i\)</span>是对历史数据的统计，
+造成了实际应用时缺乏稳定性。</p>
+</div>
+<div id="资本资产定价模型" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> 资本资产定价模型<a href="投资组合管理.html#资本资产定价模型" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="citation">Sharpe (<a href="#ref-Sharpe1964">1964</a>)</span>, <span class="citation">Treynor (<a href="#ref-Treynor1962">1962</a>)</span>, <span class="citation">Lintner (<a href="#ref-Lintner1956">1956</a>)</span>, <span class="citation">Mossin (<a href="#ref-Mossin1966">1966</a>)</span> 在Markowitz模型的基础上
+提出了资本资产定价模型（Capital Asset Pricing Model，CAPM）。
+对组合中的任一资产<span class="math inline">\(i\)</span>，其收益率可以表示为
+<span class="math inline">\(r_i=\alpha_i + \beta_i r_m + \epsilon_i\)</span>，
+其中<span class="math inline">\(\alpha_i\)</span>是一个常数，<span class="math inline">\(r_m\)</span>为市场收益率，
+<span class="math inline">\(\epsilon_i\)</span>是一个独立的随机变量，其期望<span class="math inline">\(E(\epsilon_i)=0\)</span>。
+系数<span class="math inline">\(\beta_i\)</span>称为灵敏度系数或因子载荷、因子暴露，
+描述该证券在市场风险中所占的比重，
+<span class="math display">\[\begin{align}
+  \beta_i=\frac{Cov(i,m)}{\sigma^2_m} = \rho_{im} \frac{\sigma_i}{\sigma_m}\ ,
+\end{align}\]</span>
+其中，<span class="math inline">\(Cov(i,m)\)</span>为证券收益率与市场收益率的协方差，
+<span class="math inline">\(\rho_{im}\)</span>为证券收益率与市场收益率的关联系数，
+<span class="math inline">\(\sigma_i\)</span>、 <span class="math inline">\(\sigma_m\)</span> 分别为证券收益率与市场收益率的标准差。
+那么，资产<span class="math inline">\(i\)</span>的期望收益率<span class="math inline">\(E_i=\alpha_i+\beta_i E_m\)</span>，
+方差<span class="math inline">\(\sigma_i^2=\beta_i^2 \sigma_m^2+\sigma_{\epsilon_i}^2\)</span>。
+描述风险的方差被分解成了两部分，
+<span class="math inline">\(\beta_i^2 \sigma_m^2\)</span>为与市场相关的系统性风险，
+<span class="math inline">\(\sigma_{\epsilon_i}^2\)</span>为仅与资产本身相关的特殊风险。</p>
+<p>对N个资产进行组合，并引入市场无风险利率<span class="math inline">\(r_f\)</span>后，则有，
+<span class="math display" id="eq:capm">\[\begin{align}
+  E(r_p) &amp;= \alpha_p + \beta_p (E_m-r_f) + r_f\ ,
+  \tag{2.1}
+  \\
+  \sigma_p^2 &amp;= \sum_i^N \sum_j^N w_i w_j \beta_i \beta_j \sigma_m^2 + \sum_i^N w_i^2 \sigma_{\epsilon_i}^2\ .
+\end{align}\]</span>
+其中，<span class="math inline">\(\alpha_p =\sum_i^N w_i \alpha_i\)</span>，为组合收益中与市场无关的部分，
+对于包含全市场的组合<span class="math inline">\(\sum \alpha\equiv 0\)</span>；
+<span class="math inline">\(\beta_p=\sum_i^N w_i \beta_i\)</span>，为组合的因子载荷。
+<span class="math inline">\(\alpha\)</span>与<span class="math inline">\(\beta\)</span>是评价投资组合构建的重要指标（见§<a href="投资组合管理.html#ssec:eval" reference-type="ref" reference="ssec:eval">2.3</a>）。
+若组合中的资产权重相同，当资产数<span class="math inline">\(N\to \infty\)</span>时，
+<span class="math inline">\(\sum_i w_i^2\sigma_{\epsilon_i}^2\to 0\)</span>，资产的特殊风险被分散，
+组合风险只取决于市场风险及组合的因子载荷，<span class="math inline">\(\sigma_p=|\beta_p| \sigma_m\)</span>。</p>
+<p>不同于Markowitz模型，CAPM考虑了单个资产风险与市场风险之间的关系，
+将资产风险分解为系统性风险和特殊风险两部分。
+CAPM假设：
+（1）投资者都是理性的且具有一致预期；
+（2）市场上所有资产可自由交易；
+（3）市场信息完全公开；
+（4）无税收无交易成本。</p>
+</div>
+<div id="套利定价理论" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> 套利定价理论<a href="投资组合管理.html#套利定价理论" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>CAPM模型中，组合的系统性风险由单一市场因子<span class="math inline">\((E_m-r_f)\)</span>决定。
+提出的套利定价理论（Arbitrage Pricing Theory，APT）进一步扩展了CAPM，
+将资产定价由单因子模型推广至了多因子模型。
+APT假设组合中的任一资产<span class="math inline">\(i\)</span>的收益率<span class="math inline">\(r_i=\alpha_i+\sum_j^N \beta_{ji} f_j +\epsilon_i\)</span>，
+其中<span class="math inline">\(f_j\)</span>为第<span class="math inline">\(j\)</span>个因子的收益率，或称风险溢价。
+那么组合的期望收益率，
+<span class="math display">\[\begin{align}
+  E(r_p) = \alpha_p + r_f + \sum_i^N \beta_{pi} E(f_i) \ ,
+  \label{eq:apt}
+\end{align}\]</span>
+其中，<span class="math inline">\(E(f_i)\)</span>为组合中第<span class="math inline">\(i\)</span>个因子<span class="math inline">\(f_i\)</span>的期望收益率，
+<span class="math inline">\(\beta_{pi}\)</span>为对应的因子载荷，
+取决于因子收益率与组合收益率的标准差及关联系数，
+<span class="math inline">\(\beta_{pi}=Cov(p,i)/\sigma_i^2=\sigma_i\sigma_p\rho_{pi}\)</span>。</p>
+<p>与CAPM相同，套利定价理论假设非系统性风险可以在投资组合中实现分散。
+当忽略了非系统性风险后，具有相同因子载荷的资产或组合的期望收益率应该也相同，
+否则市场将存在套利机会。
+因此，套利定价理论是基于无套利市场得出的结论。
+另外，套利定价理论虽然提出了多因子模型的理论框架，
+但并未给出具体的风险因子。</p>
+</div>
+<div id="fama三因子五因子模型" class="section level3 hasAnchor" number="2.1.4">
+<h3><span class="header-section-number">2.1.4</span> FAMA三因子、五因子模型<a href="投资组合管理.html#fama三因子五因子模型" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>1992年，<span class="citation">FAMA &amp; FRENCH (<a href="#ref-FAMA1992">1992</a>)</span> 提出了著名的三因子模型，
+在CAPM的基础上
+加入了市值因子（Small [market capitalization] minus Big，SMB）
+和账面市值比因子（High [book-to-market ratio] minus Low，HML）。
+公式<a href="投资组合管理.html#eq:capm">(2.1)</a>变为，</p>
+<p><span class="math display">\[\begin{align}
+  E_p= \alpha_p + r_f + \beta_p (E_m-r_f) +s_p\cdot SMB + h_p\cdot HML \ ,
+  % + r_s\cdot RMW + c_s\cdot CMA\ ,
+\end{align}\]</span></p>
+<p>其中，<span class="math inline">\(s_p, h_p\)</span>分别为SMB与HML的因子载荷。
+1997年，<span class="citation">Carhart (<a href="#ref-Carhart1997">1997</a>)</span>
+扩展了Fama三因子模型，加入了动量因子
+（[average returns on past] Winners minus Losers，WML）。
+2015年，<span class="citation">Fama &amp; French (<a href="#ref-FAMA2015">2015</a>)</span> 又提出了五因子模型，
+在三因子模型的基础上加入了盈利因子（Robust [profitability] minus Weak，RMW）
+和投资因子（[invest] Conservatively minus Aggressively， CMA）。</p>
+</div>
+<div id="多因子模型" class="section level3 hasAnchor" number="2.1.5">
+<h3><span class="header-section-number">2.1.5</span> 多因子模型<a href="投资组合管理.html#多因子模型" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>一般来说，因子模型可以分为三种类型<span class="citation">(<a href="#ref-Connor1995">Connor, 1995</a>)</span>：</p>
+<ul>
+<li>宏观因子模型（macroeconomic factor model），
+采用宏观经济数据作为因子。例如：
+市场风险、价格指数（CPI，PPI，通货膨胀率）、
+生产总值（GDP）、货币增长、央行利率、失业率等<span class="citation">(<a href="#ref-Chen1986">N.-F. Chen et al., 1986</a>)</span>。
+原始的CAPM属于宏观单因子模型。</li>
+<li>基本面因子模型（fundamental factor model），
+采用与公司财务有关的基本面指标作为因子。
+如所处行业、公司市值、市盈率、市净率等。
+FAMA的三因子、五因子模型就是一种基本面因子模型。
+常用的还有Barra行业因子模型。</li>
+<li>统计学因子模型（statistical factor model）。
+% 广义上任何与资产特征的相关指标都可以作为潜在的因子。
+统计因子模型利用统计学工具，
+从数据中挖掘和构造与资产价格相关的因子。
+与宏观因子模型和基本面因子模型相比，
+基于统计学建立的多因子模型牺牲了模型的可解释性，但带来了更多的灵活性。
+APT属于统计学因子模型。</li>
+</ul>
+</div>
+</div>
+<div id="投资组合构建" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> 投资组合构建<a href="投资组合管理.html#投资组合构建" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>利用多因子模型构建投资组合的过程如图<a href="投资组合管理.html#fig:pm">2.1</a>，
+一般可以分为四个阶段：</p>
+<ul>
+<li><p>数据预处理。
+主要包含数据的清理/插补：去除或纠正数据中的错误和缺失值；
+数据聚合：将不同来源或不同时间点的数据进行聚合统一分析；
+以及数据的标准化：对数据进行规范化处理，使之处于同一量级，便于比较不同数据集；</p></li>
+<li><p>因子挖掘。
+主要包含数据分析：对数据进行统计分析，识别可能影响投资回报的关键变量；
+因子设计：基于数据分析结果设计预测未来收益的因子；
+以及因子的选择与评估：评估各个因子的有效性，并选择最终用于模型的因子。</p></li>
+<li><p>建模。
+主要包含模型的构建：利用选定的因子构建预测模型，这个模型旨在预测资产的期望回报；
+回测分析：通过历史数据测试模型的性能，验证其在过去的表现；
+以及压力测试：检验模型在极端市场情况下的表现和稳健性。</p></li>
+<li><p>组合优化。
+主要包含均值-方差优化：通过优化模型来平衡预期收益和风险，寻求最优的资产配比；
+风险中性化：对冲不必要的风险，确保投资组合的系统性风险与市场或预定基准一致；
+换手控制：管理组合的买卖频率，控制交易成本。</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:pm"></span>
+<img src="intro/pm.png" alt="投资组合的构建过程[@Guo2023]。"  />
+<p class="caption">
+Figure 2.1: 投资组合的构建过程<span class="citation">(<a href="#ref-Guo2023">J. Guo et al., 2023</a>)</span>。
+</p>
+</div>
+<p>传统的多因子模型是当前量化投资组合构建的重要形式，
+但并非所有的量化投资组合管理都仅基于多因子模型。
+特别是随着机器学习等技术的发展，
+导致投资组合的构建不再拘泥于线性模型。
+许多实证研究已经表明，采用机器学习和深度学习模型构建的投资组合，
+在某些情况下可以胜过多因子模型
+<span class="citation">(<a href="#ref-Conlon2021">Conlon et al., 2021</a>; <a href="#ref-Jiang2017">Z. Jiang et al., 2017</a>; <a href="#ref-Snow2019">Snow, 2019</a>, <a href="#ref-Snow2020">2020</a>)</span>。</p>
+</div>
+<div id="ssec:eval" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> 评价体系<a href="投资组合管理.html#ssec:eval" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>表<a href="投资组合管理.html#tab:performmeasure">2.1</a>列出了评价投资策略的常用指标，及其含义和计算公式。
+在进行策略评估时，需要综合考虑各个指标的影响。</p>
+<table>
+<caption><span id="tab:performmeasure">Table 2.1: </span> 投资策略的评价指标。</caption>
+<colgroup>
+<col width="55%" />
+<col width="22%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>指标名称</th>
+<th>含义</th>
+<th>计算公式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Alpha</td>
+<td>组合的超额收益</td>
+<td><span class="math inline">\(\begin{aligned} \alpha_p =r_p-r_m \end{aligned}\)</span></td>
+</tr>
+<tr class="even">
+<td>Beta</td>
+<td>组合收益相对市场波动</td>
+<td><span class="math inline">\(\begin{aligned} \beta_p = \frac{ Cov(p,m)}{\sigma_m^2} =\rho_{pm}\frac{\sigma_p}{\sigma_m} \end{aligned}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Sharpe ratio<span class="citation">(<a href="#ref-Sharpe1966">Sharpe, 1966</a>, <a href="#ref-Sharpe1975">1975</a>)</span></td>
+<td>单位总风险的收益率</td>
+<td><span class="math inline">\(\begin{aligned} SR_p = \frac{ r_p -r_f}{ \sigma_p}\end{aligned}\)</span></td>
+</tr>
+<tr class="even">
+<td>M2 Measure<span class="citation">(<a href="#ref-Modigliani1997">Modigliani &amp; Modigliani, 1997</a>)</span></td>
+<td>考虑杠杆时的收益率</td>
+<td><span class="math inline">\(\begin{aligned} M2_p = r_f+ \sigma_m SR_p\end{aligned}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Treynor ratio<span class="citation">(<a href="#ref-Treynor1973">Treynor &amp; Black, 1973</a>)</span></td>
+<td>单位系统风险的超额收益率</td>
+<td><span class="math inline">\(\begin{aligned} TR_p = \frac{ r_p-r_f}{ \beta_p}\end{aligned}\)</span></td>
+</tr>
+<tr class="even">
+<td>Information ratio<span class="citation">(<a href="#ref-Goodwin1998">Goodwin, 1998</a>)</span></td>
+<td>单位主动风险的超额收益率</td>
+<td><span class="math inline">\(\begin{aligned} IR_p = \frac{ r_a-r_f}{ \sigma(r_p-r_f)}\end{aligned}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Jensen’s Alpha<span class="citation">(<a href="#ref-Jensen1968">Jensen, 1968</a>)</span></td>
+<td>实际收益率与理论收益率之差</td>
+<td><span class="math inline">\(\begin{aligned} \alpha_p = r_p - [r_f+\beta_p(r_m-r_f)]\end{aligned}\)</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0" line-spacing="2">
+<div id="ref-Carhart1997" class="csl-entry">
+Carhart, M. M. (1997). On persistence in mutual fund performance. <em>The Journal of Finance</em>, <em>52</em>(1), 57–82. https://doi.org/<a href="https://doi.org/10.1111/j.1540-6261.1997.tb03808.x">https://doi.org/10.1111/j.1540-6261.1997.tb03808.x</a>
+</div>
+<div id="ref-Chen1986" class="csl-entry">
+Chen, N.-F., Roll, R., &amp; Ross, S. A. (1986). Economic forces and the stock market. <em>The Journal of Business</em>, <em>59</em>(3), 383–403. <a href="http://www.jstor.org/stable/2352710">http://www.jstor.org/stable/2352710</a>
+</div>
+<div id="ref-Conlon2021" class="csl-entry">
+Conlon, T., Cotter, J., &amp; Kynigakis, I. (2021). Machine learning and factor-based portfolio optimization. <em><span>SSRN</span> Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.3889459">https://doi.org/10.2139/ssrn.3889459</a>
+</div>
+<div id="ref-Connor1995" class="csl-entry">
+Connor, G. (1995). The three types of factor models: A comparison of their explanatory power. <em>Financial Analysts Journal</em>, <em>51</em>(3), 42–46. <a href="https://doi.org/10.2469/faj.v51.n3.1904">https://doi.org/10.2469/faj.v51.n3.1904</a>
+</div>
+<div id="ref-FAMA1992" class="csl-entry">
+FAMA, E. F., &amp; FRENCH, K. R. (1992). The cross-section of expected stock returns. <em>The Journal of Finance</em>, <em>47</em>(2), 427–465. https://doi.org/<a href="https://doi.org/10.1111/j.1540-6261.1992.tb04398.x">https://doi.org/10.1111/j.1540-6261.1992.tb04398.x</a>
+</div>
+<div id="ref-FAMA2015" class="csl-entry">
+Fama, E. F., &amp; French, K. R. (2015). A five-factor asset pricing model. <em>Journal of Financial Economics</em>, <em>116</em>(1), 1–22. https://doi.org/<a href="https://doi.org/10.1016/j.jfineco.2014.10.010">https://doi.org/10.1016/j.jfineco.2014.10.010</a>
+</div>
+<div id="ref-Goodwin1998" class="csl-entry">
+Goodwin, T. H. (1998). The information ratio. <em>Financial Analysts Journal</em>, <em>54</em>(4), 34–43. <a href="http://www.jstor.org/stable/4480091">http://www.jstor.org/stable/4480091</a>
+</div>
+<div id="ref-Guo2023" class="csl-entry">
+Guo, J., Wang, S., Ni, L. M., &amp; Shum, H.-Y. (2023). <em>Quant 4.0: Engineering quantitative investment with automated, explainable and knowledge-driven artificial intelligence</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2301.04020">https://doi.org/10.48550/ARXIV.2301.04020</a>
+</div>
+<div id="ref-Jensen1968" class="csl-entry">
+Jensen, M. C. (1968). THE PERFORMANCE OF MUTUAL FUNDS IN THE PERIOD 1945–1964. <em>The Journal of Finance</em>, <em>23</em>(2), 389–416. https://doi.org/<a href="https://doi.org/10.1111/j.1540-6261.1968.tb00815.x">https://doi.org/10.1111/j.1540-6261.1968.tb00815.x</a>
+</div>
+<div id="ref-Jiang2017" class="csl-entry">
+Jiang, Z., Xu, D., &amp; Liang, J. (2017). <em>A deep reinforcement learning framework for the financial portfolio management problem</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1706.10059">https://doi.org/10.48550/ARXIV.1706.10059</a>
+</div>
+<div id="ref-Lintner1956" class="csl-entry">
+Lintner, J. (1956). Distribution of incomes of corporations among dividends, retained earnings, and taxes. <em>The American Economic Review</em>, <em>46</em>(2), 97–113. <a href="http://www.jstor.org/stable/1910664">http://www.jstor.org/stable/1910664</a>
+</div>
+<div id="ref-Markowitz2023" class="csl-entry">
+Markowitz, H. (1952). Portfolio selection. <em>The Journal of Finance</em>, <em>7</em>(1), 77–91. <a href="http://www.jstor.org/stable/2975974">http://www.jstor.org/stable/2975974</a>
+</div>
+<div id="ref-Modigliani1997" class="csl-entry">
+Modigliani, F., &amp; Modigliani, L. (1997). Risk-adjusted performance. In <em>The Journal of Portfolio Management</em> (2; Vol. 23, pp. 45–54). <a href="https://doi.org/10.3905/jpm.23.2.45">https://doi.org/10.3905/jpm.23.2.45</a>
+</div>
+<div id="ref-Mossin1966" class="csl-entry">
+Mossin, J. (1966). Equilibrium in a capital asset market. <em>Econometrica</em>, <em>34</em>(4), 768–783. <a href="http://www.jstor.org/stable/1910098">http://www.jstor.org/stable/1910098</a>
+</div>
+<div id="ref-Sharpe1964" class="csl-entry">
+Sharpe, W. F. (1964). <span>CAPITAL ASSET PRICES: A THEORY OF MARKET EQUILIBRIUM UNDER CONDITIONS OF RISK*</span>. <em>The Journal of Finance</em>, <em>19</em>(3), 425–442. <a href="https://doi.org/10.1111/J.1540-6261.1964.TB02865.X">https://doi.org/10.1111/J.1540-6261.1964.TB02865.X</a>
+</div>
+<div id="ref-Sharpe1966" class="csl-entry">
+Sharpe, W. F. (1966). Mutual fund performance. <em>The Journal of Business</em>, <em>39</em>(1), 119–138. <a href="http://www.jstor.org/stable/2351741">http://www.jstor.org/stable/2351741</a>
+</div>
+<div id="ref-Sharpe1975" class="csl-entry">
+Sharpe, W. F. (1975). Adjusting for risk in portfolio performance measurement. In <em>The Journal of Portfolio Management</em> (2; Vol. 1, pp. 29–34). <a href="https://doi.org/10.3905/jpm.1975.408513">https://doi.org/10.3905/jpm.1975.408513</a>
+</div>
+<div id="ref-Snow2019" class="csl-entry">
+Snow, D. (2019). Machine learning in asset management—part 1: Portfolio construction—trading strategies. <em>The Journal of Financial Data Science</em>, <em>2</em>(1), 10–23. <a href="https://doi.org/10.3905/jfds.2019.1.021">https://doi.org/10.3905/jfds.2019.1.021</a>
+</div>
+<div id="ref-Snow2020" class="csl-entry">
+Snow, D. (2020). Machine learning in asset management—part 2: Portfolio construction—weight optimization. <em>The Journal of Financial Data Science</em>, <em>2</em>(2), 17–24. <a href="https://doi.org/10.3905/jfds.2020.1.029">https://doi.org/10.3905/jfds.2020.1.029</a>
+</div>
+<div id="ref-Treynor1962" class="csl-entry">
+Treynor, J. L. (1962). Toward a theory of market value of risk assets. <em>Unpublished Manuscript, a Revised Version Was Published in Korajczyk, Robert, A, Ed., 1999, Asset Pricing and Portfolio Performance: Models, Strategy and Performance Metrics, Risk Books, London, 15-22</em>.
+</div>
+<div id="ref-Treynor1973" class="csl-entry">
+Treynor, J. L., &amp; Black, F. (1973). How to use security analysis to improve portfolio selection. <em>The Journal of Business</em>, <em>46</em>(1), 66–86. <a href="http://www.jstor.org/stable/2351280">http://www.jstor.org/stable/2351280</a>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="算法交易.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-portfolio.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

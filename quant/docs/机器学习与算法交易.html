@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 机器学习与算法交易 | 算法交易策略研究:基于机器学习、深度学习等方法的探索</title>
+  <meta name="description" content="4 机器学习与算法交易 | 算法交易策略研究:基于机器学习、深度学习等方法的探索" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 机器学习与算法交易 | 算法交易策略研究:基于机器学习、深度学习等方法的探索" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 机器学习与算法交易 | 算法交易策略研究:基于机器学习、深度学习等方法的探索" />
+  
+  
+  
+
+<meta name="author" content="陈隽德 2023 @ 复旦大学" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="算法交易.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">算法交易策略研究</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 量化投资的基本概念</a></li>
+<li class="chapter" data-level="2" data-path="投资组合管理.html"><a href="投资组合管理.html"><i class="fa fa-check"></i><b>2</b> 投资组合管理</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="投资组合管理.html"><a href="投资组合管理.html#理论基础"><i class="fa fa-check"></i><b>2.1</b> 理论基础</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="投资组合管理.html"><a href="投资组合管理.html#markowitz投资组合理论"><i class="fa fa-check"></i><b>2.1.1</b> Markowitz投资组合理论</a></li>
+<li class="chapter" data-level="2.1.2" data-path="投资组合管理.html"><a href="投资组合管理.html#资本资产定价模型"><i class="fa fa-check"></i><b>2.1.2</b> 资本资产定价模型</a></li>
+<li class="chapter" data-level="2.1.3" data-path="投资组合管理.html"><a href="投资组合管理.html#套利定价理论"><i class="fa fa-check"></i><b>2.1.3</b> 套利定价理论</a></li>
+<li class="chapter" data-level="2.1.4" data-path="投资组合管理.html"><a href="投资组合管理.html#fama三因子五因子模型"><i class="fa fa-check"></i><b>2.1.4</b> FAMA三因子、五因子模型</a></li>
+<li class="chapter" data-level="2.1.5" data-path="投资组合管理.html"><a href="投资组合管理.html#多因子模型"><i class="fa fa-check"></i><b>2.1.5</b> 多因子模型</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="投资组合管理.html"><a href="投资组合管理.html#投资组合构建"><i class="fa fa-check"></i><b>2.2</b> 投资组合构建</a></li>
+<li class="chapter" data-level="2.3" data-path="投资组合管理.html"><a href="投资组合管理.html#ssec:eval"><i class="fa fa-check"></i><b>2.3</b> 评价体系</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="算法交易.html"><a href="算法交易.html"><i class="fa fa-check"></i><b>3</b> 算法交易</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="算法交易.html"><a href="算法交易.html#市场微观结构"><i class="fa fa-check"></i><b>3.1</b> 市场微观结构</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="算法交易.html"><a href="算法交易.html#交易数据的组织形式限价订单簿"><i class="fa fa-check"></i><b>3.1.1</b> 交易数据的组织形式——限价订单簿</a></li>
+<li class="chapter" data-level="3.1.2" data-path="算法交易.html"><a href="算法交易.html#市场微观结构理论"><i class="fa fa-check"></i><b>3.1.2</b> 市场微观结构理论</a></li>
+<li class="chapter" data-level="3.1.3" data-path="算法交易.html"><a href="算法交易.html#算法交易的认定与监管"><i class="fa fa-check"></i><b>3.1.3</b> 算法交易的认定与监管</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="算法交易.html"><a href="算法交易.html#交易成本分析"><i class="fa fa-check"></i><b>3.2</b> 交易成本分析</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="算法交易.html"><a href="算法交易.html#交易成本构成"><i class="fa fa-check"></i><b>3.2.1</b> 交易成本构成</a></li>
+<li class="chapter" data-level="3.2.2" data-path="算法交易.html"><a href="算法交易.html#交易执行缺口"><i class="fa fa-check"></i><b>3.2.2</b> 交易执行缺口</a></li>
+<li class="chapter" data-level="3.2.3" data-path="算法交易.html"><a href="算法交易.html#交易执行结果评估"><i class="fa fa-check"></i><b>3.2.3</b> 交易执行结果评估</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="算法交易.html"><a href="算法交易.html#传统算法交易策略"><i class="fa fa-check"></i><b>3.3</b> 传统算法交易策略</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="算法交易.html"><a href="算法交易.html#twap"><i class="fa fa-check"></i><b>3.3.1</b> TWAP</a></li>
+<li class="chapter" data-level="3.3.2" data-path="算法交易.html"><a href="算法交易.html#vwap"><i class="fa fa-check"></i><b>3.3.2</b> VWAP</a></li>
+<li class="chapter" data-level="3.3.3" data-path="算法交易.html"><a href="算法交易.html#pov"><i class="fa fa-check"></i><b>3.3.3</b> POV</a></li>
+<li class="chapter" data-level="3.3.4" data-path="算法交易.html"><a href="算法交易.html#其他算法"><i class="fa fa-check"></i><b>3.3.4</b> 其他算法</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html"><i class="fa fa-check"></i><b>4</b> 机器学习与算法交易</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#机器学习简介"><i class="fa fa-check"></i><b>4.1</b> 机器学习简介</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#传统机器学习"><i class="fa fa-check"></i><b>4.1.1</b> 传统机器学习</a></li>
+<li class="chapter" data-level="4.1.2" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#深度学习"><i class="fa fa-check"></i><b>4.1.2</b> 深度学习</a></li>
+<li class="chapter" data-level="4.1.3" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#强化学习"><i class="fa fa-check"></i><b>4.1.3</b> 强化学习</a></li>
+<li class="chapter" data-level="4.1.4" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#集成学习"><i class="fa fa-check"></i><b>4.1.4</b> 集成学习</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#机器学习在算法交易中的应用"><i class="fa fa-check"></i><b>4.2</b> 机器学习在算法交易中的应用</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#订单簿模拟"><i class="fa fa-check"></i><b>4.2.1</b> 订单簿模拟</a></li>
+<li class="chapter" data-level="4.2.2" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#价格预测"><i class="fa fa-check"></i><b>4.2.2</b> 价格预测</a></li>
+<li class="chapter" data-level="4.2.3" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#情绪分析"><i class="fa fa-check"></i><b>4.2.3</b> 情绪分析</a></li>
+<li class="chapter" data-level="4.2.4" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#合规检测"><i class="fa fa-check"></i><b>4.2.4</b> 合规检测</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">算法交易策略研究:基于机器学习、深度学习等方法的探索</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="机器学习与算法交易" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> 机器学习与算法交易<a href="机器学习与算法交易.html#机器学习与算法交易" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>人工智能（Artificial Intelligence，AI）
+是一个研究如何使计算机系统具备智能行为和思维能力的领域。
+作为学术概念，人工智能可以追述到1950年代
+<span class="citation">(<a href="#ref-McCarthy2006">McCarthy et al., 2006</a>)</span>。
+早期对人工智能的研究集中在符号逻辑、推理和问题求解上。
+到1980年代，机器学习开始引领人工智能的发展，
+支持向量机<span class="citation">(<a href="#ref-Boser1992">Boser et al., 1992</a>; <a href="#ref-Cortes1995">Cortes &amp; Vapnik, 1995</a>)</span>（Support Vector Machine，SVM）、
+决策树<span class="citation">(<a href="#ref-Quinlan1986">Quinlan, 1986</a>)</span>（Decision Tree，DT）
+和神经网络<span class="citation">(<a href="#ref-Hopfield1982">Hopfield, 1982</a>; <a href="#ref-SCHMIDHUBER201585">Schmidhuber, 2015</a>)</span>（Neural Network， NN）
+等算法的发展推动了机器学习领域的进步，
+深度学习的概念也初现雏形。
+2010年后，得益于显卡运算能力的快速提升，
+基于大数据的深度学习模型取得了突破性的成果，
+由此人工智能开始在各个领域被广泛应用。</p>
+<p>在量化投资领域，人工智能已经被应用到各个方向。
+例如，将线性资产定价模型推广到非线性的资产定价模型
+<span class="citation">(<a href="#ref-Chen2023">L. Chen et al., 2023</a>; <a href="#ref-Gu2020">Gu et al., 2020</a>; <a href="#ref-Nagel2021">Nagel, 2021</a>; <a href="#ref-PAN2023102627">Pan et al., 2023</a>)</span>，
+构建并优化投资组合<span class="citation">(<a href="#ref-Aitken2015">Aitken et al., 2015</a>)</span>，
+预测资产价格<span class="citation">(<a href="#ref-Bustos2020">Bustos &amp; Pomares-Quimbaya, 2020</a>; <a href="#ref-Ponomarev2019">Ponomarev et al., 2019</a>; <a href="#ref-Soni_2022">Soni et al., 2022</a>)</span>，
+管理投资风险<span class="citation">(<a href="#ref-Aitken2015">Aitken et al., 2015</a>)</span>，
+分析市场情绪<span class="citation">(<a href="#ref-Swathi2022aa">Swathi et al., 2022</a>; <a href="#ref-Yadav2020aa">Yadav &amp; Vishwakarma, 2020</a>; <a href="#ref-Zhang2018">L. Zhang et al., 2018</a>)</span>,
+进行市场合规检测<span class="citation">(<a href="#ref-LIU2021101887">Liu et al., 2021</a>)</span> 等等。
+本章将简要介绍若干常用的机器学习模型，
+以及目前人工智能在量化投资领域中的几个重要应用。</p>
+<div id="机器学习简介" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> 机器学习简介<a href="机器学习与算法交易.html#机器学习简介" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>传统的计算机算法在处理问题时需要基于预设的规则（rule-based），
+当问题变得越来越复杂时，编写这类算法会遇到前所未有的阻力，
+甚至无法实现。
+机器学习则提供了一套基于经验（experience-based）解决思路，
+通过对大量数据的学习令算法建立自身的规则，
+从而依据经验对未知数据做出推断。</p>
+<p>图<a href="机器学习与算法交易.html#fig:mlmap">4.1</a>展示了机器学习的类型与常见算法。
+机器学习根据学习方式的不同大致可以分为有监督学习、无监督学习以及强化学习。
+根据解决的问题类型又可分为回归问题以及分类问题
+（分类问题也可以抽象为目标为若干离散值的回归问题）。
+深度学习是基于神经网络（Walter Pitts and Warren McCulloch, 1943）发展起来的一大类机器学习类型。
+另外，集成学习近年也是一大类被广泛应用的机器学习思想。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mlmap"></span>
+<img src="intro/mlmap.png" alt="机器学习的类型与代表性算法。"  />
+<p class="caption">
+Figure 4.1: 机器学习的类型与代表性算法。
+</p>
+</div>
+<div id="传统机器学习" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> 传统机器学习<a href="机器学习与算法交易.html#传统机器学习" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>传统机器学习是基于统计与代数发展起来的一类算法，
+需要人工提取数据的特征（特征工程、特征选取、数据清洗），
+然后进行建模。</p>
+<div id="线性回归" class="section level4 hasAnchor" number="4.1.1.1">
+<h4><span class="header-section-number">4.1.1.1</span> 线性回归<a href="机器学习与算法交易.html#线性回归" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>线性回归模型是最简单的机器学习模型，
+也是许多复杂模型特别是深度学习的基础。
+线性回归的原理是利用线性函数对数据进行拟合，
+<span class="math display">\[\begin{align}
+    f(x) = wx+b\ .
+\end{align}\]</span>
+其中，自变量为<span class="math inline">\(x\)</span>，<span class="math inline">\(w\)</span>称为权重，<span class="math inline">\(b\)</span>称为偏置。
+假设有N个训练样本<span class="math inline">\(\{(x_1,y_1),\cdots,(x_N,y_N)\}\)</span>，
+定义损失函数（loss function）为样本真值与预测值间的误差，
+成本函数（cost function）为样本的平均损失函数。
+对线性回归通常取均方误差为模型的成本函数，
+<span class="math display">\[\begin{align}
+  J(w,b) = \frac{1}{N}\sum_{i=1}^N(y_i-f(x_i))^2\ .
+\end{align}\]</span>
+训练的目标是找出最优参数<span class="math inline">\(\hat{w}\)</span>与<span class="math inline">\(\hat{b}\)</span>使成本函数最小。</p>
+<p>梯度下降法（Gradient descent）是求解优化问题的常用方法之一。
+<span class="math display" id="eq:gd">\[\begin{align}
+\hat{w} = w - \eta \frac{\partial J}{\partial w} \ ,\
+\hat{b} = b - \eta \frac{\partial J}{\partial b}
+\tag{4.1}
+\end{align}\]</span>\end{align}
+其中，<span class="math inline">\(\eta\)</span>为人为设定的机器学习的学习速率或步长
+（learning rate/step size）。
+对上式进行迭代直至结果收敛，得到最优参数<span class="math inline">\(\hat{w}\)</span>与<span class="math inline">\(\hat{b}\)</span>。</p>
+<p>当样本数与特征值数目相等时，
+称为充分参数化（sufficiently parameterized），
+此时仅有一个最优解，对应于成本函数等于0的解。
+当样本数大于特征数目时，
+称为欠参数化（under-parameterized），
+此时找不到成本函数等于0的解，
+最优解对应于成本函数梯度等于0的解。
+当样本数小于特征数目时，
+称为过参数化（over-parameterized），
+此时可以找到多个最优解，
+由梯度下降法给出的解称为Moore-Penrose解。</p>
+<p>线性模型同样可以运用于分类问题。
+例如，线性判别分析（Linear Discriminant Analysis，LDA）
+是用于二分类问题的线性模型<span class="citation">(<a href="#ref-FISHER1936">FISHER, 1936</a>)</span>。</p>
+</div>
+<div id="支持向量机" class="section level4 hasAnchor" number="4.1.1.2">
+<h4><span class="header-section-number">4.1.1.2</span> 支持向量机<a href="机器学习与算法交易.html#支持向量机" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>支持向量机是一类监督学习方法，
+由统计学习演化而来<span class="citation">(<a href="#ref-Boser1992">Boser et al., 1992</a>; <a href="#ref-Cortes1995">Cortes &amp; Vapnik, 1995</a>; <a href="#ref-Smola2004">Smola &amp; Schölkopf, 2004</a>)</span>。
+依然考虑一个二分类问题，
+假设有一组训练数据
+<span class="math inline">\(\{(x_1,y_1),\cdots,(x_\ell, y_\ell)\}\)</span>，
+其中<span class="math inline">\(x \in \mathbb{R}\)</span>，
+<span class="math inline">\(y \in(1,-1)\)</span>，1代表正样本，-1代表负样本。
+线性分类器的学习目标是找到一个超平面
+<span class="math inline">\(h(x)=w x + b = 0\)</span>，使其可以区分所有正负样本。
+支持向量定义了一个距离正负样本几何间隔（margin）最大的超平面。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:svm"></span>
+<img src="intro/svm.png" alt="支持向量机示意图。" width="50%" />
+<p class="caption">
+Figure 4.2: 支持向量机示意图。
+</p>
+</div>
+<p>求解支持向量可以转化为如下的凸优化问题：
+<span class="math display">\[\begin{align}
+\min \quad &amp; \frac{1}{2}||w||^2 \\
+\text{s.t.} \quad &amp; y_i(w x_i +b) \geq 1 ,
+i = 1,\cdots, \ell .
+\end{align}\]</span>
+其中，<span class="math inline">\(||w||=\langle ww \rangle\)</span>，
+<span class="math inline">\(\langle ab\rangle\)</span>代表<span class="math inline">\(a\)</span>点乘<span class="math inline">\(b\)</span>。
+对于有约束的凸优化问题，可以使用拉格朗日乘子法。
+构造如下拉格朗日量，
+<span class="math display" id="eq:svmlag">\[\begin{align}
+  \bm{L}(w,b,\lambda) = \frac{1}{2}||w||^2
+  -\sum_i^\ell \lambda_i \left[y_i(wx_i+b)-1\right]\ .
+  \tag{4.2}
+\end{align}\]</span>
+其中，<span class="math inline">\(\lambda_i\)</span>为拉格朗日乘子，<span class="math inline">\(\lambda_i\geq 0\)</span>。
+分别令<span class="math inline">\(\partial_w \bm{L} \equiv 0\)</span>，
+<span class="math inline">\(\partial_b \bm{L} \equiv 0\)</span>可得，
+<span class="math display" id="eq:svml">\[\begin{align}
+w-\sum_i^\ell \lambda_i y_i x_i = 0\ ,\quad \sum_i^\ell \lambda_i y_i =0 \ .
+\tag{4.3}
+\end{align}\]</span>
+将公式<a href="机器学习与算法交易.html#eq:svml">(4.3)</a>代回公式<a href="机器学习与算法交易.html#eq:svmlag">(4.2)</a>可得，
+<span class="math display">\[\begin{align}
+  \bm{L}(w,b,\lambda) =
+  -\frac{1}{2}\sum_{i,j=1}^\ell \lambda_i \lambda_j y_i y_j \langle x_i x_j\rangle
+  +\sum_i^\ell \lambda_i
+\end{align}\]</span>
+此时，问题转化为了求解如下对偶优化问题，
+<span class="math display">\[\begin{align}
+  \max \quad &amp;-\frac{1}{2}\sum_{i,j=1}^\ell \lambda_i \lambda_j y_i y_j \langle x_i x_j\rangle
+  +\sum_i^\ell \lambda_i \\
+  \text{s.t.} \quad &amp;
+  \lambda_i \geq 0\ ,\ i=1,\cdots,\ell \\
+  &amp;\sum_i^\ell \lambda_i y_i =0\ .
+\end{align}\]</span>
+根据Karush-Kuhn-Tucker（KKT）条件<span class="citation">(<a href="#ref-Karush1939">Karush, 1939</a>; <a href="#ref-Kuhn1950">Kuhn &amp; Tucker, 1950</a>)</span>，
+<span class="math display">\[\begin{align}
+\lambda_i \left[ y_ih(x_i)-1 \right]= 0 \ .
+\end{align}\]</span>
+对任意样本都有<span class="math inline">\(\lambda_i=0\)</span>或者<span class="math inline">\(y_ih(x_i)=1\)</span>。</p>
+<p>根据公式<a href="机器学习与算法交易.html#eq:svml">(4.3)</a>，求解的超平面可以写为，
+<span class="math display">\[\begin{align}
+h(x) = wx+b = \sum_{i=1}^\ell \lambda_i y_i \langle x_i x\rangle + b
+\end{align}\]</span>
+上式称为支持向量展开（SV expansion）。
+当<span class="math inline">\(\lambda_i=0\)</span>时，样本对<span class="math inline">\(h(x)\)</span>没有贡献；
+当<span class="math inline">\(\lambda_i&gt; 0\)</span>时，<span class="math inline">\(y_ih(x_i)=1\)</span>，
+此时对应的样本为支持向量。</p>
+<p>上述讨论基于样本线性可分的前提，
+对于线性不可分的情形，
+可按照上述步骤将模型进行推广。
+一种常用的方式是利用核函数（kernel function）对数据进行升维，
+使其在更高维度上线性可分<span class="citation">(<a href="#ref-Awad2015">Awad &amp; Khanna, 2015</a>; <a href="#ref-Smola2004">Smola &amp; Schölkopf, 2004</a>)</span>。</p>
+<p>由于支持向量机模型的复杂度仅取决于支持向量的个数，
+因此支持向量机对小样本情况依然有效，
+并且通过核函数，支持向量机可以高效的学习高维数据，避免了``维度灾难’’。</p>
+</div>
+<div id="决策树" class="section level4 hasAnchor" number="4.1.1.3">
+<h4><span class="header-section-number">4.1.1.3</span> 决策树<a href="机器学习与算法交易.html#决策树" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>决策树（Decision Tree）是一类重要的监督学习算法<span class="citation">(<a href="#ref-Quinlan1986">Quinlan, 1986</a>)</span>。
+决策树通过对数据每个特征进行逐层划分，
+最终得到一个多节点的分层树形结构。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:dctree"></span>
+<img src="intro/decisiontree.png" alt="决策树模型示意图。" width="50%" />
+<p class="caption">
+Figure 4.3: 决策树模型示意图。
+</p>
+</div>
+<p>决策树模型的关键是在每个节点应该选择哪种特征对数据进行划分。
+选择特征的好坏可以通过不纯度（impurity）进行度量。
+划分后，一个分支的所有实例所属分类越一致，
+那么这个节点的划分就越纯。
+假设决策树共有<span class="math inline">\(N\)</span>个实例待划分，
+到达节点<span class="math inline">\(m\)</span>有<span class="math inline">\(N_m\)</span>个实例，
+其中属于类别<span class="math inline">\(i\)</span>的实例个数为<span class="math inline">\(N_m^i\)</span>，
+<span class="math inline">\(\sum_i N_m^i=N_m\)</span>。
+定义该节点的熵（entropy），
+<span class="math display">\[\begin{align}
+\mathcal{I}_m=-\sum_{i=1}^K p_m^i \log_2 p_m^i\ .
+\end{align}\]</span>
+其中，
+<span class="math display">\[\begin{align}
+p_m^i = \frac{N_m^i}{N_m}\ .
+\end{align}\]</span>
+熵值越小，节点的纯度越高。
+对于二分类问题（<span class="math inline">\(K=2\)</span>），若<span class="math inline">\(p_m^1=1, P_m^2=0\)</span>，
+此时熵最小，为0。
+对于<span class="math inline">\(K\)</span>分类问题（<span class="math inline">\(K&gt;2\)</span>），
+可知当<span class="math inline">\(p^i=1/K\)</span>时熵最大，为<span class="math inline">\(\log_2K\)</span>。
+如果一个节点不纯，说明该节点需要依据实例特征进一步划分。
+划分的依据是保证划分后子节点的熵值尽可能低。
+对节点<span class="math inline">\(m\)</span>，假设划分后一共有<span class="math inline">\(L\)</span>个子节点，
+<span class="math inline">\(N_m\)</span>中有<span class="math inline">\(N_{mj}\)</span>个实例被划分到了子节点<span class="math inline">\(j\)</span>，
+那么划分后总的不纯度为，
+<span class="math display">\[\begin{align}
+  \mathcal{I}_m&#39;=-\sum_{j=1}^L\frac{N_{mj}}{N_m}
+  \sum_{i=1}^K p_{mj}^i \log_2 p_{mj}^i\ .
+  \label{eq:dt_tot_impure}
+\end{align}\]</span>
+其中，
+<span class="math display">\[\begin{align}
+  p_{mj}^i = \frac{N_{mj}^i}{N_{mj}}\ .
+\end{align}\]</span>
+构建决策树时，先对节点上的实例选取不同特征进行划分，
+然后利用公式<span class="math inline">\(\ref{eq:dt_tot_impure}\)</span>比较这些划分后的不纯度，
+取不纯度最低时对应的特征为该节点最终的划分依据。</p>
+<p>熵不是不纯度的唯一度量。
+以二分类问题为例，令<span class="math inline">\(p^1\equiv p,p^2=1-p\)</span>，
+如果一个非负函数<span class="math inline">\(\psi\)</span>满足如下三点条件，
+那么就可以作为一个不纯度度量<span class="citation">(<a href="#ref-Devroye1996">Devroye et al., 1996</a>)</span>：
+<span class="math display">\[\begin{align}
+\left\{
+  \begin{aligned}
+  &amp;\psi(1/2,1/2)\geq \psi(p,1-p), \forall p \in [0,1]\ , \\
+  &amp;\psi(0,1)=\psi(1,0)=0 \ ,\\
+  &amp;\psi(p,1-p) \text{在区间[0,1/2]递增，[1/2,1]递减} \ .\\
+  \end{aligned}
+\right.
+\end{align}\]</span>
+对于熵：<span class="math inline">\(\psi(p,1-p)=-p\log_2p-(1-p)\log_2(1-p)\)</span>。
+常用的不纯度度量还有基尼系数（Gini index）：<span class="math inline">\(\psi(p,1-p)=2p(1-p)\)</span>；
+分类误差率：<span class="math inline">\(\psi(p,1-p)=1-\max(p,1-p)\)</span>。
+ID3决策树使用熵作为不纯度度量<span class="citation">(<a href="#ref-Quinlan1986">Quinlan, 1986</a>)</span>，
+CART（Classification and Regression Trees）
+使用基尼系数作为不纯度度量<span class="citation">(<a href="#ref-Breiman2017">Breiman et al., 2017</a>)</span>，</p>
+<p>决策树具有简单易用、易可视化等优点，
+但是随着决策树节点数和深度的不断增加，
+模型容易存在过拟合的风险。
+一种降低过拟合风险的方式是剪枝（pruning）。
+剪枝的方式有预剪枝（pre-pruning）与后剪枝（post-pruning）。
+预剪枝是在训练决策树时，当子节点样本数小于预设值时，
+则停止划分。
+后剪枝是当全部训练完成后，
+从叶节点开始逐层向上替代子节点，
+如果决策树的性能可以提升，
+则将子节点替换为叶节点。
+对比预剪枝和后剪枝，
+预剪枝速度更快，而后剪枝往往更精确<span class="citation">(<a href="#ref-Alpaydin2020">Alpaydin, 2020</a>)</span>。</p>
+</div>
+</div>
+<div id="深度学习" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> 深度学习<a href="机器学习与算法交易.html#深度学习" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>深度学习是机器学习领域中最热门的分支之一。
+传统的机器学习技术受限于需要专业领域从业者对原始数据进行特征提取。
+而深度学习可以直接通过对原始数据的逐层抽象表示，
+学习非常复杂的非线性关系<span class="citation">(<a href="#ref-LeCun2015">LeCun et al., 2015</a>)</span>。</p>
+<div id="深度学习的发展历史" class="section level4 hasAnchor" number="4.1.2.1">
+<h4><span class="header-section-number">4.1.2.1</span> 深度学习的发展历史<a href="机器学习与算法交易.html#深度学习的发展历史" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Walter Pitts 和 Warren McCulloch 在 1943 年提出了神经网络最初的数学模型<span class="citation">(<a href="#ref-McCulloch1943">W. S. McCulloch &amp; Pitts, 1943</a>)</span>。
+Rosenblatt 在 1957建立了可以实际应用于二分类问题的感知机（Perceptron）模型<span class="citation">(<a href="#ref-Rosenblatt1957">Rosenblatt, 1957</a>)</span>。
+1960年，Henry J.Kelley 提出了第一个反向传播模型<span class="citation">(<a href="#ref-KELLEY1960">KELLEY, 1960</a>)</span>。
+1969年，Marvin Minsky 和 Seymour Papert 出版了 “Perceptrons” 一书<span class="citation">(<a href="#ref-Minsky2017">Minsky &amp; Papert, 2017</a>)</span>，
+指出 Rosenblatt 的感知机模型存在若干缺陷，例如无法解决异或运算（XOR）。
+这导致人工神经网络在1970年代的发展非常缓慢。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:dltl"></span>
+<img src="intro/dltl.png" alt="深度学习发展时间线。" width="100%" />
+<p class="caption">
+Figure 4.4: 深度学习发展时间线。
+</p>
+</div>
+<p>直到1986年，Geoffrey Hinton, Rumelhart, 和 Williams
+成功将反向传播模型运用于神经网络中，
+使得训练复杂的神经网络变得可行<span class="citation">(<a href="#ref-Rumelhart1986">Rumelhart et al., 1986</a>)</span>。
+1989年，Yann LeCun 及合作者利用反向传播
+（Back-Propagation，BP）算法训练了卷积神经网络，
+并成功运用于手写字体的识别<span class="citation">(<a href="#ref-LeCun1989">LeCun et al., 1989</a>)</span>，
+这为后续深度学习在计算机视觉领域的发展奠定了基础。
+同年，George Cybenko提出了通用近似定理（Universal Approximation Theorem）的雏形，
+证明拥有隐层及有限神经元个数的前馈神经网络有能力逼近任何连续性方程<span class="citation">(<a href="#ref-Cybenko1989">Cybenko, 1989</a>)</span>。
+但是受限于当时计算机的处理速度，训练深度神经网络还无法实现。
+此外，增加神经网络的规模可能导致的``梯度消失’’问题进一步限制了神经网络的应用。
+深度学习的发展第二次受阻。</p>
+<p>2006年，Geoffrey Hinton, Ruslan Salakhutdinov, Osindero 以及 Teh
+在其称为深度信念网络（Deep Belief Networks）中，
+堆叠了多个受限玻尔兹曼机（Restricted Boltzmann Machine，RBM），
+使得模型对大数据的训练效率大幅提高<span class="citation">(<a href="#ref-Hinton2006">G. E. Hinton et al., 2006</a>)</span>。
+之后，随着计算机硬件性能的提升，
+特别是人们发现GPU在处理神经网络算法上的巨大优势，
+真正开启了深度学习的时代。</p>
+<p>2011年，Yoshua Bengio, Antoine Bordes 和 Xavier Glorot 的工作展示了
+使用ReLU作为激活函数可以有效避免``梯度消失’’的问题<span class="citation">(<a href="#ref-Glorot2011">Glorot et al., 2011</a>)</span>。
+2014年，Ian Goodfellow及合作者构造了生成对抗网络
+（Generative Adversarial Neural Network, GAN）<span class="citation">(<a href="#ref-Goodfellow2014">Goodfellow et al., 2014</a>)</span>。
+GAN以假乱真的能力，使其迅速被运用在了科学、艺术、时尚等各个领域。
+2016到2017年，AlphaGo战胜一众围棋世界冠军，展示了其强大的实力。
+2017年，谷歌团队提出了Transformer模型<span class="citation">(<a href="#ref-Vaswani2017">Vaswani et al., 2017</a>)</span>，
+并在2018年基于此设计了自然语言处理（Naure Language Processing，NLP）模型Bert，
+旨在更好地理解人类每天使用的自然语言。
+2022年，同样运用Transformer，由OpenAI开发的ChatGPT
+（ Generative Pre-training Transformer）
+面向公众问世<span class="citation">(<a href="#ref-Brown2020">Brown et al., 2020</a>; <a href="#ref-OpenAI2023">OpenAI, 2023</a>; <a href="#ref-Radford2018">Radford et al., 2018</a>)</span>，
+其几乎可以谈论任何主题的能力，迅速引爆舆论。
+截至目前，深度学习还在迅速发展中，
+应用场景正不断的渗透到各个领域。</p>
+</div>
+<div id="深度学习的基本概念" class="section level4 hasAnchor" number="4.1.2.2">
+<h4><span class="header-section-number">4.1.2.2</span> 深度学习的基本概念<a href="机器学习与算法交易.html#深度学习的基本概念" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="citation">Sarker (<a href="#ref-Sarker2021">2021</a>)</span> 按照传统机器学习的分类方式，
+将深度学习分为三类：（1）有监督或识别式学习（2）无监督或生成式学习
+（3）混合式学习及其他。
+图<a href="机器学习与算法交易.html#fig:dltax">4.5</a>展示了每一类中的代表型算法以及他们的变体。
+其中最经典的模型是多层感知机（Multi-layer Perceptron，MLP）。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:dltax"></span>
+<img src="intro/dltaxonomy.png" alt="深度学习分类[@Sarker2021]。" width="100%" />
+<p class="caption">
+Figure 4.5: 深度学习分类<span class="citation">(<a href="#ref-Sarker2021">Sarker, 2021</a>)</span>。
+</p>
+</div>
+<p>感知机是神经网络中的一个神经元，是构成神经网络的最基本结构。
+<span class="math display" id="eq:perceptron">\[\begin{align}
+    y = {\rm sgn}\left(\sum_i^m w_i x_i +b\right)\ .
+    \tag{4.4}
+\end{align}\]</span>
+公式<a href="机器学习与算法交易.html#eq:perceptron">(4.4)</a>展示了感知机的工作原理：
+首先对输入端的数据<span class="math inline">\(\{x_1, x_2, \cdots, x_m\}\)</span>
+赋予权重<span class="math inline">\(\{w_1,w_2,\cdots,w_m\}\)</span>，
+然后对所有结果求和并加上偏置<span class="math inline">\(b\)</span>，
+最后经过激活函数sgn的处理得到输出值<span class="math inline">\(y\)</span>。
+其中权重<span class="math inline">\(w\)</span>和偏置<span class="math inline">\(b\)</span>为感知机待学习的参数。
+激活函数的主要作用是将输出结果非线性化，
+从而使神经网络可以拟合非线性关系。
+原始感知机的激活函数是一个阶跃函数sgn<span class="math inline">\((x)\)</span>，
+当<span class="math inline">\(x&gt;=0\)</span>时sgn<span class="math inline">\((x)=1\)</span>，当<span class="math inline">\(x&lt;0\)</span>时sgn<span class="math inline">\((x)=-1\)</span>。
+除此以外，常用的激活函数还有
+ReLU、sigmoid、tanh、softmax等，
+它们有各自的特性及适用范围<span class="citation">(<a href="#ref-sklearn">Pedregosa et al., 2011</a>)</span>。</p>
+<p>典型的多层感知机是一个全连接的前馈人工神经网络（Feedforward ANN），
+其特征是数据在每层之间单向流动，
+每个神经元的输入是上一层所有神经元的输出。
+图<a href="机器学习与算法交易.html#fig:mlp">4.6</a>展示了一个包含两个隐层的多层感知机模型结构。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mlp"></span>
+<img src="intro/mlp.png" alt="多层感知机模型、全连接神经网络结构示意图。" width="80%" />
+<p class="caption">
+Figure 4.6: 多层感知机模型、全连接神经网络结构示意图。
+</p>
+</div>
+<p>单层感知机模型是线性模型加激活函数，
+因此与训练线性模型一样，
+梯度下降法可直接用于训练单层感知机模型
+<span class="citation">(<a href="#ref-Hinton2022">G. Hinton, 2022</a>; <a href="#ref-Rumelhart1986">Rumelhart et al., 1986</a>)</span>。
+对于多层感知机也可用类似方法。
+以回归问题为例，
+假设样本<span class="math inline">\((x,y)\)</span>的输出为<span class="math inline">\(\hat{y}\)</span>，
+<span class="math inline">\(y=(y^1,y^2,\cdots,y^T)\)</span>。
+回归问题的输出层一般不需要激活函数，
+<span class="math display">\[\begin{align}
+\hat{y} = \sum_{h=1}^H w_{ih}z_h + b_{i}
+\end{align}\]</span>
+其中，<span class="math inline">\(z_h\)</span>为最后一层隐层的输出，共有<span class="math inline">\(H\)</span>个输出。
+<span class="math display">\[\begin{align}
+  z_h = \sigma\left(\sum_{j=1}^J w_{hj}z_j + b_{j}\right)
+\end{align}\]</span>
+其中，<span class="math inline">\(\sigma\)</span>为激活函数，<span class="math inline">\(z_j\)</span>为上一层的输出，共有<span class="math inline">\(J\)</span>个输出，
+以此类推。
+定义损失函数为方均误差，
+<span class="math display">\[\begin{align}
+  L = \frac{1}{2}\sum_{t=1}^T\left(y^t-\hat{y}^t\right)^2
+\end{align}\]</span>
+要训练的参数有<span class="math inline">\(w_{ih},w_{hj},\cdots\)</span>及<span class="math inline">\(b_i,b_j,\cdots\)</span>。
+类似公式<a href="机器学习与算法交易.html#eq:gd">(4.1)</a>，要更新参数，
+只需求出损失函数对相应参数的梯度即可。
+例如，由链式法则，误差对参数<span class="math inline">\(w_{hj}\)</span>的梯度可以写为，
+<span class="math display">\[\begin{align}
+\frac{\partial L}{\partial w_{hj}}
+=\frac{\partial L}{\partial y_i}
+\frac{\partial y_i}{\partial z_h}
+\frac{\partial z_h}{\partial w_{hj}}\ .
+\end{align}\]</span>
+按照顺序逐层回溯即可得到所有参数的对应结果。
+由于误差由输出反向传递给了输入，
+所以这种方法称为反向传播法<span class="citation">(<a href="#ref-Rumelhart1986">Rumelhart et al., 1986</a>)</span>。
+反向传播是深度学习中最重要的模型优化方法。</p>
+</div>
+<div id="循环神经网络" class="section level4 hasAnchor" number="4.1.2.3">
+<h4><span class="header-section-number">4.1.2.3</span> 循环神经网络<a href="机器学习与算法交易.html#循环神经网络" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>在前馈网络中，数据单向流通，
+神经元自身、神经元之间都没有数据交换。
+与前馈神经网络不同，循环神经网络（Recurrent Neural Network, RNN）
+在隐层中添加了神经元的自连接或神经元间的互连接，
+使数据不再单向流通<span class="citation">(<a href="#ref-Elman1990">Elman, 1990</a>)</span>。
+这种结构可以使得神经元存储来自先前输入的信息，
+捕捉数据中的长期依赖关系。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:rnn"></span>
+<img src="intro/rnn.png" alt="循环神经网络结构。由左至右分别为原始 RNN、LSTM 以及 GRU。" width="100%" />
+<p class="caption">
+Figure 4.7: 循环神经网络结构。由左至右分别为原始 RNN、LSTM 以及 GRU。
+</p>
+</div>
+<p>RNN存在”梯度爆炸”或”梯度消失”的问题，
+导致原始的RNN很难进行长序列的学习。
+为了解决这些问题，
+人们提出了 RNN 的各种扩展和变体，
+如长短时记忆<span class="citation">(<a href="#ref-Hochreiter1997">Hochreiter &amp; Schmidhuber, 1997</a>)</span>（LSTM）、
+门控递归单元<span class="citation">(<a href="#ref-Cho2014">Cho et al., 2014</a>)</span>（GRU）
+和注意机制<span class="citation">(<a href="#ref-Vaswani2017">Vaswani et al., 2017</a>)</span>（Attention）等。
+这些模型引入了门和记忆单元等附加组件，
+以控制信息流并增强 RNN 的学习能力。</p>
+</div>
+<div id="卷积神经网络" class="section level4 hasAnchor" number="4.1.2.4">
+<h4><span class="header-section-number">4.1.2.4</span> 卷积神经网络<a href="机器学习与算法交易.html#卷积神经网络" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>卷积神经网络（Convolutional Neural Network，CNN）
+是一种专为处理图像、视频或文本等结构化数据设计的人工神经网络，
+广泛应用于计算机视觉（Computer Vision，CV）
+和自然语言处理（Natural Language Processing，NLP）领域，
+在图像分类、物体检测、人脸识别、情感分析、机器翻译和语音识别等
+许多视觉和语言任务中都具有良好的表现。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cnn"></span>
+<img src="intro/cnn.png" alt="卷积神经网络典型结构。" width="100%" />
+<p class="caption">
+Figure 4.8: 卷积神经网络典型结构。
+</p>
+</div>
+<p>图<a href="机器学习与算法交易.html#fig:cnn">4.8</a>展示了一个典型的卷积神经网络结构。
+卷积层（Convolutional Layer）是 CNN 的主要组成部分，
+它将一组过滤器应用于输入数据，以提取局部特征，
+例如图像的边缘、形状、纹理或文本中的单词等。
+卷积层之后通常是池化层（Pooling Layer），
+池化层通过对输入数据的某个区域应用最大值、
+平均值或求和等函数来降低数据的空间维度。
+池化层的作用是在卷积神经网络中对数据进行降维，
+提取更高层次的特征，
+增强模型的不变性和泛化能力。
+卷积层和池化层通常会重复多次，
+形成一个分层特征提取过程，
+其中每一层都能识别更复杂、更抽象的模式。
+CNN 的最后一层通常是一个全连接层（Fully Connected Layer），
+根据任务的不同充当分类器或回归器的作用，
+并产生网络的最终输出结果。</p>
+</div>
+<div id="生成式神经网络" class="section level4 hasAnchor" number="4.1.2.5">
+<h4><span class="header-section-number">4.1.2.5</span> 生成式神经网络<a href="机器学习与算法交易.html#生成式神经网络" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>生成式网络（Generateive network）是一类无监督深度学习方法。
+比较常见的算法有自编码器（Auto-encoder，AE），
+深度信念网络等。
+<span class="citation">Goodfellow et al. (<a href="#ref-Goodfellow2014">2014</a>)</span> 提出的生成对抗网络
+（Generative Adversarial Network，GAN）是生成式网络
+最具突破性的代表之一，
+通过加入对抗识别模块，显著减少了神经网络的使用层数，
+极大的提高了模型的训练效率。
+原始的GAN是一种无监督学习模型，
+但随着GAN的成功，很快便发展出一系列衍生和变体模型
+<span class="citation">(<a href="#ref-Isola2016">Isola et al., 2016</a>; <a href="#ref-Mirza2014">Mirza &amp; Osindero, 2014</a>; <a href="#ref-Odena2016">Odena et al., 2016</a>)</span>。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cgan"></span>
+<img src="intro/CGAN.png" alt="条件生成对抗网络结构。" width="60%" />
+<p class="caption">
+Figure 4.9: 条件生成对抗网络结构。
+</p>
+</div>
+<p>图<a href="机器学习与算法交易.html#fig:cgan">4.9</a> 展示了条件生成对抗网络（CGAN）<span class="citation">(<a href="#ref-Mirza2014">Mirza &amp; Osindero, 2014</a>)</span> 的基本结构。
+GAN 主要由两个相互 “对抗” 的 模块组成:
+生成器 (Generator) 与判别器 (Discriminator)。
+生成器的作用是在给定 一组随机向量 <span class="math inline">\(z\)</span> 时，
+生成对目标图像 <span class="math inline">\(x\)</span> 的模拟 <span class="math inline">\(G(z)\)</span>。
+判别器的作用是区分生成器的输出与训练集中真实图像之间的差异，
+判断生成器的输出是否可以 “以假乱真”。
+判别器的引入极大的提升了网络的训练效率。</p>
+<p>GAN的目标函数为，
+<span class="math display">\[\begin{align}
+    {\rm arg} \min_G \max_D \mathcal{L}_{\rm GAN}(G,D)
+  =\mathbb{E}_x[\log D(x)]+\mathbb{E}_z[\log(1-D(G(z)))]\ .
+\end{align}\]</span></p>
+<p>其中，<span class="math inline">\({\rm arg} \min\)</span>/<span class="math inline">\(\max f(x)\)</span>表示：当<span class="math inline">\(f(x)\)</span>取最小/最大值时，
+求解参数<span class="math inline">\(x\)</span>的值。
+<span class="math inline">\(\mathbb{E}\)</span>表示数学期望。
+<span class="math inline">\(D(x)\)</span>表示输入为<span class="math inline">\(x\)</span>时判别器的输出。
+对判别器，需要调节判别器参数，
+令<span class="math inline">\(\mathbb{E}_x[\log D(x)]+\mathbb{E}_z[\log(1-D(G(z)))]\)</span>最大化（<span class="math inline">\(\max_D\)</span>）。
+对生成器，需要在固定判别器参数时调节生成器参数，
+令<span class="math inline">\(\mathbb{E}_z[\log(1-D(G(z)))]\)</span>最小化（<span class="math inline">\(\min_G\)</span>）。
+在实际训练生成器时，通常选择令<span class="math inline">\(\mathbb{E}_z[\log D(G(z)]\)</span>最大化。</p>
+<p>如果对生成器和判别器提供额外的约束条件<span class="math inline">\(y\)</span>，
+则可以将GAN扩展为条件生成对抗网络。
+此时，目标函数变为
+<span class="math display">\[\begin{equation}
+  {\rm arg} \min_G \max_D \mathcal{L}_{\rm CGAN}(G,D)
+  =\mathbb{E}_{x,y}[\log D(x|y)]+\mathbb{E}_{z,y}[\log(1-D(G(z|y)))]\ .
+\end{equation}\]</span></p>
+</div>
+</div>
+<div id="强化学习" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> 强化学习<a href="机器学习与算法交易.html#强化学习" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>在人类或动物的行为模式中，
+一个动作是否产生奖励会影响其下一步行动。
+强化学习（Reinforcement Learning, RL）试图模仿这种决策模式，
+通过学习环境对主体行为的反馈优化主体行为，
+从而获取更多奖励<span class="citation">(<a href="#ref-Littman2015">Littman, 2015</a>; <a href="#ref-Sutton2018">Sutton &amp; Barto, 2018</a>)</span>。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:rl"></span>
+<img src="intro/rl.png" alt="强化学习。" width="60%" />
+<p class="caption">
+Figure 4.10: 强化学习。
+</p>
+</div>
+<p>图<a href="机器学习与算法交易.html#fig:rltypes">4.11</a>展示了强化学习算法的分类图。
+强化学习有无模型（model-free）和有模型（model-based）两种模式。
+无模型强化学习算法不会建立环境的模型，而是直接从与环境的交互中学习，
+有模型强化学习算法会首先尝试学习或给定一个环境模型，
+然后使用这个模型来进行策略并进行学习。
+强化学习在各个领域都有应用，包括机器人学、游戏玩法、金融和医疗保健。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:rltypes"></span>
+<img src="intro/rl_algos.png" alt="强化学习分类（图片来源：OpenAI）。" width="100%" />
+<p class="caption">
+Figure 4.11: 强化学习分类（图片来源：OpenAI）。
+</p>
+</div>
+<div id="马尔可夫决策过程" class="section level4 hasAnchor" number="4.1.3.1">
+<h4><span class="header-section-number">4.1.3.1</span> 马尔可夫决策过程<a href="机器学习与算法交易.html#马尔可夫决策过程" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>马尔可夫决策过程（Markov Decision Processing, MDP）
+是强化学习问题在数学上的理想化形式。
+一个马尔可夫决策过程由元组<span class="math inline">\((S,A,P,R,\gamma)\)</span>定义，
+其中，
+（1）<span class="math inline">\(S\)</span>为状态集，<span class="math inline">\(s\in S\)</span>表示环境中的一个特定情境或配置；
+（2）<span class="math inline">\(A\)</span>为动作集，<span class="math inline">\(a\in A\)</span>表示动作集中可能采取的一个行动；
+（3）<span class="math inline">\(P\)</span>为状态转移概率函数，<span class="math inline">\(P(s&#39;|s,a)\)</span>表示通过采取行动<span class="math inline">\(a\)</span>从状态<span class="math inline">\(s\)</span>过渡到状态<span class="math inline">\(s&#39;\)</span>的概率；
+（4）<span class="math inline">\(R\)</span>为奖励函数，<span class="math inline">\(R(s,a,s&#39;)\)</span>表示通过采取行动<span class="math inline">\(a\)</span>从状态<span class="math inline">\(s\)</span>过渡到状态<span class="math inline">\(s&#39;\)</span>后获得的即时奖励；
+（5）<span class="math inline">\(\gamma\)</span>为折损因子，是一个介于0和1之间的参数，确定未来奖励的重要性。
+折后的累积奖励为，
+<span class="math display">\[\begin{align}
+G = R_1 + \gamma R_2 + \gamma^2 R_3 + \cdots\ .
+\end{align}\]</span>
+其中，<span class="math inline">\(R_i\)</span>表示第<span class="math inline">\(i\)</span>期奖励。</p>
+<p>MDP的目标是找到一个策略（policy），
+使得累积奖励的期望最大。
+策略<span class="math inline">\(\pi\)</span>是从状态到行动概率的映射，
+<span class="math inline">\(\pi(a|s)\)</span>表示当状态为<span class="math inline">\(s\)</span>时，采取行动<span class="math inline">\(a\)</span>的概率。
+策略决定了智能体（agent）的决策行为。
+累积奖励通常通过值函数进行描述。
+当智能体遵循特定策略<span class="math inline">\(\pi\)</span>时，
+在状态<span class="math inline">\(s\)</span>下未来累积奖励的期望值称为策略<span class="math inline">\(\pi\)</span>的状态值函数，
+<span class="math display">\[\begin{align}
+V^\pi (s) = \sum_{k=0}^\infty \gamma^k
+\mathbb{E}_\pi [R_{t+k+1}|s_t=s]\ .
+\end{align}\]</span>
+在状态<span class="math inline">\(s\)</span>下采取行动<span class="math inline">\(a\)</span>后未来累积奖励的期望值称为策略<span class="math inline">\(\pi\)</span>的状态行动值函数，
+<span class="math display">\[\begin{align}
+Q^\pi (s,a) = \sum_{k=0}^\infty \gamma^k
+\mathbb{E}_\pi [R_{t+k+1}|s_t=s,a_t=a]\ .
+\end{align}\]</span>
+策略、状态值函数与状态行动值函数满足如下关系，
+<span class="math display">\[\begin{align}
+V^\pi(s)=\sum_{a\in A} \pi(a|s)Q^\pi(s,a)\ .
+\end{align}\]</span></p>
+<p>贝尔曼方程（Bellman Equation）给出了某个状态值函数与其后继状态值函数间的关系，
+<span class="math display">\[\begin{align}
+V^\pi(s)=\mathbb{E}_\pi \left[R_{t+1}+\gamma G_{t+1}| s_t=s\right]
+\end{align}\]</span>
+最优价值函数可以用贝尔曼最优方程进行递归性描述，
+<span class="math display">\[\begin{align}
+V^\ast(s) = \max_a \sum_{s&#39;} P(s&#39;|s,a)\left[R(s,a,s&#39;) +\gamma  V^\ast (s&#39;)\right]
+\end{align}\]</span>
+类似的也可以写出状态行动值函数<span class="math inline">\(Q(s,a)\)</span>对应的贝尔曼方程。
+寻找最优策略的问题可以转换为为寻找最优的状态值函数或状态行动值函数。</p>
+<p>求解最优值函数最常用的方法有动态规划（Dynamic Programming，DP）、
+蒙特卡洛（Monte-Carlo，MC）和
+时序差分学习（Temporal Difference Learning，TDL）等。</p>
+</div>
+<div id="动态规划" class="section level4 hasAnchor" number="4.1.3.2">
+<h4><span class="header-section-number">4.1.3.2</span> 动态规划<a href="机器学习与算法交易.html#动态规划" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>动态规划直接根据贝尔曼公式将问题分解成一步步的子问题，
+然后进行递归求解。
+这就要求可以对环境的动态变化进行建模，
+确定状态转移概率函数和奖励函数的具体形式（model-based）。
+但是在现实问题中，往往无法对问题进行如此完备的描述。
+此外，动态规划的计算复杂度较高，
+还有可能遭遇由于状态数量激增导致的``维度灾难’’。</p>
+</div>
+<div id="蒙特卡洛" class="section level4 hasAnchor" number="4.1.3.3">
+<h4><span class="header-section-number">4.1.3.3</span> 蒙特卡洛<a href="机器学习与算法交易.html#蒙特卡洛" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>蒙特卡罗方法不需要对问题进行完备的描述，
+直接从经验中学习规律（model-free）。
+选取一个样本使其遍历整个决策过程，
+可以得到该样本对应的状态、行动、以及奖励序列，
+这个过程称为一幕（episode）。
+蒙特卡洛法通过随机采样法，对不同样本的幕进行平均，
+可以更高效的处理动态规划的问题。
+蒙特卡洛可以分为两种算法：
+同轨策略（on-policy）法和离轨策略（off-policy）法。
+同轨策略法直接使用要学习的目标策略来生成样本
+并更新值函数及策略；
+离轨策略法则将策略分为了目标策略与行动策略，
+行动策略专门用来生成样本供目标策略进行学习。
+蒙特卡洛法需要令每个样本都遍历整个决策过程，
+即到达幕的末尾，
+这可能导致收敛过慢甚至难以收敛。
+此外，蒙特卡洛结果的方差往往较大。</p>
+</div>
+<div id="时序差分学习" class="section level4 hasAnchor" number="4.1.3.4">
+<h4><span class="header-section-number">4.1.3.4</span> 时序差分学习<a href="机器学习与算法交易.html#时序差分学习" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>第三种方法是时序差分学习，它结合了动态规划与蒙特卡洛。
+时序差分不需要令每个样本都遍历整个决策过程，
+它通过学习样本当前状态与后继状态间的差别来优化值函数，
+因此极大的提升了蒙特卡洛方法的学习效率。</p>
+<p>SARSA与Q-learning分别是同轨策略与离轨策略下，
+时序差分算法的典型代表。
+SARSA（state-action-reward-state-action）是同轨策略下的时序差分，
+<span class="math display">\[\begin{align}
+  Q(s_t,a_t) \leftarrow Q(s_t,a_t) + \alpha \left[
+    R_{t+1} + \gamma Q(s_{t+1},a_{t+1}) - Q(s_t, a_t)
+\right]
+\end{align}\]</span>
+Q-learning是一种离轨策略下的时序差分学习<span class="citation">(<a href="#ref-Watkins1992">Watkins &amp; Dayan, 1992</a>)</span>。
+<span class="math display">\[\begin{align}
+Q(s_t,a_t) \leftarrow Q(s_t,a_t) + \alpha \left[
+  R_{t+1} + \gamma \max_a Q(s_{t+1},a) - Q(s_t, a_t)
+\right]
+\end{align}\]</span></p>
+</div>
+<div id="函数逼近法" class="section level4 hasAnchor" number="4.1.3.5">
+<h4><span class="header-section-number">4.1.3.5</span> 函数逼近法<a href="机器学习与算法交易.html#函数逼近法" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>函数逼近法的基本思想是用一个参数化的函数来近似值函数或策略函数，
+然后通过学习调整参数来优化性能。
+函数逼近法可以分为线性函数逼近和非线性函数逼近，
+其中非线性函数逼近又可以进一步分为基于表格的方法和基于神经网络的方法。</p>
+<p>深度强化学习（Deep Reinforcement Learning，DRL）
+是利用深度神经网络来逼近值函数和策略函数的一类学习方法。
+由此诞生了许多在复杂环境中表现出色的算法，
+如Deep Q-Networks<span class="citation">(<a href="#ref-Mnih2013">Mnih et al., 2013</a>)</span>（DQN）
+和Proximal Policy Optimization<span class="citation">(<a href="#ref-Schulman2017">Schulman et al., 2017</a>)</span>（PPO）等。</p>
+</div>
+</div>
+<div id="集成学习" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> 集成学习<a href="机器学习与算法交易.html#集成学习" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>集成学习（ensemble learning/methods）是指
+通过结合多个学习器构建的一类学习方法<span class="citation">(<a href="#ref-Breiman1996">Breiman, 1996</a>; <a href="#ref-Sagi2018">Sagi &amp; Rokach, 2018</a>; <a href="#ref-Zhou2012">Z.-H. Zhou, 2012</a>)</span>。
+<span class="citation">Dietterich (<a href="#ref-Dietterich2000">2000</a>)</span> 指出了集成学习可能优于单一学习器的三点根本原因：
+（1）统计学原因：单一学习器在数据集不足时可能产生拥有相同精度的不同结果。
+通过集成这些单一学习器，可以在统计学上降低错误答案出现的概率。
+（2）计算型原因：很多算法在寻找最优解时会卡在局部最优解而非全局最优解，
+例如深度学习中的梯度下降和决策树中的贪心分裂（Greedy Splitting），
+都属于NP-hard问题。
+通过集成初始位置不同的单一学习器，集成学习可以更加接近全局最优解。
+（3）表征型原因：想要学习的真实结果可能存在于未知的假设区域，
+不能被单一学习器所表征。
+集成不同的算法可以扩大他们的表征范围，从而找到更真实的结果。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ensemble"></span>
+<img src="intro/ensemble.png" alt="集成学习优于单一学习器的三点根本原因。" width="100%" />
+<p class="caption">
+Figure 4.12: 集成学习优于单一学习器的三点根本原因。
+</p>
+</div>
+<p>图<a href="机器学习与算法交易.html#fig:ensemble">4.12</a>形象的展示了上述三点原因。
+外围黑色实线表示单一学习器所能表征的假设空间的范围，
+<span class="math inline">\(h_1,h_2,h_3,\cdots\)</span>分别表示单一学习器给出的结果，
+<span class="math inline">\(f\)</span>代表真实结果。
+相比单一的学习器，集成学习可以显著提升模型的精度、降低模型的偏差。</p>
+<p>常用的集成学习主要有三种结构：Bagging、Boosting及stacking。</p>
+<div id="bagging" class="section level4 hasAnchor" number="4.1.4.1">
+<h4><span class="header-section-number">4.1.4.1</span> Bagging<a href="机器学习与算法交易.html#bagging" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Bagging(Bootstrap aggregating)通过Bootstrap对数据进行重采样，
+然后用独立的模型学习这些样本，
+最后集成所有习得的模型<span class="citation">(<a href="#ref-Breiman1996">Breiman, 1996</a>; <a href="#ref-Sagi2018">Sagi &amp; Rokach, 2018</a>)</span>。
+随机森林（Random Forest）是
+Bagging算法的典型代表<span class="citation">(<a href="#ref-Biau2016">Biau &amp; Scornet, 2016</a>; <a href="#ref-Breiman2001">Breiman, 2001</a>)</span>。
+随机森林使用决策树作为学习器，
+将所有学习器在bootstrap样本上习得结果的平均值作为最终结果。</p>
+</div>
+<div id="boosting" class="section level4 hasAnchor" number="4.1.4.2">
+<h4><span class="header-section-number">4.1.4.2</span> Boosting<a href="机器学习与算法交易.html#boosting" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Boosting使用弱学习器（例如深度较浅的决策树）构建一个学习器序列，
+令序列中的每个学习器学习上一个学习器的输出，
+最后集成所有弱学习器得到一个强学习器。
+Boosting算法的代表是AdaBoost<span class="citation">(<a href="#ref-Freund1997">Freund &amp; Schapire, 1997</a>)</span>（Adaptive Boosting）
+和Gradient Boosting<span class="citation">(<a href="#ref-Friedman2001">Friedman, 2001</a>, <a href="#ref-Friedman2002">2002</a>)</span>。</p>
+<p>梯度提升（Gradient Boosting）是近年表现最突出的机器学习算法之一。
+其主要思想是利用一个弱学习器去学习上一个弱学习器损失函数的负梯度（Gradient）。
+常用的 Gradient Boosting 框架有华人学者陈天奇开发的
+XGBoost<span class="citation">(<a href="#ref-Chen2016">T. Chen &amp; Guestrin, 2016</a>)</span><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>，
+微软的LightGBM<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>，
+以及俄罗斯团队开发的 CatBoost<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>。</p>
+</div>
+<div id="stacking" class="section level4 hasAnchor" number="4.1.4.3">
+<h4><span class="header-section-number">4.1.4.3</span> Stacking<a href="机器学习与算法交易.html#stacking" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Stacking 采取的集成方式是在相同数据集上使用不同的模型进行学习，
+再将学习到的结果构建成新的数据集，
+然后利用另一个模型，称为元学习器或二级学习器，
+进行最终的学习<span class="citation">(<a href="#ref-Wolpert1992">Wolpert, 1992</a>)</span>。</p>
+</div>
+</div>
+</div>
+<div id="机器学习在算法交易中的应用" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> 机器学习在算法交易中的应用<a href="机器学习与算法交易.html#机器学习在算法交易中的应用" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>由于机器学习在处理复杂非线性问题上具有明显优势。
+越来越多的分析师及研究人员开始使用人工智能技术分析庞大的金融数据集，
+识别复杂的模式，并开发用于交易和投资组合管理的模型。</p>
+<div id="订单簿模拟" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> 订单簿模拟<a href="机器学习与算法交易.html#订单簿模拟" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>订单簿模拟是量化交易中一个非常重要的工具，
+它帮助交易者更深入地理解市场动态，
+测试和优化交易策略，同时管理潜在的风险
+<span class="citation">(<a href="#ref-Abergel2011">Abergel &amp; Jedidi, 2011</a>; <a href="#ref-Huang2011">R. Huang &amp; Polak, 2011</a>; <a href="#ref-Huang2015">W. Huang et al., 2015</a>; <a href="#ref-MorariuPatrichi2021">Morariu-Patrichi &amp; Pakkanen, 2021</a>; <a href="#ref-Rou2009">Roşu, 2009</a>)</span>。
+订单簿模拟最简单的方法是历史数据回放，
+这种方法可以帮助交易者理解过去特定事件对市场的影响，
+但是很难反应真实交易环境中的各种复杂环境变化。
+除此以外，还有多种方法和技术被用于提高模拟的真实性和有效性。</p>
+<ul>
+<li><p>蒙特卡洛模拟。
+蒙特卡洛模拟方法通过随机过程生成数据，
+从而模拟可能的市场情况。
+这种方法特别适用于评估在不确定的市场条件下交易策略的表现。
+蒙特卡洛模拟可以提供对潜在市场行为的广泛洞察，
+帮助交易者准备应对各种可能的市场波动。</p></li>
+<li><p>基于代理的模型<span class="citation">(<a href="#ref-Farmer2009">Farmer &amp; Foley, 2009</a>; <a href="#ref-Shi2023">Shi &amp; Cartlidge, 2023</a>)</span>。
+基于代理的模型涉及创建一个虚拟的市场环境，
+其中多个交易代理（Agent）根据预设策略进行交易。
+这种模型有助于分析和理解市场中的复杂交互作用。
+每个代理代表了一个市场参与者，
+他们的交易决策和行为模式可以基于实际市场数据或假设的行为模式来设定。</p></li>
+<li><p>事件驱动模拟。
+事件驱动模拟考虑到了市场中的关键事件，
+如重大新闻发布、政策变动、经济数据公布等。
+这些事件对市场的影响通常是显著的，
+因此，在模拟中加入这些因素可以帮助交易者理解和预测这些事件对市场可能产生的影响。</p></li>
+<li><p>机器学习和人工智能。
+随着技术的进步，机器学习和人工智能在订单簿模拟中扮演着越来越重要的角色。
+利用这些先进技术，可以预测和模拟市场行为的复杂模式，
+甚至在某些情况下，可以模拟市场的未来动向。
+深度学习等方法能够处理和分析大量的历史数据，
+从而生成更精确的市场模拟结果。
+例如，<span class="citation">Takahashi et al. (<a href="#ref-Takahashi2019">2019</a>)</span>, <span class="citation">J. Li et al. (<a href="#ref-Li2020">2020</a>)</span>, <span class="citation">Coletta et al. (<a href="#ref-Coletta2022">2022</a>)</span>, <span class="citation">Cont et al. (<a href="#ref-Cont2023">2023</a>)</span>
+使用生成对抗网络模拟了订单簿，
+<span class="citation">Briola et al. (<a href="#ref-Briola2020">2020</a>)</span> 使用LSTM深度网络模拟订单簿等。</p></li>
+</ul>
+</div>
+<div id="价格预测" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> 价格预测<a href="机器学习与算法交易.html#价格预测" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>股票价格预测是金量化交易和算法交易研究的核心问题。
+通过分析历史数据、市场趋势和其他相关因素来预测未来的股票价格，
+对于投资者制定投资策略、管理风险和寻求收益都至关重要。
+虽然股票价格预测具有极高的价值，
+但其复杂性和不确定性意味着没有任何一种方法可以保证完全准确。
+投资者需要结合多种方法和工具，
+同时考虑市场的动态变化，灵活调整投资策略。</p>
+<table>
+<caption><span id="tab:mlpred">Table 4.1: </span> 利用不同机器学习技术预测股票价格的相关研究摘录。</caption>
+<colgroup>
+<col width="26%" />
+<col width="73%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Main Algorithm</th>
+<th>Studies</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Neural Network</td>
+<td><span class="citation">Rajihy et al. (<a href="#ref-rajihy2017">2017</a>)</span>, <span class="citation">H. Hu et al. (<a href="#ref-hu2018">2018</a>)</span>, <span class="citation">L. Zhang et al. (<a href="#ref-Zhang2018">2018</a>)</span>, <span class="citation">Shen &amp; Shafiq (<a href="#ref-Shen2020">2020a</a>)</span></td>
+</tr>
+<tr class="even">
+<td>GAN</td>
+<td><span class="citation">K. Zhang et al. (<a href="#ref-Zhang2019">2019</a>)</span>, <span class="citation">Diqi et al. (<a href="#ref-Diqi2022">2022</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>CNN</td>
+<td><span class="citation">Tsantekidis et al. (<a href="#ref-Tsantekidis2017">2017</a>)</span>, <span class="citation">Gunduz et al. (<a href="#ref-gunduz2017">2017</a>)</span>, <span class="citation">Hoseinzade &amp; Haratizadeh (<a href="#ref-hoseinzade2019">2019</a>)</span>, <span class="citation">Cao &amp; Wang (<a href="#ref-cao2019">2019</a>)</span>, <span class="citation">Lu et al. (<a href="#ref-lu2020">2020</a>)</span>, <span class="citation">Ishwarappa &amp; Anuradha (<a href="#ref-Ishwarappa2021">2021</a>)</span></td>
+</tr>
+<tr class="even">
+<td>LSTM</td>
+<td><span class="citation">Bao et al. (<a href="#ref-Bao2017">2017</a>)</span>, <span class="citation">Minh et al. (<a href="#ref-minh2018">2018</a>)</span>, <span class="citation">Baek &amp; Kim (<a href="#ref-baek2018">2018</a>)</span>, <span class="citation">Shen &amp; Shafiq (<a href="#ref-shen2020">2020b</a>)</span>, <span class="citation">Y. Li et al. (<a href="#ref-li2020">2020</a>)</span>, <span class="citation">S. W. Lee &amp; Kim (<a href="#ref-lee2020stock">2020</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>SVM</td>
+<td><span class="citation">M.-C. Lee (<a href="#ref-Lee2009">2009</a>)</span>, <span class="citation">Z. Hu et al. (<a href="#ref-Hu2013">2013</a>)</span>, <span class="citation">Rustam et al. (<a href="#ref-rustam2019">2019</a>)</span>, <span class="citation">Liagkouras &amp; Metaxiotis (<a href="#ref-Liagkouras2020">2020</a>)</span>, <span class="citation">Yuan et al. (<a href="#ref-yuan2020">2020</a>)</span>, <span class="citation">Mahmoodi et al. (<a href="#ref-Mahmoodi2022">2022</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Decision Tree</td>
+<td><span class="citation">Lai et al. (<a href="#ref-lai2009">2009</a>)</span>, <span class="citation">P.-Y. Zhou et al. (<a href="#ref-zhou2018">2018</a>)</span>, <span class="citation">Carta et al. (<a href="#ref-carta2021">2021</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>XGBoost</td>
+<td><span class="citation">M. Jiang et al. (<a href="#ref-jiang2020">2020</a>)</span>, <span class="citation">Kim et al. (<a href="#ref-kim2020">2020</a>)</span>, <span class="citation">Yun et al. (<a href="#ref-yun2021">2021</a>)</span>, <span class="citation">Almaafi et al. (<a href="#ref-Almaafi2023">2023</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Reinforcement Learning</td>
+<td><span class="citation">C. Y. Huang (<a href="#ref-Huang2018">2018</a>)</span>, <span class="citation">Pricope (<a href="#ref-Pricope2021">2021</a>)</span></td>
+</tr>
+</tbody>
+</table>
+<p>传统统计方法利用如移动平均线、指数平滑等来预测股价未来趋势，
+但随着人工智能技术的发展，
+机器学习，特别是深度学习，
+在股票价格预测中的应用越来越广泛。
+表<a href="机器学习与算法交易.html#tab:mlpred">4.1</a> 展示了近年一些利用不同机器学习、深度学习技术
+预测股票价格的研究工作。
+更多研究可以参考综述文章 <span class="citation">Zou et al. (<a href="#ref-Zou2022">2022</a>)</span>, <span class="citation">Kumbure et al. (<a href="#ref-Kumbure2022">2022</a>)</span>, <span class="citation">Patel et al. (<a href="#ref-Patel2023">2023</a>)</span>。</p>
+<p>虽然许多研究表明机器学习可以有效提升股票价格预测的精度，
+但股票价格预测仍然面临着许多挑战和问题。
+首先，证券市场非常复杂，受多种因素影响，
+包括政治事件、经济变化、公司业绩等，这些因素往往难以准确量化。
+其次，市场参与者的行为模式本身就是非线性和动态的，
+这使得模型构建变得更加困难。
+此外，过拟合是机器学习面临的一个常见问题，
+特别是在使用高度复杂的模型时，市场不确定性带来的影响一直是一个重要的挑战。</p>
+</div>
+<div id="情绪分析" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> 情绪分析<a href="机器学习与算法交易.html#情绪分析" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>金融情绪分析（Financial Sentiment Analysis）
+是预测资产价格走势的另一种重要手段。
+利用机器学习进行金融情绪分析一直面临两个难点：
+一是处理不同语言的特异性，一是缺少有标签的数据集。</p>
+<p>传统机器学习的特征提取方式通常是对反应情绪的关键词进行计数<span class="citation">(<a href="#ref-Agarwal2015">Agarwal &amp; Mittal, 2015</a>)</span>，
+但这种方式的效率和准确度较低。
+深度学习通过词汇嵌入（word embedding）将文本映射为向量，
+然后交给神经网络进行学习。
+例如，<span class="citation">Severyn &amp; Moschitti (<a href="#ref-Severyn2015">2015</a>)</span>, <span class="citation">Swathi et al. (<a href="#ref-Swathi2022aa">2022</a>)</span> 通过分析twitter文本，
+结合深度学习算法对市场情绪进行了分析，并预测了市场走向。
+随着近年自然语言处理（NLP）取得的突破性进展<span class="citation">(<a href="#ref-Landolt2021">Landolt et al., 2021</a>)</span>，
+利用预训练模型解决上述问题开始变得可行。
+FinBert<span class="citation">(<a href="#ref-araci2019finbert">Araci, 2019</a>)</span>
+第一次将Bert预训练模型运用于金融情绪分析并取得了一些突破进展。
+<span class="citation">Lopez-Lira &amp; Tang (<a href="#ref-lopezlira2023chatgpt">2023</a>)</span> 研究了利用ChatGPT进行市场情绪预测的可行性。</p>
+</div>
+<div id="合规检测" class="section level3 hasAnchor" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> 合规检测<a href="机器学习与算法交易.html#合规检测" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>股市合规检测是一个复杂的过程，
+旨在确保金融机构和个人参与者遵守相关法律、规则和标准。
+对算法交易影响较大的主要是市场操纵和市场欺诈行为。</p>
+<p>股市操纵通常涉及通过虚假信息、
+误导性行为或其他手段人为影响股票价格或交易量，
+从而使市场参与者作出基于误导的决策。
+例如，通过内部交易、回购或其他手段创造虚假的市场活动，误导其他投资者；
+故意推高或压低股价，以便在不正当的价格水平买入或卖出；
+通过媒体、社交网络或其他渠道散播虚假或误导性信息，以影响股价等。
+<span class="citation">Chullamonthon &amp; Tangamchit (<a href="#ref-Chullamonthon2023">2023</a>)</span> 通过深度学习检测股价是否存在操纵。</p>
+<p>股市欺诈涉及使用欺骗手段来误导投资者，
+通常是通过虚假声明、隐瞒重要信息或其他欺诈行为。
+例如，企业通过夸大收入、隐藏债务或其他方式操纵财务报表，误导投资者和市场；
+通过虚假的投资机会欺骗投资者等。
+<span class="citation">Craja et al. (<a href="#ref-Craja2020">2020</a>)</span> 利用深度学习检测财务报表做假行为。
+<span class="citation">Ali et al. (<a href="#ref-Ali2022">2022</a>)</span> 回顾了基于机器学习的市场欺诈行为检测的相关工作。</p>
+
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0" line-spacing="2">
+<div class="csl-entry">
+Abergel, F., &amp; Jedidi, A. (2011). A mathematical approach to order book modelling. In <em>Econophysics of order-driven markets</em> (pp. 93–107). Springer Milan. <a href="https://doi.org/10.1007/978-88-470-1766-5_7">https://doi.org/10.1007/978-88-470-1766-5_7</a>
+</div>
+<div class="csl-entry">
+Agarwal, B., &amp; Mittal, N. (2015). Machine learning approach for sentiment analysis. In <em>Socio-affective computing</em> (pp. 21–45). Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-25343-5_3">https://doi.org/10.1007/978-3-319-25343-5_3</a>
+</div>
+<div class="csl-entry">
+Aitken, M., Cumming, D., &amp; Zhan, F. (2015). <span class="nocase">High frequency trading and end-of-day price dislocation</span>. <em>Journal of Banking &amp; Finance</em>, <em>59</em>, 330–349. <a href="https://doi.org/10.1016/J.JBANKFIN.2015.06.011">https://doi.org/10.1016/J.JBANKFIN.2015.06.011</a>
+</div>
+<div class="csl-entry">
+Ali, A., Abd Razak, S., Othman, S. H., Eisa, T. A. E., Al-Dhaqm, A., Nasser, M., Elhassan, T., Elshafie, H., &amp; Saif, A. (2022). Financial fraud detection based on machine learning: A systematic literature review. <em>Applied Sciences</em>, <em>12</em>(19), 9637. <a href="https://doi.org/10.3390/app12199637">https://doi.org/10.3390/app12199637</a>
+</div>
+<div class="csl-entry">
+Almaafi, A., Bajaba, S., &amp; Alnori, F. (2023). Stock price prediction using ARIMA versus XGBoost models: The case of the largest telecommunication company in the middle east. <em>International Journal of Information Technology</em>, <em>15</em>(4), 1813–1818. <a href="https://doi.org/10.1007/s41870-023-01260-4">https://doi.org/10.1007/s41870-023-01260-4</a>
+</div>
+<div class="csl-entry">
+Almgren, R. F. (2003). Optimal execution with nonlinear impact functions and trading-enhanced risk. <em>Applied Mathematical Finance</em>, <em>10</em>(1), 1–18. <a href="https://doi.org/10.1080/135048602100056">https://doi.org/10.1080/135048602100056</a>
+</div>
+<div class="csl-entry">
+Almgren, R., &amp; Chriss, N. (2001). Optimal execution of portfolio transactions. <em>The Journal of Risk</em>, <em>3</em>(2), 5–39. <a href="https://doi.org/10.21314/jor.2001.041">https://doi.org/10.21314/jor.2001.041</a>
+</div>
+<div class="csl-entry">
+Almgren, R., Thum, C., Hauptmann, E., &amp; Li, H. (2005). Direct estimation of equity market impact. <em>RISK</em>, <em>18</em>.
+</div>
+<div class="csl-entry">
+Alpaydin, E. (2020). <em>Introduction to machine learning</em> (4th ed.). MIT Press.
+</div>
+<div class="csl-entry">
+Amihud, Y. (2002). Illiquidity and stock returns: Cross-section and time-series effects. <em>Journal of Financial Markets</em>, <em>5</em>(1), 31–56. <a href="https://doi.org/10.1016/s1386-4181(01)00024-6">https://doi.org/10.1016/s1386-4181(01)00024-6</a>
+</div>
+<div class="csl-entry">
+Ammar, I. B., Hellara, S., &amp; Ghadhab, I. (2020). High-frequency trading and stock liquidity: An intraday analysis. <em>Research in International Business and Finance</em>, <em>53</em>, 101235. <a href="https://doi.org/10.1016/j.ribaf.2020.101235">https://doi.org/10.1016/j.ribaf.2020.101235</a>
+</div>
+<div class="csl-entry">
+Anagnostidis, P., Fontaine, P., &amp; Varsakelis, C. (2020). Are high<span></span>frequency traders informed? <em>Economic Modelling</em>, <em>93</em>, 365–383. <a href="https://doi.org/10.1016/j.econmod.2020.08.013">https://doi.org/10.1016/j.econmod.2020.08.013</a>
+</div>
+<div class="csl-entry">
+Araci, D. (2019). <em>FinBERT: Financial sentiment analysis with pre-trained language models</em>. <a href="https://arxiv.org/abs/1908.10063">https://arxiv.org/abs/1908.10063</a>
+</div>
+<div class="csl-entry">
+Arnott, R. D., &amp; Wagner, W. H. (1990). The measurement and control of trading costs. <em>Financial Analysts Journal</em>, <em>46</em>(6), 73–80. <a href="https://doi.org/10.2469/faj.v46.n6.73">https://doi.org/10.2469/faj.v46.n6.73</a>
+</div>
+<div class="csl-entry">
+Arumugam, D., Prasanna, P. K., &amp; Marathe, R. R. (2023). Do algorithmic traders exploit volatility? <em>Journal of Behavioral and Experimental Finance</em>, <em>37</em>, 100778. https://doi.org/<a href="https://doi.org/10.1016/j.jbef.2022.100778">https://doi.org/10.1016/j.jbef.2022.100778</a>
+</div>
+<div class="csl-entry">
+Awad, M., &amp; Khanna, R. (2015). Support vector machines for classification. In <em>Efficient learning machines</em> (pp. 39–66). Apress. <a href="https://doi.org/10.1007/978-1-4302-5990-9_3">https://doi.org/10.1007/978-1-4302-5990-9_3</a>
+</div>
+<div class="csl-entry">
+Bacry, E., Iuga, A., Lasnier, M., &amp; Lehalle, C.-A. (2015). Market impacts and the life cycle of investors orders. <em>Market Microstructure and Liquidity</em>, <em>01</em>(02), 1550009. <a href="https://doi.org/10.1142/s2382626615500094">https://doi.org/10.1142/s2382626615500094</a>
+</div>
+<div class="csl-entry">
+Baek, Y., &amp; Kim, H. Y. (2018). ModAugNet: A new forecasting framework for stock market index value with an overfitting prevention LSTM module and a prediction LSTM module. <em>Expert Systems with Applications</em>, <em>113</em>, 457–480.
+</div>
+<div class="csl-entry">
+Bao, W., Yue, J., &amp; Rao, Y. (2017). A deep learning framework for financial time series using stacked autoencoders and long-short term memory. <em>PLOS ONE</em>, <em>12</em>(7), e0180944. <a href="https://doi.org/10.1371/journal.pone.0180944">https://doi.org/10.1371/journal.pone.0180944</a>
+</div>
+<div class="csl-entry">
+Barzykin, A., &amp; Lillo, F. (2019). <em>Optimal VWAP execution under transient price impact</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1901.02327">https://doi.org/10.48550/ARXIV.1901.02327</a>
+</div>
+<div class="csl-entry">
+Bertsimas, D., &amp; Lo, A. W. (1998). Optimal control of execution costs. <em>Journal of Financial Markets</em>, <em>1</em>(1), 1–50. <a href="https://doi.org/10.1016/s1386-4181(97)00012-8">https://doi.org/10.1016/s1386-4181(97)00012-8</a>
+</div>
+<div class="csl-entry">
+Biakowski, J., Darolles, S., &amp; Fol, G. L. (2008). Improving <span>VWAP</span> strategies: A dynamic volume approach. <em>Journal of Banking &amp; Finance</em>, <em>32</em>(9), 1709–1722. <a href="https://doi.org/10.1016/j.jbankfin.2007.09.023">https://doi.org/10.1016/j.jbankfin.2007.09.023</a>
+</div>
+<div class="csl-entry">
+Biau, G., &amp; Scornet, E. (2016). A random forest guided tour. <em><span>TEST</span></em>, <em>25</em>(2), 197–227. <a href="https://doi.org/10.1007/s11749-016-0481-7">https://doi.org/10.1007/s11749-016-0481-7</a>
+</div>
+<div class="csl-entry">
+Boser, B. E., Guyon, I. M., &amp; Vapnik, V. N. (1992). A training algorithm for optimal margin classifiers. <em>Proceedings of the Fifth Annual Workshop on Computational Learning Theory</em>, 144–152. <a href="https://doi.org/10.1145/130385.130401">https://doi.org/10.1145/130385.130401</a>
+</div>
+<div class="csl-entry">
+Breiman, L. (1996). Bagging predictors. <em>Machine Learning</em>, <em>24</em>(2), 123–140. <a href="https://doi.org/10.1023/a:1018054314350">https://doi.org/10.1023/a:1018054314350</a>
+</div>
+<div class="csl-entry">
+Breiman, L. (2001). Random forests. <em>Machine Learning</em>, <em>45</em>(1), 5–32. <a href="https://doi.org/10.1023/A:1010933404324">https://doi.org/10.1023/A:1010933404324</a>
+</div>
+<div class="csl-entry">
+Breiman, L., Friedman, J. H., Olshen, R. A., &amp; Stone, C. J. (2017). <em>Classification and regression trees</em>. Routledge. <a href="https://doi.org/10.1201/9781315139470">https://doi.org/10.1201/9781315139470</a>
+</div>
+<div class="csl-entry">
+Briola, A., Turiel, J., &amp; Aste, T. (2020). <em>Deep learning modeling of limit order book: A comparative perspective</em>.
+</div>
+<div class="csl-entry">
+Brogaard, J., &amp; Garriott, C. (2018). High-frequency trading competition. <em>Journal of Financial and Quantitative Analysis</em>, <em>54</em>(4), 1469–1497. <a href="https://doi.org/10.1017/s0022109018001175">https://doi.org/10.1017/s0022109018001175</a>
+</div>
+<div class="csl-entry">
+Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D. M., Wu, J., Winter, C., … Amodei, D. (2020). <em>Language models are few-shot learners</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2005.14165">https://doi.org/10.48550/ARXIV.2005.14165</a>
+</div>
+<div class="csl-entry">
+Busseti, E., &amp; Boyd, S. (2015). <em>Volume weighted average price optimal execution</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1509.08503">https://doi.org/10.48550/ARXIV.1509.08503</a>
+</div>
+<div class="csl-entry">
+Bustos, O., &amp; Pomares-Quimbaya, A. (2020). Stock market movement forecast: A systematic review. <em>Expert Systems with Applications</em>, <em>156</em>, 113464. https://doi.org/<a href="https://doi.org/10.1016/j.eswa.2020.113464">https://doi.org/10.1016/j.eswa.2020.113464</a>
+</div>
+<div class="csl-entry">
+Buti, S., Rindi, B., &amp; Werner, I. M. (2017). Dark pool trading strategies, market quality and welfare. <em>Journal of Financial Economics</em>, <em>124</em>(2), 244–265. <a href="https://doi.org/10.1016/j.jfineco.2016.02.002">https://doi.org/10.1016/j.jfineco.2016.02.002</a>
+</div>
+<div class="csl-entry">
+Cao, J., &amp; Wang, J. (2019). Stock price forecasting model based on modified convolution neural network and financial time series analysis. <em>International Journal of Communication Systems</em>, <em>32</em>(12), e3987.
+</div>
+<div class="csl-entry">
+Carhart, M. M. (1997). On persistence in mutual fund performance. <em>The Journal of Finance</em>, <em>52</em>(1), 57–82. https://doi.org/<a href="https://doi.org/10.1111/j.1540-6261.1997.tb03808.x">https://doi.org/10.1111/j.1540-6261.1997.tb03808.x</a>
+</div>
+<div class="csl-entry">
+Carta, S. M., Consoli, S., Piras, L., Podda, A. S., &amp; Recupero, D. R. (2021). Explainable machine learning exploiting news and domain-specific lexicon for stock market forecasting. <em>IEEE Access</em>, <em>9</em>, 30193–30205.
+</div>
+<div class="csl-entry">
+Cartea, Álvaro, &amp; Jaimungal, S. (2016). A closed-form execution strategy to target volume weighted average price. <em><span>SIAM</span> Journal on Financial Mathematics</em>, <em>7</em>(1), 760–785. <a href="https://doi.org/10.1137/16m1058406">https://doi.org/10.1137/16m1058406</a>
+</div>
+<div class="csl-entry">
+Chen, L., Pelger, M., &amp; Zhu, J. (2023). Deep learning in asset pricing. <em>Management Science</em>, <em>0</em>(0), null. <a href="https://doi.org/10.1287/mnsc.2023.4695">https://doi.org/10.1287/mnsc.2023.4695</a>
+</div>
+<div class="csl-entry">
+Chen, N.-F., Roll, R., &amp; Ross, S. A. (1986). Economic forces and the stock market. <em>The Journal of Business</em>, <em>59</em>(3), 383–403. <a href="http://www.jstor.org/stable/2352710">http://www.jstor.org/stable/2352710</a>
+</div>
+<div class="csl-entry">
+Chen, T., &amp; Guestrin, C. (2016). <span>XGBoost: A Scalable Tree Boosting System</span>. <em>Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em>, <em>13-17-August-2016</em>, 785–794. <a href="https://doi.org/10.1145/2939672.2939785">https://doi.org/10.1145/2939672.2939785</a>
+</div>
+<div class="csl-entry">
+Cho, K., Merrienboer, B. van, Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H., &amp; Bengio, Y. (2014). <em>Learning phrase representations using RNN encoder-decoder for statistical machine translation</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1406.1078">https://doi.org/10.48550/ARXIV.1406.1078</a>
+</div>
+<div class="csl-entry">
+CHRISTIE, W. G., HARRIS, J. H., &amp; SCHULTZ, P. H. (1994). Why did NASDAQ market makers stop avoiding odd-eighth quotes? <em>The Journal of Finance</em>, <em>49</em>(5), 1841–1860. https://doi.org/<a href="https://doi.org/10.1111/j.1540-6261.1994.tb04783.x">https://doi.org/10.1111/j.1540-6261.1994.tb04783.x</a>
+</div>
+<div class="csl-entry">
+CHRISTIE, W. G., &amp; SCHULTZ, P. H. (1994). Why do NASDAQ market makers avoid odd-eighth quotes? <em>The Journal of Finance</em>, <em>49</em>(5), 1813–1840. https://doi.org/<a href="https://doi.org/10.1111/j.1540-6261.1994.tb04782.x">https://doi.org/10.1111/j.1540-6261.1994.tb04782.x</a>
+</div>
+<div class="csl-entry">
+Chullamonthon, P., &amp; Tangamchit, P. (2023). Ensemble of supervised and unsupervised deep neural networks for stock price manipulation detection. <em>Expert Systems with Applications</em>, <em>220</em>, 119698. <a href="https://doi.org/10.1016/j.eswa.2023.119698">https://doi.org/10.1016/j.eswa.2023.119698</a>
+</div>
+<div class="csl-entry">
+Chung, K. H., &amp; Lee, A. J. (2016). High-frequency trading: Review of the literature and regulatory initiatives around the world. <em>Asia-Pacific Journal of Financial Studies</em>, <em>45</em>(1), 7–33. <a href="https://doi.org/10.1111/ajfs.12120">https://doi.org/10.1111/ajfs.12120</a>
+</div>
+<div class="csl-entry">
+Coletta, A., Moulin, A., Vyetrenko, S., &amp; Balch, T. (2022). Learning to simulate realistic limit order book markets from data as a world agent. <em>Proceedings of the Third ACM International Conference on AI in Finance</em>, 428–436. <a href="https://doi.org/10.1145/3533271.3561753">https://doi.org/10.1145/3533271.3561753</a>
+</div>
+<div class="csl-entry">
+Comerton-Forde, C., Malinova, K., &amp; Park, A. (2018). Regulating dark trading: Order flow segmentation and market quality. <em>Journal of Financial Economics</em>, <em>130</em>(2), 347–366. <a href="https://doi.org/10.1016/j.jfineco.2018.07.002">https://doi.org/10.1016/j.jfineco.2018.07.002</a>
+</div>
+<div class="csl-entry">
+Conlon, T., Cotter, J., &amp; Kynigakis, I. (2021). Machine learning and factor-based portfolio optimization. <em><span>SSRN</span> Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.3889459">https://doi.org/10.2139/ssrn.3889459</a>
+</div>
+<div class="csl-entry">
+Connor, G. (1995). The three types of factor models: A comparison of their explanatory power. <em>Financial Analysts Journal</em>, <em>51</em>(3), 42–46. <a href="https://doi.org/10.2469/faj.v51.n3.1904">https://doi.org/10.2469/faj.v51.n3.1904</a>
+</div>
+<div class="csl-entry">
+Cont, R., Cucuringu, M., Kochems, J., &amp; Prenzel, F. (2023). Limit order book simulation with generative adversarial networks. <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.4512356">https://doi.org/10.2139/ssrn.4512356</a>
+</div>
+<div class="csl-entry">
+Cortes, C., &amp; Vapnik, V. (1995). Support-vector networks. <em>Mach. Learn.</em>, <em>20</em>(3), 273–297. <a href="https://doi.org/10.1023/A:1022627411411">https://doi.org/10.1023/A:1022627411411</a>
+</div>
+<div class="csl-entry">
+Craja, P., Kim, A., &amp; Lessmann, S. (2020). Deep learning for detecting financial statement fraud. <em>Decision Support Systems</em>, <em>139</em>, 113421. <a href="https://doi.org/10.1016/j.dss.2020.113421">https://doi.org/10.1016/j.dss.2020.113421</a>
+</div>
+<div class="csl-entry">
+Cybenko, G. (1989). Approximation by superpositions of a sigmoidal function. <em>Mathematics of Control, Signals, and Systems</em>, <em>2</em>(4), 303–314. <a href="https://doi.org/10.1007/bf02551274">https://doi.org/10.1007/bf02551274</a>
+</div>
+<div class="csl-entry">
+Devroye, L., Györfi, L., &amp; Lugosi, G. (1996). <em>A probabilistic theory of pattern recognition</em>. Springer New York. <a href="https://doi.org/10.1007/978-1-4612-0711-5">https://doi.org/10.1007/978-1-4612-0711-5</a>
+</div>
+<div class="csl-entry">
+Dietterich, T. G. (2000). Ensemble methods in machine learning. In <em>Multiple classifier systems</em> (pp. 1–15). Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/3-540-45014-9_1">https://doi.org/10.1007/3-540-45014-9_1</a>
+</div>
+<div class="csl-entry">
+Diqi, M., Hiswati, M. E., &amp; Nur, A. S. (2022). StockGAN: Robust stock price prediction using GAN algorithm. <em>International Journal of Information Technology</em>, <em>14</em>(5), 2309–2315. <a href="https://doi.org/10.1007/s41870-022-00929-6">https://doi.org/10.1007/s41870-022-00929-6</a>
+</div>
+<div class="csl-entry">
+Easley, D. (2013). <em>High-frequency trading: New realities for traders, markets and regulators</em>. Risk Books. <a href="https://books.google.com.hk/books?id=pli5oAEACAAJ">https://books.google.com.hk/books?id=pli5oAEACAAJ</a>
+</div>
+<div class="csl-entry">
+Easley, D., Hvidkjaer, S., &amp; O’Hara, M. (2002). Is information risk a determinant of asset returns? <em>The Journal of Finance</em>, <em>57</em>(5), 2185–2221. <a href="https://doi.org/10.1111/1540-6261.00493">https://doi.org/10.1111/1540-6261.00493</a>
+</div>
+<div class="csl-entry">
+EASLEY, D., KIEFER, N. M., O’HARA, M., &amp; PAPERMAN, J. B. (1996). Liquidity, information, and infrequently traded stocks. <em>The Journal of Finance</em>, <em>51</em>(4), 1405–1436. <a href="https://doi.org/10.1111/j.1540-6261.1996.tb04074.x">https://doi.org/10.1111/j.1540-6261.1996.tb04074.x</a>
+</div>
+<div class="csl-entry">
+Elman, J. L. (1990). Finding structure in time. <em>Cognitive Science</em>, <em>14</em>(2), 179–211. <a href="https://doi.org/10.1207/s15516709cog1402_1">https://doi.org/10.1207/s15516709cog1402_1</a>
+</div>
+<div class="csl-entry">
+FAMA, E. F., &amp; FRENCH, K. R. (1992). The cross-section of expected stock returns. <em>The Journal of Finance</em>, <em>47</em>(2), 427–465. https://doi.org/<a href="https://doi.org/10.1111/j.1540-6261.1992.tb04398.x">https://doi.org/10.1111/j.1540-6261.1992.tb04398.x</a>
+</div>
+<div class="csl-entry">
+Fama, E. F., &amp; French, K. R. (2015). A five-factor asset pricing model. <em>Journal of Financial Economics</em>, <em>116</em>(1), 1–22. https://doi.org/<a href="https://doi.org/10.1016/j.jfineco.2014.10.010">https://doi.org/10.1016/j.jfineco.2014.10.010</a>
+</div>
+<div class="csl-entry">
+Farmer, J. D., &amp; Foley, D. (2009). The economy needs agent-based modelling. <em>Nature</em>, <em>460</em>(7256), 685–686. <a href="https://doi.org/10.1038/460685a">https://doi.org/10.1038/460685a</a>
+</div>
+<div class="csl-entry">
+Farmer, J. D., Patelli, P., &amp; Zovko, I. I. (2005). The predictive power of zero intelligence in financial markets. <em>Proceedings of the National Academy of Sciences</em>, <em>102</em>(6), 2254–2259. <a href="https://doi.org/10.1073/pnas.0409157102">https://doi.org/10.1073/pnas.0409157102</a>
+</div>
+<div class="csl-entry">
+FISHER, R. A. (1936). <span>THE</span> <span>USE</span> <span>OF</span> <span>MULTIPLE</span> <span>MEASUREMENTS</span> <span>IN</span> <span>TAXONOMIC</span> <span>PROBLEMS</span>. <em>Annals of Eugenics</em>, <em>7</em>(2), 179–188. <a href="https://doi.org/10.1111/j.1469-1809.1936.tb02137.x">https://doi.org/10.1111/j.1469-1809.1936.tb02137.x</a>
+</div>
+<div class="csl-entry">
+Foucault, T. (2012). Algorithmic trading: Issues and preliminary evidence. In <em>Market microstructure</em> (pp. 1–40). John Wiley &amp; Sons, Ltd. https://doi.org/<a href="https://doi.org/10.1002/9781118673553.ch1">https://doi.org/10.1002/9781118673553.ch1</a>
+</div>
+<div class="csl-entry">
+Frazzini, A., Israel, R., &amp; Moskowitz, T. J. (2018). Trading costs. <em>Capital Markets: Market Microstructure eJournal</em>. https://doi.org/<a href="https://dx.doi.org/10.2139/ssrn.3229719">https://dx.doi.org/10.2139/ssrn.3229719</a>
+</div>
+<div class="csl-entry">
+Frei, C., &amp; Westray, N. (2013). <span>OPTIMAL</span> <span>EXECUTION</span> <span>OF</span> a <span>VWAP</span> <span>ORDER</span>: A <span>STOCHASTIC</span> <span>CONTROL</span> <span>APPROACH</span>. <em>Mathematical Finance</em>, <em>25</em>(3), 612–639. <a href="https://doi.org/10.1111/mafi.12048">https://doi.org/10.1111/mafi.12048</a>
+</div>
+<div class="csl-entry">
+Freund, Y., &amp; Schapire, R. E. (1997). A decision-theoretic generalization of on-line learning and an application to boosting. <em>Journal of Computer and System Sciences</em>, <em>55</em>(1), 119–139. <a href="https://doi.org/10.1006/jcss.1997.1504">https://doi.org/10.1006/jcss.1997.1504</a>
+</div>
+<div class="csl-entry">
+Freyre-Sanders, A., Guobuzaite, R., &amp; Byrne, K. (2004). A review of trading cost models. <em>The Journal of Investing</em>, <em>13</em>(3), 93–115. <a href="https://doi.org/10.3905/joi.2004.434557">https://doi.org/10.3905/joi.2004.434557</a>
+</div>
+<div class="csl-entry">
+Friedman, J. H. (2001). Greedy function approximation: A gradient boosting machine. <em>The Annals of Statistics</em>, <em>29</em>(5). <a href="https://doi.org/10.1214/aos/1013203451">https://doi.org/10.1214/aos/1013203451</a>
+</div>
+<div class="csl-entry">
+Friedman, J. H. (2002). Stochastic gradient boosting. <em>Computational Statistics &amp; Data Analysis</em>, <em>38</em>(4), 367–378. <a href="https://doi.org/10.1016/s0167-9473(01)00065-2">https://doi.org/10.1016/s0167-9473(01)00065-2</a>
+</div>
+<div class="csl-entry">
+Gatev, E., Goetzmann, W., &amp; Rouwenhorst, K. G. (1999). <em>Pairs trading: Performance of a relative value arbitrage rule</em>. National Bureau of Economic Research. <a href="https://doi.org/10.3386/w7032">https://doi.org/10.3386/w7032</a>
+</div>
+<div class="csl-entry">
+Glorot, X., Bordes, A., &amp; Bengio, Y. (2011). Deep sparse rectifier neural networks. In G. Gordon, D. Dunson, &amp; M. Dudík (Eds.), <em>Proceedings of the fourteenth international conference on artificial intelligence and statistics</em> (Vol. 15, pp. 315–323). PMLR. <a href="https://proceedings.mlr.press/v15/glorot11a.html">https://proceedings.mlr.press/v15/glorot11a.html</a>
+</div>
+<div class="csl-entry">
+Gomber, P., Arndt, B., Lutat, M., &amp; Uhle, T. (2011). High-frequency trading. <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.1858626">https://doi.org/10.2139/ssrn.1858626</a>
+</div>
+<div class="csl-entry">
+Gomber, P., Lutat, M., &amp; Wranik, A. (2008). Flexible <span>VWAP</span> executions in electronic trading. In <em>Lecture notes in business information processing</em> (pp. 1–14). Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-540-78550-7_1">https://doi.org/10.1007/978-3-540-78550-7_1</a>
+</div>
+<div class="csl-entry">
+Goodfellow, I. J., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A., &amp; Bengio, Y. (2014). <span>Generative Adversarial Networks</span>. <em>Communications of the ACM</em>, <em>63</em>(11), 139–144. <a href="https://arxiv.org/abs/1406.2661v1">https://arxiv.org/abs/1406.2661v1</a>
+</div>
+<div class="csl-entry">
+Goodwin, T. H. (1998). The information ratio. <em>Financial Analysts Journal</em>, <em>54</em>(4), 34–43. <a href="http://www.jstor.org/stable/4480091">http://www.jstor.org/stable/4480091</a>
+</div>
+<div class="csl-entry">
+Gu, S., Kelly, B., &amp; Xiu, D. (2020). <span class="nocase">Empirical Asset Pricing via Machine Learning</span>. <em>The Review of Financial Studies</em>, <em>33</em>(5), 2223–2273. <a href="https://doi.org/10.1093/rfs/hhaa009">https://doi.org/10.1093/rfs/hhaa009</a>
+</div>
+<div class="csl-entry">
+Guéant, O. (2013). <em>Permanent market impact can be nonlinear</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1305.0413">https://doi.org/10.48550/ARXIV.1305.0413</a>
+</div>
+<div class="csl-entry">
+Gunduz, H., Yaslan, Y., &amp; Cataltepe, Z. (2017). Intraday prediction of borsa istanbul using convolutional neural networks and feature correlations. <em>Knowledge-Based Systems</em>, <em>137</em>, 138–148.
+</div>
+<div class="csl-entry">
+Guo, J., Wang, S., Ni, L. M., &amp; Shum, H.-Y. (2023). <em>Quant 4.0: Engineering quantitative investment with automated, explainable and knowledge-driven artificial intelligence</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2301.04020">https://doi.org/10.48550/ARXIV.2301.04020</a>
+</div>
+<div class="csl-entry">
+Guo, M., Li, Z., &amp; Tu, Z. (2012). <span class="nocase">A unique <span>“T+1 trading rule”</span> in China: Theory and evidence</span>. <em>Journal of Banking &amp; Finance</em>, <em>36</em>(2), 575–583. <a href="https://doi.org/10.1016/J.JBANKFIN.2011.09.002">https://doi.org/10.1016/J.JBANKFIN.2011.09.002</a>
+</div>
+<div class="csl-entry">
+Han, S., Wu, L., &amp; Cheng, Y. (2018). Equity market impact modeling: An empirical analysis for the chinese market. <em>Journal of Risk</em>, <em>20</em>(6), 75–97. <a href="https://doi.org/10.21314/jor.2018.391">https://doi.org/10.21314/jor.2018.391</a>
+</div>
+<div class="csl-entry">
+Hasbrouck, J. (2007). <em>Empirical market microstructure</em>. Oxford University Press.
+</div>
+<div class="csl-entry">
+Hasbrouck, J., &amp; Saar, G. (2013). Low-latency trading. <em>Journal of Financial Markets</em>, <em>16</em>(4), 646–679. https://doi.org/<a href="https://doi.org/10.1016/j.finmar.2013.05.003">https://doi.org/10.1016/j.finmar.2013.05.003</a>
+</div>
+<div class="csl-entry">
+HENDERSHOTT, T., JONES, C. M., &amp; MENKVELD, A. J. (2011). Does algorithmic trading improve liquidity? <em>The Journal of Finance</em>, <em>66</em>(1), 1–33. <a href="https://doi.org/10.1111/j.1540-6261.2010.01624.x">https://doi.org/10.1111/j.1540-6261.2010.01624.x</a>
+</div>
+<div class="csl-entry">
+Hinton, G. (2022). <em>The forward-forward algorithm: Some preliminary investigations</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2212.13345">https://doi.org/10.48550/ARXIV.2212.13345</a>
+</div>
+<div class="csl-entry">
+Hinton, G. E., Osindero, S., &amp; Teh, Y.-W. (2006). A fast learning algorithm for deep belief nets. <em>Neural Computation</em>, <em>18</em>(7), 1527–1554. <a href="https://doi.org/10.1162/neco.2006.18.7.1527">https://doi.org/10.1162/neco.2006.18.7.1527</a>
+</div>
+<div class="csl-entry">
+Hochreiter, S., &amp; Schmidhuber, J. (1997). Long short-term memory. <em>Neural Computation</em>, <em>9</em>(8), 1735–1780. <a href="https://doi.org/10.1162/neco.1997.9.8.1735">https://doi.org/10.1162/neco.1997.9.8.1735</a>
+</div>
+<div class="csl-entry">
+Hopfield, J. J. (1982). Neural networks and physical systems with emergent collective computational abilities. <em>Proceedings of the National Academy of Sciences</em>, <em>79</em>(8), 2554–2558. <a href="https://doi.org/10.1073/pnas.79.8.2554">https://doi.org/10.1073/pnas.79.8.2554</a>
+</div>
+<div class="csl-entry">
+Hoseinzade, E., &amp; Haratizadeh, S. (2019). CNNpred: CNN-based stock market prediction using a diverse set of variables. <em>Expert Systems with Applications</em>, <em>129</em>, 273–285.
+</div>
+<div class="csl-entry">
+Hu, H., Tang, L., Zhang, S., &amp; Wang, H. (2018). Predicting the direction of stock markets using optimized neural networks with google trends. <em>Neurocomputing</em>, <em>285</em>, 188–195.
+</div>
+<div class="csl-entry">
+Hu, Z., Zhu, J., &amp; Tse, K. (2013, November). Stocks market prediction using support vector machine. <em>2013 6th International Conference on Information Management, Innovation Management and Industrial Engineering</em>. <a href="https://doi.org/10.1109/iciii.2013.6703096">https://doi.org/10.1109/iciii.2013.6703096</a>
+</div>
+<div class="csl-entry">
+Huang, C. Y. (2018). <em>Financial trading as a game: A deep reinforcement learning approach</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1807.02787">https://doi.org/10.48550/ARXIV.1807.02787</a>
+</div>
+<div class="csl-entry">
+Huang, R., &amp; Polak, T. (2011). LOBSTER: Limit order book reconstruction system. <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.1977207">https://doi.org/10.2139/ssrn.1977207</a>
+</div>
+<div class="csl-entry">
+Huang, W., Lehalle, C.-A., &amp; Rosenbaum, M. (2015). Simulating and analyzing order book data: The queue-reactive model. <em>Journal of the American Statistical Association</em>, <em>110</em>(509), 107–122. <a href="https://doi.org/10.1080/01621459.2014.982278">https://doi.org/10.1080/01621459.2014.982278</a>
+</div>
+<div class="csl-entry">
+Ishwarappa, &amp; Anuradha, J. (2021). Big data based stock trend prediction using deep <span>CNN</span> with reinforcement-<span>LSTM</span> model. <em>International Journal of System Assurance Engineering and Management</em>. <a href="https://doi.org/10.1007/s13198-021-01074-2">https://doi.org/10.1007/s13198-021-01074-2</a>
+</div>
+<div class="csl-entry">
+Isola, P., Zhu, J.-Y., Zhou, T., &amp; Efros, A. A. (2016). <em>Image-to-image translation with conditional adversarial networks</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1611.07004">https://doi.org/10.48550/ARXIV.1611.07004</a>
+</div>
+<div class="csl-entry">
+Jensen, M. C. (1968). THE PERFORMANCE OF MUTUAL FUNDS IN THE PERIOD 1945–1964. <em>The Journal of Finance</em>, <em>23</em>(2), 389–416. https://doi.org/<a href="https://doi.org/10.1111/j.1540-6261.1968.tb00815.x">https://doi.org/10.1111/j.1540-6261.1968.tb00815.x</a>
+</div>
+<div class="csl-entry">
+Jiang, M., Liu, J., Zhang, L., &amp; Liu, C. (2020). An improved stacking framework for stock index prediction by leveraging tree-based ensemble models and deep learning algorithms. <em>Physica A: Statistical Mechanics and Its Applications</em>, <em>541</em>, 122272.
+</div>
+<div class="csl-entry">
+Jiang, Z., Xu, D., &amp; Liang, J. (2017). <em>A deep reinforcement learning framework for the financial portfolio management problem</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1706.10059">https://doi.org/10.48550/ARXIV.1706.10059</a>
+</div>
+<div class="csl-entry">
+Jones, C. M. (2013). What do we know about high-frequency trading? <em><span>SSRN</span> Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.2236201">https://doi.org/10.2139/ssrn.2236201</a>
+</div>
+<div class="csl-entry">
+Karush, W. (1939). <em>Minima of functions of several variables with inequalities as side conditions.</em> [PhD thesis]. Thesis (S.M.)–University of Chicago, Department of Mathematics, December 1939.
+</div>
+<div class="csl-entry">
+KELLEY, H. J. (1960). Gradient theory of optimal flight paths. <em><span>ARS</span> Journal</em>, <em>30</em>(10), 947–954. <a href="https://doi.org/10.2514/8.5282">https://doi.org/10.2514/8.5282</a>
+</div>
+<div class="csl-entry">
+Kim, S., Ku, S., Chang, W., &amp; Song, J. W. (2020). Predicting the direction of US stock prices using effective transfer entropy and machine learning techniques. <em>IEEE Access</em>, <em>8</em>, 111660–111682.
+</div>
+<div class="csl-entry">
+KIRILENKO, A., KYLE, A. S., SAMADI, M., &amp; TUZUN, T. (2017). The flash crash: High-frequency trading in an electronic market. <em>The Journal of Finance</em>, <em>72</em>(3), 967–998. https://doi.org/<a href="https://doi.org/10.1111/jofi.12498">https://doi.org/10.1111/jofi.12498</a>
+</div>
+<div class="csl-entry">
+Kissell, R. (2008). Transaction cost analysis. <em>The Journal of Trading</em>, <em>3</em>(2), 29–37. <a href="https://doi.org/10.3905/jot.2008.705630">https://doi.org/10.3905/jot.2008.705630</a>
+</div>
+<div class="csl-entry">
+Kissell, R. L. (2021). Transaction costs. In <em>Algorithmic trading methods</em> (pp. 57–97). Elsevier. <a href="https://doi.org/10.1016/b978-0-12-815630-8.00003-x">https://doi.org/10.1016/b978-0-12-815630-8.00003-x</a>
+</div>
+<div class="csl-entry">
+Konishi, H. (2002). Optimal slice of a <span>VWAP</span> trade. <em>Journal of Financial Markets</em>, <em>5</em>(2), 197–221. <a href="https://doi.org/10.1016/s1386-4181(01)00023-4">https://doi.org/10.1016/s1386-4181(01)00023-4</a>
+</div>
+<div class="csl-entry">
+Kuhn, H. W., &amp; Tucker, A. W. (1950). Nonlinear programming. <em>Proceedings of the Second Berkeley Symposium on Mathematical Statistics and Probability (July 31 - August 12, 1950)</em>, pages 481–492. <a href="http://digicoll.lib.berkeley.edu/record/112776">http://digicoll.lib.berkeley.edu/record/112776</a>
+</div>
+<div class="csl-entry">
+Kumbure, M. M., Lohrmann, C., Luukka, P., &amp; Porras, J. (2022). Machine learning techniques and data for stock market forecasting: A literature review. <em>Expert Systems with Applications</em>, <em>197</em>, 116659. <a href="https://doi.org/10.1016/j.eswa.2022.116659">https://doi.org/10.1016/j.eswa.2022.116659</a>
+</div>
+<div class="csl-entry">
+Kyle, A. S. (1985). Continuous auctions and insider trading. <em>Econometrica</em>, <em>53</em>(6), 1315. <a href="https://doi.org/10.2307/1913210">https://doi.org/10.2307/1913210</a>
+</div>
+<div class="csl-entry">
+Lai, R. K., Fan, C.-Y., Huang, W.-H., &amp; Chang, P.-C. (2009). Evolving and clustering fuzzy decision tree for financial time series data forecasting. <em>Expert Systems with Applications</em>, <em>36</em>(2), 3761–3773.
+</div>
+<div class="csl-entry">
+Landolt, S., Wambsganss, T., &amp; Söllner, M. (2021). A taxonomy for deep learning in natural language processing. <em>Proceedings of the Annual Hawaii International Conference on System Sciences</em>. <a href="https://doi.org/10.24251/hicss.2021.129">https://doi.org/10.24251/hicss.2021.129</a>
+</div>
+<div class="csl-entry">
+LeCun, Y., Bengio, Y., &amp; Hinton, G. (2015). Deep learning. <em>Nature</em>, <em>521</em>(7553), 436–444. <a href="https://doi.org/10.1038/nature14539">https://doi.org/10.1038/nature14539</a>
+</div>
+<div class="csl-entry">
+LeCun, Y., Boser, B., Denker, J. S., Henderson, D., Howard, R. E., Hubbard, W., &amp; Jackel, L. D. (1989). Backpropagation applied to handwritten zip code recognition. <em>Neural Computation</em>, <em>1</em>(4), 541–551. <a href="https://doi.org/10.1162/neco.1989.1.4.541">https://doi.org/10.1162/neco.1989.1.4.541</a>
+</div>
+<div class="csl-entry">
+Lee, M.-C. (2009). Using support vector machine with a hybrid feature selection method to the stock trend prediction. <em>Expert Systems with Applications</em>, <em>36</em>(8), 10896–10904. <a href="https://doi.org/10.1016/j.eswa.2009.02.038">https://doi.org/10.1016/j.eswa.2009.02.038</a>
+</div>
+<div class="csl-entry">
+Lee, S. W., &amp; Kim, H. Y. (2020). Stock market forecasting with super-high dimensional time-series data using ConvLSTM, trend sampling, and specialized data augmentation. <em>Expert Systems with Applications</em>, <em>161</em>, 113704.
+</div>
+<div class="csl-entry">
+Li, J., Wang, X., Lin, Y., Sinha, A., &amp; Wellman, M. (2020). Generating realistic stock market order streams. <em>Proceedings of the AAAI Conference on Artificial Intelligence</em>, <em>34</em>(01), 727–734. <a href="https://doi.org/10.1609/aaai.v34i01.5415">https://doi.org/10.1609/aaai.v34i01.5415</a>
+</div>
+<div class="csl-entry">
+Li, S., Wang, X., &amp; Ye, M. (2021). Who provides liquidity, and when? <em>Journal of Financial Economics</em>, <em>141</em>(3), 968–980. https://doi.org/<a href="https://doi.org/10.1016/j.jfineco.2021.04.020">https://doi.org/10.1016/j.jfineco.2021.04.020</a>
+</div>
+<div class="csl-entry">
+Li, Y., Bu, H., Li, J., &amp; Wu, J. (2020). The role of text-extracted investor sentiment in chinese stock price prediction with the enhancement of deep learning. <em>International Journal of Forecasting</em>, <em>36</em>(4), 1541–1562.
+</div>
+<div class="csl-entry">
+Liagkouras, K., &amp; Metaxiotis, K. (2020). Stock market forecasting by using support vector machines. In <em>Learning and analytics in intelligent systems</em> (pp. 259–271). Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-49724-8_11">https://doi.org/10.1007/978-3-030-49724-8_11</a>
+</div>
+<div class="csl-entry">
+Lillo, F., Farmer, J. D., &amp; Mantegna, R. N. (2003). Master curve for price-impact function. <em>Nature</em>, <em>421</em>(6919), 129–130. <a href="https://doi.org/10.1038/421129a">https://doi.org/10.1038/421129a</a>
+</div>
+<div class="csl-entry">
+Lintner, J. (1956). Distribution of incomes of corporations among dividends, retained earnings, and taxes. <em>The American Economic Review</em>, <em>46</em>(2), 97–113. <a href="http://www.jstor.org/stable/1910664">http://www.jstor.org/stable/1910664</a>
+</div>
+<div class="csl-entry">
+Littman, M. L. (2015). Reinforcement learning improves behaviour from evaluative feedback. <em>Nature</em>, <em>521</em>(7553), 445–451. <a href="https://doi.org/10.1038/nature14540">https://doi.org/10.1038/nature14540</a>
+</div>
+<div class="csl-entry">
+Liu, Q., Wang, C., Zhang, P., &amp; Zheng, K. (2021). Detecting stock market manipulation via machine learning: Evidence from china securities regulatory commission punishment cases. <em>International Review of Financial Analysis</em>, <em>78</em>, 101887. https://doi.org/<a href="https://doi.org/10.1016/j.irfa.2021.101887">https://doi.org/10.1016/j.irfa.2021.101887</a>
+</div>
+<div class="csl-entry">
+Loeb, T. F. (1983). Trading cost: The critical link between investment information and results. <em>Financial Analysts Journal</em>, <em>39</em>(3), 39–44. <a href="http://www.jstor.org/stable/4478644">http://www.jstor.org/stable/4478644</a>
+</div>
+<div class="csl-entry">
+Lopez de Prado, M. (2018). <em>Advances in financial machine learning</em>. John Wiley &amp; Sons.
+</div>
+<div class="csl-entry">
+Lopez-Lira, A., &amp; Tang, Y. (2023). <em>Can ChatGPT forecast stock price movements? Return predictability and large language models</em>. <a href="https://arxiv.org/abs/2304.07619">https://arxiv.org/abs/2304.07619</a>
+</div>
+<div class="csl-entry">
+Lu, W., Li, J., Li, Y., Sun, A., &amp; Wang, J. (2020). A CNN-LSTM-based model to forecast stock prices. <em>Complexity</em>, <em>2020</em>, 1–10.
+</div>
+<div class="csl-entry">
+Mahmoodi, A., Hashemi, L., Jasemi, M., Mehraban, S., Laliberté, J., &amp; Millar, R. C. (2022). A developed stock price forecasting model using support vector machine combined with metaheuristic algorithms. <em><span>OPSEARCH</span></em>, <em>60</em>(1), 59–86. <a href="https://doi.org/10.1007/s12597-022-00608-x">https://doi.org/10.1007/s12597-022-00608-x</a>
+</div>
+<div class="csl-entry">
+Markowitz, H. (1952). Portfolio selection. <em>The Journal of Finance</em>, <em>7</em>(1), 77–91. <a href="http://www.jstor.org/stable/2975974">http://www.jstor.org/stable/2975974</a>
+</div>
+<div class="csl-entry">
+McCarthy, J., Minsky, M. L., Rochester, N., &amp; Shannon, C. E. (2006). A proposal for the dartmouth summer research project on artificial intelligence, august 31, 1955. <em>AI Magazine</em>, <em>27</em>(4), 12. <a href="https://doi.org/10.1609/aimag.v27i4.1904">https://doi.org/10.1609/aimag.v27i4.1904</a>
+</div>
+<div class="csl-entry">
+McCulloch, J., &amp; Kazakov, V. (2012). Mean variance optimal <span>VWAP</span> trading. <em><span>SSRN</span> Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.1803858">https://doi.org/10.2139/ssrn.1803858</a>
+</div>
+<div class="csl-entry">
+McCulloch, W. S., &amp; Pitts, W. (1943). A logical calculus of the ideas immanent in nervous activity. <em>The Bulletin of Mathematical Biophysics</em>, <em>5</em>(4), 115–133. <a href="https://doi.org/10.1007/bf02478259">https://doi.org/10.1007/bf02478259</a>
+</div>
+<div class="csl-entry">
+Meucci, A. (2011). ’P’versus’ q’: Differences and commonalities between the two areas of quantitative finance. <em>GARP Risk Professional</em>, 47–50.
+</div>
+<div class="csl-entry">
+Miller, R. S., &amp; Shorter, G. (2016). <em>High frequency trading: Overview of recent developments</em>. University of North Texas Libraries, UNT Digital Library. <a href="https://digital.library.unt.edu/ark:/67531/metadc847719/">https://digital.library.unt.edu/ark:/67531/metadc847719/</a>
+</div>
+<div class="csl-entry">
+Minh, D. L., Sadeghi-Niaraki, A., Huy, H. D., Min, K., &amp; Moon, H. (2018). Deep learning approach for short-term stock trends prediction based on two-stream gated recurrent unit network. <em>Ieee Access</em>, <em>6</em>, 55392–55404.
+</div>
+<div class="csl-entry">
+Minsky, M., &amp; Papert, S. A. (2017). <em>Perceptrons</em>. The <span>MIT</span> Press. <a href="https://doi.org/10.7551/mitpress/11301.001.0001">https://doi.org/10.7551/mitpress/11301.001.0001</a>
+</div>
+<div class="csl-entry">
+Mirza, M., &amp; Osindero, S. (2014). <em><span>Conditional Generative Adversarial Nets</span></em>. <a href="https://arxiv.org/abs/1411.1784v1">https://arxiv.org/abs/1411.1784v1</a>
+</div>
+<div class="csl-entry">
+Mitchell, D., Bialkowski, J. P., &amp; Tompaidis, S. (2013). Optimal <span>VWAP</span> tracking. <em><span>SSRN</span> Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.2333916">https://doi.org/10.2139/ssrn.2333916</a>
+</div>
+<div class="csl-entry">
+Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra, D., &amp; Riedmiller, M. (2013). <em>Playing atari with deep reinforcement learning</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1312.5602">https://doi.org/10.48550/ARXIV.1312.5602</a>
+</div>
+<div class="csl-entry">
+Modigliani, F., &amp; Modigliani, L. (1997). Risk-adjusted performance. In <em>The Journal of Portfolio Management</em> (2; Vol. 23, pp. 45–54). <a href="https://doi.org/10.3905/jpm.23.2.45">https://doi.org/10.3905/jpm.23.2.45</a>
+</div>
+<div class="csl-entry">
+Moinas, S. (2005). Hidden limit orders and liquidity in limit order markets. <em><span>SSRN</span> Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.676564">https://doi.org/10.2139/ssrn.676564</a>
+</div>
+<div class="csl-entry">
+Morariu-Patrichi, M., &amp; Pakkanen, M. S. (2021). State-dependent hawkes processes and their application to limit order book modelling. <em>Quantitative Finance</em>, <em>22</em>(3), 563–583. <a href="https://doi.org/10.1080/14697688.2021.1983199">https://doi.org/10.1080/14697688.2021.1983199</a>
+</div>
+<div class="csl-entry">
+Moro, E., Vicente, J., Moyano, L. G., Gerig, A., Farmer, J. D., Vaglica, G., Lillo, F., &amp; Mantegna, R. N. (2009). Market impact and trading profile of hidden orders in stock markets. <em>Physical Review E</em>, <em>80</em>(6). <a href="https://doi.org/10.1103/physreve.80.066102">https://doi.org/10.1103/physreve.80.066102</a>
+</div>
+<div class="csl-entry">
+Mossin, J. (1966). Equilibrium in a capital asset market. <em>Econometrica</em>, <em>34</em>(4), 768–783. <a href="http://www.jstor.org/stable/1910098">http://www.jstor.org/stable/1910098</a>
+</div>
+<div class="csl-entry">
+Nagel, S. (2021). <em>Machine learning in asset pricing</em>. Princeton University Press.
+</div>
+<div class="csl-entry">
+O’Hara, M. (1997). <em>Market microstructure theory</em>. Blackwell.
+</div>
+<div class="csl-entry">
+O’Hara, M. (2015). High frequency market microstructure. <em>Journal of Financial Economics</em>, <em>116</em>(2), 257–270. https://doi.org/<a href="https://doi.org/10.1016/j.jfineco.2015.01.003">https://doi.org/10.1016/j.jfineco.2015.01.003</a>
+</div>
+<div class="csl-entry">
+Odena, A., Olah, C., &amp; Shlens, J. (2016). <em>Conditional image synthesis with auxiliary classifier GANs</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1610.09585">https://doi.org/10.48550/ARXIV.1610.09585</a>
+</div>
+<div class="csl-entry">
+OpenAI. (2023). <em>GPT-4 technical report</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2303.08774">https://doi.org/10.48550/ARXIV.2303.08774</a>
+</div>
+<div class="csl-entry">
+Pan, S., Long, S., Wang, Y., &amp; Xie, Y. (2023). Nonlinear asset pricing in chinese stock market: A deep learning approach. <em>International Review of Financial Analysis</em>, <em>87</em>, 102627. https://doi.org/<a href="https://doi.org/10.1016/j.irfa.2023.102627">https://doi.org/10.1016/j.irfa.2023.102627</a>
+</div>
+<div class="csl-entry">
+Patel, M., Jariwala, K., &amp; Chattopadhyay, C. (2023, January). Deep learning techniques for stock market forecasting: Recent trends and challenges. <em>2023 the 6th International Conference on Software Engineering and Information Management</em>. <a href="https://doi.org/10.1145/3584871.3584872">https://doi.org/10.1145/3584871.3584872</a>
+</div>
+<div class="csl-entry">
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., &amp; Duchesnay, É. (2011). Scikit-learn: Machine learning in python. <em>J. Mach. Learn. Res.</em>, <em>12</em>(null), 2825–2830.
+</div>
+<div class="csl-entry">
+Perold, A. F. (1988). The implementation shortfall. In <em>Journal of Portfolio Management</em> (3; Vol. 14, pp. 4–9). <a href="https://doi.org/10.3905/jpm.1988.409150">https://doi.org/10.3905/jpm.1988.409150</a>
+</div>
+<div class="csl-entry">
+Ponomarev, E. S., Oseledets, I. V., &amp; Cichocki, A. S. (2019). Using reinforcement learning in the algorithmic trading problem. <em>Journal of Communications Technology and Electronics</em>, <em>64</em>(12), 1450–1457. <a href="https://doi.org/10.1134/s1064226919120131">https://doi.org/10.1134/s1064226919120131</a>
+</div>
+<div class="csl-entry">
+Potters, M., &amp; Bouchaud, J.-P. (2003). More statistical properties of order books and price impact. <em>Physica A: Statistical Mechanics and Its Applications</em>, <em>324</em>(1-2), 133–140. <a href="https://doi.org/10.1016/s0378-4371(02)01896-4">https://doi.org/10.1016/s0378-4371(02)01896-4</a>
+</div>
+<div class="csl-entry">
+Pricope, T.-V. (2021). <em>Deep reinforcement learning in quantitative algorithmic trading: A review</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2106.00123">https://doi.org/10.48550/ARXIV.2106.00123</a>
+</div>
+<div class="csl-entry">
+Quinlan, J. R. (1986). Induction of decision trees. <em>Machine Learning</em>, <em>1</em>(1), 81–106. <a href="https://doi.org/10.1007/BF00116251">https://doi.org/10.1007/BF00116251</a>
+</div>
+<div class="csl-entry">
+Radford, A., Narasimhan, K., Salimans, T., &amp; Sutskever, I. (2018). <em>Improving language understanding by generative pre-training</em>. <a href="https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf">https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf</a>
+</div>
+<div class="csl-entry">
+Rajihy, Y., Nermend, K., &amp; Alsakaa, A. (2017). Back-propagation artificial neural networks in stock market forecasting. An application to the warsaw stock exchange WIG20. <em>Aestimatio: The IEB International Journal of Finance</em>, <em>15</em>, 88–99.
+</div>
+<div class="csl-entry">
+Rosenblatt, F. (1957). The perceptron: A perceiving and recognizing automaton. In <em>Cornell Aeronautical Laboratory</em> (85-460-1).
+</div>
+<div class="csl-entry">
+Rosenthal, D. (2009). Performance metrics for algorithmic traders. <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.1439902">https://doi.org/10.2139/ssrn.1439902</a>
+</div>
+<div class="csl-entry">
+Roşu, I. (2009). A dynamic model of the limit order book. <em>Review of Financial Studies</em>, <em>22</em>(11), 4601–4641. <a href="https://doi.org/10.1093/rfs/hhp011">https://doi.org/10.1093/rfs/hhp011</a>
+</div>
+<div class="csl-entry">
+Rumelhart, D. E., Hinton, G. E., &amp; Williams, R. J. (1986). Learning representations by back-propagating errors. <em>Nature</em>, <em>323</em>(6088), 533–536. <a href="https://doi.org/10.1038/323533a0">https://doi.org/10.1038/323533a0</a>
+</div>
+<div class="csl-entry">
+Rustam, Z., Kintandani, P., et al. (2019). Application of support vector regression in indonesian stock price prediction with feature selection using particle swarm optimisation. <em>Modelling and Simulation in Engineering</em>, <em>2019</em>.
+</div>
+<div class="csl-entry">
+Sagi, O., &amp; Rokach, L. (2018). Ensemble learning: A survey. <em>WIREs Data Mining and Knowledge Discovery</em>, <em>8</em>(4), e1249. https://doi.org/<a href="https://doi.org/10.1002/widm.1249">https://doi.org/10.1002/widm.1249</a>
+</div>
+<div class="csl-entry">
+Said, E., Ayed, A. B. H., Thillou, D., Rabeyrin, J.-J., &amp; Abergel, F. (2020). Market impact: A systematic study of the high frequency options market. <em>Quantitative Finance</em>, <em>21</em>(1), 69–84. <a href="https://doi.org/10.1080/14697688.2020.1791948">https://doi.org/10.1080/14697688.2020.1791948</a>
+</div>
+<div class="csl-entry">
+Sarker, I. H. (2021). Deep learning: A comprehensive overview on techniques, taxonomy, applications and research directions. <em><span>SN</span> Computer Science</em>, <em>2</em>(6). <a href="https://doi.org/10.1007/s42979-021-00815-1">https://doi.org/10.1007/s42979-021-00815-1</a>
+</div>
+<div class="csl-entry">
+Schmidhuber, J. (2015). Deep learning in neural networks: An overview. <em>Neural Networks</em>, <em>61</em>, 85–117. https://doi.org/<a href="https://doi.org/10.1016/j.neunet.2014.09.003">https://doi.org/10.1016/j.neunet.2014.09.003</a>
+</div>
+<div class="csl-entry">
+Scholtus, M., van Dijk, D., &amp; Frijns, B. (2014). Speed, algorithmic trading, and market quality around macroeconomic news announcements. <em>Journal of Banking &amp; Finance</em>, <em>38</em>, 89–105. https://doi.org/<a href="https://doi.org/10.1016/j.jbankfin.2013.09.016">https://doi.org/10.1016/j.jbankfin.2013.09.016</a>
+</div>
+<div class="csl-entry">
+Schulman, J., Wolski, F., Dhariwal, P., Radford, A., &amp; Klimov, O. (2017). <em>Proximal policy optimization algorithms</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1707.06347">https://doi.org/10.48550/ARXIV.1707.06347</a>
+</div>
+<div class="csl-entry">
+Severyn, A., &amp; Moschitti, A. (2015, August). Twitter sentiment analysis with deep convolutional neural networks. <em>Proceedings of the 38th International <span>ACM</span> <span>SIGIR</span> Conference on Research and Development in Information Retrieval</em>. <a href="https://doi.org/10.1145/2766462.2767830">https://doi.org/10.1145/2766462.2767830</a>
+</div>
+<div class="csl-entry">
+Sharpe, W. F. (1964). <span>CAPITAL ASSET PRICES: A THEORY OF MARKET EQUILIBRIUM UNDER CONDITIONS OF RISK*</span>. <em>The Journal of Finance</em>, <em>19</em>(3), 425–442. <a href="https://doi.org/10.1111/J.1540-6261.1964.TB02865.X">https://doi.org/10.1111/J.1540-6261.1964.TB02865.X</a>
+</div>
+<div class="csl-entry">
+Sharpe, W. F. (1966). Mutual fund performance. <em>The Journal of Business</em>, <em>39</em>(1), 119–138. <a href="http://www.jstor.org/stable/2351741">http://www.jstor.org/stable/2351741</a>
+</div>
+<div class="csl-entry">
+Sharpe, W. F. (1975). Adjusting for risk in portfolio performance measurement. In <em>The Journal of Portfolio Management</em> (2; Vol. 1, pp. 29–34). <a href="https://doi.org/10.3905/jpm.1975.408513">https://doi.org/10.3905/jpm.1975.408513</a>
+</div>
+<div class="csl-entry">
+Shen, J., &amp; Shafiq, M. O. (2020a). Short-term stock market price trend prediction using a comprehensive deep learning system. <em>Journal of Big Data</em>, <em>7</em>(1). <a href="https://doi.org/10.1186/s40537-020-00333-6">https://doi.org/10.1186/s40537-020-00333-6</a>
+</div>
+<div class="csl-entry">
+Shen, J., &amp; Shafiq, M. O. (2020b). Short-term stock market price trend prediction using a comprehensive deep learning system. <em>Journal of Big Data</em>, <em>7</em>(1), 1–33.
+</div>
+<div class="csl-entry">
+Shi, Z., &amp; Cartlidge, J. (2023). <em>Neural stochastic agent-based limit order book simulation: A hybrid methodology</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2303.00080">https://doi.org/10.48550/ARXIV.2303.00080</a>
+</div>
+<div class="csl-entry">
+Smola, A. J., &amp; Schölkopf, B. (2004). A tutorial on support vector regression. <em>Statistics and Computing</em>, <em>14</em>(3), 199–222. <a href="https://doi.org/10.1023/b:stco.0000035301.49549.88">https://doi.org/10.1023/b:stco.0000035301.49549.88</a>
+</div>
+<div class="csl-entry">
+Snow, D. (2019). Machine learning in asset management—part 1: Portfolio construction—trading strategies. <em>The Journal of Financial Data Science</em>, <em>2</em>(1), 10–23. <a href="https://doi.org/10.3905/jfds.2019.1.021">https://doi.org/10.3905/jfds.2019.1.021</a>
+</div>
+<div class="csl-entry">
+Snow, D. (2020). Machine learning in asset management—part 2: Portfolio construction—weight optimization. <em>The Journal of Financial Data Science</em>, <em>2</em>(2), 17–24. <a href="https://doi.org/10.3905/jfds.2020.1.029">https://doi.org/10.3905/jfds.2020.1.029</a>
+</div>
+<div class="csl-entry">
+Soni, P., Tewari, Y., &amp; Krishnan, D. (2022). Machine learning approaches in stock price prediction: A systematic review. <em>Journal of Physics: Conference Series</em>, <em>2161</em>(1), 012065. <a href="https://doi.org/10.1088/1742-6596/2161/1/012065">https://doi.org/10.1088/1742-6596/2161/1/012065</a>
+</div>
+<div class="csl-entry">
+Sutton, R. S., &amp; Barto, A. G. (2018). <em>Reinforcement learning</em> (2nd ed.). Bradford Books.
+</div>
+<div class="csl-entry">
+Swathi, T., Kasiviswanath, N., &amp; Rao, A. A. (2022). An optimal deep learning-based LSTM for stock price prediction using twitter sentiment analysis. <em>Applied Intelligence</em>, <em>52</em>(12), 13675–13688. <a href="https://doi.org/10.1007/s10489-022-03175-2">https://doi.org/10.1007/s10489-022-03175-2</a>
+</div>
+<div class="csl-entry">
+Takahashi, S., Chen, Y., &amp; Tanaka-Ishii, K. (2019). Modeling financial time-series with generative adversarial networks. <em>Physica A: Statistical Mechanics and Its Applications</em>, <em>527</em>, 121261. <a href="https://doi.org/10.1016/j.physa.2019.121261">https://doi.org/10.1016/j.physa.2019.121261</a>
+</div>
+<div class="csl-entry">
+Tóth, B., Lempérière, Y., Deremble, C., Lataillade, J. de, Kockelkoren, J., &amp; Bouchaud, J.-P. (2011). Anomalous price impact and the critical nature of liquidity in financial markets. <em>Physical Review X</em>, <em>1</em>(2). <a href="https://doi.org/10.1103/physrevx.1.021006">https://doi.org/10.1103/physrevx.1.021006</a>
+</div>
+<div class="csl-entry">
+Treynor, J. L. (1962). Toward a theory of market value of risk assets. <em>Unpublished Manuscript, a Revised Version Was Published in Korajczyk, Robert, A, Ed., 1999, Asset Pricing and Portfolio Performance: Models, Strategy and Performance Metrics, Risk Books, London, 15-22</em>.
+</div>
+<div class="csl-entry">
+Treynor, J. L., &amp; Black, F. (1973). How to use security analysis to improve portfolio selection. <em>The Journal of Business</em>, <em>46</em>(1), 66–86. <a href="http://www.jstor.org/stable/2351280">http://www.jstor.org/stable/2351280</a>
+</div>
+<div class="csl-entry">
+Tsantekidis, A., Passalis, N., Tefas, A., Kanniainen, J., Gabbouj, M., &amp; Iosifidis, A. (2017, July). Forecasting stock prices from the limit order book using convolutional neural networks. <em>2017 IEEE 19th Conference on Business Informatics (CBI)</em>. <a href="https://doi.org/10.1109/cbi.2017.23">https://doi.org/10.1109/cbi.2017.23</a>
+</div>
+<div class="csl-entry">
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., &amp; Polosukhin, I. (2017). <em>Attention is all you need</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1706.03762">https://doi.org/10.48550/ARXIV.1706.03762</a>
+</div>
+<div class="csl-entry">
+Wagner, W. H., &amp; Edwards, M. (1993). Best execution. <em>Financial Analysts Journal</em>, <em>49</em>(1), 65–71. <a href="https://doi.org/10.2469/faj.v49.n1.65">https://doi.org/10.2469/faj.v49.n1.65</a>
+</div>
+<div class="csl-entry">
+Watkins, C. J. C. H., &amp; Dayan, P. (1992). Q-learning. <em>Machine Learning</em>, <em>8</em>(3-4), 279–292. <a href="https://doi.org/10.1007/bf00992698">https://doi.org/10.1007/bf00992698</a>
+</div>
+<div class="csl-entry">
+Wolpert, D. H. (1992). Stacked generalization. <em>Neural Networks</em>, <em>5</em>(2), 241–259. <a href="https://doi.org/10.1016/s0893-6080(05)80023-1">https://doi.org/10.1016/s0893-6080(05)80023-1</a>
+</div>
+<div class="csl-entry">
+Yadav, A., &amp; Vishwakarma, D. K. (2020). Sentiment analysis using deep learning architectures: A review. <em>Artificial Intelligence Review</em>, <em>53</em>(6), 4335–4385. <a href="https://doi.org/10.1007/s10462-019-09794-5">https://doi.org/10.1007/s10462-019-09794-5</a>
+</div>
+<div class="csl-entry">
+Yuan, X., Yuan, J., Jiang, T., &amp; Ain, Q. U. (2020). Integrated long-term stock selection models based on feature selection and machine learning algorithms for china stock market. <em>IEEE Access</em>, <em>8</em>, 22672–22685.
+</div>
+<div class="csl-entry">
+Yun, K. K., Yoon, S. W., &amp; Won, D. (2021). Prediction of stock price direction using a hybrid GA-XGBoost algorithm with a three-stage feature engineering process. <em>Expert Systems with Applications</em>, <em>186</em>, 115716.
+</div>
+<div class="csl-entry">
+Zhang, K., Zhong, G., Dong, J., Wang, S., &amp; Wang, Y. (2019). Stock market prediction based on generative adversarial network. <em>Procedia Computer Science</em>, <em>147</em>, 400–406. <a href="https://doi.org/10.1016/j.procs.2019.01.256">https://doi.org/10.1016/j.procs.2019.01.256</a>
+</div>
+<div class="csl-entry">
+Zhang, L., Wang, S., &amp; Liu, B. (2018). Deep learning for sentiment analysis: A survey. <em>WIREs Data Mining and Knowledge Discovery</em>, <em>8</em>(4), e1253. https://doi.org/<a href="https://doi.org/10.1002/widm.1253">https://doi.org/10.1002/widm.1253</a>
+</div>
+<div class="csl-entry">
+Zhou, P.-Y., Chan, K. C., &amp; Ou, C. X. (2018). Corporate communication network and stock price movements: Insights from data mining. <em>IEEE Transactions on Computational Social Systems</em>, <em>5</em>(2), 391–402.
+</div>
+<div class="csl-entry">
+Zhou, Z.-H. (2012). <em>Ensemble methods</em>. Chapman; Hall/<span>CRC</span>. <a href="https://doi.org/10.1201/b12207">https://doi.org/10.1201/b12207</a>
+</div>
+<div class="csl-entry">
+Zou, J., Zhao, Q., Jiao, Y., Cao, H., Liu, Y., Yan, Q., Abbasnejad, E., Liu, L., &amp; Shi, J. Q. (2022). <em>Stock market prediction via deep learning techniques: A survey</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2212.12717">https://doi.org/10.48550/ARXIV.2212.12717</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0" line-spacing="2">
+<div id="ref-Abergel2011" class="csl-entry">
+Abergel, F., &amp; Jedidi, A. (2011). A mathematical approach to order book modelling. In <em>Econophysics of order-driven markets</em> (pp. 93–107). Springer Milan. <a href="https://doi.org/10.1007/978-88-470-1766-5_7">https://doi.org/10.1007/978-88-470-1766-5_7</a>
+</div>
+<div id="ref-Agarwal2015" class="csl-entry">
+Agarwal, B., &amp; Mittal, N. (2015). Machine learning approach for sentiment analysis. In <em>Socio-affective computing</em> (pp. 21–45). Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-25343-5_3">https://doi.org/10.1007/978-3-319-25343-5_3</a>
+</div>
+<div id="ref-Aitken2015" class="csl-entry">
+Aitken, M., Cumming, D., &amp; Zhan, F. (2015). <span class="nocase">High frequency trading and end-of-day price dislocation</span>. <em>Journal of Banking &amp; Finance</em>, <em>59</em>, 330–349. <a href="https://doi.org/10.1016/J.JBANKFIN.2015.06.011">https://doi.org/10.1016/J.JBANKFIN.2015.06.011</a>
+</div>
+<div id="ref-Ali2022" class="csl-entry">
+Ali, A., Abd Razak, S., Othman, S. H., Eisa, T. A. E., Al-Dhaqm, A., Nasser, M., Elhassan, T., Elshafie, H., &amp; Saif, A. (2022). Financial fraud detection based on machine learning: A systematic literature review. <em>Applied Sciences</em>, <em>12</em>(19), 9637. <a href="https://doi.org/10.3390/app12199637">https://doi.org/10.3390/app12199637</a>
+</div>
+<div id="ref-Almaafi2023" class="csl-entry">
+Almaafi, A., Bajaba, S., &amp; Alnori, F. (2023). Stock price prediction using ARIMA versus XGBoost models: The case of the largest telecommunication company in the middle east. <em>International Journal of Information Technology</em>, <em>15</em>(4), 1813–1818. <a href="https://doi.org/10.1007/s41870-023-01260-4">https://doi.org/10.1007/s41870-023-01260-4</a>
+</div>
+<div id="ref-Alpaydin2020" class="csl-entry">
+Alpaydin, E. (2020). <em>Introduction to machine learning</em> (4th ed.). MIT Press.
+</div>
+<div id="ref-araci2019finbert" class="csl-entry">
+Araci, D. (2019). <em>FinBERT: Financial sentiment analysis with pre-trained language models</em>. <a href="https://arxiv.org/abs/1908.10063">https://arxiv.org/abs/1908.10063</a>
+</div>
+<div id="ref-Awad2015" class="csl-entry">
+Awad, M., &amp; Khanna, R. (2015). Support vector machines for classification. In <em>Efficient learning machines</em> (pp. 39–66). Apress. <a href="https://doi.org/10.1007/978-1-4302-5990-9_3">https://doi.org/10.1007/978-1-4302-5990-9_3</a>
+</div>
+<div id="ref-baek2018" class="csl-entry">
+Baek, Y., &amp; Kim, H. Y. (2018). ModAugNet: A new forecasting framework for stock market index value with an overfitting prevention LSTM module and a prediction LSTM module. <em>Expert Systems with Applications</em>, <em>113</em>, 457–480.
+</div>
+<div id="ref-Bao2017" class="csl-entry">
+Bao, W., Yue, J., &amp; Rao, Y. (2017). A deep learning framework for financial time series using stacked autoencoders and long-short term memory. <em>PLOS ONE</em>, <em>12</em>(7), e0180944. <a href="https://doi.org/10.1371/journal.pone.0180944">https://doi.org/10.1371/journal.pone.0180944</a>
+</div>
+<div id="ref-Biau2016" class="csl-entry">
+Biau, G., &amp; Scornet, E. (2016). A random forest guided tour. <em><span>TEST</span></em>, <em>25</em>(2), 197–227. <a href="https://doi.org/10.1007/s11749-016-0481-7">https://doi.org/10.1007/s11749-016-0481-7</a>
+</div>
+<div id="ref-Boser1992" class="csl-entry">
+Boser, B. E., Guyon, I. M., &amp; Vapnik, V. N. (1992). A training algorithm for optimal margin classifiers. <em>Proceedings of the Fifth Annual Workshop on Computational Learning Theory</em>, 144–152. <a href="https://doi.org/10.1145/130385.130401">https://doi.org/10.1145/130385.130401</a>
+</div>
+<div id="ref-Breiman1996" class="csl-entry">
+Breiman, L. (1996). Bagging predictors. <em>Machine Learning</em>, <em>24</em>(2), 123–140. <a href="https://doi.org/10.1023/a:1018054314350">https://doi.org/10.1023/a:1018054314350</a>
+</div>
+<div id="ref-Breiman2001" class="csl-entry">
+Breiman, L. (2001). Random forests. <em>Machine Learning</em>, <em>45</em>(1), 5–32. <a href="https://doi.org/10.1023/A:1010933404324">https://doi.org/10.1023/A:1010933404324</a>
+</div>
+<div id="ref-Breiman2017" class="csl-entry">
+Breiman, L., Friedman, J. H., Olshen, R. A., &amp; Stone, C. J. (2017). <em>Classification and regression trees</em>. Routledge. <a href="https://doi.org/10.1201/9781315139470">https://doi.org/10.1201/9781315139470</a>
+</div>
+<div id="ref-Briola2020" class="csl-entry">
+Briola, A., Turiel, J., &amp; Aste, T. (2020). <em>Deep learning modeling of limit order book: A comparative perspective</em>.
+</div>
+<div id="ref-Brown2020" class="csl-entry">
+Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D. M., Wu, J., Winter, C., … Amodei, D. (2020). <em>Language models are few-shot learners</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2005.14165">https://doi.org/10.48550/ARXIV.2005.14165</a>
+</div>
+<div id="ref-Bustos2020" class="csl-entry">
+Bustos, O., &amp; Pomares-Quimbaya, A. (2020). Stock market movement forecast: A systematic review. <em>Expert Systems with Applications</em>, <em>156</em>, 113464. https://doi.org/<a href="https://doi.org/10.1016/j.eswa.2020.113464">https://doi.org/10.1016/j.eswa.2020.113464</a>
+</div>
+<div id="ref-cao2019" class="csl-entry">
+Cao, J., &amp; Wang, J. (2019). Stock price forecasting model based on modified convolution neural network and financial time series analysis. <em>International Journal of Communication Systems</em>, <em>32</em>(12), e3987.
+</div>
+<div id="ref-carta2021" class="csl-entry">
+Carta, S. M., Consoli, S., Piras, L., Podda, A. S., &amp; Recupero, D. R. (2021). Explainable machine learning exploiting news and domain-specific lexicon for stock market forecasting. <em>IEEE Access</em>, <em>9</em>, 30193–30205.
+</div>
+<div id="ref-Chen2023" class="csl-entry">
+Chen, L., Pelger, M., &amp; Zhu, J. (2023). Deep learning in asset pricing. <em>Management Science</em>, <em>0</em>(0), null. <a href="https://doi.org/10.1287/mnsc.2023.4695">https://doi.org/10.1287/mnsc.2023.4695</a>
+</div>
+<div id="ref-Chen2016" class="csl-entry">
+Chen, T., &amp; Guestrin, C. (2016). <span>XGBoost: A Scalable Tree Boosting System</span>. <em>Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em>, <em>13-17-August-2016</em>, 785–794. <a href="https://doi.org/10.1145/2939672.2939785">https://doi.org/10.1145/2939672.2939785</a>
+</div>
+<div id="ref-Cho2014" class="csl-entry">
+Cho, K., Merrienboer, B. van, Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H., &amp; Bengio, Y. (2014). <em>Learning phrase representations using RNN encoder-decoder for statistical machine translation</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1406.1078">https://doi.org/10.48550/ARXIV.1406.1078</a>
+</div>
+<div id="ref-Chullamonthon2023" class="csl-entry">
+Chullamonthon, P., &amp; Tangamchit, P. (2023). Ensemble of supervised and unsupervised deep neural networks for stock price manipulation detection. <em>Expert Systems with Applications</em>, <em>220</em>, 119698. <a href="https://doi.org/10.1016/j.eswa.2023.119698">https://doi.org/10.1016/j.eswa.2023.119698</a>
+</div>
+<div id="ref-Coletta2022" class="csl-entry">
+Coletta, A., Moulin, A., Vyetrenko, S., &amp; Balch, T. (2022). Learning to simulate realistic limit order book markets from data as a world agent. <em>Proceedings of the Third ACM International Conference on AI in Finance</em>, 428–436. <a href="https://doi.org/10.1145/3533271.3561753">https://doi.org/10.1145/3533271.3561753</a>
+</div>
+<div id="ref-Cont2023" class="csl-entry">
+Cont, R., Cucuringu, M., Kochems, J., &amp; Prenzel, F. (2023). Limit order book simulation with generative adversarial networks. <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.4512356">https://doi.org/10.2139/ssrn.4512356</a>
+</div>
+<div id="ref-Cortes1995" class="csl-entry">
+Cortes, C., &amp; Vapnik, V. (1995). Support-vector networks. <em>Mach. Learn.</em>, <em>20</em>(3), 273–297. <a href="https://doi.org/10.1023/A:1022627411411">https://doi.org/10.1023/A:1022627411411</a>
+</div>
+<div id="ref-Craja2020" class="csl-entry">
+Craja, P., Kim, A., &amp; Lessmann, S. (2020). Deep learning for detecting financial statement fraud. <em>Decision Support Systems</em>, <em>139</em>, 113421. <a href="https://doi.org/10.1016/j.dss.2020.113421">https://doi.org/10.1016/j.dss.2020.113421</a>
+</div>
+<div id="ref-Cybenko1989" class="csl-entry">
+Cybenko, G. (1989). Approximation by superpositions of a sigmoidal function. <em>Mathematics of Control, Signals, and Systems</em>, <em>2</em>(4), 303–314. <a href="https://doi.org/10.1007/bf02551274">https://doi.org/10.1007/bf02551274</a>
+</div>
+<div id="ref-Devroye1996" class="csl-entry">
+Devroye, L., Györfi, L., &amp; Lugosi, G. (1996). <em>A probabilistic theory of pattern recognition</em>. Springer New York. <a href="https://doi.org/10.1007/978-1-4612-0711-5">https://doi.org/10.1007/978-1-4612-0711-5</a>
+</div>
+<div id="ref-Dietterich2000" class="csl-entry">
+Dietterich, T. G. (2000). Ensemble methods in machine learning. In <em>Multiple classifier systems</em> (pp. 1–15). Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/3-540-45014-9_1">https://doi.org/10.1007/3-540-45014-9_1</a>
+</div>
+<div id="ref-Diqi2022" class="csl-entry">
+Diqi, M., Hiswati, M. E., &amp; Nur, A. S. (2022). StockGAN: Robust stock price prediction using GAN algorithm. <em>International Journal of Information Technology</em>, <em>14</em>(5), 2309–2315. <a href="https://doi.org/10.1007/s41870-022-00929-6">https://doi.org/10.1007/s41870-022-00929-6</a>
+</div>
+<div id="ref-Elman1990" class="csl-entry">
+Elman, J. L. (1990). Finding structure in time. <em>Cognitive Science</em>, <em>14</em>(2), 179–211. <a href="https://doi.org/10.1207/s15516709cog1402_1">https://doi.org/10.1207/s15516709cog1402_1</a>
+</div>
+<div id="ref-Farmer2009" class="csl-entry">
+Farmer, J. D., &amp; Foley, D. (2009). The economy needs agent-based modelling. <em>Nature</em>, <em>460</em>(7256), 685–686. <a href="https://doi.org/10.1038/460685a">https://doi.org/10.1038/460685a</a>
+</div>
+<div id="ref-FISHER1936" class="csl-entry">
+FISHER, R. A. (1936). <span>THE</span> <span>USE</span> <span>OF</span> <span>MULTIPLE</span> <span>MEASUREMENTS</span> <span>IN</span> <span>TAXONOMIC</span> <span>PROBLEMS</span>. <em>Annals of Eugenics</em>, <em>7</em>(2), 179–188. <a href="https://doi.org/10.1111/j.1469-1809.1936.tb02137.x">https://doi.org/10.1111/j.1469-1809.1936.tb02137.x</a>
+</div>
+<div id="ref-Freund1997" class="csl-entry">
+Freund, Y., &amp; Schapire, R. E. (1997). A decision-theoretic generalization of on-line learning and an application to boosting. <em>Journal of Computer and System Sciences</em>, <em>55</em>(1), 119–139. <a href="https://doi.org/10.1006/jcss.1997.1504">https://doi.org/10.1006/jcss.1997.1504</a>
+</div>
+<div id="ref-Friedman2001" class="csl-entry">
+Friedman, J. H. (2001). Greedy function approximation: A gradient boosting machine. <em>The Annals of Statistics</em>, <em>29</em>(5). <a href="https://doi.org/10.1214/aos/1013203451">https://doi.org/10.1214/aos/1013203451</a>
+</div>
+<div id="ref-Friedman2002" class="csl-entry">
+Friedman, J. H. (2002). Stochastic gradient boosting. <em>Computational Statistics &amp; Data Analysis</em>, <em>38</em>(4), 367–378. <a href="https://doi.org/10.1016/s0167-9473(01)00065-2">https://doi.org/10.1016/s0167-9473(01)00065-2</a>
+</div>
+<div id="ref-Glorot2011" class="csl-entry">
+Glorot, X., Bordes, A., &amp; Bengio, Y. (2011). Deep sparse rectifier neural networks. In G. Gordon, D. Dunson, &amp; M. Dudík (Eds.), <em>Proceedings of the fourteenth international conference on artificial intelligence and statistics</em> (Vol. 15, pp. 315–323). PMLR. <a href="https://proceedings.mlr.press/v15/glorot11a.html">https://proceedings.mlr.press/v15/glorot11a.html</a>
+</div>
+<div id="ref-Goodfellow2014" class="csl-entry">
+Goodfellow, I. J., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A., &amp; Bengio, Y. (2014). <span>Generative Adversarial Networks</span>. <em>Communications of the ACM</em>, <em>63</em>(11), 139–144. <a href="https://arxiv.org/abs/1406.2661v1">https://arxiv.org/abs/1406.2661v1</a>
+</div>
+<div id="ref-Gu2020" class="csl-entry">
+Gu, S., Kelly, B., &amp; Xiu, D. (2020). <span class="nocase">Empirical Asset Pricing via Machine Learning</span>. <em>The Review of Financial Studies</em>, <em>33</em>(5), 2223–2273. <a href="https://doi.org/10.1093/rfs/hhaa009">https://doi.org/10.1093/rfs/hhaa009</a>
+</div>
+<div id="ref-gunduz2017" class="csl-entry">
+Gunduz, H., Yaslan, Y., &amp; Cataltepe, Z. (2017). Intraday prediction of borsa istanbul using convolutional neural networks and feature correlations. <em>Knowledge-Based Systems</em>, <em>137</em>, 138–148.
+</div>
+<div id="ref-Hinton2022" class="csl-entry">
+Hinton, G. (2022). <em>The forward-forward algorithm: Some preliminary investigations</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2212.13345">https://doi.org/10.48550/ARXIV.2212.13345</a>
+</div>
+<div id="ref-Hinton2006" class="csl-entry">
+Hinton, G. E., Osindero, S., &amp; Teh, Y.-W. (2006). A fast learning algorithm for deep belief nets. <em>Neural Computation</em>, <em>18</em>(7), 1527–1554. <a href="https://doi.org/10.1162/neco.2006.18.7.1527">https://doi.org/10.1162/neco.2006.18.7.1527</a>
+</div>
+<div id="ref-Hochreiter1997" class="csl-entry">
+Hochreiter, S., &amp; Schmidhuber, J. (1997). Long short-term memory. <em>Neural Computation</em>, <em>9</em>(8), 1735–1780. <a href="https://doi.org/10.1162/neco.1997.9.8.1735">https://doi.org/10.1162/neco.1997.9.8.1735</a>
+</div>
+<div id="ref-Hopfield1982" class="csl-entry">
+Hopfield, J. J. (1982). Neural networks and physical systems with emergent collective computational abilities. <em>Proceedings of the National Academy of Sciences</em>, <em>79</em>(8), 2554–2558. <a href="https://doi.org/10.1073/pnas.79.8.2554">https://doi.org/10.1073/pnas.79.8.2554</a>
+</div>
+<div id="ref-hoseinzade2019" class="csl-entry">
+Hoseinzade, E., &amp; Haratizadeh, S. (2019). CNNpred: CNN-based stock market prediction using a diverse set of variables. <em>Expert Systems with Applications</em>, <em>129</em>, 273–285.
+</div>
+<div id="ref-hu2018" class="csl-entry">
+Hu, H., Tang, L., Zhang, S., &amp; Wang, H. (2018). Predicting the direction of stock markets using optimized neural networks with google trends. <em>Neurocomputing</em>, <em>285</em>, 188–195.
+</div>
+<div id="ref-Hu2013" class="csl-entry">
+Hu, Z., Zhu, J., &amp; Tse, K. (2013, November). Stocks market prediction using support vector machine. <em>2013 6th International Conference on Information Management, Innovation Management and Industrial Engineering</em>. <a href="https://doi.org/10.1109/iciii.2013.6703096">https://doi.org/10.1109/iciii.2013.6703096</a>
+</div>
+<div id="ref-Huang2018" class="csl-entry">
+Huang, C. Y. (2018). <em>Financial trading as a game: A deep reinforcement learning approach</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1807.02787">https://doi.org/10.48550/ARXIV.1807.02787</a>
+</div>
+<div id="ref-Huang2011" class="csl-entry">
+Huang, R., &amp; Polak, T. (2011). LOBSTER: Limit order book reconstruction system. <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.1977207">https://doi.org/10.2139/ssrn.1977207</a>
+</div>
+<div id="ref-Huang2015" class="csl-entry">
+Huang, W., Lehalle, C.-A., &amp; Rosenbaum, M. (2015). Simulating and analyzing order book data: The queue-reactive model. <em>Journal of the American Statistical Association</em>, <em>110</em>(509), 107–122. <a href="https://doi.org/10.1080/01621459.2014.982278">https://doi.org/10.1080/01621459.2014.982278</a>
+</div>
+<div id="ref-Ishwarappa2021" class="csl-entry">
+Ishwarappa, &amp; Anuradha, J. (2021). Big data based stock trend prediction using deep <span>CNN</span> with reinforcement-<span>LSTM</span> model. <em>International Journal of System Assurance Engineering and Management</em>. <a href="https://doi.org/10.1007/s13198-021-01074-2">https://doi.org/10.1007/s13198-021-01074-2</a>
+</div>
+<div id="ref-Isola2016" class="csl-entry">
+Isola, P., Zhu, J.-Y., Zhou, T., &amp; Efros, A. A. (2016). <em>Image-to-image translation with conditional adversarial networks</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1611.07004">https://doi.org/10.48550/ARXIV.1611.07004</a>
+</div>
+<div id="ref-jiang2020" class="csl-entry">
+Jiang, M., Liu, J., Zhang, L., &amp; Liu, C. (2020). An improved stacking framework for stock index prediction by leveraging tree-based ensemble models and deep learning algorithms. <em>Physica A: Statistical Mechanics and Its Applications</em>, <em>541</em>, 122272.
+</div>
+<div id="ref-Karush1939" class="csl-entry">
+Karush, W. (1939). <em>Minima of functions of several variables with inequalities as side conditions.</em> [PhD thesis]. Thesis (S.M.)–University of Chicago, Department of Mathematics, December 1939.
+</div>
+<div id="ref-KELLEY1960" class="csl-entry">
+KELLEY, H. J. (1960). Gradient theory of optimal flight paths. <em><span>ARS</span> Journal</em>, <em>30</em>(10), 947–954. <a href="https://doi.org/10.2514/8.5282">https://doi.org/10.2514/8.5282</a>
+</div>
+<div id="ref-kim2020" class="csl-entry">
+Kim, S., Ku, S., Chang, W., &amp; Song, J. W. (2020). Predicting the direction of US stock prices using effective transfer entropy and machine learning techniques. <em>IEEE Access</em>, <em>8</em>, 111660–111682.
+</div>
+<div id="ref-Kuhn1950" class="csl-entry">
+Kuhn, H. W., &amp; Tucker, A. W. (1950). Nonlinear programming. <em>Proceedings of the Second Berkeley Symposium on Mathematical Statistics and Probability (July 31 - August 12, 1950)</em>, pages 481–492. <a href="http://digicoll.lib.berkeley.edu/record/112776">http://digicoll.lib.berkeley.edu/record/112776</a>
+</div>
+<div id="ref-Kumbure2022" class="csl-entry">
+Kumbure, M. M., Lohrmann, C., Luukka, P., &amp; Porras, J. (2022). Machine learning techniques and data for stock market forecasting: A literature review. <em>Expert Systems with Applications</em>, <em>197</em>, 116659. <a href="https://doi.org/10.1016/j.eswa.2022.116659">https://doi.org/10.1016/j.eswa.2022.116659</a>
+</div>
+<div id="ref-lai2009" class="csl-entry">
+Lai, R. K., Fan, C.-Y., Huang, W.-H., &amp; Chang, P.-C. (2009). Evolving and clustering fuzzy decision tree for financial time series data forecasting. <em>Expert Systems with Applications</em>, <em>36</em>(2), 3761–3773.
+</div>
+<div id="ref-Landolt2021" class="csl-entry">
+Landolt, S., Wambsganss, T., &amp; Söllner, M. (2021). A taxonomy for deep learning in natural language processing. <em>Proceedings of the Annual Hawaii International Conference on System Sciences</em>. <a href="https://doi.org/10.24251/hicss.2021.129">https://doi.org/10.24251/hicss.2021.129</a>
+</div>
+<div id="ref-LeCun2015" class="csl-entry">
+LeCun, Y., Bengio, Y., &amp; Hinton, G. (2015). Deep learning. <em>Nature</em>, <em>521</em>(7553), 436–444. <a href="https://doi.org/10.1038/nature14539">https://doi.org/10.1038/nature14539</a>
+</div>
+<div id="ref-LeCun1989" class="csl-entry">
+LeCun, Y., Boser, B., Denker, J. S., Henderson, D., Howard, R. E., Hubbard, W., &amp; Jackel, L. D. (1989). Backpropagation applied to handwritten zip code recognition. <em>Neural Computation</em>, <em>1</em>(4), 541–551. <a href="https://doi.org/10.1162/neco.1989.1.4.541">https://doi.org/10.1162/neco.1989.1.4.541</a>
+</div>
+<div id="ref-Lee2009" class="csl-entry">
+Lee, M.-C. (2009). Using support vector machine with a hybrid feature selection method to the stock trend prediction. <em>Expert Systems with Applications</em>, <em>36</em>(8), 10896–10904. <a href="https://doi.org/10.1016/j.eswa.2009.02.038">https://doi.org/10.1016/j.eswa.2009.02.038</a>
+</div>
+<div id="ref-lee2020stock" class="csl-entry">
+Lee, S. W., &amp; Kim, H. Y. (2020). Stock market forecasting with super-high dimensional time-series data using ConvLSTM, trend sampling, and specialized data augmentation. <em>Expert Systems with Applications</em>, <em>161</em>, 113704.
+</div>
+<div id="ref-Li2020" class="csl-entry">
+Li, J., Wang, X., Lin, Y., Sinha, A., &amp; Wellman, M. (2020). Generating realistic stock market order streams. <em>Proceedings of the AAAI Conference on Artificial Intelligence</em>, <em>34</em>(01), 727–734. <a href="https://doi.org/10.1609/aaai.v34i01.5415">https://doi.org/10.1609/aaai.v34i01.5415</a>
+</div>
+<div id="ref-li2020" class="csl-entry">
+Li, Y., Bu, H., Li, J., &amp; Wu, J. (2020). The role of text-extracted investor sentiment in chinese stock price prediction with the enhancement of deep learning. <em>International Journal of Forecasting</em>, <em>36</em>(4), 1541–1562.
+</div>
+<div id="ref-Liagkouras2020" class="csl-entry">
+Liagkouras, K., &amp; Metaxiotis, K. (2020). Stock market forecasting by using support vector machines. In <em>Learning and analytics in intelligent systems</em> (pp. 259–271). Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-49724-8_11">https://doi.org/10.1007/978-3-030-49724-8_11</a>
+</div>
+<div id="ref-Littman2015" class="csl-entry">
+Littman, M. L. (2015). Reinforcement learning improves behaviour from evaluative feedback. <em>Nature</em>, <em>521</em>(7553), 445–451. <a href="https://doi.org/10.1038/nature14540">https://doi.org/10.1038/nature14540</a>
+</div>
+<div id="ref-LIU2021101887" class="csl-entry">
+Liu, Q., Wang, C., Zhang, P., &amp; Zheng, K. (2021). Detecting stock market manipulation via machine learning: Evidence from china securities regulatory commission punishment cases. <em>International Review of Financial Analysis</em>, <em>78</em>, 101887. https://doi.org/<a href="https://doi.org/10.1016/j.irfa.2021.101887">https://doi.org/10.1016/j.irfa.2021.101887</a>
+</div>
+<div id="ref-lopezlira2023chatgpt" class="csl-entry">
+Lopez-Lira, A., &amp; Tang, Y. (2023). <em>Can ChatGPT forecast stock price movements? Return predictability and large language models</em>. <a href="https://arxiv.org/abs/2304.07619">https://arxiv.org/abs/2304.07619</a>
+</div>
+<div id="ref-lu2020" class="csl-entry">
+Lu, W., Li, J., Li, Y., Sun, A., &amp; Wang, J. (2020). A CNN-LSTM-based model to forecast stock prices. <em>Complexity</em>, <em>2020</em>, 1–10.
+</div>
+<div id="ref-Mahmoodi2022" class="csl-entry">
+Mahmoodi, A., Hashemi, L., Jasemi, M., Mehraban, S., Laliberté, J., &amp; Millar, R. C. (2022). A developed stock price forecasting model using support vector machine combined with metaheuristic algorithms. <em><span>OPSEARCH</span></em>, <em>60</em>(1), 59–86. <a href="https://doi.org/10.1007/s12597-022-00608-x">https://doi.org/10.1007/s12597-022-00608-x</a>
+</div>
+<div id="ref-McCarthy2006" class="csl-entry">
+McCarthy, J., Minsky, M. L., Rochester, N., &amp; Shannon, C. E. (2006). A proposal for the dartmouth summer research project on artificial intelligence, august 31, 1955. <em>AI Magazine</em>, <em>27</em>(4), 12. <a href="https://doi.org/10.1609/aimag.v27i4.1904">https://doi.org/10.1609/aimag.v27i4.1904</a>
+</div>
+<div id="ref-McCulloch1943" class="csl-entry">
+McCulloch, W. S., &amp; Pitts, W. (1943). A logical calculus of the ideas immanent in nervous activity. <em>The Bulletin of Mathematical Biophysics</em>, <em>5</em>(4), 115–133. <a href="https://doi.org/10.1007/bf02478259">https://doi.org/10.1007/bf02478259</a>
+</div>
+<div id="ref-minh2018" class="csl-entry">
+Minh, D. L., Sadeghi-Niaraki, A., Huy, H. D., Min, K., &amp; Moon, H. (2018). Deep learning approach for short-term stock trends prediction based on two-stream gated recurrent unit network. <em>Ieee Access</em>, <em>6</em>, 55392–55404.
+</div>
+<div id="ref-Minsky2017" class="csl-entry">
+Minsky, M., &amp; Papert, S. A. (2017). <em>Perceptrons</em>. The <span>MIT</span> Press. <a href="https://doi.org/10.7551/mitpress/11301.001.0001">https://doi.org/10.7551/mitpress/11301.001.0001</a>
+</div>
+<div id="ref-Mirza2014" class="csl-entry">
+Mirza, M., &amp; Osindero, S. (2014). <em><span>Conditional Generative Adversarial Nets</span></em>. <a href="https://arxiv.org/abs/1411.1784v1">https://arxiv.org/abs/1411.1784v1</a>
+</div>
+<div id="ref-Mnih2013" class="csl-entry">
+Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra, D., &amp; Riedmiller, M. (2013). <em>Playing atari with deep reinforcement learning</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1312.5602">https://doi.org/10.48550/ARXIV.1312.5602</a>
+</div>
+<div id="ref-MorariuPatrichi2021" class="csl-entry">
+Morariu-Patrichi, M., &amp; Pakkanen, M. S. (2021). State-dependent hawkes processes and their application to limit order book modelling. <em>Quantitative Finance</em>, <em>22</em>(3), 563–583. <a href="https://doi.org/10.1080/14697688.2021.1983199">https://doi.org/10.1080/14697688.2021.1983199</a>
+</div>
+<div id="ref-Nagel2021" class="csl-entry">
+Nagel, S. (2021). <em>Machine learning in asset pricing</em>. Princeton University Press.
+</div>
+<div id="ref-Odena2016" class="csl-entry">
+Odena, A., Olah, C., &amp; Shlens, J. (2016). <em>Conditional image synthesis with auxiliary classifier GANs</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1610.09585">https://doi.org/10.48550/ARXIV.1610.09585</a>
+</div>
+<div id="ref-OpenAI2023" class="csl-entry">
+OpenAI. (2023). <em>GPT-4 technical report</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2303.08774">https://doi.org/10.48550/ARXIV.2303.08774</a>
+</div>
+<div id="ref-PAN2023102627" class="csl-entry">
+Pan, S., Long, S., Wang, Y., &amp; Xie, Y. (2023). Nonlinear asset pricing in chinese stock market: A deep learning approach. <em>International Review of Financial Analysis</em>, <em>87</em>, 102627. https://doi.org/<a href="https://doi.org/10.1016/j.irfa.2023.102627">https://doi.org/10.1016/j.irfa.2023.102627</a>
+</div>
+<div id="ref-Patel2023" class="csl-entry">
+Patel, M., Jariwala, K., &amp; Chattopadhyay, C. (2023, January). Deep learning techniques for stock market forecasting: Recent trends and challenges. <em>2023 the 6th International Conference on Software Engineering and Information Management</em>. <a href="https://doi.org/10.1145/3584871.3584872">https://doi.org/10.1145/3584871.3584872</a>
+</div>
+<div id="ref-sklearn" class="csl-entry">
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., &amp; Duchesnay, É. (2011). Scikit-learn: Machine learning in python. <em>J. Mach. Learn. Res.</em>, <em>12</em>(null), 2825–2830.
+</div>
+<div id="ref-Ponomarev2019" class="csl-entry">
+Ponomarev, E. S., Oseledets, I. V., &amp; Cichocki, A. S. (2019). Using reinforcement learning in the algorithmic trading problem. <em>Journal of Communications Technology and Electronics</em>, <em>64</em>(12), 1450–1457. <a href="https://doi.org/10.1134/s1064226919120131">https://doi.org/10.1134/s1064226919120131</a>
+</div>
+<div id="ref-Pricope2021" class="csl-entry">
+Pricope, T.-V. (2021). <em>Deep reinforcement learning in quantitative algorithmic trading: A review</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2106.00123">https://doi.org/10.48550/ARXIV.2106.00123</a>
+</div>
+<div id="ref-Quinlan1986" class="csl-entry">
+Quinlan, J. R. (1986). Induction of decision trees. <em>Machine Learning</em>, <em>1</em>(1), 81–106. <a href="https://doi.org/10.1007/BF00116251">https://doi.org/10.1007/BF00116251</a>
+</div>
+<div id="ref-Radford2018" class="csl-entry">
+Radford, A., Narasimhan, K., Salimans, T., &amp; Sutskever, I. (2018). <em>Improving language understanding by generative pre-training</em>. <a href="https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf">https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf</a>
+</div>
+<div id="ref-rajihy2017" class="csl-entry">
+Rajihy, Y., Nermend, K., &amp; Alsakaa, A. (2017). Back-propagation artificial neural networks in stock market forecasting. An application to the warsaw stock exchange WIG20. <em>Aestimatio: The IEB International Journal of Finance</em>, <em>15</em>, 88–99.
+</div>
+<div id="ref-Rosenblatt1957" class="csl-entry">
+Rosenblatt, F. (1957). The perceptron: A perceiving and recognizing automaton. In <em>Cornell Aeronautical Laboratory</em> (85-460-1).
+</div>
+<div id="ref-Rou2009" class="csl-entry">
+Roşu, I. (2009). A dynamic model of the limit order book. <em>Review of Financial Studies</em>, <em>22</em>(11), 4601–4641. <a href="https://doi.org/10.1093/rfs/hhp011">https://doi.org/10.1093/rfs/hhp011</a>
+</div>
+<div id="ref-Rumelhart1986" class="csl-entry">
+Rumelhart, D. E., Hinton, G. E., &amp; Williams, R. J. (1986). Learning representations by back-propagating errors. <em>Nature</em>, <em>323</em>(6088), 533–536. <a href="https://doi.org/10.1038/323533a0">https://doi.org/10.1038/323533a0</a>
+</div>
+<div id="ref-rustam2019" class="csl-entry">
+Rustam, Z., Kintandani, P., et al. (2019). Application of support vector regression in indonesian stock price prediction with feature selection using particle swarm optimisation. <em>Modelling and Simulation in Engineering</em>, <em>2019</em>.
+</div>
+<div id="ref-Sagi2018" class="csl-entry">
+Sagi, O., &amp; Rokach, L. (2018). Ensemble learning: A survey. <em>WIREs Data Mining and Knowledge Discovery</em>, <em>8</em>(4), e1249. https://doi.org/<a href="https://doi.org/10.1002/widm.1249">https://doi.org/10.1002/widm.1249</a>
+</div>
+<div id="ref-Sarker2021" class="csl-entry">
+Sarker, I. H. (2021). Deep learning: A comprehensive overview on techniques, taxonomy, applications and research directions. <em><span>SN</span> Computer Science</em>, <em>2</em>(6). <a href="https://doi.org/10.1007/s42979-021-00815-1">https://doi.org/10.1007/s42979-021-00815-1</a>
+</div>
+<div id="ref-SCHMIDHUBER201585" class="csl-entry">
+Schmidhuber, J. (2015). Deep learning in neural networks: An overview. <em>Neural Networks</em>, <em>61</em>, 85–117. https://doi.org/<a href="https://doi.org/10.1016/j.neunet.2014.09.003">https://doi.org/10.1016/j.neunet.2014.09.003</a>
+</div>
+<div id="ref-Schulman2017" class="csl-entry">
+Schulman, J., Wolski, F., Dhariwal, P., Radford, A., &amp; Klimov, O. (2017). <em>Proximal policy optimization algorithms</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1707.06347">https://doi.org/10.48550/ARXIV.1707.06347</a>
+</div>
+<div id="ref-Severyn2015" class="csl-entry">
+Severyn, A., &amp; Moschitti, A. (2015, August). Twitter sentiment analysis with deep convolutional neural networks. <em>Proceedings of the 38th International <span>ACM</span> <span>SIGIR</span> Conference on Research and Development in Information Retrieval</em>. <a href="https://doi.org/10.1145/2766462.2767830">https://doi.org/10.1145/2766462.2767830</a>
+</div>
+<div id="ref-Shen2020" class="csl-entry">
+Shen, J., &amp; Shafiq, M. O. (2020a). Short-term stock market price trend prediction using a comprehensive deep learning system. <em>Journal of Big Data</em>, <em>7</em>(1). <a href="https://doi.org/10.1186/s40537-020-00333-6">https://doi.org/10.1186/s40537-020-00333-6</a>
+</div>
+<div id="ref-shen2020" class="csl-entry">
+Shen, J., &amp; Shafiq, M. O. (2020b). Short-term stock market price trend prediction using a comprehensive deep learning system. <em>Journal of Big Data</em>, <em>7</em>(1), 1–33.
+</div>
+<div id="ref-Shi2023" class="csl-entry">
+Shi, Z., &amp; Cartlidge, J. (2023). <em>Neural stochastic agent-based limit order book simulation: A hybrid methodology</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2303.00080">https://doi.org/10.48550/ARXIV.2303.00080</a>
+</div>
+<div id="ref-Smola2004" class="csl-entry">
+Smola, A. J., &amp; Schölkopf, B. (2004). A tutorial on support vector regression. <em>Statistics and Computing</em>, <em>14</em>(3), 199–222. <a href="https://doi.org/10.1023/b:stco.0000035301.49549.88">https://doi.org/10.1023/b:stco.0000035301.49549.88</a>
+</div>
+<div id="ref-Soni_2022" class="csl-entry">
+Soni, P., Tewari, Y., &amp; Krishnan, D. (2022). Machine learning approaches in stock price prediction: A systematic review. <em>Journal of Physics: Conference Series</em>, <em>2161</em>(1), 012065. <a href="https://doi.org/10.1088/1742-6596/2161/1/012065">https://doi.org/10.1088/1742-6596/2161/1/012065</a>
+</div>
+<div id="ref-Sutton2018" class="csl-entry">
+Sutton, R. S., &amp; Barto, A. G. (2018). <em>Reinforcement learning</em> (2nd ed.). Bradford Books.
+</div>
+<div id="ref-Swathi2022aa" class="csl-entry">
+Swathi, T., Kasiviswanath, N., &amp; Rao, A. A. (2022). An optimal deep learning-based LSTM for stock price prediction using twitter sentiment analysis. <em>Applied Intelligence</em>, <em>52</em>(12), 13675–13688. <a href="https://doi.org/10.1007/s10489-022-03175-2">https://doi.org/10.1007/s10489-022-03175-2</a>
+</div>
+<div id="ref-Takahashi2019" class="csl-entry">
+Takahashi, S., Chen, Y., &amp; Tanaka-Ishii, K. (2019). Modeling financial time-series with generative adversarial networks. <em>Physica A: Statistical Mechanics and Its Applications</em>, <em>527</em>, 121261. <a href="https://doi.org/10.1016/j.physa.2019.121261">https://doi.org/10.1016/j.physa.2019.121261</a>
+</div>
+<div id="ref-Tsantekidis2017" class="csl-entry">
+Tsantekidis, A., Passalis, N., Tefas, A., Kanniainen, J., Gabbouj, M., &amp; Iosifidis, A. (2017, July). Forecasting stock prices from the limit order book using convolutional neural networks. <em>2017 IEEE 19th Conference on Business Informatics (CBI)</em>. <a href="https://doi.org/10.1109/cbi.2017.23">https://doi.org/10.1109/cbi.2017.23</a>
+</div>
+<div id="ref-Vaswani2017" class="csl-entry">
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., &amp; Polosukhin, I. (2017). <em>Attention is all you need</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1706.03762">https://doi.org/10.48550/ARXIV.1706.03762</a>
+</div>
+<div id="ref-Watkins1992" class="csl-entry">
+Watkins, C. J. C. H., &amp; Dayan, P. (1992). Q-learning. <em>Machine Learning</em>, <em>8</em>(3-4), 279–292. <a href="https://doi.org/10.1007/bf00992698">https://doi.org/10.1007/bf00992698</a>
+</div>
+<div id="ref-Wolpert1992" class="csl-entry">
+Wolpert, D. H. (1992). Stacked generalization. <em>Neural Networks</em>, <em>5</em>(2), 241–259. <a href="https://doi.org/10.1016/s0893-6080(05)80023-1">https://doi.org/10.1016/s0893-6080(05)80023-1</a>
+</div>
+<div id="ref-Yadav2020aa" class="csl-entry">
+Yadav, A., &amp; Vishwakarma, D. K. (2020). Sentiment analysis using deep learning architectures: A review. <em>Artificial Intelligence Review</em>, <em>53</em>(6), 4335–4385. <a href="https://doi.org/10.1007/s10462-019-09794-5">https://doi.org/10.1007/s10462-019-09794-5</a>
+</div>
+<div id="ref-yuan2020" class="csl-entry">
+Yuan, X., Yuan, J., Jiang, T., &amp; Ain, Q. U. (2020). Integrated long-term stock selection models based on feature selection and machine learning algorithms for china stock market. <em>IEEE Access</em>, <em>8</em>, 22672–22685.
+</div>
+<div id="ref-yun2021" class="csl-entry">
+Yun, K. K., Yoon, S. W., &amp; Won, D. (2021). Prediction of stock price direction using a hybrid GA-XGBoost algorithm with a three-stage feature engineering process. <em>Expert Systems with Applications</em>, <em>186</em>, 115716.
+</div>
+<div id="ref-Zhang2019" class="csl-entry">
+Zhang, K., Zhong, G., Dong, J., Wang, S., &amp; Wang, Y. (2019). Stock market prediction based on generative adversarial network. <em>Procedia Computer Science</em>, <em>147</em>, 400–406. <a href="https://doi.org/10.1016/j.procs.2019.01.256">https://doi.org/10.1016/j.procs.2019.01.256</a>
+</div>
+<div id="ref-Zhang2018" class="csl-entry">
+Zhang, L., Wang, S., &amp; Liu, B. (2018). Deep learning for sentiment analysis: A survey. <em>WIREs Data Mining and Knowledge Discovery</em>, <em>8</em>(4), e1253. https://doi.org/<a href="https://doi.org/10.1002/widm.1253">https://doi.org/10.1002/widm.1253</a>
+</div>
+<div id="ref-zhou2018" class="csl-entry">
+Zhou, P.-Y., Chan, K. C., &amp; Ou, C. X. (2018). Corporate communication network and stock price movements: Insights from data mining. <em>IEEE Transactions on Computational Social Systems</em>, <em>5</em>(2), 391–402.
+</div>
+<div id="ref-Zhou2012" class="csl-entry">
+Zhou, Z.-H. (2012). <em>Ensemble methods</em>. Chapman; Hall/<span>CRC</span>. <a href="https://doi.org/10.1201/b12207">https://doi.org/10.1201/b12207</a>
+</div>
+<div id="ref-Zou2022" class="csl-entry">
+Zou, J., Zhao, Q., Jiao, Y., Cao, H., Liu, Y., Yan, Q., Abbasnejad, E., Liu, L., &amp; Shi, J. Q. (2022). <em>Stock market prediction via deep learning techniques: A survey</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2212.12717">https://doi.org/10.48550/ARXIV.2212.12717</a>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>XGBoost: <a href="https://xgboost.ai" class="uri">https://xgboost.ai</a><a href="机器学习与算法交易.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>LightGBM: <a href="https://lightgbm.readthedocs.io/" class="uri">https://lightgbm.readthedocs.io/</a><a href="机器学习与算法交易.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>CatBoost: <a href="https://catboost.ai" class="uri">https://catboost.ai</a><a href="机器学习与算法交易.html#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="算法交易.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-ml.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

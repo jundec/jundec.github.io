@@ -46,6 +46,11 @@ body{
 .navbar .navbar-nav .astronomy .dropdown-menu {background-color: #fff;border:none!important;}
 .navbar .navbar-nav .astronomy .dropdown-menu a {color: #000;font-size:0.8rem}
 .navbar .navbar-nav .astronomy .dropdown-menu a:hover {color:#ff5c33;background-color:#fff;}
+.navbar .navbar-nav .quant a{color: #000;}
+.navbar .navbar-nav .quant a:hover, a:active, a:focus{color: #ff5c33;outline:none;}
+.navbar .navbar-nav .quant .dropdown-menu {background-color: #fff;border:none!important;}
+.navbar .navbar-nav .quant .dropdown-menu a {color: #000;font-size:0.8rem;}
+.navbar .navbar-nav .quant .dropdown-menu a:hover {color: #ff5c33;background-color: #fff;}
 .navbar .navbar-nav .music a{color: #000;}
 .navbar .navbar-nav .music a:hover, a:active, a:focus{color: #ff5c33;outline:none;}
 .navbar .navbar-nav .music .dropdown-menu {background-color: #fff;border:none!important;}

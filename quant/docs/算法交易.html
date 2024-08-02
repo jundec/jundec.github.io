@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 算法交易 | 算法交易策略研究:基于机器学习、深度学习等方法的探索</title>
+  <meta name="description" content="3 算法交易 | 算法交易策略研究:基于机器学习、深度学习等方法的探索" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 算法交易 | 算法交易策略研究:基于机器学习、深度学习等方法的探索" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 算法交易 | 算法交易策略研究:基于机器学习、深度学习等方法的探索" />
+  
+  
+  
+
+<meta name="author" content="陈隽德 2023 @ 复旦大学" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="投资组合管理.html"/>
+<link rel="next" href="机器学习与算法交易.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">算法交易策略研究</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 量化投资的基本概念</a></li>
+<li class="chapter" data-level="2" data-path="投资组合管理.html"><a href="投资组合管理.html"><i class="fa fa-check"></i><b>2</b> 投资组合管理</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="投资组合管理.html"><a href="投资组合管理.html#理论基础"><i class="fa fa-check"></i><b>2.1</b> 理论基础</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="投资组合管理.html"><a href="投资组合管理.html#markowitz投资组合理论"><i class="fa fa-check"></i><b>2.1.1</b> Markowitz投资组合理论</a></li>
+<li class="chapter" data-level="2.1.2" data-path="投资组合管理.html"><a href="投资组合管理.html#资本资产定价模型"><i class="fa fa-check"></i><b>2.1.2</b> 资本资产定价模型</a></li>
+<li class="chapter" data-level="2.1.3" data-path="投资组合管理.html"><a href="投资组合管理.html#套利定价理论"><i class="fa fa-check"></i><b>2.1.3</b> 套利定价理论</a></li>
+<li class="chapter" data-level="2.1.4" data-path="投资组合管理.html"><a href="投资组合管理.html#fama三因子五因子模型"><i class="fa fa-check"></i><b>2.1.4</b> FAMA三因子、五因子模型</a></li>
+<li class="chapter" data-level="2.1.5" data-path="投资组合管理.html"><a href="投资组合管理.html#多因子模型"><i class="fa fa-check"></i><b>2.1.5</b> 多因子模型</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="投资组合管理.html"><a href="投资组合管理.html#投资组合构建"><i class="fa fa-check"></i><b>2.2</b> 投资组合构建</a></li>
+<li class="chapter" data-level="2.3" data-path="投资组合管理.html"><a href="投资组合管理.html#ssec:eval"><i class="fa fa-check"></i><b>2.3</b> 评价体系</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="算法交易.html"><a href="算法交易.html"><i class="fa fa-check"></i><b>3</b> 算法交易</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="算法交易.html"><a href="算法交易.html#市场微观结构"><i class="fa fa-check"></i><b>3.1</b> 市场微观结构</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="算法交易.html"><a href="算法交易.html#交易数据的组织形式限价订单簿"><i class="fa fa-check"></i><b>3.1.1</b> 交易数据的组织形式——限价订单簿</a></li>
+<li class="chapter" data-level="3.1.2" data-path="算法交易.html"><a href="算法交易.html#市场微观结构理论"><i class="fa fa-check"></i><b>3.1.2</b> 市场微观结构理论</a></li>
+<li class="chapter" data-level="3.1.3" data-path="算法交易.html"><a href="算法交易.html#算法交易的认定与监管"><i class="fa fa-check"></i><b>3.1.3</b> 算法交易的认定与监管</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="算法交易.html"><a href="算法交易.html#交易成本分析"><i class="fa fa-check"></i><b>3.2</b> 交易成本分析</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="算法交易.html"><a href="算法交易.html#交易成本构成"><i class="fa fa-check"></i><b>3.2.1</b> 交易成本构成</a></li>
+<li class="chapter" data-level="3.2.2" data-path="算法交易.html"><a href="算法交易.html#交易执行缺口"><i class="fa fa-check"></i><b>3.2.2</b> 交易执行缺口</a></li>
+<li class="chapter" data-level="3.2.3" data-path="算法交易.html"><a href="算法交易.html#交易执行结果评估"><i class="fa fa-check"></i><b>3.2.3</b> 交易执行结果评估</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="算法交易.html"><a href="算法交易.html#传统算法交易策略"><i class="fa fa-check"></i><b>3.3</b> 传统算法交易策略</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="算法交易.html"><a href="算法交易.html#twap"><i class="fa fa-check"></i><b>3.3.1</b> TWAP</a></li>
+<li class="chapter" data-level="3.3.2" data-path="算法交易.html"><a href="算法交易.html#vwap"><i class="fa fa-check"></i><b>3.3.2</b> VWAP</a></li>
+<li class="chapter" data-level="3.3.3" data-path="算法交易.html"><a href="算法交易.html#pov"><i class="fa fa-check"></i><b>3.3.3</b> POV</a></li>
+<li class="chapter" data-level="3.3.4" data-path="算法交易.html"><a href="算法交易.html#其他算法"><i class="fa fa-check"></i><b>3.3.4</b> 其他算法</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html"><i class="fa fa-check"></i><b>4</b> 机器学习与算法交易</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#机器学习简介"><i class="fa fa-check"></i><b>4.1</b> 机器学习简介</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#传统机器学习"><i class="fa fa-check"></i><b>4.1.1</b> 传统机器学习</a></li>
+<li class="chapter" data-level="4.1.2" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#深度学习"><i class="fa fa-check"></i><b>4.1.2</b> 深度学习</a></li>
+<li class="chapter" data-level="4.1.3" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#强化学习"><i class="fa fa-check"></i><b>4.1.3</b> 强化学习</a></li>
+<li class="chapter" data-level="4.1.4" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#集成学习"><i class="fa fa-check"></i><b>4.1.4</b> 集成学习</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#机器学习在算法交易中的应用"><i class="fa fa-check"></i><b>4.2</b> 机器学习在算法交易中的应用</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#订单簿模拟"><i class="fa fa-check"></i><b>4.2.1</b> 订单簿模拟</a></li>
+<li class="chapter" data-level="4.2.2" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#价格预测"><i class="fa fa-check"></i><b>4.2.2</b> 价格预测</a></li>
+<li class="chapter" data-level="4.2.3" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#情绪分析"><i class="fa fa-check"></i><b>4.2.3</b> 情绪分析</a></li>
+<li class="chapter" data-level="4.2.4" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#合规检测"><i class="fa fa-check"></i><b>4.2.4</b> 合规检测</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">算法交易策略研究:基于机器学习、深度学习等方法的探索</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="算法交易" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> 算法交易<a href="算法交易.html#算法交易" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>量化投资的另一个核心部分是算法交易。
+早期的股票和其他金融工具的交易通常是在交易所的交易厅内进行，
+交易员需要通过电话、传真或者面对面的方式进行现场交易。
+然而，这些传统交易方式不仅效率低下，还容易受到信息不透明和人为操纵的影响。</p>
+<p>1971年，美国纽约诞生了首个电子交易所——纳斯达克（Nasdaq）。
+电子交易平台和电子通讯网络（ECN）的出现，
+使得交易员可以通过计算机进行交易，无需亲临交易所。
+到了1990年代，几乎所有的证券交易都转移到了更快速、更高效的电子交易平台，
+这为算法交易的兴起创造了必要的条件。</p>
+<p>市场参与者为了降低交易成本、抵御市场冲击，
+开始采用计算机制定的交易策略，并通过互联网完成交易，
+这极大地提升了市场交易效率。
+做市商市场交易规则的改变和北美开放市场中的套利机会，
+进一步推动了高频交易的发展<span class="citation">(<a href="#ref-CHRISTIE19942">CHRISTIE et al., 1994</a>; <a href="#ref-CHRISTIE1994">CHRISTIE &amp; SCHULTZ, 1994</a>)</span>。
+高频交易的兴起，又进一步改变了市场结构<span class="citation">(<a href="#ref-OHARA2015">O’Hara, 2015</a>)</span>。
+如今，大多数量化投资策略都是通过计算机算法在市场上执行交易的。</p>
+<p>与传统的人工交易方式相比，算法交易具有多重优势，例如：</p>
+<ul>
+<li>高效的执行效率：
+算法交易能够在纳秒级别内执行交易，降低人工交易成本，
+并且避免人工交易犯错的可能性。</li>
+<li>快速的决策速度：
+算法交易可以迅速识别和利用市场变动，
+从而避免错过有利的交易时机。</li>
+<li>较低的情绪影响：
+算法交易能够严格执行交易策略，
+从而避免人为因素给策略带来的情绪性干扰。</li>
+<li>多策略的综合运用：
+算法交易可以同时应用多种交易策略，
+这些策略可以基于市场数据、统计模型、技术分析等多种因素，
+从而降低单一策略带来的风险。</li>
+<li>实时风险管理：
+算法交易可以实时监控市场变动，
+从而进行及时的风险管理。</li>
+</ul>
+<p>虽然算法交易具备以上优势，但是自其诞生以来也一直伴随许多争议<span class="citation">(<a href="#ref-Foucault2012">Foucault, 2012</a>)</span>，
+争议的主要内容包括：对市场流动性的影响<span class="citation">(<a href="#ref-BenAmmar2020">Ammar et al., 2020</a>; <a href="#ref-HENDERSHOTT2011">HENDERSHOTT et al., 2011</a>; <a href="#ref-LI2021968">S. Li et al., 2021</a>)</span>，
+在市场波动时高频交易会不会引起流动性损失；
+对价格波动的影响<span class="citation">(<a href="#ref-ARUMUGAM2023100778">Arumugam et al., 2023</a>; <a href="#ref-SCHOLTUS201489">Scholtus et al., 2014</a>)</span>；
+是否使价格趋近其真实价格，从而使市场更有效；
+高频交易者的利润是否来源于传统交易者，从而损害了传统交易者的利益，
+高频交易是否是知情交易<span class="citation">(<a href="#ref-Anagnostidis2020">Anagnostidis et al., 2020</a>)</span>；
+算法交易是否会引起或加剧市场闪崩，
+从而在市场危机时增加流动性损失的风险<span class="citation">(<a href="#ref-KIRILENKO2017">KIRILENKO et al., 2017</a>)</span>；
+市场是否会由于算法交易的引入而更容易出现价格操纵；
+市场的组织形式是否应该针对高频交易者进行更改、
+对数据的纰漏是否应该更加公开、对高频交易者是否应该单独制定收费机制等。</p>
+<p>综上，算法交易的发展，不仅展现了技术进步给金融市场带来的机遇，
+也突显了其在市场稳定性和透明度方面的新挑战。</p>
+<div id="市场微观结构" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> 市场微观结构<a href="算法交易.html#市场微观结构" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>市场微观结构是一门研究交易在金融市场内的组织形式和详细机制的学科<span class="citation">(<a href="#ref-easley2013">Easley, 2013</a>; <a href="#ref-Hasbrouck2007">Hasbrouck, 2007</a>; <a href="#ref-OHara1997">O’Hara, 1997</a>)</span>。
+通过对所有市场参与者在市场内发生的粒度级别的交互和动态进行分析，
+市场微观结构试图解释价格形成和发现、分析交易成本、并完善市场的组织结构等。
+了解市场微观结构对于算法交易策略的制定至关重要，</p>
+<div id="交易数据的组织形式限价订单簿" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> 交易数据的组织形式——限价订单簿<a href="算法交易.html#交易数据的组织形式限价订单簿" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>市场微观结构的研究建立在粒度级别的交易数据之上，
+其最重要的组织形式是限价订单簿（Limit Order Book，LOB）。</p>
+<p>交易所接受的订单通常可以分为两类：
+市价订单（Market Order）与限价订单（Limit Order）。
+市价订单是指以当前市场上的最优价格立即成交的订单，
+限价订单是指以不劣于交易员规定的价格成交的订单。
+限价订单簿就是一种系统化排列限价订单的数据组织形式。</p>
+<p>图<a href="算法交易.html#fig:ob">3.1</a>是限价订单簿在某一时刻的快照示意图。
+绿色、红色分别为买方、卖方委托量随报价的分布。
+买方最高报价与卖方最低报价之差为买卖差价（ask-bid spread）。
+当新的限价委托提交时，会排列到相应价格的队列之后。
+成交时一般采取“先进先出”的模式（FIFO，First In First Out），
+即同样的价格先委托的先成交。
+当市价单到达时，会根据限价单的最优报价进行撮合，
+当最优报价全部成交后，市价将产生变动。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ob"></span>
+<img src="intro/lob.png" alt="限价订单薄。" width="50%" />
+<p class="caption">
+Figure 3.1: 限价订单薄。
+</p>
+</div>
+<p><strong>A股交易数据的组织形式</strong></p>
+<blockquote>
+<p>中国有上海和深圳两个证券交易所，其数据组织形式大体相同。
+上交所提供Level-1和Level-2两档数据，
+对应深交所的基本行情与增强行情。
+Level-2的实时行情包含快照类数据以及逐笔数据。
+其中，逐笔成交数据包括每一笔成交的证券代码、成交时间、成交价格、成交数量、成交金额、
+成交序号、成交通道、买方订单号、卖方订单号以及内外盘标志。
+逐笔委托数据包括每一笔委托的证券代码、委托时间、委托价格、委托数量、委托序号、
+委托通道、原始订单号以及内外盘标志。
+快照类数据（限价订单簿）每3秒更新一次，
+包括了每支证券的代码、昨收盘价格、开盘价格、最高价格、
+最低价格、 最新价格、收盘价格、成交笔数、成交量、成交金额、
+委托买入总量、加权平均 委买价格、委托卖出总量、加权平均委卖价格、
+买入总笔数、卖出总笔数、买卖 10 档价格和数量等
+<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>。</p>
+</blockquote>
+<div style="font-size:80%">
+<table style="width:100%;">
+<caption><span id="tab:obsamp">Table 3.1: </span> 限价订单簿样本数据。</caption>
+<colgroup>
+<col width="10%" />
+<col width="9%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="8%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Time</th>
+<th>Price</th>
+<th>Ask Price</th>
+<th>Ask Volume</th>
+<th>Bid Price</th>
+<th>Bid Volume</th>
+<th>Volume</th>
+<th>Turnover</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>600703.SH</td>
+<td>09:35:11</td>
+<td>￥324.70</td>
+<td>￥324.80</td>
+<td>700</td>
+<td>￥324.60</td>
+<td>500</td>
+<td>7123769</td>
+<td>￥232,356.81</td>
+</tr>
+<tr class="even">
+<td>600703.SH</td>
+<td>09:35:14</td>
+<td>￥325.00</td>
+<td>￥325.00</td>
+<td>200</td>
+<td>￥324.90</td>
+<td>4500</td>
+<td>7176769</td>
+<td>￥234,078.39</td>
+</tr>
+<tr class="odd">
+<td>600703.SH</td>
+<td>09:35:17</td>
+<td>￥325.00</td>
+<td>￥325.30</td>
+<td>400</td>
+<td>￥325.00</td>
+<td>1200</td>
+<td>7217769</td>
+<td>￥235,410.71</td>
+</tr>
+<tr class="even">
+<td>600703.SH</td>
+<td>09:35:20</td>
+<td>￥325.40</td>
+<td>￥325.50</td>
+<td>17000</td>
+<td>￥325.40</td>
+<td>12400</td>
+<td>7242469</td>
+<td>￥236,213.71</td>
+</tr>
+<tr class="odd">
+<td>600703.SH</td>
+<td>09:35:23</td>
+<td>￥325.60</td>
+<td>￥326.00</td>
+<td>200</td>
+<td>￥325.60</td>
+<td>11800</td>
+<td>7290369</td>
+<td>￥237,773.62</td>
+</tr>
+<tr class="even">
+<td>600703.SH</td>
+<td>09:35:26</td>
+<td>￥326.20</td>
+<td>￥326.30</td>
+<td>600</td>
+<td>￥326.10</td>
+<td>4800</td>
+<td>7373469</td>
+<td>￥240,479.98</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>A 股市场的特点</strong></p>
+<blockquote>
+<p>A 股市场与全球其他股票市场的重要区别之一是采取次日交易日起回转交易，
+即“ T+1 交易规则”。
+该规则不允许投资者在同一天卖出当天买入的股票。
+但是在持有底仓的情况下，仍然可以在效果上实现“ T+0 ”交易。
+A 股市场的另一个显著特点是设置了 10% 到 20%（科创板） 的涨跌停阈值，
+某支股票达到该阈值后会强制停止竞价。
+此外，A 股市场不可以直接卖空股票，无法直接利用做空进行风险对冲（需通过融资融券）。
+上述规则在一定程度上抑制了市场上的投机行为，
+保护了A 股以``散户’’为主的大部分参与者的利益<span class="citation">(<a href="#ref-Guo2012">M. Guo et al., 2012</a>)</span>。</p>
+</blockquote>
+</div>
+<div id="市场微观结构理论" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> 市场微观结构理论<a href="算法交易.html#市场微观结构理论" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>随着金融市场的不断开放与完善、
+市场交易数据的不断累积、以及数据形式的不断增加，
+市场微观结构理论的复杂性在不断提高，
+因此，目前该领域并没有一个被广泛认可的模型。</p>
+<p>市场微观结构的研究可以分为三代<span class="citation">(<a href="#ref-Marcos2018">Lopez de Prado, 2018</a>)</span>。
+第一代模型是价格序列模型，仅采用了价格信息，
+较早期的模型有交易分类模型和Roll模型。
+第二代模型增加了交易量数据，研究的方向转移到了交易量对价格的影响，
+<span class="citation">Kyle (<a href="#ref-Kyle1985">1985</a>)</span> 和 <span class="citation">Amihud (<a href="#ref-Amihud2002">2002</a>)</span> 是这一代的两个代表性模型。
+第三代模型始于知情交易概率理论（Probability of Informed Trade, PIN）的建立
+<span class="citation">(<a href="#ref-EASLEY1996">EASLEY et al., 1996</a>; <a href="#ref-Easley2002">Easley et al., 2002</a>)</span>，
+PIN理论认为买卖差价是做市商（提供流动性）
+和知情交易者（持有头寸）之间连续性博弈的均衡结果。</p>
+<p>假设证券价格为<span class="math inline">\(S\)</span>，现价为<span class="math inline">\(S_0\)</span>。
+价格受到新信息的影响后变为<span class="math inline">\(S_B\)</span>（坏消息）与<span class="math inline">\(S_G\)</span>（好消息）。
+假设新信息的到达率为<span class="math inline">\(a\)</span>，
+是坏消息的概率为<span class="math inline">\(\delta\)</span>，是好消息的概率为<span class="math inline">\(1-\delta\)</span>。
+那么<span class="math inline">\(t\)</span>时刻，价格的期望值为，
+<span class="math display">\[\begin{align}
+E(S_t)=(1-\alpha_t)S_0 + \alpha_t
+[\delta_t S_B + (1-\delta_t)S_G] \ .
+\end{align}\]</span>
+若报单行为服从泊松分布，
+知情交易者的报单到达率为<span class="math inline">\(\mu\)</span>，
+非知情交易者的报单到达率为<span class="math inline">\(\epsilon\)</span>，
+那么，做市商与知情交易者之间经过博弈后，
+达到买卖差价的盈亏平衡点为，
+<span class="math display">\[\begin{align}
+E(A_t-B_t) = \frac{\mu \alpha_t(1-\delta_t)}{\epsilon + \mu \alpha_t(1-\delta_t)}
+(S_G-E(S_t)) +
+\frac{\mu \alpha_t\delta_t}{\epsilon+\mu \alpha_t \delta_t}
+(E(S_t) -S_B)\ .
+\end{align}\]</span>
+当<span class="math inline">\(\delta_t=1/2\)</span>时，买卖差价的盈亏平衡点为，
+<span class="math display">\[\begin{align}
+E(A_t-B_t) = \frac{\alpha_t\mu}{\alpha_t\mu+2\epsilon}(S_G-S_B)\ .
+\end{align}\]</span>
+式中，<span class="math inline">\((S_G-S_B)\)</span>的系数决定是盈亏平衡点的关键因素，
+定义为知情交易概率PIN，
+<span class="math display">\[\begin{align}
+  PIN_t = \frac{\alpha_t\mu}{\alpha_t\mu+2\epsilon}
+\end{align}\]</span>
+通过拟合<span class="math inline">\((\alpha, \delta, \mu, \epsilon)\)</span>可以得到PIN的值。</p>
+</div>
+<div id="算法交易的认定与监管" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> 算法交易的认定与监管<a href="算法交易.html#算法交易的认定与监管" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>对于算法交易，国内市场的监管还处于探索阶段。
+在这方面，德国最早对高频交易实施了较为严格的监管。
+德国监管机构要求高频交易必须备案，
+禁止利用高频交易进行试探性交易（Ping Orders）、
+误导簇交易（Quote Stuffing）、引发动量交易（Momentum Ignition）、
+分层与欺诈交易（Layering and Spoofing）等。
+国内期货市场对高频交易的判定采取3+3或5+5规则，
+即投资者在1秒内有3（或5）次报单，且当天重复出现3（或5）次以上，
+则被认定为高频交易。
+但是，在股票市场尚无明确认定方式。</p>
+</div>
+</div>
+<div id="交易成本分析" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> 交易成本分析<a href="算法交易.html#交易成本分析" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>交易成本分析（Transaction Cost Analysis，TCA）
+是评估交易策略及执行流程效率和有效性的重要工具。</p>
+<div id="交易成本构成" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> 交易成本构成<a href="算法交易.html#交易成本构成" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>交易成本包含直接成本和间接成本两部分
+<span class="citation">(<a href="#ref-Almgren2001">R. Almgren &amp; Chriss, 2001</a>; <a href="#ref-Arnott1990">Arnott &amp; Wagner, 1990</a>; <a href="#ref-Bertsimas1998">Bertsimas &amp; Lo, 1998</a>; <a href="#ref-FreyreSanders2004">Freyre-Sanders et al., 2004</a>; <a href="#ref-Loeb1983">Loeb, 1983</a>; <a href="#ref-Rosenthal2009">Rosenthal, 2009</a>; <a href="#ref-Wagner1993">Wagner &amp; Edwards, 1993</a>)</span>。</p>
+<p>直接成本是与执行交易直接相关的明确、可测量的费用，
+包括佣金（commissions），交易所费用，税金等。
+这些费用是在交易发生后，由交易所、交易商及税务部门直接收取的费用。
+A股市场的佣金对个人交易者通常在2-3bps，单笔最低5元，
+对机构交易者可以更低。
+印花税为10bps，2023年底减半征收，目前为5bps，仅对卖家征收。
+此外，上海证券交易所还会对每笔交易征收0.1bps的过户费。</p>
+<p>间接成本是不太显而易见的成本，也是交易成本分析的主要研究对象。
+间接成本主要包含：
+（1）市场冲击（Market Impact）。
+市场冲击是指交易自身导致的价格向交易方向不利的变动。
+（2）机会成本（Opportunity Cost）。
+机会成本是由于流动性丧失导致无法交易时产生的成本。
+（3）时间延迟成本（Delay Cost）。
+时间延迟成本是由于时间延迟导致成交前市场价格发生变动时产生的成本。
+（4）价格漂移成本（Price drift）。
+价格漂移是指证券价格在交易期内发生的异动，
+即该时间段内的<span class="math inline">\(\alpha\)</span>。
+价格漂移成本是在证券价格异动时买卖股票造成的额外成本。
+（5）择时风险（Timing Risk）。
+择时风险包含了价格波动和流动性风险，
+波动异常或流动性降低都会显著影响交易成本。
+（6）买卖差价（ask-bid spread）。
+当交易者需要在市场上立即成交时，
+通常需要以支付买卖差价作为代价。
+这些间接成本虽然不会立即显现，但可以显著影响交易绩效。</p>
+<p>对于大宗交易，市场冲击是影响交易成本最重要的因素。
+市场冲击的种类并非单一，其构成较为复杂。
+通常可以将市场冲击分为临时市场冲击和永久市场冲击两类<span class="citation">(<a href="#ref-Almgren2003">R. F. Almgren, 2003</a>)</span>。
+临时市场冲击是交易者在市场上获取流动性所产生的冲击，
+流动性越低，临时冲击越大；
+永久市场冲击是由于交易者的交易意图暴露在市场中导致的永久性价格变动，
+通常表现在订单簿的买卖失衡，
+买卖失衡直接影响供需关系，从而永久改变证券价格。
+除了构成复杂，市场冲击的形式在不同市场间也存在差异
+<span class="citation">(<a href="#ref-Bacry2015">Bacry et al., 2015</a>; <a href="#ref-Farmer2005">Farmer et al., 2005</a>; <a href="#ref-Han2018">Han et al., 2018</a>; <a href="#ref-Lillo2003">Lillo et al., 2003</a>; <a href="#ref-Moro2009">Moro et al., 2009</a>; <a href="#ref-Potters2003">Potters &amp; Bouchaud, 2003</a>; <a href="#ref-Said2020">Said et al., 2020</a>)</span>。
+上面的各种因素造成了市场冲击理论的多样与复杂<span class="citation">(<a href="#ref-Gueant2013">Guéant, 2013</a>; <a href="#ref-Tth2011">Tóth et al., 2011</a>)</span>，
+不仅如此，有实证研究表明市场冲击理论与实际交易之间存在一定差距
+<span class="citation">(<a href="#ref-Almgren2005">R. Almgren et al., 2005</a>; <a href="#ref-Frazzini2018">Frazzini et al., 2018</a>)</span>。</p>
+</div>
+<div id="交易执行缺口" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> 交易执行缺口<a href="算法交易.html#交易执行缺口" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>交易成本分析中的一个重要概念是执行缺口<span class="citation">(<a href="#ref-Perold1988">Perold, 1988</a>)</span>
+（Implementation Shortfall，IS）。
+执行缺口是预期回报（Paper Return）与实际回报（Actual Return）之差。
+假设待交易的股票数量为<span class="math inline">\(S\)</span>，
+预期回报由决策价格（decision price）<span class="math inline">\(P_d\)</span>和交易结束时的市场价格<span class="math inline">\(P_n\)</span>决定，
+<span class="math display">\[\begin{align}
+PR = S(P_n-P_d)
+\end{align}\]</span>
+实际回报，
+<span class="math display">\[\begin{align}
+AR = \sum s_i P_n - \sum s_i p_i - fees\ ,
+\end{align}\]</span>
+其中，<span class="math inline">\(s_i\)</span>，<span class="math inline">\(p_i\)</span>分别为第<span class="math inline">\(i\)</span>笔交易的数量及价格，
+<span class="math inline">\(fees\)</span>代表交易产生的固定费用。
+则执行缺口为，
+<span class="math display">\[\begin{align}
+  IS = S(P_n-P_d) - \sum s_i (P_n - p_i) + fees \ .
+\end{align}\]</span></p>
+<p>（1）如果交易全部完成，则有，<span class="math inline">\(\sum s_j=S\)</span>。
+此时的执行缺口，
+<span class="math display">\[\begin{align}
+IS = S(P_a - P_d) + fees\ ,
+\end{align}\]</span>
+其中，<span class="math inline">\(P_a= \sum s_i p_i / S\)</span>为交易执行的平均价格。</p>
+<p>(2)如果交易没有全部完成，<span class="math inline">\(\sum s_i\neq S\)</span>，
+此时的执行缺口可以写为，
+<span class="math display">\[\begin{align}
+  IS = \sum s_i (P_a - P_d)
+  + \left(S-\sum s_i\right)(P_n-P_d) + fees
+  \label{eq:wagner}
+\end{align}\]</span>
+式中第一项为交易的执行成本，
+第二项是由于交易未完成所产生的机会成本。</p>
+<p>(3)考虑到决策与交易间的延迟，
+决策价格与到达价格(Arrival Price)之间通常存在差异。
+改写<span class="math inline">\(P_n-P_d=(P_n-P_0)+(P_0-P_d)\)</span>，其中 <span class="math inline">\(P_0\)</span>为到达价格。
+此时的执行缺口可以写为，
+<span class="math display">\[\begin{align}
+  IS = S(P_0-P_d) + \sum s_i (P_a - P_0)
+  + \left(S-\sum s_i\right)(P_n-P_0) + fees
+\end{align}\]</span>
+公式<span class="math inline">\(\ref{eq:wagner}\)</span>中的交易执行成本和机会成本中，
+各有一部分被分解合并到了延迟造成的成本中，即上式第一项。
+第二项、第三项对应修正后的交易执行成本和机会成本。</p>
+<p>(4)通常决策价格是由组合经理决定的，
+与算法交易和交易执行期间的市场活动本身无关，
+剔除这部分影响后的执行缺口为，
+<span class="math display" id="eq:tradingis">\[\begin{align}
+  IS = \sum s_i (P_a - P_0)
+  + \left(S-\sum s_i\right)(P_n-P_0) + fees
+  \tag{3.1}
+\end{align}\]</span>
+式中第一项为交易执行成本，第二项为机会成本。</p>
+</div>
+<div id="交易执行结果评估" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> 交易执行结果评估<a href="算法交易.html#交易执行结果评估" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>公式<a href="算法交易.html#eq:tradingis">(3.1)</a>中的第一项是与交易执行直接相关的成本，
+代表交易者希望以开始下单时的市场价格(到达价格)成交时，
+所需支付的交易执行成本。
+在限价订单簿中，到达价格通常取当时买卖价格的中间值。
+这里的到达价格可以看作交易选取的基准价格。
+更一般的，交易成本（trading cost, TC）取决于
+交易执行价格（execution price）
+与基准价格（benchmark price）之差。
+以基点（base points，bps）为单位的交易成本为，
+<span class="math display">\[\begin{align}
+  \rm
+  trading\ cost  =  side \cdot
+  \frac{execution\ price-benchmark\ price}
+  {benchmark\ price}\times 10,000\ (bps) \ .
+\end{align}\]</span>
+其中，交易方向为买时，<span class="math inline">\(\rm side=+1\)</span>，
+交易方向为卖时，<span class="math inline">\(\rm side=-1\)</span>。
+对于订单拆分，交易执行价格为平均价格<span class="math inline">\(P_a\)</span>。
+基准价格可以根据不同的交易和分析目标进行选取，
+例如到达价格（Arrival Price）、
+TWAP、VWAP、收盘价格等。</p>
+<p>目前市场上最常用的基准价格是VWAP（Volume- weighted average price）。
+VWAP是按照证券交易量加权后的市场平均价格：
+<span class="math display">\[\begin{align}
+  {\rm VWAP} = \sum_i P_i V_i /\sum_i V_i\ .
+\end{align}\]</span>
+但是，使用VWAP存在一些局限<span class="citation">(<a href="#ref-Kissell2021">R. L. Kissell, 2021</a>)</span>：
+首先，订单越大，结果会越接近 VWAP 价格。
+极端情况，当交易时段市场参与度为100%时，那么交易的结果就等于VWAP价格。
+其次，当在不同交易所进行大宗交易，特别是交易者仅有有限机会参与交易时，
+用VWAP作为基准，结果可能会有偏差。
+第三，VWAP 的结果会受到波动率等因素的较大影响，
+因此不便于比较不同股票、或同一股票在不同日期间的交易结果。</p>
+<p>参与度加权价格基准（Participation-Weighted Price， PWP）
+是按照市场参与度，计算得到的对应市场成交量的VWAP：
+<span class="math display">\[\begin{align}
+  \text{ PWP = market VWAP for volume V , where V=S/POV .}
+\end{align}\]</span>
+其中，S代表需要完成的交易量，POV为预设的市场参与度，
+V是交易开始时到市场累计完成V=S/POV时的交易量。
+与VWAP基准类似，PWP同样不适合进行跨股或跨日的比较。
+此外，投资者有可能通过更激进的交易操纵PWP。
+由于市场冲击的影响，投资者可以通过在短时间内推高买单（推低卖单）价格，
+造成后续仍有大量交易的假象，并将价格维持在较高（较低）水平。
+此时，PWP需要更长的等待时间以满足市场交易量的需求，
+导致计算出的PWP向对投资者更有利的方向移动，
+而无法反应订单在实际交易时的市场价格。</p>
+<p>上面的基准都包含了市场或行业的总体波动，
+在市场上升或下降时交易股票会使计算的交易成本偏离预期。
+经过市场调整后的成本，
+可以将交易执行成本与证券价格随总体市场波动的部份分开<span class="citation">(<a href="#ref-Kissell2008">R. Kissell, 2008</a>)</span>。
+<span class="math display">\[\begin{align}
+  \rm
+  adjusted\ trading\ cost =
+  trading\ cost - \beta \times
+  market\ cost\ .
+\end{align}\]</span>
+其中，<span class="math inline">\(\beta\)</span>为证券对市场的载荷，
+市场成本为，
+<span class="math display">\[\begin{align}
+  \rm
+  market\ cost = side\cdot
+  \frac{market\ VWAP - market\ arrival\ price}{market\ arrival\ price}
+  \times 10,000\ (bps)\ .
+\end{align}\]</span>
+市场成本通常选择相应的市场或行业指数进行计算。</p>
+</div>
+</div>
+<div id="传统算法交易策略" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> 传统算法交易策略<a href="算法交易.html#传统算法交易策略" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>假设算法需要在交易时长<span class="math inline">\(T\)</span>内完成交易量<span class="math inline">\(V\)</span>，
+为了完成交易并降低市场冲击，交易者需要将订单进行拆分。
+传统的拆分方式有时间加权平均价格（Time-weighted Average Price，TWAP）、
+交易量加权平均价格（Volume-weighted Average Price，VWAP），
+成交量百分比（Percent Of Volume，POV）等。</p>
+<div id="twap" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> TWAP<a href="算法交易.html#twap" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>TWAP是交易量随时间均匀分布时，所有成交价格的简单算数平均。
+假设订单在交易时间段内被均匀拆分为<span class="math inline">\(N\)</span>份，
+且拆分后第<span class="math inline">\(i\)</span>份子订单的成交价格为<span class="math inline">\(P_i\)</span>，
+那么该订单的时间加权平均成交价格为，
+<span class="math display">\[\begin{align}
+  \mathrm{TWAP}=\frac{1}{N}\sum_{i=1}^{N} P_i\ .
+  \label{eq:twap}
+\end{align}\]</span>
+虽然将订单等时拆分很方便，但这种交易方式比较容易被交易对手嗅探。
+因此，为了不被市场察觉，交易者往往需要将订单拆分到足够小。
+此外，也有算法对交易时间甚以及交易量在TWAP的基础上加上随机扰动，以隐藏交易意图。</p>
+</div>
+<div id="vwap" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> VWAP<a href="算法交易.html#vwap" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>全市场的VWAP常被看作公平市场价格（fair market price），
+因此常被用于算法交易的基准价格。
+VWAP算法的实质是追踪全市场的VWAP。
+假设订单被拆分为<span class="math inline">\(N\)</span>份，每份成交量为<span class="math inline">\(V_i\)</span>，成交价格为<span class="math inline">\(P_i\)</span>，
+那么该订单的交易量加权平均成交价格为，
+<span class="math display">\[\begin{align}
+  \mathrm{VWAP}=\sum_{i=1}^N P_i V_i/\sum_{i=1}^N V_i\ .
+  \label{eq:vwap}
+\end{align}\]</span>
+其中每份成交量<span class="math inline">\(V_i\)</span>通常根据对应时间段内的历史成交量曲线，按照一定比例进行分配。</p>
+<p>由于真实市场的交易量在随时变化，
+实现VWAP难点之一是市场交易量分布的计算和预测。
+另外，交易频率的选择也至关重要，
+合理的交易频率的可以有效的隐藏自己的交易意图，降低市场冲击。
+VWAP算法有许多变体
+（例如：<span class="citation">Konishi (<a href="#ref-Konishi2002">2002</a>)</span>, <span class="citation">Gomber et al. (<a href="#ref-Gomber2008">2008</a>)</span>, <span class="citation">Biakowski et al. (<a href="#ref-Biakowski2008">2008</a>)</span>, <span class="citation">J. McCulloch &amp; Kazakov (<a href="#ref-McCulloch2012">2012</a>)</span>, <span class="citation">Frei &amp; Westray (<a href="#ref-Frei2013">2013</a>)</span>, <span class="citation">Mitchell et al. (<a href="#ref-Mitchell2013">2013</a>)</span>, <span class="citation">Busseti &amp; Boyd (<a href="#ref-Busseti2015">2015</a>)</span>, <span class="citation">Cartea &amp; Jaimungal (<a href="#ref-Cartea2016">2016</a>)</span>, <span class="citation">Barzykin &amp; Lillo (<a href="#ref-Barzykin2019">2019</a>)</span>），
+是目前市场上应用最广泛的算法之一。</p>
+</div>
+<div id="pov" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> POV<a href="算法交易.html#pov" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>市场参与度POV（Percent of Volume）是指按照市场当前成交量的固定百分比参与交易的算法。
+与TWAP一样，POV一般将交易时段进行等时划分，
+其成交量由市场动态调节。
+对于第<span class="math inline">\(i\)</span>期交易，POV算法参与的订单量<span class="math inline">\(S_i\)</span>为，
+<span class="math display">\[\begin{align}
+  S_i = POV \cdot (V_{market,i-1}-S_{i-1})\ .
+\end{align}\]</span>
+其中，POV为预设的百分比，<span class="math inline">\(V_{market, t-1}\)</span>为上一期市场的交易量，
+<span class="math inline">\(S_{t-1}\)</span>为上一期算法自身成交量。
+POV算法在执行大量订单时可以有效隐藏自己的交易信息，
+也是目前被广泛使用的算法之一。</p>
+<p>上述介绍的三种算法都是被动算法。
+图<a href="算法交易.html#fig:algo">3.2</a>展示了这三种算法相对市场交易量随时间的分布示意图。
+他们的实现相对容易，但可能损失的机会成本较大。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:algo"></span>
+<img src="intro/algo.png" alt="TWAP、VWAP及POV相对市场交易量随时间的分布示意图。"  />
+<p class="caption">
+Figure 3.2: TWAP、VWAP及POV相对市场交易量随时间的分布示意图。
+</p>
+</div>
+</div>
+<div id="其他算法" class="section level3 hasAnchor" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> 其他算法<a href="算法交易.html#其他算法" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>除了上述算法，市面上还有针对私人交易所设计的
+暗池算法<span class="citation">(<a href="#ref-Buti2017">Buti et al., 2017</a>)</span>（“Dark Pool”），
+隐藏部份订单量的冰山算法<span class="citation">(<a href="#ref-Moinas2005">Moinas, 2005</a>)</span>（“Iceberg”），
+配对交易算法<span class="citation">(<a href="#ref-Gatev1999">Gatev et al., 1999</a>)</span>（Pair Trading）等。</p>
+<p>除了这些传统算法，
+随着人工智能的发展，
+越来越多的交易者开始借助机器学习、
+深度学习和强化学习等技术制定自己的交易策略。</p>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0" line-spacing="2">
+<div id="ref-Almgren2003" class="csl-entry">
+Almgren, R. F. (2003). Optimal execution with nonlinear impact functions and trading-enhanced risk. <em>Applied Mathematical Finance</em>, <em>10</em>(1), 1–18. <a href="https://doi.org/10.1080/135048602100056">https://doi.org/10.1080/135048602100056</a>
+</div>
+<div id="ref-Almgren2001" class="csl-entry">
+Almgren, R., &amp; Chriss, N. (2001). Optimal execution of portfolio transactions. <em>The Journal of Risk</em>, <em>3</em>(2), 5–39. <a href="https://doi.org/10.21314/jor.2001.041">https://doi.org/10.21314/jor.2001.041</a>
+</div>
+<div id="ref-Almgren2005" class="csl-entry">
+Almgren, R., Thum, C., Hauptmann, E., &amp; Li, H. (2005). Direct estimation of equity market impact. <em>RISK</em>, <em>18</em>.
+</div>
+<div id="ref-Amihud2002" class="csl-entry">
+Amihud, Y. (2002). Illiquidity and stock returns: Cross-section and time-series effects. <em>Journal of Financial Markets</em>, <em>5</em>(1), 31–56. <a href="https://doi.org/10.1016/s1386-4181(01)00024-6">https://doi.org/10.1016/s1386-4181(01)00024-6</a>
+</div>
+<div id="ref-BenAmmar2020" class="csl-entry">
+Ammar, I. B., Hellara, S., &amp; Ghadhab, I. (2020). High-frequency trading and stock liquidity: An intraday analysis. <em>Research in International Business and Finance</em>, <em>53</em>, 101235. <a href="https://doi.org/10.1016/j.ribaf.2020.101235">https://doi.org/10.1016/j.ribaf.2020.101235</a>
+</div>
+<div id="ref-Anagnostidis2020" class="csl-entry">
+Anagnostidis, P., Fontaine, P., &amp; Varsakelis, C. (2020). Are high<span></span>frequency traders informed? <em>Economic Modelling</em>, <em>93</em>, 365–383. <a href="https://doi.org/10.1016/j.econmod.2020.08.013">https://doi.org/10.1016/j.econmod.2020.08.013</a>
+</div>
+<div id="ref-Arnott1990" class="csl-entry">
+Arnott, R. D., &amp; Wagner, W. H. (1990). The measurement and control of trading costs. <em>Financial Analysts Journal</em>, <em>46</em>(6), 73–80. <a href="https://doi.org/10.2469/faj.v46.n6.73">https://doi.org/10.2469/faj.v46.n6.73</a>
+</div>
+<div id="ref-ARUMUGAM2023100778" class="csl-entry">
+Arumugam, D., Prasanna, P. K., &amp; Marathe, R. R. (2023). Do algorithmic traders exploit volatility? <em>Journal of Behavioral and Experimental Finance</em>, <em>37</em>, 100778. https://doi.org/<a href="https://doi.org/10.1016/j.jbef.2022.100778">https://doi.org/10.1016/j.jbef.2022.100778</a>
+</div>
+<div id="ref-Bacry2015" class="csl-entry">
+Bacry, E., Iuga, A., Lasnier, M., &amp; Lehalle, C.-A. (2015). Market impacts and the life cycle of investors orders. <em>Market Microstructure and Liquidity</em>, <em>01</em>(02), 1550009. <a href="https://doi.org/10.1142/s2382626615500094">https://doi.org/10.1142/s2382626615500094</a>
+</div>
+<div id="ref-Barzykin2019" class="csl-entry">
+Barzykin, A., &amp; Lillo, F. (2019). <em>Optimal VWAP execution under transient price impact</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1901.02327">https://doi.org/10.48550/ARXIV.1901.02327</a>
+</div>
+<div id="ref-Bertsimas1998" class="csl-entry">
+Bertsimas, D., &amp; Lo, A. W. (1998). Optimal control of execution costs. <em>Journal of Financial Markets</em>, <em>1</em>(1), 1–50. <a href="https://doi.org/10.1016/s1386-4181(97)00012-8">https://doi.org/10.1016/s1386-4181(97)00012-8</a>
+</div>
+<div id="ref-Biakowski2008" class="csl-entry">
+Biakowski, J., Darolles, S., &amp; Fol, G. L. (2008). Improving <span>VWAP</span> strategies: A dynamic volume approach. <em>Journal of Banking &amp; Finance</em>, <em>32</em>(9), 1709–1722. <a href="https://doi.org/10.1016/j.jbankfin.2007.09.023">https://doi.org/10.1016/j.jbankfin.2007.09.023</a>
+</div>
+<div id="ref-Busseti2015" class="csl-entry">
+Busseti, E., &amp; Boyd, S. (2015). <em>Volume weighted average price optimal execution</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1509.08503">https://doi.org/10.48550/ARXIV.1509.08503</a>
+</div>
+<div id="ref-Buti2017" class="csl-entry">
+Buti, S., Rindi, B., &amp; Werner, I. M. (2017). Dark pool trading strategies, market quality and welfare. <em>Journal of Financial Economics</em>, <em>124</em>(2), 244–265. <a href="https://doi.org/10.1016/j.jfineco.2016.02.002">https://doi.org/10.1016/j.jfineco.2016.02.002</a>
+</div>
+<div id="ref-Cartea2016" class="csl-entry">
+Cartea, Álvaro, &amp; Jaimungal, S. (2016). A closed-form execution strategy to target volume weighted average price. <em><span>SIAM</span> Journal on Financial Mathematics</em>, <em>7</em>(1), 760–785. <a href="https://doi.org/10.1137/16m1058406">https://doi.org/10.1137/16m1058406</a>
+</div>
+<div id="ref-CHRISTIE19942" class="csl-entry">
+CHRISTIE, W. G., HARRIS, J. H., &amp; SCHULTZ, P. H. (1994). Why did NASDAQ market makers stop avoiding odd-eighth quotes? <em>The Journal of Finance</em>, <em>49</em>(5), 1841–1860. https://doi.org/<a href="https://doi.org/10.1111/j.1540-6261.1994.tb04783.x">https://doi.org/10.1111/j.1540-6261.1994.tb04783.x</a>
+</div>
+<div id="ref-CHRISTIE1994" class="csl-entry">
+CHRISTIE, W. G., &amp; SCHULTZ, P. H. (1994). Why do NASDAQ market makers avoid odd-eighth quotes? <em>The Journal of Finance</em>, <em>49</em>(5), 1813–1840. https://doi.org/<a href="https://doi.org/10.1111/j.1540-6261.1994.tb04782.x">https://doi.org/10.1111/j.1540-6261.1994.tb04782.x</a>
+</div>
+<div id="ref-easley2013" class="csl-entry">
+Easley, D. (2013). <em>High-frequency trading: New realities for traders, markets and regulators</em>. Risk Books. <a href="https://books.google.com.hk/books?id=pli5oAEACAAJ">https://books.google.com.hk/books?id=pli5oAEACAAJ</a>
+</div>
+<div id="ref-Easley2002" class="csl-entry">
+Easley, D., Hvidkjaer, S., &amp; O’Hara, M. (2002). Is information risk a determinant of asset returns? <em>The Journal of Finance</em>, <em>57</em>(5), 2185–2221. <a href="https://doi.org/10.1111/1540-6261.00493">https://doi.org/10.1111/1540-6261.00493</a>
+</div>
+<div id="ref-EASLEY1996" class="csl-entry">
+EASLEY, D., KIEFER, N. M., O’HARA, M., &amp; PAPERMAN, J. B. (1996). Liquidity, information, and infrequently traded stocks. <em>The Journal of Finance</em>, <em>51</em>(4), 1405–1436. <a href="https://doi.org/10.1111/j.1540-6261.1996.tb04074.x">https://doi.org/10.1111/j.1540-6261.1996.tb04074.x</a>
+</div>
+<div id="ref-Farmer2005" class="csl-entry">
+Farmer, J. D., Patelli, P., &amp; Zovko, I. I. (2005). The predictive power of zero intelligence in financial markets. <em>Proceedings of the National Academy of Sciences</em>, <em>102</em>(6), 2254–2259. <a href="https://doi.org/10.1073/pnas.0409157102">https://doi.org/10.1073/pnas.0409157102</a>
+</div>
+<div id="ref-Foucault2012" class="csl-entry">
+Foucault, T. (2012). Algorithmic trading: Issues and preliminary evidence. In <em>Market microstructure</em> (pp. 1–40). John Wiley &amp; Sons, Ltd. https://doi.org/<a href="https://doi.org/10.1002/9781118673553.ch1">https://doi.org/10.1002/9781118673553.ch1</a>
+</div>
+<div id="ref-Frazzini2018" class="csl-entry">
+Frazzini, A., Israel, R., &amp; Moskowitz, T. J. (2018). Trading costs. <em>Capital Markets: Market Microstructure eJournal</em>. https://doi.org/<a href="https://dx.doi.org/10.2139/ssrn.3229719">https://dx.doi.org/10.2139/ssrn.3229719</a>
+</div>
+<div id="ref-Frei2013" class="csl-entry">
+Frei, C., &amp; Westray, N. (2013). <span>OPTIMAL</span> <span>EXECUTION</span> <span>OF</span> a <span>VWAP</span> <span>ORDER</span>: A <span>STOCHASTIC</span> <span>CONTROL</span> <span>APPROACH</span>. <em>Mathematical Finance</em>, <em>25</em>(3), 612–639. <a href="https://doi.org/10.1111/mafi.12048">https://doi.org/10.1111/mafi.12048</a>
+</div>
+<div id="ref-FreyreSanders2004" class="csl-entry">
+Freyre-Sanders, A., Guobuzaite, R., &amp; Byrne, K. (2004). A review of trading cost models. <em>The Journal of Investing</em>, <em>13</em>(3), 93–115. <a href="https://doi.org/10.3905/joi.2004.434557">https://doi.org/10.3905/joi.2004.434557</a>
+</div>
+<div id="ref-Gatev1999" class="csl-entry">
+Gatev, E., Goetzmann, W., &amp; Rouwenhorst, K. G. (1999). <em>Pairs trading: Performance of a relative value arbitrage rule</em>. National Bureau of Economic Research. <a href="https://doi.org/10.3386/w7032">https://doi.org/10.3386/w7032</a>
+</div>
+<div id="ref-Gomber2008" class="csl-entry">
+Gomber, P., Lutat, M., &amp; Wranik, A. (2008). Flexible <span>VWAP</span> executions in electronic trading. In <em>Lecture notes in business information processing</em> (pp. 1–14). Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-540-78550-7_1">https://doi.org/10.1007/978-3-540-78550-7_1</a>
+</div>
+<div id="ref-Gueant2013" class="csl-entry">
+Guéant, O. (2013). <em>Permanent market impact can be nonlinear</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.1305.0413">https://doi.org/10.48550/ARXIV.1305.0413</a>
+</div>
+<div id="ref-Guo2012" class="csl-entry">
+Guo, M., Li, Z., &amp; Tu, Z. (2012). <span class="nocase">A unique <span>“T+1 trading rule”</span> in China: Theory and evidence</span>. <em>Journal of Banking &amp; Finance</em>, <em>36</em>(2), 575–583. <a href="https://doi.org/10.1016/J.JBANKFIN.2011.09.002">https://doi.org/10.1016/J.JBANKFIN.2011.09.002</a>
+</div>
+<div id="ref-Han2018" class="csl-entry">
+Han, S., Wu, L., &amp; Cheng, Y. (2018). Equity market impact modeling: An empirical analysis for the chinese market. <em>Journal of Risk</em>, <em>20</em>(6), 75–97. <a href="https://doi.org/10.21314/jor.2018.391">https://doi.org/10.21314/jor.2018.391</a>
+</div>
+<div id="ref-Hasbrouck2007" class="csl-entry">
+Hasbrouck, J. (2007). <em>Empirical market microstructure</em>. Oxford University Press.
+</div>
+<div id="ref-HENDERSHOTT2011" class="csl-entry">
+HENDERSHOTT, T., JONES, C. M., &amp; MENKVELD, A. J. (2011). Does algorithmic trading improve liquidity? <em>The Journal of Finance</em>, <em>66</em>(1), 1–33. <a href="https://doi.org/10.1111/j.1540-6261.2010.01624.x">https://doi.org/10.1111/j.1540-6261.2010.01624.x</a>
+</div>
+<div id="ref-KIRILENKO2017" class="csl-entry">
+KIRILENKO, A., KYLE, A. S., SAMADI, M., &amp; TUZUN, T. (2017). The flash crash: High-frequency trading in an electronic market. <em>The Journal of Finance</em>, <em>72</em>(3), 967–998. https://doi.org/<a href="https://doi.org/10.1111/jofi.12498">https://doi.org/10.1111/jofi.12498</a>
+</div>
+<div id="ref-Kissell2008" class="csl-entry">
+Kissell, R. (2008). Transaction cost analysis. <em>The Journal of Trading</em>, <em>3</em>(2), 29–37. <a href="https://doi.org/10.3905/jot.2008.705630">https://doi.org/10.3905/jot.2008.705630</a>
+</div>
+<div id="ref-Kissell2021" class="csl-entry">
+Kissell, R. L. (2021). Transaction costs. In <em>Algorithmic trading methods</em> (pp. 57–97). Elsevier. <a href="https://doi.org/10.1016/b978-0-12-815630-8.00003-x">https://doi.org/10.1016/b978-0-12-815630-8.00003-x</a>
+</div>
+<div id="ref-Konishi2002" class="csl-entry">
+Konishi, H. (2002). Optimal slice of a <span>VWAP</span> trade. <em>Journal of Financial Markets</em>, <em>5</em>(2), 197–221. <a href="https://doi.org/10.1016/s1386-4181(01)00023-4">https://doi.org/10.1016/s1386-4181(01)00023-4</a>
+</div>
+<div id="ref-Kyle1985" class="csl-entry">
+Kyle, A. S. (1985). Continuous auctions and insider trading. <em>Econometrica</em>, <em>53</em>(6), 1315. <a href="https://doi.org/10.2307/1913210">https://doi.org/10.2307/1913210</a>
+</div>
+<div id="ref-LI2021968" class="csl-entry">
+Li, S., Wang, X., &amp; Ye, M. (2021). Who provides liquidity, and when? <em>Journal of Financial Economics</em>, <em>141</em>(3), 968–980. https://doi.org/<a href="https://doi.org/10.1016/j.jfineco.2021.04.020">https://doi.org/10.1016/j.jfineco.2021.04.020</a>
+</div>
+<div id="ref-Lillo2003" class="csl-entry">
+Lillo, F., Farmer, J. D., &amp; Mantegna, R. N. (2003). Master curve for price-impact function. <em>Nature</em>, <em>421</em>(6919), 129–130. <a href="https://doi.org/10.1038/421129a">https://doi.org/10.1038/421129a</a>
+</div>
+<div id="ref-Loeb1983" class="csl-entry">
+Loeb, T. F. (1983). Trading cost: The critical link between investment information and results. <em>Financial Analysts Journal</em>, <em>39</em>(3), 39–44. <a href="http://www.jstor.org/stable/4478644">http://www.jstor.org/stable/4478644</a>
+</div>
+<div id="ref-Marcos2018" class="csl-entry">
+Lopez de Prado, M. (2018). <em>Advances in financial machine learning</em>. John Wiley &amp; Sons.
+</div>
+<div id="ref-McCulloch2012" class="csl-entry">
+McCulloch, J., &amp; Kazakov, V. (2012). Mean variance optimal <span>VWAP</span> trading. <em><span>SSRN</span> Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.1803858">https://doi.org/10.2139/ssrn.1803858</a>
+</div>
+<div id="ref-Mitchell2013" class="csl-entry">
+Mitchell, D., Bialkowski, J. P., &amp; Tompaidis, S. (2013). Optimal <span>VWAP</span> tracking. <em><span>SSRN</span> Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.2333916">https://doi.org/10.2139/ssrn.2333916</a>
+</div>
+<div id="ref-Moinas2005" class="csl-entry">
+Moinas, S. (2005). Hidden limit orders and liquidity in limit order markets. <em><span>SSRN</span> Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.676564">https://doi.org/10.2139/ssrn.676564</a>
+</div>
+<div id="ref-Moro2009" class="csl-entry">
+Moro, E., Vicente, J., Moyano, L. G., Gerig, A., Farmer, J. D., Vaglica, G., Lillo, F., &amp; Mantegna, R. N. (2009). Market impact and trading profile of hidden orders in stock markets. <em>Physical Review E</em>, <em>80</em>(6). <a href="https://doi.org/10.1103/physreve.80.066102">https://doi.org/10.1103/physreve.80.066102</a>
+</div>
+<div id="ref-OHara1997" class="csl-entry">
+O’Hara, M. (1997). <em>Market microstructure theory</em>. Blackwell.
+</div>
+<div id="ref-OHARA2015" class="csl-entry">
+O’Hara, M. (2015). High frequency market microstructure. <em>Journal of Financial Economics</em>, <em>116</em>(2), 257–270. https://doi.org/<a href="https://doi.org/10.1016/j.jfineco.2015.01.003">https://doi.org/10.1016/j.jfineco.2015.01.003</a>
+</div>
+<div id="ref-Perold1988" class="csl-entry">
+Perold, A. F. (1988). The implementation shortfall. In <em>Journal of Portfolio Management</em> (3; Vol. 14, pp. 4–9). <a href="https://doi.org/10.3905/jpm.1988.409150">https://doi.org/10.3905/jpm.1988.409150</a>
+</div>
+<div id="ref-Potters2003" class="csl-entry">
+Potters, M., &amp; Bouchaud, J.-P. (2003). More statistical properties of order books and price impact. <em>Physica A: Statistical Mechanics and Its Applications</em>, <em>324</em>(1-2), 133–140. <a href="https://doi.org/10.1016/s0378-4371(02)01896-4">https://doi.org/10.1016/s0378-4371(02)01896-4</a>
+</div>
+<div id="ref-Rosenthal2009" class="csl-entry">
+Rosenthal, D. (2009). Performance metrics for algorithmic traders. <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.1439902">https://doi.org/10.2139/ssrn.1439902</a>
+</div>
+<div id="ref-Said2020" class="csl-entry">
+Said, E., Ayed, A. B. H., Thillou, D., Rabeyrin, J.-J., &amp; Abergel, F. (2020). Market impact: A systematic study of the high frequency options market. <em>Quantitative Finance</em>, <em>21</em>(1), 69–84. <a href="https://doi.org/10.1080/14697688.2020.1791948">https://doi.org/10.1080/14697688.2020.1791948</a>
+</div>
+<div id="ref-SCHOLTUS201489" class="csl-entry">
+Scholtus, M., van Dijk, D., &amp; Frijns, B. (2014). Speed, algorithmic trading, and market quality around macroeconomic news announcements. <em>Journal of Banking &amp; Finance</em>, <em>38</em>, 89–105. https://doi.org/<a href="https://doi.org/10.1016/j.jbankfin.2013.09.016">https://doi.org/10.1016/j.jbankfin.2013.09.016</a>
+</div>
+<div id="ref-Tth2011" class="csl-entry">
+Tóth, B., Lempérière, Y., Deremble, C., Lataillade, J. de, Kockelkoren, J., &amp; Bouchaud, J.-P. (2011). Anomalous price impact and the critical nature of liquidity in financial markets. <em>Physical Review X</em>, <em>1</em>(2). <a href="https://doi.org/10.1103/physrevx.1.021006">https://doi.org/10.1103/physrevx.1.021006</a>
+</div>
+<div id="ref-Wagner1993" class="csl-entry">
+Wagner, W. H., &amp; Edwards, M. (1993). Best execution. <em>Financial Analysts Journal</em>, <em>49</em>(1), 65–71. <a href="https://doi.org/10.2469/faj.v49.n1.65">https://doi.org/10.2469/faj.v49.n1.65</a>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>深圳证券交易所：
+<a href="http://www.szse.cn/marketServices/index.html" class="uri">http://www.szse.cn/marketServices/index.html</a><br />
+上证所信息网络有限公司：
+<a href="https://www.sseinfo.com/services/assortment/document/" class="uri">https://www.sseinfo.com/services/assortment/document/</a><a href="算法交易.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="投资组合管理.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="机器学习与算法交易.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-algotrading.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
