@@ -6,6 +6,7 @@ fig:pm
 tab:performmeasure
 fig:ob
 tab:obsamp
+eq:wagner
 eq:tradingis
 fig:algo
 fig:mlmap

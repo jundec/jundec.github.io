@@ -288,20 +288,20 @@ i = 1,\cdots, \ell .
 对于有约束的凸优化问题，可以使用拉格朗日乘子法。
 构造如下拉格朗日量，
 <span class="math display" id="eq:svmlag">\[\begin{align}
-  \bm{L}(w,b,\lambda) = \frac{1}{2}||w||^2
+  L(w,b,\lambda) = \frac{1}{2}||w||^2
   -\sum_i^\ell \lambda_i \left[y_i(wx_i+b)-1\right]\ .
   \tag{4.2}
 \end{align}\]</span>
 其中，<span class="math inline">\(\lambda_i\)</span>为拉格朗日乘子，<span class="math inline">\(\lambda_i\geq 0\)</span>。
-分别令<span class="math inline">\(\partial_w \bm{L} \equiv 0\)</span>，
-<span class="math inline">\(\partial_b \bm{L} \equiv 0\)</span>可得，
+分别令<span class="math inline">\(\partial_w L \equiv 0\)</span>，
+<span class="math inline">\(\partial_b L \equiv 0\)</span>可得，
 <span class="math display" id="eq:svml">\[\begin{align}
 w-\sum_i^\ell \lambda_i y_i x_i = 0\ ,\quad \sum_i^\ell \lambda_i y_i =0 \ .
 \tag{4.3}
 \end{align}\]</span>
 将公式<a href="机器学习与算法交易.html#eq:svml">(4.3)</a>代回公式<a href="机器学习与算法交易.html#eq:svmlag">(4.2)</a>可得，
 <span class="math display">\[\begin{align}
-  \bm{L}(w,b,\lambda) =
+  L(w,b,\lambda) =
   -\frac{1}{2}\sum_{i,j=1}^\ell \lambda_i \lambda_j y_i y_j \langle x_i x_j\rangle
   +\sum_i^\ell \lambda_i
 \end{align}\]</span>
