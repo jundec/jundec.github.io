@@ -30,10 +30,6 @@ cover:
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
-editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
 ---
 
 报告聚焦于量化投资领域，结合机器学习、深度学习及强化学习技术，开发高频算法交易策略与A股T+0交易策略。
