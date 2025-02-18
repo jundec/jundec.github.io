@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>算法交易策略研究:基于机器学习、深度学习等方法的探索</title>
+  <meta name="description" content="算法交易策略研究:基于机器学习、深度学习等方法的探索" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="算法交易策略研究:基于机器学习、深度学习等方法的探索" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="算法交易策略研究:基于机器学习、深度学习等方法的探索" />
+  
+  
+  
+
+<meta name="author" content="陈隽德 2023 @ 复旦大学" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="投资组合管理.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">算法交易策略研究</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 量化投资的基本概念</a></li>
+<li class="chapter" data-level="2" data-path="投资组合管理.html"><a href="投资组合管理.html"><i class="fa fa-check"></i><b>2</b> 投资组合管理</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="投资组合管理.html"><a href="投资组合管理.html#理论基础"><i class="fa fa-check"></i><b>2.1</b> 理论基础</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="投资组合管理.html"><a href="投资组合管理.html#markowitz投资组合理论"><i class="fa fa-check"></i><b>2.1.1</b> Markowitz投资组合理论</a></li>
+<li class="chapter" data-level="2.1.2" data-path="投资组合管理.html"><a href="投资组合管理.html#资本资产定价模型"><i class="fa fa-check"></i><b>2.1.2</b> 资本资产定价模型</a></li>
+<li class="chapter" data-level="2.1.3" data-path="投资组合管理.html"><a href="投资组合管理.html#套利定价理论"><i class="fa fa-check"></i><b>2.1.3</b> 套利定价理论</a></li>
+<li class="chapter" data-level="2.1.4" data-path="投资组合管理.html"><a href="投资组合管理.html#fama三因子五因子模型"><i class="fa fa-check"></i><b>2.1.4</b> FAMA三因子、五因子模型</a></li>
+<li class="chapter" data-level="2.1.5" data-path="投资组合管理.html"><a href="投资组合管理.html#多因子模型"><i class="fa fa-check"></i><b>2.1.5</b> 多因子模型</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="投资组合管理.html"><a href="投资组合管理.html#投资组合构建"><i class="fa fa-check"></i><b>2.2</b> 投资组合构建</a></li>
+<li class="chapter" data-level="2.3" data-path="投资组合管理.html"><a href="投资组合管理.html#ssec:eval"><i class="fa fa-check"></i><b>2.3</b> 评价体系</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="算法交易.html"><a href="算法交易.html"><i class="fa fa-check"></i><b>3</b> 算法交易</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="算法交易.html"><a href="算法交易.html#市场微观结构"><i class="fa fa-check"></i><b>3.1</b> 市场微观结构</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="算法交易.html"><a href="算法交易.html#交易数据的组织形式限价订单簿"><i class="fa fa-check"></i><b>3.1.1</b> 交易数据的组织形式——限价订单簿</a></li>
+<li class="chapter" data-level="3.1.2" data-path="算法交易.html"><a href="算法交易.html#市场微观结构理论"><i class="fa fa-check"></i><b>3.1.2</b> 市场微观结构理论</a></li>
+<li class="chapter" data-level="3.1.3" data-path="算法交易.html"><a href="算法交易.html#算法交易的认定与监管"><i class="fa fa-check"></i><b>3.1.3</b> 算法交易的认定与监管</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="算法交易.html"><a href="算法交易.html#交易成本分析"><i class="fa fa-check"></i><b>3.2</b> 交易成本分析</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="算法交易.html"><a href="算法交易.html#交易成本构成"><i class="fa fa-check"></i><b>3.2.1</b> 交易成本构成</a></li>
+<li class="chapter" data-level="3.2.2" data-path="算法交易.html"><a href="算法交易.html#交易执行缺口"><i class="fa fa-check"></i><b>3.2.2</b> 交易执行缺口</a></li>
+<li class="chapter" data-level="3.2.3" data-path="算法交易.html"><a href="算法交易.html#交易执行结果评估"><i class="fa fa-check"></i><b>3.2.3</b> 交易执行结果评估</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="算法交易.html"><a href="算法交易.html#传统算法交易策略"><i class="fa fa-check"></i><b>3.3</b> 传统算法交易策略</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="算法交易.html"><a href="算法交易.html#twap"><i class="fa fa-check"></i><b>3.3.1</b> TWAP</a></li>
+<li class="chapter" data-level="3.3.2" data-path="算法交易.html"><a href="算法交易.html#vwap"><i class="fa fa-check"></i><b>3.3.2</b> VWAP</a></li>
+<li class="chapter" data-level="3.3.3" data-path="算法交易.html"><a href="算法交易.html#pov"><i class="fa fa-check"></i><b>3.3.3</b> POV</a></li>
+<li class="chapter" data-level="3.3.4" data-path="算法交易.html"><a href="算法交易.html#其他算法"><i class="fa fa-check"></i><b>3.3.4</b> 其他算法</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html"><i class="fa fa-check"></i><b>4</b> 机器学习与算法交易</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#机器学习简介"><i class="fa fa-check"></i><b>4.1</b> 机器学习简介</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#传统机器学习"><i class="fa fa-check"></i><b>4.1.1</b> 传统机器学习</a></li>
+<li class="chapter" data-level="4.1.2" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#深度学习"><i class="fa fa-check"></i><b>4.1.2</b> 深度学习</a></li>
+<li class="chapter" data-level="4.1.3" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#强化学习"><i class="fa fa-check"></i><b>4.1.3</b> 强化学习</a></li>
+<li class="chapter" data-level="4.1.4" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#集成学习"><i class="fa fa-check"></i><b>4.1.4</b> 集成学习</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#机器学习在算法交易中的应用"><i class="fa fa-check"></i><b>4.2</b> 机器学习在算法交易中的应用</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#订单簿模拟"><i class="fa fa-check"></i><b>4.2.1</b> 订单簿模拟</a></li>
+<li class="chapter" data-level="4.2.2" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#价格预测"><i class="fa fa-check"></i><b>4.2.2</b> 价格预测</a></li>
+<li class="chapter" data-level="4.2.3" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#情绪分析"><i class="fa fa-check"></i><b>4.2.3</b> 情绪分析</a></li>
+<li class="chapter" data-level="4.2.4" data-path="机器学习与算法交易.html"><a href="机器学习与算法交易.html#合规检测"><i class="fa fa-check"></i><b>4.2.4</b> 合规检测</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">算法交易策略研究:基于机器学习、深度学习等方法的探索</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">算法交易策略研究:基于机器学习、深度学习等方法的探索</h1>
+<p class="author"><em>陈隽德 2023 @ 复旦大学</em></p>
+</div>
+<div id="量化投资的基本概念" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> 量化投资的基本概念<a href="index.html#量化投资的基本概念" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>金融市场自诞生以来，受到技术、经济、政治和社会因素的共同影响，持续演变并不断发展。
+从传统交易方式到现代高度自动化的市场，投资行为逐渐演变成为一门关于投资的科学，
+发展出一类利用数学、统计学和定量分析等方法来制定投资策略的投资方式——量化投资。</p>
+<p>在欧美等发达金融市场，量化投资已经有几十年的历史，其有效性经历了市场长期的检验。
+我国量化投资兴起于2010年左右，并在之后经历了快速的发展。
+根据中国证券投资基金业协会的统计，截止2021年末，
+已备份的量化基金共有 16850 只，规模达到了 1.08 万亿元
+<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>。
+随着量化投资规模的不断扩大，对量化投资的研究需求也在不断增加。
+本章将简要介绍量化投资及其相关概念。</p>
+<p>量化投资的概念十分宽泛。
+理论上，只要使用数学、统计学或其他定量分析方法制定的投资策略都可以归类为量化投资。
+学界通常将量化投资分析师（Quant）分为两种类型<span class="citation">(<a href="#ref-meucci2011p">Meucci, 2011</a>)</span>：
+P-Quant和Q-Quant。
+P-Quant通常适用于买方市场。
+他们的主要角色是根据历史数据预测未来趋势，然后确定交易策略。
+Q-Quant通常适用于金融机构的卖方。
+他们的主要任务是根据数学模型对金融衍生品进行定价。
+表<a href="index.html#tab:pqquant">1.1</a>展示了它们的部分区别。
+本文所讨论的对象是买方量化，即P-Quant。
+如无特殊说明，下文量化投资皆指买方量化（P-Quant）。</p>
+<table>
+<caption><span id="tab:pqquant">Table 1.1: </span> P-Quant与Q-Quant<span class="citation">(<a href="#ref-meucci2011p">Meucci, 2011</a>)</span>。</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th align="left">Q-Quant</th>
+<th align="left">P-Quant</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>业务</td>
+<td align="left">卖方，如投资银行等</td>
+<td align="left">买方，如对冲基金等</td>
+</tr>
+<tr class="even">
+<td>测度</td>
+<td align="left">风险中性（risk neutral）</td>
+<td align="left">真实概率（real probability）</td>
+</tr>
+<tr class="odd">
+<td>目标</td>
+<td align="left">推断现在</td>
+<td align="left">预测未来</td>
+</tr>
+<tr class="even">
+<td>工具</td>
+<td align="left">随机过程、偏微分方程</td>
+<td align="left">时间序列分析，贝叶斯统计，机器学习等</td>
+</tr>
+</tbody>
+</table>
+<p>买方量化投资主要分为两个部分：
+投资组合管理（Portfolio Management，QM）
+和算法交易（Algorithmic Trading，TA）。
+这两部份共同覆盖了从投资组合构建到交易执行的全过程。
+图<a href="index.html#fig:algodef">1.1</a>展示了投资组合管理和算法交易之间的关系，
+其中，横坐标代表研究范围及其自动化程度，纵坐标表示时间延迟敏感度。
+可以看到，从投资组合构建到交易执行，自动化程度逐渐增加。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:algodef"></span>
+<img src="intro/quant_algo_trading.png" alt="投资组合管理与算法交易、高频交易的关系[@Gomber2011]。"  />
+<p class="caption">
+Figure 1.1: 投资组合管理与算法交易、高频交易的关系<span class="citation">(<a href="#ref-Gomber2011">Gomber et al., 2011</a>)</span>。
+</p>
+</div>
+<p>投资组合管理重点在于通过分析交易数据、
+基本面信息和市场情绪等来构建交易组合，
+目的是获得超过市场基准的超额收益。
+其研究范围通常包含组合构建及低频信号的生成，例如股票市场中的选股与择时。
+这一过程对延迟的敏感度较低，可以使用非常复杂的模型进行研究。</p>
+<p>算法交易则主要基于对市场微观结构的理解，利用低延迟技术
+在短时间内迅速处理大量订单，从而在微小的市场波动中获取利润。
+其研究范围通常涵盖高频信号的生成、算法验证以及交易执行三个过程。
+算法交易对延迟敏感度和硬件技术的要求都比较高，
+需要高效交易系统的支持。</p>
+<p><span class="citation">Hasbrouck &amp; Saar (<a href="#ref-HASBROUCK2013646">2013</a>)</span> 将算法交易分为
+专有算法（Proprietary Algorithm，PA）
+和代理算法（Agency Algorithm，AA）两类。
+代理算法通过帮助交易者制定交易策略来节约交易成本。
+专有算法的目的则是直接从交易环境中获利，
+一般包括做市和统计套利两种类型，
+通常用于资产管理公司和对冲基金的自营产品。
+与代理算法相比，专有算法对速度延迟更加敏感，
+是狭义上的高频交易<span class="citation">(<a href="#ref-LI2021968">S. Li et al., 2021</a>)</span>，
+目前，学术界和各国监管机构尚未对高频交易给出明确统一的定义
+<span class="citation">(<a href="#ref-Brogaard2018">Brogaard &amp; Garriott, 2018</a>; <a href="#ref-Chung2016">Chung &amp; Lee, 2016</a>; <a href="#ref-ComertonForde2018">Comerton-Forde et al., 2018</a>; <a href="#ref-Jones2013">Jones, 2013</a>; <a href="#ref-Miller2016">Miller &amp; Shorter, 2016</a>)</span>。
+表<a href="index.html#tab:at">1.2</a>比较了代理算法与专有算法的部份相同点和不同点。</p>
+<table style="width:99%;">
+<caption><span id="tab:at">Table 1.2: </span> 代理算法与专有算法的共同特征与独有特征<span class="citation">(<a href="#ref-Gomber2011">Gomber et al., 2011</a>)</span>。</caption>
+<colgroup>
+<col width="37%" />
+<col width="7%" />
+<col width="53%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>代理算法</th>
+<th></th>
+<th>专有算法（高频交易）</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="3">预设计的交易决策，实时观察市场数据，自动提交订单，自动订单管理，没有人为干预</td>
+</tr>
+<tr class="even">
+<td>以基准价格为交易目标</td>
+<td><span class="math inline">\(|\)</span></td>
+<td>通过买卖差价获利（做市、套利）</td>
+</tr>
+<tr class="odd">
+<td>最小化市场冲击</td>
+<td><span class="math inline">\(|\)</span></td>
+<td>迅速处理撤单</td>
+</tr>
+<tr class="even">
+<td>随着时间和市场的变化处理订单</td>
+<td><span class="math inline">\(|\)</span></td>
+<td>持仓周期非常短，需要在日内平仓</td>
+</tr>
+</tbody>
+</table>
+<p>投资组合管理主要关注资产的中长期收益，
+而不太会涉及市场冲击、交易合规等交易层面的具体细节。
+相比之下，算法交易的目标是通过精心设计的交易策略，
+来减少交易的摩擦成本或通过统计套利等方法直接从交易中获益。
+需要注意的是，交易执行中的摩擦成本对投资组合的整体收益有显著影响。
+因此，一个高效的量化投资策略应当将投资组合管理与算法交易有效结合起来。</p>
+
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0" line-spacing="2">
+<div id="ref-Brogaard2018" class="csl-entry">
+Brogaard, J., &amp; Garriott, C. (2018). High-frequency trading competition. <em>Journal of Financial and Quantitative Analysis</em>, <em>54</em>(4), 1469–1497. <a href="https://doi.org/10.1017/s0022109018001175">https://doi.org/10.1017/s0022109018001175</a>
+</div>
+<div id="ref-Chung2016" class="csl-entry">
+Chung, K. H., &amp; Lee, A. J. (2016). High-frequency trading: Review of the literature and regulatory initiatives around the world. <em>Asia-Pacific Journal of Financial Studies</em>, <em>45</em>(1), 7–33. <a href="https://doi.org/10.1111/ajfs.12120">https://doi.org/10.1111/ajfs.12120</a>
+</div>
+<div id="ref-ComertonForde2018" class="csl-entry">
+Comerton-Forde, C., Malinova, K., &amp; Park, A. (2018). Regulating dark trading: Order flow segmentation and market quality. <em>Journal of Financial Economics</em>, <em>130</em>(2), 347–366. <a href="https://doi.org/10.1016/j.jfineco.2018.07.002">https://doi.org/10.1016/j.jfineco.2018.07.002</a>
+</div>
+<div id="ref-Gomber2011" class="csl-entry">
+Gomber, P., Arndt, B., Lutat, M., &amp; Uhle, T. (2011). High-frequency trading. <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.1858626">https://doi.org/10.2139/ssrn.1858626</a>
+</div>
+<div id="ref-HASBROUCK2013646" class="csl-entry">
+Hasbrouck, J., &amp; Saar, G. (2013). Low-latency trading. <em>Journal of Financial Markets</em>, <em>16</em>(4), 646–679. https://doi.org/<a href="https://doi.org/10.1016/j.finmar.2013.05.003">https://doi.org/10.1016/j.finmar.2013.05.003</a>
+</div>
+<div id="ref-Jones2013" class="csl-entry">
+Jones, C. M. (2013). What do we know about high-frequency trading? <em><span>SSRN</span> Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.2236201">https://doi.org/10.2139/ssrn.2236201</a>
+</div>
+<div id="ref-LI2021968" class="csl-entry">
+Li, S., Wang, X., &amp; Ye, M. (2021). Who provides liquidity, and when? <em>Journal of Financial Economics</em>, <em>141</em>(3), 968–980. https://doi.org/<a href="https://doi.org/10.1016/j.jfineco.2021.04.020">https://doi.org/10.1016/j.jfineco.2021.04.020</a>
+</div>
+<div id="ref-meucci2011p" class="csl-entry">
+Meucci, A. (2011). ’P’versus’ q’: Differences and commonalities between the two areas of quantitative finance. <em>GARP Risk Professional</em>, 47–50.
+</div>
+<div id="ref-Miller2016" class="csl-entry">
+Miller, R. S., &amp; Shorter, G. (2016). <em>High frequency trading: Overview of recent developments</em>. University of North Texas Libraries, UNT Digital Library. <a href="https://digital.library.unt.edu/ark:/67531/metadc847719/">https://digital.library.unt.edu/ark:/67531/metadc847719/</a>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>中国私募基金行业数据报告:
+<a href="https://www.amac.org.cn/researchstatistics/report/zgsmjjhysjbg/" class="uri">https://www.amac.org.cn/researchstatistics/report/zgsmjjhysjbg/</a><a href="index.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="投资组合管理.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

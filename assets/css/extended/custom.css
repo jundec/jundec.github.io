@@ -1,0 +1,26 @@
+/* 修改文章内容的字体大小 */
+.post-content {
+    font-size: 16px;  /* 设置你想要的字体大小 */
+}
+
+/* 可选：修改标题的字体大小 */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 2em;  /* 或者根据需要调整 */
+}
+
+/* 为各级标题添加下方虚线 */
+h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    padding-bottom: 10px;  /* 为标题留出空白区域 */
+}
+
+h1::after, h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px dashed #ccc;  /* 设置虚线样式，可以根据需要调整颜色和宽度 */
+}
+
+
