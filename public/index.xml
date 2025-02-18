@@ -14,14 +14,14 @@
     <lastBuildDate>Tue, 18 Feb 2025 14:00:37 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>算法交易研究报告综述</title>
+      <title>算法交易研究报告</title>
       <link>http://localhost:1313/posts/mypostdoc/</link>
       <pubDate>Mon, 15 Jan 2024 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/posts/mypostdoc/</guid>
       <description>Desc Text.</description>
     </item>
     <item>
-      <title>博士论文综述</title>
+      <title>博士论文</title>
       <link>http://localhost:1313/posts/myphd/</link>
       <pubDate>Fri, 15 Jan 2021 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/posts/myphd/</guid>
@@ -40,21 +40,8 @@
       <pubDate>Wed, 15 Jan 2025 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/cv/</guid>
       <description>&lt;h2 id=&#34;profile&#34;&gt;Profile&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;从宇宙大尺度结构建模到A股高频算法交易，专注用复杂系统方法论破解金融市场的混沌性&lt;/li&gt;
-&lt;li&gt;核心能力：因子挖掘 × 机器学习信号融合 × 低延迟系统架构&lt;/li&gt;
-&lt;li&gt;寻找：对冲基金/FinTech公司的策略研发岗，致力于AI在另类数据中的Alpha探索&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;skills&#34;&gt;Skills&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;量化交易：A股高频策略开发（2年实盘）、Tick数据清洗、市场冲击模型、机器学习/强化学习信号生成&lt;/li&gt;
-&lt;li&gt;金融工程：因子挖掘、策略回测、风险控制&lt;/li&gt;
-&lt;li&gt;技术栈: Python（pandas/numpy/pytorch/etc.）、C++、SQL、Linux、OpenMP/MPI&lt;/li&gt;
-&lt;li&gt;学术优势：复杂系统建模、大数据分析、机器学习、深度学习、强化学习&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;博士 - 天文学&lt;/strong&gt;
-上海交通大学, 2015–2021&lt;/p&gt;</description>
+&lt;p&gt;具有天文学博士学位，并在量化投资、算法交易和机器学习领域具有丰富的研究经验。
+专注于将统计建模、机器学习和高频交易策略方面的专业知识应用于量化金融领域，参与前沿金融技术的开发和应用。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,5 @@
 ---
-title: "算法交易研究报告综述"
+title: "算法交易研究报告"
 date: 2024-01-15T11:30:03+00:00
 weight: 1
 # aliases: ["/first"]
@@ -35,6 +35,9 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
+
+报告聚焦于量化投资领域，结合机器学习、深度学习及强化学习技术，开发高频算法交易策略与A股T+0交易策略。
+研究覆盖量化投资的理论框架（投资组合管理、市场微观结构）、算法交易的技术实现（传统策略与AI驱动策略）以及针对中国A股市场特性的创新性应用。
 
 链接：**{{<newtabref href="/notes/quant/index.html" title="算法交易研究报告综述部分">}}**
 
@@ -79,3 +82,4 @@ editPost:
 - **情绪分析**：分析新闻、社交媒体等文本数据，评估市场情绪对价格的影响。
 
 - **合规检测**：监测交易行为，识别潜在的市场操纵或违规行为。
+

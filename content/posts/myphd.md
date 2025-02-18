@@ -1,5 +1,5 @@
 ---
-title: "博士论文综述"
+title: "博士论文"
 date: 2021-01-15T11:30:03+00:00
 weight: 1
 # aliases: ["/first"]
