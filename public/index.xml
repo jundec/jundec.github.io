@@ -50,5 +50,12 @@
       <guid>http://localhost:1313/posts/vbias/</guid>
       <description>arXiv:1803.00728</description>
     </item>
+    <item>
+      <title>JupyterLab部署</title>
+      <link>http://localhost:1313/posts/jpylab/</link>
+      <pubDate>Mon, 15 May 2017 01:11:15 +0000</pubDate>
+      <guid>http://localhost:1313/posts/jpylab/</guid>
+      <description>在conda环境下部署JupyterLab</description>
+    </item>
   </channel>
 </rss>

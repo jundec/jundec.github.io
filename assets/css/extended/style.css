@@ -1,0 +1,35 @@
+/* 新的选择器定位 */
+.home-info .entry-content {
+  --star-animation-duration: 1.8s;
+  position: relative;
+}
+
+@keyframes star-twinkle {
+  0%, 100% { 
+    opacity: 0.9; 
+    transform: scale(1);
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+  }
+  50% { 
+    opacity: 0.2; 
+    transform: scale(0.95);
+    text-shadow: none;
+  }
+}
+
+.star-char {
+  display: inline-block;
+  animation: star-twinkle var(--star-animation-duration) infinite;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 处理 <em> 标签内的字符 */
+.entry-content em .star-char {
+  animation-duration: calc(var(--star-animation-duration) * 0.8);
+}
+
+/* 创建随机延迟 */
+.star-char:nth-child(7n+1) { animation-delay: 0.1s; }
+.star-char:nth-child(7n+3) { animation-delay: 0.4s; }
+.star-char:nth-child(7n+5) { animation-delay: 0.7s; }
+.star-char:nth-child(7n+7) { animation-delay: 1.0s; }

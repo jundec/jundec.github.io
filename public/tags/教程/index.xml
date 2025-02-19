@@ -20,5 +20,12 @@
       <guid>http://localhost:1313/posts/hugo/</guid>
       <description>本教程由AI生成</description>
     </item>
+    <item>
+      <title>Jupyterlab部署</title>
+      <link>http://localhost:1313/posts/jpylab/</link>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/posts/jpylab/</guid>
+      <description>Desc Text.</description>
+    </item>
   </channel>
 </rss>

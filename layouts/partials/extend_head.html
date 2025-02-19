@@ -1,0 +1,22 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const processNode = (node) => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const wrapper = document.createElement('span');
+      wrapper.innerHTML = node.textContent.split('').map(c => 
+        `<span class="star-char">${c}</span>`
+      ).join('');
+      node.parentNode.replaceChild(wrapper, node);
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      Array.from(node.childNodes).forEach(processNode);
+    }
+  };
+
+  document.querySelectorAll('.entry-content').forEach(container => {
+    // 克隆节点避免实时 DOM 操作冲突
+    const clone = container.cloneNode(true);
+    Array.from(clone.childNodes).forEach(processNode);
+    container.parentNode.replaceChild(clone, container);
+  });
+});
+</script>

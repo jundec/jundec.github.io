@@ -13,7 +13,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "arXiv:1803.00728"
-canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
