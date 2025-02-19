@@ -11,8 +11,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
+description: "算法交易策略研究:基于机器学习、深度学习等方法的探索"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
@@ -35,7 +34,8 @@ cover:
 报告聚焦于量化投资领域，结合机器学习、深度学习及强化学习技术，开发高频算法交易策略与A股T+0交易策略。
 研究覆盖量化投资的理论框架（投资组合管理、市场微观结构）、算法交易的技术实现（传统策略与AI驱动策略）以及针对中国A股市场特性的创新性应用。
 
-链接：**{{<newtabref href="/notes/quant/index.html" title="算法交易研究报告综述部分">}}**
+> **算法交易研究报告综述部分：{{<newtabref href="/notes/quant/index.html" title="Bookdown">}}， 
+全文：[PDF](/files/postdoc_report.pdf)**
 
 综述内容主要包括：
 

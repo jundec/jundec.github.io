@@ -11,8 +11,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
+description: "红移畸变宇宙学研究"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
@@ -32,7 +31,8 @@ cover:
     hidden: true # only hide on current single page
 ---
 
-链接：**{{<newtabref href="/notes/astro/index.html" title="博士论文综述部分">}}**
+> **博士论文综述部分：{{<newtabref href="/notes/astro/index.html" title="Bookdown">}}， 
+全文：[PDF](/files/phd_thesis.pdf)**
 
 综述内容主要包括：
 

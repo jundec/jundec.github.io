@@ -18,14 +18,14 @@
       <link>http://localhost:1313/posts/mypostdoc/</link>
       <pubDate>Mon, 15 Jan 2024 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/posts/mypostdoc/</guid>
-      <description>Desc Text.</description>
+      <description>算法交易策略研究:基于机器学习、深度学习等方法的探索</description>
     </item>
     <item>
       <title>博士论文</title>
       <link>http://localhost:1313/posts/myphd/</link>
       <pubDate>Fri, 15 Jan 2021 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/posts/myphd/</guid>
-      <description>Desc Text.</description>
+      <description>红移畸变宇宙学研究</description>
     </item>
     <item>
       <title>使用Hugo部署Github pages</title>
@@ -42,6 +42,13 @@
       <description>&lt;h2 id=&#34;profile&#34;&gt;Profile&lt;/h2&gt;
 &lt;p&gt;具有天文学博士学位，并在量化投资、算法交易和机器学习领域具有丰富的研究经验。
 专注于将统计建模、机器学习和高频交易策略方面的专业知识应用于量化金融领域，参与前沿金融技术的开发和应用。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Accurate Determination of halo velocity bias in simulations and its cosmological implications</title>
+      <link>http://localhost:1313/posts/vbias/</link>
+      <pubDate>Tue, 21 Aug 2018 21:20:09 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vbias/</guid>
+      <description>arXiv:1803.00728</description>
     </item>
   </channel>
 </rss>
