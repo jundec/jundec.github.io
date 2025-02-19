@@ -18,14 +18,14 @@
       <link>http://localhost:1313/posts/mypostdoc/</link>
       <pubDate>Mon, 15 Jan 2024 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/posts/mypostdoc/</guid>
-      <description>Desc Text.</description>
+      <description>算法交易策略研究:基于机器学习、深度学习等方法的探索</description>
     </item>
     <item>
       <title>博士论文</title>
       <link>http://localhost:1313/posts/myphd/</link>
       <pubDate>Fri, 15 Jan 2021 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/posts/myphd/</guid>
-      <description>Desc Text.</description>
+      <description>红移畸变宇宙学研究</description>
     </item>
     <item>
       <title>使用Hugo部署Github pages</title>
@@ -33,6 +33,13 @@
       <pubDate>Tue, 18 Feb 2025 14:00:37 +0800</pubDate>
       <guid>http://localhost:1313/posts/hugo/</guid>
       <description>本教程由AI生成</description>
+    </item>
+    <item>
+      <title>Accurate Determination of halo velocity bias in simulations and its cosmological implications</title>
+      <link>http://localhost:1313/posts/vbias/</link>
+      <pubDate>Tue, 21 Aug 2018 21:20:09 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vbias/</guid>
+      <description>arXiv:1803.00728</description>
     </item>
   </channel>
 </rss>

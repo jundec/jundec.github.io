@@ -82,4 +82,6 @@ cover:
 ## Publications
 
 - Chen J D, Zhang P J, Zheng Y. Expansion series of the pairwise velocity generating function and its implications on redshift space distortion modeling[J]. Research in Astronomy and Astrophysics, 2021, 21(7): 176. [arXiv:2103.11934](https://arxiv.org/abs/2103.11934)
+- Zhao J W, Chen J D. The moment generating function of pairwise velocity in the context of redshift space distortion[J]. Research in Astronomy and Astrophysics, 2021, 21(2): 028. [DOI 10.1088/1674-4527/21/2/28](https://iopscience.iop.org/article/10.1088/1674-4527/21/2/28)
 - Chen J D, Zhang P J, Zheng Y, et al. Accurate determination of halo velocity bias in simulations and its cosmological implications[J]. The Astrophysical Journal, 2018, 861(1): 58. [arXiv:1803.00728](https://arxiv.org/abs/1803.00728)
+- Bai X, Lee B H, Chen J, et al. Chaos in Lifshitz spacetimes[J]. Journal of the Korean Physical Society, 2016, 68: 639-644. [arXiv:1406.5816](https://arxiv.org/abs/1406.5816)
