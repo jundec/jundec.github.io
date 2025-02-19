@@ -4,7 +4,7 @@ in simulations and its cosmological implications"
 date: 2018-08-21T21:20:09+00:00
 # weight: 1
 # aliases: ["/first"]
-tags: ["first"]
+tags: ["天文","宇宙学"]
 author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
