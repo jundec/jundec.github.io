@@ -152,3 +152,8 @@ markup:
     # lineNos: true
     # style: monokai
 
+markup:
+  tableOfContents:
+    endLevel: 4
+    ordered: false
+    startLevel: 2
