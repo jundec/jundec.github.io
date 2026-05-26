@@ -1,0 +1,160 @@
+---
+title: "我的私人图书馆"
+date: 2026-05-26
+description: "这里收集了我所有的 Bookdown 笔记、书籍和长文归档。"
+layout: "library"
+type: "page"
+---
+
+<div class="library-container">
+    <p class="library-subtitle">探索知识的足迹，点击下方卡片即可直接阅读对应的 Bookdown 书籍。</p>
+    
+    <div class="book-grid">
+        <a href="/ShiTouJi/" class="book-card" target="_blank">
+            <div class="book-cover color-1">
+                <span class="book-badge">R 语言</span>
+                <h3 class="book-title">明朝那些事儿（精读笔记）</h3>
+            </div>
+            <div class="book-info">
+                <p class="book-description">使用 Bookdown 整理的读书笔记，包含历史年表可视化与深度人物剖析。</p>
+                <div class="book-meta">
+                    <span>📅 2026 更新</span>
+                    <span>📖 12 章节</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="/XiYouJi/" class="book-card" target="_blank">
+            <div class="book-cover color-2">
+                <span class="book-badge">游戏开发</span>
+                <h3 class="book-title">2D 游戏动画与 Blender 工作流</h3>
+            </div>
+            <div class="book-info">
+                <p class="book-description">记录关于 Blender UV 偏移、2D 角色表现力以及多视角资产导出的技术沉淀。</p>
+                <div class="book-meta">
+                    <span>📅 2026 更新</span>
+                    <span>📖 8 章节</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="#" class="book-card Coming-soon">
+            <div class="book-cover color-3">
+                <h3 class="book-title">新书酝酿中...</h3>
+            </div>
+            <div class="book-info">
+                <p class="book-description">下一个研究课题正在全力码字中，敬请期待。</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<style>
+/* ====== 现代书架精美样式 ====== */
+.library-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.library-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+/* 网格布局 */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+/* 卡片基础样式 */
+.book-card {
+    background: var(--card-background, #fff);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-decoration: none !important;
+    color: inherit !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+/* 书本封面 */
+.book-cover {
+    height: 180px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+}
+/* 拟物化书脊阴影效果 */
+.book-cover::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 15px;
+    background: linear-gradient(to right, rgba(0,0,0,0.15), rgba(0,0,0,0));
+}
+/* 封面渐变色 */
+.color-1 { background: linear-gradient(135deg, #3a6073, #3a7bd5); }
+.color-2 { background: linear-gradient(135deg, #43a047, #a8ff78); }
+.color-3 { background: linear-gradient(135deg, #7474bf, #348f50); }
+.coming-soon .book-cover { background: linear-gradient(135deg, #e0e0e0, #bdbdbd); color: #666; }
+
+.book-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(5px);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.book-title {
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.4;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+/* 书本简介 */
+.book-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.book-description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+}
+/* 元数据 */
+.book-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    color: #888;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 12px;
+}
+/* 暗黑模式适配（如果你的Hugo主题支持） */
+@media (prefers-color-scheme: dark) {
+    .book-card { background: #1e1e1e; border-color: #333; }
+    .book-description { color: #ccc; }
+    .book-meta { border-color: #2d2d2d; }
+    .library-subtitle { color: #aaa; }
+}
+</style>
