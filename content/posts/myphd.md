@@ -12,7 +12,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "红移畸变宇宙学研究"
-disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false

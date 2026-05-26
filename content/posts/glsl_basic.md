@@ -13,7 +13,6 @@ math: false
 hidemeta: false
 comments: false
 description: "GLSL基础函数分类整理表格"
-disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false

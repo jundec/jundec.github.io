@@ -1,6 +1,5 @@
 ---
 date: '2025-02-18T14:00:37+08:00'
-draft: true
 title: '使用Hugo部署Github pages'
 tags: ["教程"]
 description: "本教程由AI生成"

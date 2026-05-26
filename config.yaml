@@ -1,7 +1,7 @@
 baseURL: "https://junde.online/"
 title: Junde @ Quant x AI x Astronomy
 pagination.pagerSize: 5
-theme: PaperMod
+theme: "PaperMod"
 hasCJKLanguage: true
 
 enableEmoji: true
@@ -143,6 +143,7 @@ outputs:
     - JSON # necessary for search
 
 pygmentsUseClasses: true
+
 markup:
   highlight:
     noClasses: false
@@ -152,7 +153,6 @@ markup:
     # lineNos: true
     # style: monokai
 
-markup:
   tableOfContents:
     endLevel: 4
     ordered: false

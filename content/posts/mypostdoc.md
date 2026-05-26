@@ -12,7 +12,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "算法交易策略研究:基于机器学习、深度学习等方法的探索"
-disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false

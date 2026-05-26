@@ -12,7 +12,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "在conda环境下JupyterLab的服务器部署"
-disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false
