@@ -1,0 +1,28 @@
+/* 正文字體 */
+body {
+  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", STSong, serif;
+  line-height: 1.8;
+}
+
+/* 章節標題 */
+h1, h2, h3 {
+  font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Heiti SC", STHeiti, sans-serif;
+}
+
+/* 詩句段落縮排 */
+blockquote {
+  font-style: normal;
+  border-left: 3px solid #8B0000;
+  color: #333;
+}
+
+/* 目錄側欄 */
+.book .book-summary {
+  font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif;
+}
+
+/* 代碼塊（校注等） */
+pre {
+  background-color: #f8f5f0;
+  border: 1px solid #e0d5c1;
+}
