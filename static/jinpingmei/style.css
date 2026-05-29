@@ -4,18 +4,9 @@ body {
   line-height: 1.8;
 }
 
-/* 段落首行縮進：由源文件全角空格控制 */
-
 /* 章節標題 */
 h1, h2, h3 {
   font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Heiti SC", STHeiti, sans-serif;
-}
-
-/* 詩句段落縮排 */
-blockquote {
-  font-style: normal;
-  border-left: 3px solid #8B0000;
-  color: #333;
 }
 
 /* 目錄側欄 */
@@ -23,8 +14,21 @@ blockquote {
   font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif;
 }
 
-/* 代碼塊（校注等） */
-pre {
-  background-color: #f8f5f0;
-  border: 1px solid #e0d5c1;
+/* 让所有正文段落首行缩进两个字 */
+p {
+  text-size-adjust: none;
+  text-indent: 2em; /* 2em 表示当前字号下两个字的宽度 */
+  margin-top: 0;
+  margin-bottom: 0; /* 消除段落间的空行间距，更符合传统网格排版 */
+}
+
+/* 詩句段落縮排 */
+p:has(br) { 
+  text-indent: 0; 
+  padding-left: 2em;
+}
+
+/* 统一控制所有被单反引号包裹的批语样式 */
+.book .book-body .page-wrapper .page-inner section.normal code {
+  color: #B22222 !important; 
 }
