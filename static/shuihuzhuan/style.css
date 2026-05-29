@@ -1,0 +1,34 @@
+/* 正文字體 */
+body {
+  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", STSong, serif;
+  line-height: 1.8;
+}
+
+/* 章節標題 */
+h1, h2, h3 {
+  font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Heiti SC", STHeiti, sans-serif;
+}
+
+/* 目錄側欄 */
+.book .book-summary {
+  font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif;
+}
+
+/* 让所有正文段落首行缩进两个字 */
+p {
+  text-size-adjust: none;
+  text-indent: 2em; /* 2em 表示当前字号下两个字的宽度 */
+  margin-top: 0;
+  margin-bottom: 0; /* 消除段落间的空行间距，更符合传统网格排版 */
+}
+
+/* 詩句段落縮排 */
+p:has(br) { 
+  text-indent: 0; 
+  padding-left: 2em;
+}
+
+/* 统一控制所有被单反引号包裹的批语样式 */
+.book .book-body .page-wrapper .page-inner section.normal code {
+  color: #B22222 !important; 
+}
